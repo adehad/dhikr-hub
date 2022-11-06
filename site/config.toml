@@ -1,0 +1,14 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+######################
+# Theme Theme Config
+######################
+theme = "hugo-book"
+[params]
+# In the left-handside display, show all the pages inthe content/
+BookSection = '*'
+
+[markup.tableOfContents]
+startLevel = 1
