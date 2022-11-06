@@ -22,27 +22,25 @@
             "properties": {
                 "ara": {
                     "title": "The ara Schema",
-                    "type": "array",
-                    "default": [],
-                    "items": {},
+                    "type": "string",
+                    "default": "",
                     "examples": [
-                        []
+                        ""
                     ]
                 },
                 "en": {
                     "title": "The en Schema",
-                    "type": "array",
-                    "default": [],
-                    "items": {},
+                    "type": "string",
+                    "default": "",
                     "examples": [
-                        []
+                        ""
                     ]
                 }
             },
             "examples": [
                 {
-                    "ara": [],
-                    "en": []
+                    "ara": "",
+                    "en": "Thalama"
                 }
             ]
         },
