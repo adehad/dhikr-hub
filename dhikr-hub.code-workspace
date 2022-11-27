@@ -8,5 +8,26 @@
 		"yaml.schemas": {
 			"https://json.schemastore.org/github-workflow.json": "{workspaceFolder}/dhikr-hub/.github/workflows/deploy.yml"
 		}
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Serve Hugo",
+				"command": "hugo serve --verbose --buildDrafts --minify",
+				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder}/site"
+				},
+				"args": [],
+				"problemMatcher": [
+					"$tsc"
+				],
+				"presentation": {
+					"reveal": "always"
+				},
+				"group": "build"
+			}
+		]
 	}
 }
