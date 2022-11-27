@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+# baseURL = 'http://example.org/' # Set in the GitHub Actions as a command line arg
 languageCode = 'en-us'
 title = 'Salawaat Hub'
 
