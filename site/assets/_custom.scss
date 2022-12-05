@@ -1,0 +1,33 @@
+/* You can add custom styles here. */
+
+// @import "plugins/numbered";
+// @import "plugins/scrollbars";
+
+/* noto-naskh-arabic-regular - arabic */
+@font-face {
+    font-family: 'Noto Naskh Arabic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/noto-naskh-arabic-v18-arabic-regular.woff2') format('woff2'),
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url('fonts/noto-naskh-arabic-v18-arabic-regular.woff') format('woff');
+}
+
+.arabic {
+    font-family: 'Noto Naskh Arabic', sans-serif;
+    font-size: 200%;
+}
+
+.verse {
+    text-align: center;
+}
+
+.verse-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    direction: rtl;
+}

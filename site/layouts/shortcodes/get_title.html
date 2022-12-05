@@ -1,0 +1,11 @@
+{{ $verse_file_name := .Get "file" }}
+{{ $verse_lang := .Get "lang" }}
+
+{{/* Join the file parts together and load up the JSON */}}
+{{ $verse_file_list := slice "data/" $verse_file_name ".json" }}
+{{ $verses_json := getJSON (delimit $verse_file_list "") }}
+
+{{/* Access the verses for the language provided */}}
+{{ $title_in_lang := (index (index $verses_json "name") $verse_lang) }}
+
+{{ $title_in_lang }}

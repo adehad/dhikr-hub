@@ -1,3 +1,44 @@
-<div>
-    {{ $.Site.Data.salawaat.example.name.en }}
+{{/*
+USAGE:
+verse FILE LANG
+FILE = filepath relative to data/salawaat
+LANG = language
+
+e.g. verse thalama en
+
+*/}}
+
+
+
+{{ $verse_file_name := .Get "file" }}
+{{ $verse_lang := .Get "lang" }}
+
+{{/* Join the file parts together and load up the JSON */}}
+{{ $verse_file_list := slice "data/" $verse_file_name ".json" }}
+{{ $verses_json := getJSON (delimit $verse_file_list "") }}
+
+{{/* Access the verses for the language provided */}}
+{{ $verses_in_lang := (index (index $verses_json "verses") $verse_lang) }}
+
+
+{{ range $v_idx, $v_ara := $verses_json.verses.ara }}
+<div class="verse-container">
+    {{ $verse_num := (delimit (slice "## " $v_idx) "") }}
+    {{ $verse_num | markdownify }}
+    {{/* {{ $verse_num.RenderString }} */}}
+
+    {{ $v_in_lang := index $verses_in_lang $v_idx }}
+    {{ range $w_idx, $word_ara := $v_ara }}
+    <table class="verse">
+        <tbody>
+            <tr class="arabic">
+                <td>{{ $word_ara }}</td>
+            </tr>
+            <tr class="translation">
+                <td>{{index $v_in_lang $w_idx }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {{ end }}
 </div>
+{{ end }}

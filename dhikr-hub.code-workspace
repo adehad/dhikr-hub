@@ -7,6 +7,13 @@
 	"settings": {
 		"yaml.schemas": {
 			"https://json.schemastore.org/github-workflow.json": "{workspaceFolder}/dhikr-hub/.github/workflows/deploy.yml"
+		},
+		"[json]": {
+			"editor.quickSuggestions": {
+				"strings": true
+			},
+			"editor.suggest.insertMode": "replace",
+			"editor.formatOnSave": false,
 		}
 	},
 	"tasks": {
