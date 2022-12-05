@@ -1,0 +1,35 @@
+{
+    "name": {
+        "ara": "",
+        "en": "Thalama Asku Gharami  - How Long will my heart ache"
+    },
+    "verses": {
+        "ara": [
+            [ "ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ" ],
+            [ "ﻭَﺍُﻧَﺎﺩِﻯ","ﻳَﺎ ﺗِﻬَﺎﻣِﻰ", "ﻳَﺎ ﻣَﻌْﺪِﻥَ", "ﺍﻟْﺠُﻮْﺩ" ],
+            [ "ﻣُﻨْﻴَﺘِﻰ", "ﺍَﻗْﺼَﻰ", "ﻣَﺮَﺍﻣِﻰ", "ﺍَﺣْﻈَﻰ ", "ﺑِﺎﻟﺸُّﻬُﻮْﺩ" ],
+            [ "ﻭَﺍَﺭَﻯ", "ﺑَﺎﺏَ", "ﺍﻟﺴَّﻼَﻡِ", "ﻳَﺎ ﺯَﺍﻛِﻰ ", "ﺍﻟْﺠُﺪُﻭْﺩ" ],
+            [ "ﻳَﺎ ﻃِﺮَﺍﺯَ", "ﺍﻟْﻜَﻮْﻥِ", "ﺇِﻧِّﻰ", "ﻋَﺎﺷِﻖْ", "ﻣُﺴْﺘَﻬَﺎﻡ" ]
+        ],
+        "en": [
+            [ "Tholama", "ashku", "gharami", "yaa nurol" ,"wujud"],
+            [ "wa unadi", "ya tihaami", "yaa ma'dinal", "juud"],
+            [ "Mun-yati","aqshol","maromi","ahzho","bissyuhud"],
+            [ "wa aro","baabas","salami","yaa azkal","judud"],
+            [ "Ya thirazal", "kauni", "inni", "aashiq", "muntaham"]
+        ]
+    },
+    "translation": {
+        "en": [
+            [
+                "How long",
+                "will I yearn, infaturated",
+                ""
+            ]
+        ]
+    },
+    "order": [
+        0,
+        1
+    ]
+}
