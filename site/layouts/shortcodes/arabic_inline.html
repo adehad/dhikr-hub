@@ -1,0 +1,20 @@
+{{/*
+
+USAGE:
+WORDS: a string of the words to put into an span with the Arabic stylings.
+
+1. Using the inner contents of the shortcode
+    {{< arabic >}}salawat{{< /arabic >}}
+2. Use the first argument in a (self closing) shortcode
+    {{< arabic "shortcomings" />}}
+*/}}
+
+<span class="arabic" style="font-size: 150%;">
+    {{ with .Get 0 }}
+        {{.}}
+    {{ else }}
+        {{with .Inner}}
+            {{.}}
+        {{end}}
+    {{ end }}
+</span>
