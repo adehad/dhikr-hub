@@ -1,7 +1,7 @@
 {
     "name": {
         "ara": "",
-        "en": "Thalama Asku Gharami  - How Long will my heart ache"
+        "en": "Tholama Ashku Gharami  - How Long will my heart ache"
     },
     "verses": {
         "ara": [
@@ -9,27 +9,86 @@
             [ "ﻭَﺍُﻧَﺎﺩِﻯ","ﻳَﺎ ﺗِﻬَﺎﻣِﻰ", "ﻳَﺎ ﻣَﻌْﺪِﻥَ", "ﺍﻟْﺠُﻮْﺩ" ],
             [ "ﻣُﻨْﻴَﺘِﻰ", "ﺍَﻗْﺼَﻰ", "ﻣَﺮَﺍﻣِﻰ", "ﺍَﺣْﻈَﻰ ", "ﺑِﺎﻟﺸُّﻬُﻮْﺩ" ],
             [ "ﻭَﺍَﺭَﻯ", "ﺑَﺎﺏَ", "ﺍﻟﺴَّﻼَﻡِ", "ﻳَﺎ ﺯَﺍﻛِﻰ ", "ﺍﻟْﺠُﺪُﻭْﺩ" ],
-            [ "ﻳَﺎ ﻃِﺮَﺍﺯَ", "ﺍﻟْﻜَﻮْﻥِ", "ﺇِﻧِّﻰ", "ﻋَﺎﺷِﻖْ", "ﻣُﺴْﺘَﻬَﺎﻡ" ]
+            [ "ﻳَﺎ ﻃِﺮَﺍﺯَ", "ﺍﻟْﻜَﻮْﻥِ", "ﺇِﻧِّﻰ", "ﻋَﺎﺷِﻖْ", "ﻣُﺴْﺘَﻬَﺎﻡ" ],
+            [ "ﻣُﻐْﺮَﻡٌ", "ﻭَﺍﻟْﻤَﺪْﺡُ", "ﻓَﻨِّﻰ", "ﻳَﺎ ﺑَﺪْﺭَ","ﺍﻟﺘَّﻤَﺎﻡ" ],
+            [ "إِصْرِفِ","الْأَعْرَاضَ","عَنِّي","أَضْنَانِي","الْغَرَامْ" ],
+            [ "فِيكَ", "قَدْ", "حَسَّنْتُ", "ظَنِّي", "يَاسَامِي", "الْعُهُودْ" ],
+            [ "ﻳَﺎ ﺳِﺮَﺍﺝَ","ﺍْﻷَﻧْﺒِﻴَﺎﺀِ","ﻳَﺎ ﻋَﺎﻟِﻲ", "ﺍﻟْﺠَﻨَﺎﺏ" ],
+            [ "ﻳَﺎ ﺇِﻣَﺎﻡَ","ﺍْﻷَﺗْﻘِﻴَﺎﺀِ","ﺇِﻥَّ","ﻗَﻠْﺒِﻲ","ذَاﺏ" ],
+            [ "يَكْفِي","يَا نُورَ", "الأَهِلَّة", "إِنَّ", "هَجْرِي", "طَالْ" ],
+            [ "سَيدِّي","وَالعُمْرُ","وَلَّى","جُدْ","بِالوَصْلِ","جُودْ" ],
+            [ "يَانَبِيًّا", "قَدْ", "تَحَلَّى", "حَقًّا", "بِالْجَمَالْ" ],
+            [ "وَعَلَيْكَ اللهُ", "صَلَّى", "رَبِّي", "ذُو الْجَلَالْ" ]
         ],
         "en": [
             [ "Tholama", "ashku", "gharami", "yaa nurol" ,"wujud"],
             [ "wa unadi", "ya tihaami", "yaa ma'dinal", "juud"],
             [ "Mun-yati","aqshol","maromi","ahzho","bissyuhud"],
             [ "wa aro","baabas","salami","yaa azkal","judud"],
-            [ "Ya thirazal", "kauni", "inni", "aashiq", "muntaham"]
+            [ "Ya thirazal", "kauni", "inni", "aashiq", "muntaham"],
+            [ "Mughramun","wal Madhu","fannii","Ya Badrat","Tamaam"],
+            [ "-Isrifil", "-a'raada", "'annee", "-adnaanil", "gharaam" ],
+            [ "fiika", "qod", "ahsantu", "zhonni", "yaa saamil'", "uhud" ],
+            [ "Yaa sirojal", "anbiyaa-i", "yaa'alil", "janaab" ],
+            [ "yaa imaamal", "atqiyaa-i", "inna", "qolbi", "dzaab" ],
+            [ "Yakfi" , "yaa nurol", "ahillah", "inna", "hajri", "thool" ],
+            [ "Sayyidi", "wal'umru", "walla", "jud", "bil washli", "jud" ],
+            [ "Yaa nabeeyan", "qad", "taHalla", "Haqqan", "biljamaal" ],
+            [ "Wa'alaikallahu", "sholla", "rabbi", "dzuljalal" ]
+
         ]
     },
     "translation": {
         "en": [
-            [
-                "How long",
-                "will I yearn, infaturated",
-                ""
-            ]
+            [ "How long will I yearn infatuated<br> O light of the universe" ],
+            [ "And continue calling out O Tihāmī O treasure-trove of goodness!" ],
+            [ "My wish my utmost desire is that I attain the vision"],
+            [ "And look upon the Portal of Peace O nurturer of good fortune"],
+            [ "O jewel of the universe I am a lover engrossed in longing"],
+            [ "Infatuated; praise is my profession Oh full moon (of perfection)"],
+            [ "Take everything away from me, For love has consumed and exhausted me " ],
+            [ "Of you I have the best opinion, O bearer of the highest covenants!" ],
+            [ "Oh, light of the prophets, Oh, summit of purity," ],
+            [ "Leader of the pious (people of Taqwa), My heart is melting" ],
+            [ "It's enough for me, Oh, light of Allah, To journey towards you, surely the separation is long…" ],
+            [ "My master, I am old, be generous in connecting me to you" ],
+            [ "O Prophet, you truly adorned yourself with beauty" ],
+            [ "For you may there be the salutations of Allah, And upon you Allah did pray, my Lord, the Majestic" ]
         ]
     },
-    "order": [
-        0,
-        1
-    ]
+    "order": {
+        "chorus": [
+            {"repeat": 2, "index": 0 },
+            {"repeat": 2, "index": 1 }
+        ],
+        "verses": [
+            [
+                {"repeat": 2, "index": 2 },
+                {"repeat": 2, "index": 3 }
+            ],
+            [
+                {"repeat": 2, "index": 4 },
+                {"repeat": 2, "index": 5 }
+            ],
+            [
+                {"repeat": 2, "index": 6 },
+                {"repeat": 2, "index": 7 }
+            ],
+            [
+                {"repeat": 2, "index": 8 },
+                {"repeat": 2, "index": 9 }
+            ],
+            [
+                {"repeat": 2, "index": 10 },
+                {"repeat": 2, "index": 11 }
+            ],
+            [
+                {"repeat": 2, "index": 12 },
+                {"repeat": 2, "index": 13 }
+            ],
+            [
+                {"repeat": "-1" }
+            ]
+        ]
+    }
 }

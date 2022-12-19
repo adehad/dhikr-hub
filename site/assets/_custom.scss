@@ -31,3 +31,18 @@
     justify-content: right;
     direction: rtl;
 }
+
+.transliteration {
+    direction: ltr;
+    font-size: 80%;
+
+}
+
+.translation {
+    direction: ltr;
+    font-size: 85%;
+}
+
+.word-by-word {
+    display: none;
+}

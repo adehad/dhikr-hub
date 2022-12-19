@@ -19,6 +19,7 @@ e.g. verse thalama en
 
 {{/* Access the verses for the language provided */}}
 {{ $verses_in_lang := (index (index $verses_json "verses") $verse_lang) }}
+{{ $verses_in_lang_translated := (index (index $verses_json "translation") $verse_lang) }}
 
 
 {{ range $v_idx, $v_ara := $verses_json.verses.ara }}
@@ -28,17 +29,25 @@ e.g. verse thalama en
     {{/* {{ $verse_num.RenderString }} */}}
 
     {{ $v_in_lang := index $verses_in_lang $v_idx }}
+    {{ $v_in_lang_translated := index $verses_in_lang_translated $v_idx }}
     {{ range $w_idx, $word_ara := $v_ara }}
     <table class="verse">
         <tbody>
             <tr class="arabic">
                 <td>{{ $word_ara }}</td>
             </tr>
-            <tr class="translation">
+            <tr class="transliteration word-by-word">
                 <td>{{index $v_in_lang $w_idx }}</td>
+            </tr>
+            <tr class="translation word-by-word">
+                <td>{{index $v_in_lang_translated $w_idx }}</td>
             </tr>
         </tbody>
     </table>
     {{ end }}
+    <div class="translation" style="flex-basis: 100%; text-align: center;">
+        {{ (index $v_in_lang_translated 0) | markdownify }}
+        {{ "------" | markdownify }}
+    </div>
 </div>
 {{ end }}
