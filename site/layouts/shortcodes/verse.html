@@ -8,8 +8,6 @@ e.g. verse thalama en
 
 */}}
 
-
-
 {{ $verse_file_name := .Get "file" }}
 {{ $verse_lang := .Get "lang" }}
 
@@ -21,32 +19,55 @@ e.g. verse thalama en
 {{ $verses_in_lang := (index (index $verses_json "verses") $verse_lang) }}
 {{ $verses_in_lang_translated := (index (index $verses_json "translation") $verse_lang) }}
 
+{{ $how_many_chorus := (len $verses_json.order.chorus) }}
 
-{{ range $v_idx, $v_ara := $verses_json.verses.ara }}
+{{ $verses_to_display := $verses_json.order.chorus | append $verses_json.order.verses}}
+{{ $total_verses := (len $verses_to_display) }}
+
+{{ $verse_num := "??" }}
+
+{{/* {{ range $v_idx, $v_ara := $verses_json.verses.ara }} */}}
+{{ range $v_config_idx, $v_config := $verses_to_display }}
 <div class="verse-container">
-    {{ $verse_num := (delimit (slice "## " $v_idx) "") }}
+
+    {{ if (gt $how_many_chorus 0) }}
+        {{ $verse_num = (delimit (slice "## Chorus " $v_config_idx) "") }}
+        {{ $total_verses = sub $total_verses 1 }}
+        {{ $how_many_chorus = sub $how_many_chorus 1 }}
+    {{ else }}
+        {{ $verse_num = (delimit (slice "## " $v_config_idx) "") }}
+    {{ end }}
+
     {{ $verse_num | markdownify }}
+    <p style="flex-basis: 100%; margin: 0;"></p>
     {{/* {{ $verse_num.RenderString }} */}}
 
-    {{ $v_in_lang := index $verses_in_lang $v_idx }}
-    {{ $v_in_lang_translated := index $verses_in_lang_translated $v_idx }}
-    {{ range $w_idx, $word_ara := $v_ara }}
-    <table class="verse">
-        <tbody>
-            <tr class="arabic">
-                <td>{{ $word_ara }}</td>
-            </tr>
-            <tr class="transliteration word-by-word">
-                <td>{{index $v_in_lang $w_idx }}</td>
-            </tr>
-            <tr class="translation word-by-word">
-                <td>{{index $v_in_lang_translated $w_idx }}</td>
-            </tr>
-        </tbody>
-    </table>
+    {{ range $new_verse := $v_config }}
+        {{ $v_idx := int (index $new_verse "index") }}
+        {{ $v_ara := index $verses_json.verses.ara $v_idx }}
+
+        {{ $v_in_lang := index $verses_in_lang $v_idx }}
+        {{ $v_in_lang_translated := index $verses_in_lang_translated $v_idx }}
+        {{ range $w_idx, $word_ara := $v_ara }}
+            <table class="verse">
+                <tbody>
+                    <tr class="arabic">
+                        <td>{{ $word_ara }}</td>
+                    </tr>
+                    <tr class="transliteration word-by-word">
+                        <td>{{index $v_in_lang $w_idx }}</td>
+                    </tr>
+                    <tr class="translation word-by-word">
+                        <td>{{index $v_in_lang_translated $w_idx }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        {{ end }}
+        <div class="translation" style="flex-basis: 100%; text-align: right;">
+            {{ (index $v_in_lang_translated 0) | markdownify }}
+        </div>
     {{ end }}
-    <div class="translation" style="flex-basis: 100%; text-align: center;">
-        {{ (index $v_in_lang_translated 0) | markdownify }}
+    <div style="flex-basis: 100%;">
         {{ "------" | markdownify }}
     </div>
 </div>
