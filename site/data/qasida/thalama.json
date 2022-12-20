@@ -40,7 +40,7 @@
     },
     "translation": {
         "en": [
-            [ "How long will I yearn infatuated<br> O light of the universe" ],
+            [ "How long will I yearn infatuated O light of the universe" ],
             [ "And continue calling out O Tihāmī O treasure-trove of goodness!" ],
             [ "My wish my utmost desire is that I attain the vision"],
             [ "And look upon the Portal of Peace O nurturer of good fortune"],
@@ -87,9 +87,6 @@
             [
                 {"repeat": 2, "index": 12 },
                 {"repeat": 2, "index": 13 }
-            ],
-            [
-                {"repeat": "-1" }
             ]
         ]
     }
