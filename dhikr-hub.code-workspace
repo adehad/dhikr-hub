@@ -21,7 +21,7 @@
 		"tasks": [
 			{
 				"label": "Serve Hugo",
-				"command": "hugo serve --verbose --buildDrafts --minify",
+				"command": "hugo serve --verbose --buildDrafts", // --minify makes harder to debug, but should be used in prod
 				"type": "shell",
 				"options": {
 					"cwd": "${workspaceFolder}/site"
