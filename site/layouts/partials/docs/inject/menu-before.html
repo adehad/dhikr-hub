@@ -1,0 +1,119 @@
+<form class="settings-box" action="">
+    <fieldset>
+        <legend>Settings</legend>
+
+        <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="transliteration"
+                onchange="UpdateDisplayState(this.id, this.checked)" checked>
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Transliteration</span>
+        </label>
+
+        <label for="transliteration-size">Font Size
+            <input type="range" id="transliteration-size" name="theme" min="50" max="200" value="80"
+                onchange="UpdateFontSize('--transliteration-font-perc',this.value)">
+        </label>
+
+        <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="translation"
+                onchange="UpdateDisplayState(this.id, this.checked)" checked>
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Translation</span>
+        </label>
+
+        <label for="translation-size">Font Size
+            <input type="range" id="translation-size" name="theme" min="50" max="200" value="85"
+                onchange="UpdateFontSize('--translation-font-perc',this.value)">
+        </label>
+
+    </fieldset>
+</form>
+
+
+<script>
+    function setLocalStorageObject(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+    }
+
+    function getLocalStorageObject(key) {
+        var value = localStorage.getItem(key);
+        return value && JSON.parse(value);
+    }
+
+
+    function UpdateDisplayState(classname_str, is_checked) {
+        let new_state = is_checked ? "" : "none";
+        let class_selector = `.${classname_str}.word-by-word`;
+        console.log(class_selector);
+        document.querySelectorAll(class_selector).forEach(
+            function (element) {
+                element.style.display = new_state;
+            }
+        )
+        SaveToLocalStorage();
+    };
+
+    function UpdateFontSize(font_size_variable_str, percentage) {
+        document.querySelector(':root').style.setProperty(font_size_variable_str, `${percentage}%`);
+        SaveToLocalStorage();
+    };
+
+
+    function UpdateLayoutBasedOnUserSettings() {
+        document.querySelectorAll(".settings-box > * input").forEach(
+            function (element) {
+                console.log(element);
+                if (element.onchange) {
+                    element.onchange();
+                }
+            }
+        )
+    };
+
+    function SaveToLocalStorage() {
+        let saved_data = {}
+        document.querySelectorAll(".settings-box > * input").forEach(
+            function (element) {
+                console.log(element.type)
+                switch (element.type) {
+                    case "checkbox":
+                        saved_data[element.id] = element.checked
+                        break
+                    default:
+                        saved_data[element.id] = element.value
+                        break
+                }
+            }
+        )
+        console.log(saved_data);
+        setLocalStorageObject("dhikr-hub-settings", saved_data);
+    };
+
+    function LoadFromLocalStorage() {
+        saved_data = getLocalStorageObject("dhikr-hub-settings");
+        for (const [key, value] of Object.entries(saved_data)) {
+            console.log(`${key}: ${value}`);
+            element = document.getElementById(key)
+            switch (element.type) {
+                case "checkbox":
+                    element.checked = element.checked
+                    console.log(["here", element])
+                    break
+                default:
+                    element.value = element.value
+                    break
+            }
+        }
+        console.log(["Loaded settings", saved_data]);
+
+
+    };
+
+    window.onload = (event) => {
+        LoadFromLocalStorage();
+        // UpdateLayoutBasedOnUserSettings();
+        console.log("page is fully loaded");
+    };
+
+
+</script>

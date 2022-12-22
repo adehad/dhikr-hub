@@ -16,9 +16,17 @@
         url('fonts/noto-naskh-arabic-v18-arabic-regular.woff') format('woff');
 }
 
+:root {
+    --arabic-font-perc: 200%;
+
+    --translation-font-perc: 85%;
+
+    --transliteration-font-perc: 80%;
+}
+
 .arabic {
     font-family: 'Noto Naskh Arabic', sans-serif;
-    font-size: 200%;
+    font-size: var(--arabic-font-perc);
 }
 
 .verse {
@@ -34,15 +42,97 @@
 
 .transliteration {
     direction: ltr;
-    font-size: 80%;
+    font-size: var(--transliteration-font-perc);
 
 }
 
 .translation {
     direction: ltr;
-    font-size: 85%;
+    font-size: var(--translation-font-perc);
 }
 
-.word-by-word {
-    display: none;
+
+.settings-box>fieldset {
+    border: 0.1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex-direction: column;
+    // gap: 2rem;
+    width: fit-content;
+    background: #fff;
+    // padding: 1rem 3rem;
+    margin-inline: auto;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.settings-box input[type=radio] {
+    // appearance: none;
+    // width: 1.5rem;
+    // height: 1.5rem;
+    // outline: 3px solid var(--radio-color, currentColor);
+    // outline-offset: 3px;
+    // border-radius: 50%;
+}
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        .toggle-switch {
+            &:before {
+                background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 1em;
+    width: 2em;
+    height: 1em;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+
+    &:before {
+        content: "";
+        display: block;
+        background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+        width: 0.5em;
+        height: 0.5em;
+        position: absolute;
+        top: 0.25em;
+        left: 0.25em;
+        transition: left 0.25s;
+    }
+
+    &:after {
+        content: "";
+    }
+}
+
+.toggle-checkbox {
+    &:checked+.toggle-switch {
+        background: #56c080;
+
+        &:before {
+            left: 1.25em;
+        }
+    }
+
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle-label {
+    margin-left: 0.5em;
+    position: relative;
+    top: 0.15em;
 }
