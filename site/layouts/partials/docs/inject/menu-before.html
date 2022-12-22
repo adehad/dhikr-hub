@@ -87,7 +87,12 @@
     };
 
     function LoadFromLocalStorage() {
-        saved_data = getLocalStorageObject("dhikr-hub-settings");
+        const local_storage_key = "dhikr-hub-settings"
+        if (localStorage.getItem(local_storage_key) == null) {
+            SaveToLocalStorage(); // Save the settings and exit the function
+            return;
+        }
+        saved_data = getLocalStorageObject(local_storage_key);
         for (const [settings_key, settings_value] of Object.entries(saved_data)) {
             element = document.getElementById(settings_key);
             switch (element.type) {
