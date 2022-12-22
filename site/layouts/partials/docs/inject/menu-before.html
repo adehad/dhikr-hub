@@ -42,9 +42,8 @@
 
 
     function UpdateDisplayState(classname_str, is_checked) {
-        let new_state = is_checked ? "" : "none";
-        let class_selector = `.${classname_str}.word-by-word`;
-        console.log(class_selector);
+        const new_state = is_checked ? "" : "none";
+        const class_selector = `.${classname_str}.word-by-word`;
         document.querySelectorAll(class_selector).forEach(
             function (element) {
                 element.style.display = new_state;
@@ -62,7 +61,6 @@
     function UpdateLayoutBasedOnUserSettings() {
         document.querySelectorAll(".settings-box > * input").forEach(
             function (element) {
-                console.log(element);
                 if (element.onchange) {
                     element.onchange();
                 }
@@ -74,45 +72,41 @@
         let saved_data = {}
         document.querySelectorAll(".settings-box > * input").forEach(
             function (element) {
-                console.log(element.type)
                 switch (element.type) {
                     case "checkbox":
-                        saved_data[element.id] = element.checked
-                        break
+                        saved_data[element.id] = element.checked;
+                        break;
                     default:
-                        saved_data[element.id] = element.value
-                        break
+                        saved_data[element.id] = element.value;
+                        break;
                 }
             }
         )
-        console.log(saved_data);
+        console.debug("Saved settings", saved_data);
         setLocalStorageObject("dhikr-hub-settings", saved_data);
     };
 
     function LoadFromLocalStorage() {
         saved_data = getLocalStorageObject("dhikr-hub-settings");
-        for (const [key, value] of Object.entries(saved_data)) {
-            console.log(`${key}: ${value}`);
-            element = document.getElementById(key)
+        for (const [settings_key, settings_value] of Object.entries(saved_data)) {
+            element = document.getElementById(settings_key);
             switch (element.type) {
                 case "checkbox":
-                    element.checked = element.checked
-                    console.log(["here", element])
-                    break
+                    element.checked = settings_value;
+                    break;
                 default:
-                    element.value = element.value
-                    break
+                    element.value = settings_value;
+                    break;
             }
         }
-        console.log(["Loaded settings", saved_data]);
+        console.debug("Loaded settings", saved_data);
 
 
     };
 
     window.onload = (event) => {
         LoadFromLocalStorage();
-        // UpdateLayoutBasedOnUserSettings();
-        console.log("page is fully loaded");
+        UpdateLayoutBasedOnUserSettings();
     };
 
 
