@@ -1,6 +1,6 @@
 {
     "name": {
-        "ara": "",
+        "ara": "ﻃَﺎﻟَﻤَﺎ",
         "en": "Thalama"
     },
     "verses": {
@@ -28,8 +28,15 @@
             ]
         ]
     },
-    "order": [
-        0,
-        1
-    ]
+    "order": {
+        "chorus": [
+            [
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 2, "index": 0 }
+            ]
+        ]
+    }
 }
