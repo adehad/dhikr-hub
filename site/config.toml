@@ -1,7 +1,7 @@
 # baseURL = 'http://example.org/' # Set in the GitHub Actions as a command line arg
 languageCode = 'en-us'
 title = 'Salawaat Hub'
-
+enableGitInfo = true
 ######################
 # Theme Theme Config
 ######################
@@ -9,6 +9,15 @@ theme = "hugo-book"
 [params]
 # In the left-handside display, show all the pages inthe content/
 BookSection = '*'
+
+# Set source repository location.
+# Used for 'Last Modified' and 'Edit this page' links.
+BookRepo = 'https://github.com/adehad/dhikr-hub'
+
+  # Enable 'Edit this page' links for 'doc' page type.
+  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+  # Path must point to the site directory.
+  BookEditPath = 'blob/main/site'
 
 [markup.tableOfContents]
 startLevel = 1
