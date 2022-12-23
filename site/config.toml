@@ -17,7 +17,7 @@ BookRepo = 'https://github.com/adehad/dhikr-hub'
   # Enable 'Edit this page' links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to the site directory.
-  BookEditPath = 'blob/main/site'
+  BookEditPath = 'blob/HEAD/site'
 
 [markup.tableOfContents]
 startLevel = 1
