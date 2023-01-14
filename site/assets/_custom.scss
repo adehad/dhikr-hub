@@ -24,6 +24,10 @@
     --transliteration-font-perc: 80%;
 }
 
+body {
+    font-family: 'Noto Naskh Arabic', 'Roboto', 'Open Sans', sans-serif;
+}
+
 .arabic {
     font-family: 'Noto Naskh Arabic', sans-serif;
     font-size: var(--arabic-font-perc);
