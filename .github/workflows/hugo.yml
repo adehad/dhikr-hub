@@ -41,7 +41,7 @@ jobs:
           submodules: recursive
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
       - name: Copy README
         run: cp -a README.md site/content/About.md
       - name: Build with Hugo
