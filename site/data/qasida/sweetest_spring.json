@@ -1,0 +1,437 @@
+{
+    "name": {
+        "ara": "المشرب الأهنى",
+        "en": "Al-Mashrab Al-Ahna - The Sweetest Spring"
+    },
+    "verses": {
+        "ara": [
+            ["اللهُ","يَا","رَحْمَنُ","يَا","رَحِيْمُ"],
+            ["يَا","مَلِكُ","عَطَاءُهُ","فَخِيْمُ"],
+
+            ["قُدُّوسُ","قَدِّسُ","بِالصَّفَاءِ","رُوْحِي"],
+            ["وَافْتَحْ","عَلَيْنَا","أَكْبَرَ","الْفُتُوْحِ"],
+
+            ["سَلَامُ","يَا","مُؤْمِنُ","آمِنْ","رَوْعَتِيْ"],
+            ["مُهَيْمِنٌ","عَزِيْزُ","ارْفَعْ","رُتْبَتِي"],
+
+            ["جَبَّارُ","يَا","مُتَكَبِّرُ","يَا","خَالِقُ"],
+            ["يَا بَارِئُ إِنِّي بِفَضْلِكَ وَاثِقُ"],
+
+            ["مُصَوِّرُ غَفَّارُ يَا قَهَّارُ"],
+            ["وَهَّابُ غَيْثُكْ دَائِمًا مِدْرَارُ"],
+
+            ["رَزَّاقُ يَا فَتَّاحُ يَا عَلِـيْمُ"],
+            ["إِِفْضَالُهُ وَخَيْرُهُ عَمِيْمُ"],
+
+            ["يَا قَابِضُ يَا بَاسِطُ هَبْنَا الْمُنَى"],
+            ["يَا خَافِضُ يَا رَافِعُ كُنْ عَوْنَنَا"],
+
+            ["مُعِزُّ يَا مُذِلُّ هَبْ لِي عزًّا"],
+            ["سَمِيْعُ يَا بَصِيْرُ كُنْ لِيْ حِرْزَا"],
+
+            ["يَا حَكَمُ يَا عَدْلُ عَامِلَ بِالْكَرَمْ"],
+            ["لَطِيفُ يَا خَيْرُ وَادْفَعِ النِّقَمَ"],
+
+            ["حَلِيْمُ يَا عَظِيْمُ يَا غَفُورُ"],
+            ["شَكُورُ يَا عَلِيُّ يَا كَبِيْرُ"],
+
+            ["حَفِيظٌ يَا مُقِيْتُ يَا حَسِيْبُ"],
+            ["جَلِيلُ يَا كَرِيْمُ يَا رَقِيبُ"],
+
+            ["مُجِيْبُ يَا وَاسِعُ وَسُعْ مَشْهَدِي"],
+            ["حَكِيْمُ يَا وَدُوْدُ صَفِّ مَوْرُوْدِي"],
+
+            ["مَجِيْدُ يَابَاعِثُ ابْعَثْ هَمَّتِي"],
+            ["شَهِيْدُ يَاحَقُّ وَحَقِّقْ وِجْهَتِيْ"],
+
+            ["وَكِيلُ يَا قَويُّ قَوْ لِي الْيَقِيْنَ"],
+            ["مَتِيْنُ يَا وَلِيُّ كُنْ لَنَا مُعِيْنُ"],
+
+            ["حَمِيْدُ يَا مُحْصِي فَأَصْلِحِ الْأُمُورَ"],
+            ["مُبْدِئُ يَا مُعِيْدُ وَاشْرَحْ الصُّدُورَ"],
+
+            ["مُحْبِي مُمِيْتُ رَبَّنَا أَصْلِحِ الْقُلُوْبَ"],
+            ["يَا حَيُّ يَا قَيُّوْمُ وَاكْشِفْ الْكُرُوبَ"],
+
+            ["يَا وَاجِدُ يَا مَاجِدُ هَبْنَا الْأَمَل"],
+            ["يَا وَاحِدُ يَا أَحَدُ عَزَّ وَجَلَّ"],
+
+            ["يَا فَرْدُ يَا صَمَدُ أَصْلِحْ الشُّئُوْنَ"],
+            ["يَا قَادِرُ مُقْتَدِرُ جَلِّ الْحَزُوْنَ"],
+
+            ["مُقَدِّمٌ مُؤَخِّرٌ كُنْ عَوْنَنَا"],
+            ["أَوَّلُ يَا آخِرُ وَاكْشِفْ ضُرَّنَا"],
+
+            ["يَاظَاهِرُ يَابَاطِنُ أَصْلِحْ مَا ظَهَرَ"],
+            ["تَوَّابُ تُبْ وَاكْفِ العِدَا يَامُنتَقِمُ"],
+
+            ["وَبَاطِنًا يَا وَالُّ يَا مُتَعَالُ بَرُّ"],
+            ["يَا مَالِكَ الْمُلْكِ أَعْطِنِي مَرَامِي"],
+
+            ["عَفُو يَارَؤُوْفُ سَامِحْ مِنْ نَدِم"],
+            ["فَأَنْتَ ذُو الْجَلَالِ وَالْإِكْرَامِ"],
+
+            ["مُقْسِطُ يَاجَامِعُ إِجْمَعْ لِي الْخُيُوْر"],
+            ["غَنِيُّ يَا مُغْنِي وَضَاعِفِ الْأُجُوْرِ"],
+
+            ["يَامَانِعُ يَاضَارُّ إِكْفِنَا الضَّرَرَ"],
+            ["يَا نَافِعُ إِنْفَعْنَا فَأَنْتَ الْمُدَّخَرُ"],
+
+            ["يَا نُوْرُ نَوِّرُ وَاهْدِنَا يَا هَادِي"],
+            ["بَدِيعُ أَصْلِحْ بَاطِنِي وَالْبَادِي"],
+
+            ["يَا بَاقِي يَا وَارِثُ يَا رَشِيْدُ"],
+            ["صَبُوْرُ هَبْنَا فَوْقَ مَا نُرِيدُ"],
+
+            ["مِنْ كُلِّ خَيْرٍ هَاهُنَا وَالْآخِرَه"],
+            ["وَزِدْ وَضَاعِف لِلْهِبَاتِ الْوَافِرَه"],
+
+            ["وَهَبْ لَنَا الْحَنَانَ يَا حَنَّانُ"],
+            ["وَامْنُنْ عَلَيْنَا إِنَّكَ الْمَنَّانُ"],
+
+            ["بِالْمُصْطَفَى خَيْر الْأَنَامِ الطَّاهِرِ"],
+            ["ذِي الْقَدْرِ وَ الْوَجْهِ الْمُنِيرِ الزَّاهِرِ"],
+
+            ["ذِي الْجَاهِ وَالذِّكْرِ الْجَمِيْلَ الْعَاطِرِ"],
+            ["وَأَكْرَمِ الشُّفَعَاءِ عِنْدَ الْفَاطِرِ"],
+
+            ["صَلَّى عَلَيْهِ اللهُ وَالْآلِ الْغُرَرُ"],
+            ["وَصَحْبِهِ وَالتَّابِعِيْنَ بِالْأَثَرِ"],
+
+            ["مُسَلِّمًا فِي كُلّ حِيْنِ أَبَدًا"],
+            ["وَالْحَمْدُ لِلرَّحْمَنِ دَأَبًا سَرْمَدًا"]
+
+        ],
+        "en": [
+            ["Allāhu yā raḥmānu ya raḥīmu"],
+            ["Yā maliku ‛aṭā’uhū fakhīmu."],
+
+            ["Quddūsu qaddis biṣṣafā’i rūḥī"],
+            ["Waftaḥ ‛alaynā akbaral futūḥi."],
+
+            ["Salāmu yā mu’minu āmin raw‛atī"],
+            ["Muhayminun ‛azīzu irfa‛ rutbatī"],
+
+            ["Jabbāru yā mutakabbiru yā khāliqu"],
+            ["Yā bāri’u innī bifaḍlika wāthiqu"],
+
+            ["Muṣawwiru ghaffāru yā qahhāru"],
+            ["Wahhābu ghaythuka dā’iman midrāru."] ,
+
+            ["Razzāqu yā fattāḥu yā ‛alīmu"],
+            ["Ifḍāluhū wa khayruhū ‛amīmu"],
+
+            ["Yā qābiḍu yā basiṭu habnal munā"],
+            ["Yā khāfiḍu yā rāfi‛u kun ‛awnanā. "],
+
+            ["Mu‛izzu yā mudhillu hab lī ‘izzan"],
+            ["Samī‛u yā baṣīru kun lī ḥirzan."],
+
+            ["Yā ḥakamu yā ‛adlu ‛āmil bil karam"],
+            ["Laṭīfu yā khabīru wadfa‛in niqama. "],
+
+            ["Ḥalīmu yā ‛aẓīmu yā ghafūru"],
+            ["Shakūru yā ‛aliyyu yā kabīru. "],
+
+            ["Ḥafīẓu yā muqītu yā ḥasību"],
+            ["Jalīlu yā karīmu yā raqību. "],
+
+            ["Mujību yā wāsi‛u wassi‛ mash-hadī"],
+            ["Ḥakīmu yā wadūdu ṣaffi mawrūdī. "],
+
+            ["Majīdu yā bā‛ithu ib‛ath hammatī"],
+            ["Shahīdu yā ḥaqqu wa ḥaqqiq wijhatī. "],
+
+            ["Wakīlu yā qawiyyu qawwi līl yaqīn"],
+            ["Matīnu yā waliyyu kun lanā ma‛īn. "],
+
+            ["Ḥamīdu yā muḥṣī fa’aṣliḥil umūr"],
+            ["Mubdi’u yā mu‛īdu washraḥiṣ ṣudūr. "],
+
+            ["Muḥyī mumītu rabbanā aṣliḥil qulūb"],
+            ["Yā ḥayyu yā qayyūmu wakshifil kurūb. "],
+
+            ["Yā wājidu yā mājidu habnal amal"],
+            ["Yā wāḥidu yā aḥadu ‛azza wa jalla. "],
+
+            ["Yā fardu yā ṣamadu aṣliḥish shu’ūn"],
+            ["Yā qādiru muqtadiru jallil ḥazūn. "],
+
+            ["Muqaddimu mu’akh-khiru kun ‛awnanā"],
+            ["Awwalu yā ākhiru wakshif ḍurranā. "],
+
+            ["Yā ẓāhiru yā bāṭinu aṣliḥ mā ẓahara"],
+            ["Wa bāṭinan yā wāllu yā muta‛ālu barru. "],
+
+            ["Tawwābu tub wakfil ‛idā yā muntaqimu"],
+            ["‛Afuwwu yā ra’ūfu sāmiḥ min nadam. "],
+
+            ["Yā mālikul mulki a‛ṭinī marāmī"],
+            ["Fa’anta dhul jalāli wal ikrām. "],
+
+            ["Muqsiṭu yā jāmi‛u ijma‛ līl khuyūr"],
+            ["Ghaniyyu yā mughnī wa ḍā‛ifil ujūr. "],
+
+            ["Yā māni‛u yā ḍārru ikfinaḍ ḍarar"],
+            ["Yā nāfi‛u infa‛nā fa’antal muddakhar. "],
+
+            ["Yā nūru nawwir wahdinā yā hādī"],
+            ["Badī‛u aṣliḥ bāṭinī wal bādī. "],
+
+            ["Yā bāqī yā wārithu yā rashīdu"],
+            ["Ṣabūru habnā fawqa mā nurīdu. "],
+
+            ["Min kulli khayrin hāhunā wal ākhirah"],
+            ["Wa zid waḍā‛if lil hibātil wāfirah. "],
+
+            ["Wa hab lanal ḥanāna yā ḥannānu"],
+            ["Wamnun ‛alaynā innakal mannān. "],
+
+            ["Bil muṣṭafā khayril anāmiṭ ṭāhir"],
+            ["Dhil qadri wal wajhil munīriz zāhir. "],
+
+            ["Dhil jāhi wadh-dhikril jamīlil ‛āṭiri"],
+            ["Wa akramish-shufa‛ā’i ‛indal fāṭiri. "],
+
+            ["Ṣallā ‛alayhillāhu wal ālil ghurar"],
+            ["Wa ṣaḥbihī wattābi’īna bil athar. "],
+
+            ["Musalliman fī kulli ḥīnin abadan"],
+            ["Walḥamdu lirraḥmāni da’aban sarmadan. "]
+
+        ]
+    },
+    "translation": {
+        "en": [
+            [ "O Allāh, All-Compassionate and Merciful"],
+            [ "King, whose Gifts are Boundless," ],
+
+            [ "O Most Holy, sanctify my soul with Purity, " ],
+            [ "and grant us the biggest Spiritual Openings. " ],
+
+            ["O Source of Peace, Inspirer of Faith, relieve my fear, "],
+            ["Guardian, Most Mighty, elevate my rank. "],
+
+            ["O Compeller, O Almighty Creator, "],
+            ["O Giver of Order, I am confident of Your Bounty. "],
+
+            ["Shaper of Beauty, Forgiver, O Subduer, Giver of All."],
+            ["Your Grace is a constant outpouring. "],
+
+            ["O Sustainer, O Facilitator,  O Knower of All, "],
+            ["Whose Favours and Bounties are all-pervading, "],
+
+            ["O Withholder, O Bestower, fulfil our hopes. "],
+            ["O Abaser, O Exalter, be our helper."],
+
+            ["Bestower of Honour, O Abaser, grant me honour. "],
+            ["O Hearer and Seer of All, be my Protector. "],
+
+            ["O Most Wise, O Most Just, I beg clemency. "],
+            ["O All-Aware,  O Knower of Subtleties, remove  all misfortunes. "],
+
+            ["O Clement; O Magnificent;  O Forgiver; "],
+            ["O Rewarder of Thankfulness; O Most Elevated; O Great. "],
+
+            ["O Preserver; O Sustainer;  O Accounter; "],
+            ["O Majestic; O Lord of Honour; O Watchful One. "],
+
+            ["O Responder of Prayers; O the Vast, widen my horizons. "],
+            ["O Wise and Loving One, purify my drinking source. "],
+
+            ["O Majestic One; O Reviver, revive my enthusiasm;"],
+            ["O Witness; O Owner of Truth, make my aspirations true. "],
+
+            ["O Trustee; O Possessor of Strength, strengthen my faith."],
+            ["O Powerful One; O Patron, be my  Helper. "],
+
+            ["O Praiseworthy; O Appraiser, make right our affairs."],
+            ["O Originator; O Restorer, expand our breasts. "],
+
+            ["O Giver and Taker of Life;  O Lord, purify our hearts."],
+            ["O Ever Living; O Self-Subsisting, ease our distress. "],
+
+            ["O Finder; O Splendid One, grant us hope."],
+            ["(You are) the One and Only, Majestic and Glorified.  "],
+
+            ["O Singular; O Satisfier of Needs, set right our affairs. "],
+            ["O Powerful and Capable, rid us of sorrows. "],
+
+            ["O Expediter and Postponer, assist us. "],
+            ["O the First and the Last, remove what harms us. "],
+
+            ["O Evident One; O Hidden One, make right what we show"],
+            ["and conceal. O Protecting Friend; O Supreme; O Devoted. "],
+
+            ["O Accepter of Repentance, pardon us, suffice us against the enemy. "],
+            ["O Avenger; O Forgiver; O Clement One, forgive those who show regret. "],
+
+            ["O Master of the Kingdom, Fulfill my aspirations, "],
+            ["for You are the Lord of Majesty and Bounty. "],
+
+            ["O Equitable One; O Gatherer, gather for me all goodness.  "],
+            ["O Rich One; O Enricher, multiply our rewards. "],
+
+            ["O Preventer; O Bestower of Affection, protect us from harm. "],
+            ["O Giver of Benefit, benefit us, for You are the Keeper of Treasures.  "],
+
+            ["O Light, Illuminate us and guide us, for You are the Guide.  "],
+            ["O Originator, reform my inner and outer self. "],
+
+            ["O Everlasting Inheritor of All;  O Most Discerning One, "],
+            ["grant us even more than we could wish for, "],
+
+            ["Of every good thing in this world and the next. "],
+            ["Increase and multiply Your abundant gifts."],
+
+            ["Endow us with compassion, O Kind One."],
+            ["Bestow us with your Grace, for You are the Bestower."],
+
+            ["By the honour of the select one, the best of humanity, the purified,"],
+            ["the possessor of high status, and radiant illuminated face,"],
+
+            ["Possessor of high status, and beautiful perfumed remembrance;"],
+            ["the noblest of intercessors in the sight of the Creator."],
+
+            ["May Allāh bestow him with Grace, and also his noblest family,"],
+            ["his Companions, and their  successors who followed in their footsteps."],
+
+            ["I shall be a Muslim for all time, "],
+            ["and Praise be to the Merciful, eternally."]
+
+        ]
+    },
+    "order": {
+        "chorus": [ ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ],
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ],
+            [
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 1, "index": 17 }
+            ],
+            [
+                {"repeat": 1, "index": 18 },
+                {"repeat": 1, "index": 19 }
+            ],
+            [
+                {"repeat": 1, "index": 20 },
+                {"repeat": 1, "index": 21 }
+            ],
+            [
+                {"repeat": 1, "index": 22 },
+                {"repeat": 1, "index": 23 }
+            ],
+            [
+                {"repeat": 1, "index": 24 },
+                {"repeat": 1, "index": 25 }
+            ],
+            [
+                {"repeat": 1, "index": 26 },
+                {"repeat": 1, "index": 27 }
+            ],
+            [
+                {"repeat": 1, "index": 28 },
+                {"repeat": 1, "index": 29 }
+            ],
+            [
+                {"repeat": 1, "index": 30 },
+                {"repeat": 1, "index": 31 }
+            ],
+            [
+                {"repeat": 1, "index": 32 },
+                {"repeat": 1, "index": 33 }
+            ],
+            [
+                {"repeat": 1, "index": 34 },
+                {"repeat": 1, "index": 35 }
+            ],
+            [
+                {"repeat": 1, "index": 36 },
+                {"repeat": 1, "index": 37 }
+            ],
+            [
+                {"repeat": 1, "index": 38 },
+                {"repeat": 1, "index": 39 }
+            ],
+            [
+                {"repeat": 1, "index": 40 },
+                {"repeat": 1, "index": 41 }
+            ],
+            [
+                {"repeat": 1, "index": 42 },
+                {"repeat": 1, "index": 43 }
+            ],
+            [
+                {"repeat": 1, "index": 44 },
+                {"repeat": 1, "index": 45 }
+            ],
+            [
+                {"repeat": 1, "index": 46 },
+                {"repeat": 1, "index": 47 }
+            ],
+            [
+                {"repeat": 1, "index": 48 },
+                {"repeat": 1, "index": 49 }
+            ],
+            [
+                {"repeat": 1, "index": 50 },
+                {"repeat": 1, "index": 51 }
+            ],
+            [
+                {"repeat": 1, "index": 52 },
+                {"repeat": 1, "index": 53 }
+            ],
+            [
+                {"repeat": 1, "index": 54 },
+                {"repeat": 1, "index": 55 }
+            ],
+            [
+                {"repeat": 1, "index": 56 },
+                {"repeat": 1, "index": 57 }
+            ],
+            [
+                {"repeat": 1, "index": 58 },
+                {"repeat": 1, "index": 59 }
+            ],
+            [
+                {"repeat": 1, "index": 60 },
+                {"repeat": 1, "index": 61 }
+            ],
+            [
+                {"repeat": 1, "index": 62 },
+                {"repeat": 2, "index": 63 }
+            ]
+        ]
+    }
+}
