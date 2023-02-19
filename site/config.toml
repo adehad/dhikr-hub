@@ -1,6 +1,6 @@
 # baseURL = 'http://example.org/' # Set in the GitHub Actions as a command line arg
 languageCode = 'en-us'
-title = 'Salawaat Hub'
+title = 'Dhikr Hub'
 enableGitInfo = true
 ######################
 # Theme Theme Config
