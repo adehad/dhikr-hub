@@ -10,6 +10,8 @@ This project was created for myself to consolidate the Qasidah from various sour
 Additionally I wanted to be able to capture transliteration and translation in a way that would be easy for a reader to follow,
 eg while reading the Arabic/transliteration being able to quickly glance at the translation, inspired by the many Quran apps.
 
+I also need to apologise in advance for the mistakes and shortcomings.
+
 # Key Project Intentions and Goals
 
 There was a further intention to design the system in a way to help consolidate effort within the community.
@@ -25,6 +27,27 @@ The project therefore provides a framework for:
 
 1. To allow people to fork the project should they disagree with aspect or create their own variation
 
+## Provision for API deployment or Data Consumption
+
+The project utilises a json as a way to store the Arabic, transliterations and translations.
+The intention of this is to allow this system to be used in an API or otherwise
+such that other applications can consume this effort for their own projects, such as an app.
+
+## Possibility for Offline access
+
+The intention of a static website generator is to provide a framework that allows
+this effort to be converted into a PWA. Allowing users to access data offline when possible.
+
+# Contributors
+
+Contributions are welcome and encouraged!
+
+## Page Types
+
+### Most Qasidah and Salawaat
+
+Will follow a pattern where the verses are loaded first, followed by some details.
+
 ```md
 # Verses loaded via json
 
@@ -38,13 +61,3 @@ About the author of the poem
 For Arabic, translation or transliteration
 ```
 
-## Provision for API deployment or Data Consumption
-
-The project utilises a json as a way to store the Arabic, transliterations and translations.
-The intention of this is to allow this system to be used in an API or otherwise
-such that other applications can consume this effort for their own projects, such as an app.
-
-## Possibility for Offline access
-
-The intention of a static website generator is to provide a framework that allows
-this effort to be converted into a PWA. Allowing users to access data offline when possible.
