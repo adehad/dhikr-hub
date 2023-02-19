@@ -21,13 +21,15 @@ Istighfar (ga-fa-ra - to forgive, istag-fa-ra - asks to get forgive(ness)) :
     2. for doing permissions things without an intention
     3. for being not connected to Allah for even a moment
 
-# Subhanallah
-beyond that /if you have a thought you say he is beyond that, until it is impossible for us to know anything of the reality
+# Tasbeeh
 
-# Alhamdullilah
+## Subhanallah
+beyond that /if you have a thought you say he is beyond that, until it is impossible for us to know anything of the reality
+3
+## Alhamdullilah
 when you reflect upon you are puzzled by how to Be grateful. Then we start the Quran with this, be is the one who blessed you with the blessing to even acknowledge His blessings by using the sam
 
-# La Ilha Ilallah
+## La Ilha Ilallah
 He is the only one who is the real existence
 
 1. Allah
@@ -35,7 +37,7 @@ He is the only one who is the real existence
 3. lahoo
 4. hoo
 
-# Allahu Akbar
+## Allahu Akbar
 greater than all our issues and concerns and so generous that he responds to our calls and duas
 
 # HasbunAllah
