@@ -61,3 +61,13 @@ About the author of the poem
 For Arabic, translation or transliteration
 ```
 
+
+# Useful workflow
+
+## Capturing existing documents/photos
+
+1. The Google Translate app works really well at capturing the arabic with harakaat (especially for non-printed).
+2. Verses where the harakaat has not been captured properly can be recovered using: https://rdi-tashkeel.com/en/home
+   1. You can use the dev tools to grab the harakaat version.
+3. Minor adjustments can be made online if preferred https://www.lexilogos.com/keyboard/arabic.htm.
+
