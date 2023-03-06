@@ -1,0 +1,177 @@
+{
+    "name": {
+        "ara": "وله رضي الله عنه رائية وحدة الفعل والوجود",
+        "en": "The Oneness of Action and Existence - (Sa'altu Qalbi)"
+    },
+    "verses": {
+        "ara": [
+            ["سَأَلْتُ قَلبِي عَنْ قُرْبِ رَبِّي"],
+            ["فَقَالَ لَا شَكَّ هُوَ حَاضِرْ"],
+
+            ["فَقُلْتُ مَا لِي لَا أَرَاهُ"],
+            ["فَقَالَ لِي هُوَ فِيكَ ظَاهِرْ"],
+
+            ["فَقُلْتُ هَذَا الْأَمْرُ عَجِيبٌ"],
+            ["فَكَيْفَ يَخْفَى وَالنُّورُ بَاهِرْ"],
+
+            ["فَقَالَ وَهُمٌ هُوَ الْحِجَابُ"],
+            ["وَهْوَ لِكُلِّ الأَنامِ قَاهِر"],
+
+            ["لَكِنَّ مَنْ كَانَ ذَا اجْتِبَاءِ"],
+            ["غَابَ عَنِ الْوَهْمِ بِالسَّرَائِر"],
+
+            ["وَصَارَ رُوحًا بِغَيْرِ جِسْمٍ"],
+            ["وَشَاهَدَ الرَّبَّ بِالْبَصَائِرْ"],
+
+            ["فَغَايَةُ الفَتْحِ في الشُّهُودِ"],
+            ["لِحَضْرَةٍ مَا لَهَا مِنْ سَاتِر"],
+
+            ["فَلَيْسَ فِعْلٌ وَلَا وُجُودٌ"],
+            ["لِغَيْرِ رَبِّي عِنْدَ الأَكَابِرْ"],
+
+            ["فَكُلُّ مَنْ بَاحَ بِاخْتِيَارٍ"],
+            ["مِنْ غَيْرِ إِذْنِ لَهُ الزَّوَاجِرْ"],
+
+            ["يَا رَبِّ إِفْتَحْ لَنَا الْبَصَائِر"],
+            ["وَنُوِّرُ الْقَلْبِ وَالسَّرَائِرِ"],
+
+            ["ثُمَّ الصَّلَاةُ عَلَى النَّبِيِّ"],
+            ["مَا جَدَّ حِبُّ وَسَارَ سَائِر"],
+
+            ["وَءَالِهِ وَالصَّحَابِ جَمْعًا"],
+            ["مَا طَارَ شَوْقًا لِلَّهِ طَائِر"]
+
+        ],
+        "en": [
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            [""],
+
+            [""],
+            ["."]
+
+        ]
+    },
+    "translation": {
+        "en": [
+            ["I asked my heart about the nearness of my Lord,"],
+            ["so it said, 'There is no doubt that He is present.'"],
+
+            ["I said, 'What is wrong with me that I do not see Him?'"],
+            ["And it said to me, 'He is manifest in you.'"],
+
+            ["I said, “This is truly astonishing -"],
+            ["how can He be hidden when light is brilliant?'"],
+
+            ["So it said, 'It is illusion that is the veil:"],
+            ["and it overpowers each and every one.'"],
+
+            ["'However, the one who is chosen"],
+            ["withdraws from illusion through his secrets."],
+
+            ["'And he becomes a spirit without body"],
+            ["and directly sees the Lord with inner sight.'"],
+
+            ["So the goal of opening in vision"],
+            ["is a Presence that has no veil."],
+
+            ["For the great there is neither action"],
+            ["nor existence from other than my Lord."],
+
+            ["Whoever divulges the Secret by choice,"],
+            ["without Idhn, has restrictions placed on him."],
+
+            ["O Lord, open our inner sight for us"],
+            ["and illumine our heart and our secret."],
+
+            ["Then bless the Prophet as long as there is a lover"],
+            ["serious in his love and a wayfarer journeying."],
+
+            ["And his family and Companions altogether,"],
+            ["as long as there is one who flies to Allah with longing."]
+
+        ]
+    },
+    "order": {
+        "chorus": [ ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ],
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ],
+            [
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 1, "index": 17 }
+            ],
+            [
+                {"repeat": 1, "index": 18 },
+                {"repeat": 1, "index": 19 }
+            ],
+            [
+                {"repeat": 1, "index": 20 },
+                {"repeat": 1, "index": 21 }
+            ],
+            [
+                {"repeat": 1, "index": 22 },
+                {"repeat": 1, "index": 23 }
+            ]
+        ]
+    }
+}
