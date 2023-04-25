@@ -16,6 +16,20 @@
         url('fonts/noto-naskh-arabic-v18-arabic-regular.woff') format('woff');
 }
 
+/* lexend-regular - latin */
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('fonts/lexend-v17-latin_latin-ext-regular.woff2') format('woff2'),
+        /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url('fonts/lexend-v17-latin_latin-ext-regular.woff') format('woff');
+}
+
+
 :root {
     --arabic-font-perc: 200%;
 
@@ -25,7 +39,7 @@
 }
 
 body {
-    font-family: 'Noto Naskh Arabic', 'Roboto', 'Open Sans', sans-serif;
+    font-family: 'Lexend', 'Noto Naskh Arabic', 'Roboto', 'Open Sans', sans-serif;
 }
 
 .arabic {
