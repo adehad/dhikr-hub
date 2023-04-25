@@ -2,6 +2,20 @@
     <fieldset>
         <legend>Settings</legend>
 
+        <!--Arabic Display and Font Size-->
+        <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="arabic"
+                onchange="UpdateDisplayState(this.id, this.checked)" checked>
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Arabic</span>
+        </label>
+
+        <label for="arabic-size">Font Size
+            <input type="range" id="arabic-size" name="theme" min="50" max="400" value="200"
+                onchange="UpdateFontSize('--arabic-font-perc',this.value)">
+        </label>
+
+        <!--Transliteration Display and Font Sizer-->
         <label class="toggle">
             <input class="toggle-checkbox" type="checkbox" id="transliteration"
                 onchange="UpdateDisplayState(this.id, this.checked)" checked>
@@ -14,6 +28,7 @@
                 onchange="UpdateFontSize('--transliteration-font-perc',this.value)">
         </label>
 
+        <!--Translation Display and Font Sizer-->
         <label class="toggle">
             <input class="toggle-checkbox" type="checkbox" id="translation"
                 onchange="UpdateDisplayState(this.id, this.checked)">
