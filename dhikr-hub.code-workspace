@@ -14,7 +14,15 @@
 			},
 			"editor.suggest.insertMode": "replace",
 			"editor.formatOnSave": false,
-		}
+		},
+		"json.schemas": [
+			{
+				"fileMatch": [
+					"site/data/qasida/*.json"
+				],
+				"url": "./qasida.schema.json"
+			}
+		]
 	},
 	"tasks": {
 		"version": "2.0.0",

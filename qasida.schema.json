@@ -1,259 +1,349 @@
 {
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://example.com/example.json",
-    "title": "Root Schema",
-    "type": "object",
-    "default": {},
-    "required": [
-        "name",
-        "verses",
-        "translation",
-        "order"
-    ],
-    "properties": {
-        "name": {
-            "title": "The name Schema",
-            "type": "object",
-            "default": {},
-            "required": [
-                "ara",
-                "en"
-            ],
-            "properties": {
-                "ara": {
-                    "title": "The ara Schema",
-                    "type": "string",
-                    "default": "",
-                    "examples": [
-                        ""
-                    ]
-                },
-                "en": {
-                    "title": "The en Schema",
-                    "type": "string",
-                    "default": "",
-                    "examples": [
-                        ""
-                    ]
-                }
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "$comment": "https://www.jsonschema.net/app/schemas/286834",
+  "title": "Qasida Schema",
+  "required": ["name", "verses", "translation", "order"],
+  "properties": {
+    "name": {
+      "type": "object",
+      "default": {},
+      "title": "The Qasida name",
+      "required": ["ara", "en"],
+      "properties": {
+        "ara": {
+          "type": "string",
+          "default": "",
+          "title": "The Qasida name in Arabic",
+          "examples": ["صَلَاةُ الْبَدْرِ يَا"]
+        },
+        "en": {
+          "type": "string",
+          "default": "",
+          "title": "The Qasida name in English",
+          "examples": ["Salat-al Badriyya"]
+        }
+      },
+      "examples": [
+        {
+          "ara": "صَلَاةُ الْبَدْرِ يَا",
+          "en": "Salat-al Badriyya"
+        }
+      ]
+    },
+    "verses": {
+      "type": "object",
+      "default": {},
+      "title": "The verses",
+      "required": ["ara", "en"],
+      "properties": {
+        "ara": {
+          "type": "array",
+          "default": [],
+          "title": "The verses in Arabic",
+          "items": {
+            "type": "array",
+            "title": "Arabic verse",
+            "items": {
+              "type": "string",
+              "title": "Word by word Arabic verse",
+              "examples": [
+                "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
+                "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
+                "ﻃَﺎﻟَﻤَﺎ",
+                "ﺍَﺷْﻜُﻮْ",
+                "ﻏَﺮَﺍﻣِﻰ",
+                "ﻳَﺎ ﻧُﻮْ ﺭَ ",
+                "ﺍﻟْﻮُﺟُﻮْﺩ"
+              ]
             },
             "examples": [
-                {
-                    "ara": "",
-                    "en": "Thalama"
-                }
+              ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
+              ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
+              ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
             ]
+          },
+          "examples": [
+            [
+              ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
+              ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
+              ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
+            ]
+          ]
         },
-        "verses": {
-            "title": "The verses Schema",
-            "type": "object",
-            "default": {},
-            "required": [
-                "ara",
-                "en"
-            ],
-            "properties": {
-                "ara": {
-                    "title": "The ara Schema",
-                    "type": "array",
-                    "default": [],
-                    "items": {
-                        "title": "A Schema",
-                        "type": "array",
-                        "default": [],
-                        "items": {
-                            "title": "A Schema",
-                            "type": "string",
-                            "examples": [
-                                "ﻃَﺎﻟَﻤَﺎ",
-                                "ﺍَﺷْﻜُﻮْ",
-                                "ﻏَﺮَﺍﻣِﻰ"
-                            ]
-                        },
-                        "examples": [
-                            [
-                                "ﻃَﺎﻟَﻤَﺎ",
-                                "ﺍَﺷْﻜُﻮْ",
-                                "ﻏَﺮَﺍﻣِﻰ"
-                            ]
-                        ]
-                    },
-                    "examples": [
-                        [
-                            [
-                                "ﻃَﺎﻟَﻤَﺎ",
-                                "ﺍَﺷْﻜُﻮْ",
-                                "ﻏَﺮَﺍﻣِﻰ"
-                            ]
-                        ]
-                    ]
-                },
-                "en": {
-                    "title": "The en Schema",
-                    "type": "array",
-                    "default": [],
-                    "items": {
-                        "title": "A Schema",
-                        "type": "array",
-                        "default": [],
-                        "items": {
-                            "title": "A Schema",
-                            "type": "string",
-                            "examples": [
-                                "Tholama",
-                                "ashku",
-                                "gharami"
-                            ]
-                        },
-                        "examples": [
-                            [
-                                "Tholama",
-                                "ashku",
-                                "gharami"
-                            ]
-                        ]
-                    },
-                    "examples": [
-                        [
-                            [
-                                "Tholama",
-                                "ashku",
-                                "gharami"
-                            ]
-                        ]
-                    ]
-                }
+        "en": {
+          "type": "array",
+          "default": [],
+          "title": "The verses in English (transliteration)",
+          "items": {
+            "type": "array",
+            "title": "English (transliteration) verse",
+            "items": {
+              "type": "string",
+              "title": "Word by word English (transliteration) verse",
+              "examples": [
+                "Ṣalātu Llāh salāmu Llāh",
+                "ʿalā Ṭāhā rasūli Llāh",
+                "Tholama",
+                "ashku",
+                "gharami",
+                "yaa nurol",
+                "wujud"
+              ]
             },
             "examples": [
-                {
-                    "ara": [
-                        [
-                            "ﻃَﺎﻟَﻤَﺎ",
-                            "ﺍَﺷْﻜُﻮْ",
-                            "ﻏَﺮَﺍﻣِﻰ"
-                        ]
-                    ],
-                    "en": [
-                        [
-                            "Tholama",
-                            "ashku",
-                            "gharami"
-                        ]
-                    ]
-                }
+              ["Ṣalātu Llāh salāmu Llāh"],
+              ["ʿalā Ṭāhā rasūli Llāh"],
+              ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
             ]
-        },
-        "translation": {
-            "title": "The translation Schema",
-            "type": "object",
-            "default": {},
-            "required": [
-                "en"
-            ],
-            "properties": {
-                "en": {
-                    "title": "The en Schema",
-                    "type": "array",
-                    "default": [],
-                    "items": {
-                        "title": "A Schema",
-                        "type": "array",
-                        "default": [],
-                        "items": {
-                            "title": "A Schema",
-                            "type": "string",
-                            "examples": [
-                                "How long",
-                                "will I yearn, infaturated",
-                                ""
-                            ]
-                        },
-                        "examples": [
-                            [
-                                "How long",
-                                "will I yearn, infaturated",
-                                ""
-                            ]
-                        ]
-                    },
-                    "examples": [
-                        [
-                            [
-                                "How long",
-                                "will I yearn, infaturated",
-                                ""
-                            ]
-                        ]
-                    ]
-                }
+          },
+          "examples": [
+            [
+              ["Ṣalātu Llāh salāmu Llāh"],
+              ["ʿalā Ṭāhā rasūli Llāh"],
+              ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
+            ]
+          ]
+        }
+      },
+      "examples": [
+        {
+          "ara": [
+            ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
+            ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
+            ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
+          ],
+          "en": [
+            ["Ṣalātu Llāh salāmu Llāh"],
+            ["ʿalā Ṭāhā rasūli Llāh"],
+            ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
+          ]
+        }
+      ]
+    },
+    "translation": {
+      "type": "object",
+      "default": {},
+      "title": "The verse translation",
+      "required": ["en"],
+      "properties": {
+        "en": {
+          "type": "array",
+          "default": [],
+          "title": "The English verse translation",
+          "items": {
+            "type": "array",
+            "title": "The English translation",
+            "items": {
+              "type": "string",
+              "title": "Word by word English translation",
+              "examples": [
+                "May the blessings of Allah, may the peace of Allah",
+                "be upon Ta-Ha, the Messenger of Allah ﷺ",
+                "How long will I yearn infatuated O light of the universe"
+              ]
             },
             "examples": [
-                {
-                    "en": [
-                        [
-                            "How long",
-                            "will I yearn, infaturated",
-                            ""
-                        ]
-                    ]
-                }
+              ["May the blessings of Allah, may the peace of Allah"],
+              ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
+              ["How long will I yearn infatuated O light of the universe"]
             ]
-        },
-        "order": {
-            "title": "The order Schema",
+          },
+          "examples": [
+            [
+              ["May the blessings of Allah, may the peace of Allah"],
+              ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
+              ["How long will I yearn infatuated O light of the universe"]
+            ]
+          ]
+        }
+      },
+      "examples": [
+        {
+          "en": [
+            ["May the blessings of Allah, may the peace of Allah"],
+            ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
+            ["How long will I yearn infatuated O light of the universe"]
+          ]
+        }
+      ]
+    },
+    "order": {
+      "type": "object",
+      "default": {},
+      "title": "The verse order",
+      "required": ["chorus", "verses"],
+      "properties": {
+        "chorus": {
+          "type": "array",
+          "default": [],
+          "title": "The chorus",
+          "items": {
             "type": "array",
             "default": [],
+            "title": "The grouped chorus entries",
             "items": {
-                "title": "A Schema",
-                "type": "integer",
-                "examples": [
-                    0,
-                    1
-                ]
+              "type": "object",
+              "title": "The chorus entry",
+              "required": ["repeat", "index"],
+              "properties": {
+                "repeat":{
+                  "type": "integer",
+                  "title": "How many times to repeat the chorus",
+                  "examples": [1]
+                },
+                "index": {
+                  "type": "integer",
+                  "title": "The index of the verse array",
+                  "examples": [0, 1, 2, 3]
+                }
+              },
+              "examples": [
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
+              ]
             },
             "examples": [
-                [
-                    0,
-                    1
-                ]
+              [
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
+              ]
             ]
+          },
+          "examples": [
+            [
+              [
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
+              ]
+            ]
+          ]
+        },
+        "verses": {
+          "type": "array",
+          "default": [],
+          "title": "The verses",
+          "items": {
+            "type": "array",
+            "default": [],
+            "title": "The grouped verse entry",
+            "items": {
+              "type": "object",
+              "title": "The verse entry",
+              "required": ["repeat", "index"],
+              "properties": {
+                "repeat":{
+                  "type": "integer",
+                  "title": "How many times to repeat the verse",
+                  "examples": [1]
+                },
+                "index": {
+                  "type": "integer",
+                  "title": "The index in the verse array",
+                  "examples": [4, 5, 6, 7]
+                }
+              },
+              "examples": [
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 },
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
+              ]
+            },
+            "examples": [
+              [
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 },
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
+              ]
+            ]
+          },
+          "examples": [
+            [
+              [
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 },
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
+              ]
+            ]
+          ]
         }
-    },
-    "examples": [
+      },
+      "examples": [
         {
-            "name": {
-                "ara": [],
-                "en": []
-            },
-            "verses": {
-                "ara": [
-                    [
-                        "ﻃَﺎﻟَﻤَﺎ",
-                        "ﺍَﺷْﻜُﻮْ",
-                        "ﻏَﺮَﺍﻣِﻰ"
-                    ]
-                ],
-                "en": [
-                    [
-                        "Tholama",
-                        "ashku",
-                        "gharami"
-                    ]
-                ]
-            },
-            "translation": {
-                "en": [
-                    [
-                        "How long",
-                        "will I yearn, infaturated",
-                        ""
-                    ]
-                ]
-            },
-            "order": [
-                0,
-                1
+          "chorus": [
+            [
+              { "repeat": 1, "index": 0 },
+              { "repeat": 1, "index": 1 },
+              { "repeat": 1, "index": 2 },
+              { "repeat": 1, "index": 3 }
             ]
+          ],
+          "verses": [
+            [
+              { "repeat": 1, "index": 4 },
+              { "repeat": 1, "index": 5 },
+              { "repeat": 1, "index": 6 },
+              { "repeat": 1, "index": 7 }
+            ]
+          ]
         }
-    ]
+      ]
+    }
+  },
+  "examples": [
+    {
+      "name": {
+        "ara": "صَلَاةُ الْبَدْرِ يَا",
+        "en": "Salat-al Badriyya  - "
+      },
+      "verses": {
+        "ara": [
+          ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
+          ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
+          ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
+        ],
+        "en": [
+          ["Ṣalātu Llāh salāmu Llāh"],
+          ["ʿalā Ṭāhā rasūli Llāh"],
+          ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
+        ]
+      },
+      "translation": {
+        "en": [
+          ["May the blessings of Allah, may the peace of Allah"],
+          ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
+          ["How long will I yearn infatuated O light of the universe"]
+        ]
+      },
+      "order": {
+        "chorus": [
+          [
+            { "repeat": 1, "index": 0 },
+            { "repeat": 1, "index": 1 },
+            { "repeat": 1, "index": 2 },
+            { "repeat": 1, "index": 3 }
+          ]
+        ],
+        "verses": [
+          [
+            { "repeat": 1, "index": 4 },
+            { "repeat": 1, "index": 5 },
+            { "repeat": 1, "index": 6 },
+            { "repeat": 1, "index": 7 }
+          ]
+        ]
+      }
+    }
+  ]
 }
