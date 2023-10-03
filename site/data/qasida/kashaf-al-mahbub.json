@@ -1,0 +1,137 @@
+{
+    "name": {
+        "ara": "كشف المحبوب",
+        "en": "Kashafa’l-Maḥbūb - The Beloved lifted the Veil"
+    },
+    "verses": {
+        "ara": [
+            [" كَشَفَ الْمَحْبُوبُ عَنْ قَلْبِي الْغُطَيْ"],
+            [" وَتَجَلَّى جَهْرَةً مِنِّيْ إِلَيْ"],
+
+            ["لَمْ يُشَاهِدْ حُسْنَهُ غَيْرِي وَلَمْ"],
+            ["يَبْقَ فِي الدَّيْرِ سِوَى الْمَشْهُوْدِ فَيْ"],
+
+            ["وَجَلاَ عَنِّيْ حِجَاباً كُنْتُهُ"],
+            ["وَتَلاشَى الْكَوْنُ يَا صَاحِ لَدَيْ"],
+
+            ["أَيُّ حُسْنٍ مَا بَدَا إِلَّا لِمَنْ"],
+            ["قَدْ طَوَى الْعَقْلَ مَعَ الْكَوْنَيْنِ طَيْ "],
+
+            ["وَرَأَى الْأَشْيَاءَ شَيْئاً وَاحِداً "],
+            ["بَلْ رَأَى الْوَاحِدَ وِتْراً دُوْنَ شَيْ"],
+
+            ["لَا تَرَى فِيْ شَمْسِهَا ظِلَّ السِّوَى"],
+            ["فَهْيَ شَمْسٌ وَهْيَ ظِلُّ وَهْيَ فَيْ"],
+
+            ["هَٰذِهِ أَنْوَارُ لَيْلَى قَدْ بَدَتْ "],
+            ["فَلِسَلْبِ الْعَقْلِ يَا صَاحِ تَهَيْ"],
+
+            ["فَالْفَتَى مَنْ سَلَبَتْهُ جُمْلَةً"],
+            ["لَا الَّذِي تَسْلُبُهُ شَيْئاً فَشَيْ"],
+
+            ["وَإِذَا الْحُسْنُ بَدَا فَاسْجُدْ لَهُ"],
+            ["فَسُجُودُ الشُّكْرِ فَرْضٌ يَا أُخَيْ"]
+        ],
+        "en": [
+            ["kashafa al-maḥbūbu ʿan qalbī al-ghuṭay"],
+            ["wa-tajallā jahratan minnī ilay"],
+
+            ["lam yushāhid ḥusnahu ghayrī wa-lam"],
+            ["yabqa fī al-dayri siwā al-mashhūdi fay"],
+
+            ["wa-jalā ʻannī hijāban kuntuhu"],
+            ["watalashā al-kawnu yā ṣāḥ laday"],
+
+            ["ayyu ḥusnin mā badā illā liman"],
+            ["qad ṭawā al-ʻaqla maʻa al-kawnayni ṭay"],
+
+            ["warā al-ashyāa shay'an wāḥidan"],
+            ["bal raā al-wāḥida witran dūna shay"],
+
+            ["lā tarā fī shamsihā ẓilla al-siwā"],
+            ["fahiyā shamsun wahyā ẓillu wahyā fay"],
+
+            ["hādhihi anwāru laylá qad badat"],
+            ["falisalbi al-ʻaqli yā ṣāḥi tahay"],
+
+            ["falfatá man salabathu jumlatan"],
+            ["lālladhī taslubuhu shay'an fashay"],
+
+            ["wa-idhā al-ḥusnu badā fasjud lahu"],
+            ["fasujūdu al-shukri farḍun yā ukhay"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["The Beloved lifted the veil from my heart"],
+            ["And He manifested himself clearly from me to me."],
+
+            ["No one other than me witnessed this beauty and no"],
+            ["Shade of any other being remained in the universe other than that which was witnessed (the manifestations of Allah (SWT))."],
+
+            ["And remove from me the veil, that was my self,"],
+            ["And the entire universe faded away, my friend, around me."],
+
+            ["This beauty only appears to the one who"],
+            ["Has folded the intellect with the two universes,"],
+
+            ["And who sees everything as one thing (as the effect of Allah)"],
+            ["And then sees the One unique without seeing anything else."],
+
+            ["You do not see in this sunlight the shadow of anything else"],
+            ["For it is a sun and it is a shade and it is a shadow."],
+
+            ["These are the lights of Layla (metaphor for Divine Beauty) that has appeared,"],
+            ["So ready yourself, my friend, for the snatching away of your intellect."],
+
+            ["The real youth is one whom these lights take entirely,"],
+            ["Not the one whom they take bit by bit."],
+
+            ["And when this beauty appears to you, prostrate to it."],
+            ["The prostration of gratitude is an obligation, O my little brother."]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ],
+            [
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 1, "index": 17 }
+            ]
+        ]
+    }
+}
