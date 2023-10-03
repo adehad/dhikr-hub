@@ -1,0 +1,114 @@
+{
+    "name": {
+        "ara": "يا كتاب الغيوب",
+        "en": "Yā Kitāb al-Ghuyūb - O Book of the Unseen "
+    },
+    "verses": {
+        "ara": [
+            ["يَا كِتَابَ الْغُيُوبْ قَدْ لَجَأْنَا إِلَيْكْ"],
+            ["يَا شِفَاءَ الْقُلُوبْ الْصَّلَاةُ عَلَيْكْ"],
+
+            ["أَنْتَ مَجْلَى الْجَمَالْ فِي نِظَامِ الْكَمَالْ"],
+            ["كُلُّ هَٰذَا الْنَّوَالْ فَاضَ مِنْ رَاحَتَيْكْ"],
+
+            ["أَنْتَ رُوحُ الْوُجُودْ كَنْزُ فَضْلٍ وَجُودْ"],
+            ["فِي مَقَامِ الْشُّهُودْ كُلُّ فَضْلٍ لَدَيْكْ"],
+
+            ["أَنْتَ سِرُّ الْكِتَابْ عَنْكَ فَصْلُ الْخِطَابْ"],
+            ["وَبِيَوْمِ الْحِسَابْ فَالْرُّجُوعُ إِلَيْكْ"],
+
+            ["أَنْتَ طَٰهَٰ الْرَّسُولْ تَاجُ أَهْلِ الْقَبُولْ"],
+            ["كُلُّ هَمٍّ يَزُولْ بِالْصَّلَاةِ عَلَيْكْ"],
+
+            ["أَنْتَ فِي الْعَالَمِينْ رُوحُ جِسْمِ الْيَقِينْ"],
+            ["مَوْكِبُ الْمُرْسَلِينْ قَامَ بَيْنَ يَدَيْكْ"],
+
+            ["وَعَلَيْكَ الْسَلَامْ يَا رَسُولَ الْأَنَامْ"],
+            ["مَا شَدَا مُسْتَهَامْ بِالْصَّلَاةِ عَلَيْكْ"]
+
+
+        ],
+        "en": [
+            ["yā kitāb al-ghuyūb qad lajaʾnā ilayk"],
+            ["yā shifāʾ al-qulūb al-ṣalāh ʿalayk"],
+
+            ["anta majlā al-jamāl fī niẓām al-kamāl"],
+            ["kullu hādhā al-nawāl fāḍa min rāḥatayk"],
+
+            ["anta rūḥ al-wujūd kanzu faḍlin wa-jūd"],
+            ["fī maqām al-shuhūd kullu faḍlin ladayk"],
+
+            ["anta sirr al-kitāb ʿanka faṣlu al-khiṭāb"],
+            ["wa-biyawm al-ḥisāb fa-al-rujūʿu ilayk"],
+
+            ["anta ṭāhā al-rasūl tāju ahli al-qabūl"],
+            ["kullu hamm yazuwl bi-al-ṣalāti ʿalayk"],
+
+            ["anta fī al-ʿālamīn rūḥ jism al-yaqīn"],
+            ["mawkibu al-mursalīn qāma bayna yadayk"],
+
+            ["wa-ʿalayka al-salām yā rasūl al-anām"],
+            ["mā shadā mustahām bi-al-ṣalāti ʿalayk"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["O book of the unseen, we have sought refuge in you."],
+            ["O healing of the hearts, prayers be upon you."],
+
+            ["You are beauty manifest in the form of the perfection."],
+            ["All this favour overflowed from your two rests."],
+
+            ["You are the spirit of existence, a treasure of virtue and goodness,"],
+            ["In the rank of witnessing, you have every virtue."],
+
+            ["You are the secret of the book, from you is the final greeting"],
+            ["On the Day of Account, so the return is to you."],
+
+            ["You are the Prophet Ṭā-Hā, crown of the people of acceptance."],
+            ["Every worry ceases with prayers sent upon you."],
+
+            ["You are the spirit of the body of certainty in the worlds,"],
+            ["The parade of the Messengers stopped in front of you."],
+
+            ["And upon you be peace, O Messenger of Mankind,"],
+            ["So long as the besotted sings prayers upon you."]
+
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ]
+        ]
+    }
+}
