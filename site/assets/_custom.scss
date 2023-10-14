@@ -58,13 +58,15 @@ body {
     direction: rtl;
 }
 
-.transliteration {
+.transliteration,
+.transliteration-phrase-by-phrase {
     direction: ltr;
     font-size: var(--transliteration-font-perc);
 
 }
 
-.translation {
+.translation,
+.translation-phrase-by-phrase {
     direction: ltr;
     font-size: var(--translation-font-perc);
 }

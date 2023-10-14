@@ -9,34 +9,51 @@
             <div class="toggle-switch"></div>
             <span class="toggle-label">Arabic</span>
         </label>
-
+        <br />
         <label for="arabic-size">Font Size
+            <br />
             <input type="range" id="arabic-size" name="theme" min="50" max="400" value="200"
                 onchange="UpdateFontSize('--arabic-font-perc',this.value)">
         </label>
 
         <!--Transliteration Display and Font Sizer-->
+        <hr style="width: 100%" />
         <label class="toggle">
             <input class="toggle-checkbox" type="checkbox" id="transliteration"
-                onchange="UpdateDisplayState(this.id, this.checked)" checked>
+                onchange="UpdateDisplayState(this.id, this.checked)">
             <div class="toggle-switch"></div>
             <span class="toggle-label">Transliteration</span>
         </label>
-
+        <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="transliteration-phrase-by-phrase"
+                onchange="UpdateDisplayState(this.id, this.checked)" checked>
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Phrase-by-Phrase</span>
+        </label>
+        <br />
         <label for="transliteration-size">Font Size
+            <br />
             <input type="range" id="transliteration-size" name="theme" min="50" max="200" value="80"
                 onchange="UpdateFontSize('--transliteration-font-perc',this.value)">
         </label>
 
         <!--Translation Display and Font Sizer-->
+        <hr style="width: 100%" />
         <label class="toggle">
             <input class="toggle-checkbox" type="checkbox" id="translation"
                 onchange="UpdateDisplayState(this.id, this.checked)">
             <div class="toggle-switch"></div>
             <span class="toggle-label">Translation</span>
         </label>
-
+        <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="translation-phrase-by-phrase"
+                onchange="UpdateDisplayState(this.id, this.checked)" checked>
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Phrase-by-Phrase</span>
+        </label>
+        <br />
         <label for="translation-size">Font Size
+            <br />
             <input type="range" id="translation-size" name="theme" min="50" max="200" value="85"
                 onchange="UpdateFontSize('--translation-font-perc',this.value)">
         </label>
@@ -58,7 +75,7 @@
 
     function UpdateDisplayState(classname_str, is_checked) {
         const new_state = is_checked ? "" : "none";
-        const class_selector = `.${classname_str}.word-by-word`;
+        const class_selector = `.${classname_str}`;
         document.querySelectorAll(class_selector).forEach(
             function (element) {
                 element.style.display = new_state;
