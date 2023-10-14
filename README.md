@@ -71,3 +71,14 @@ For Arabic, translation or transliteration
    1. You can use the dev tools to grab the harakaat version.
 3. Minor adjustments can be made online if preferred https://www.lexilogos.com/keyboard/arabic.htm.
 
+## Transliterations
+
+AI can provide an excellent starting point for transliterations, consider the following prompt:
+
+```text
+Using the Library of Congress Arabic Romanization system, transliterate the snippet below, returning it in the exact same form:
+'''
+
+'''
+```
+
