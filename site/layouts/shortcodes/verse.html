@@ -31,11 +31,11 @@ e.g. verse thalama en
 <div class="verse-container">
 
     {{ if (gt $how_many_chorus 0) }}
-        {{ $verse_num = (delimit (slice "## Chorus " $v_config_idx) "") }}
-        {{ $total_verses = sub $total_verses 1 }}
-        {{ $how_many_chorus = sub $how_many_chorus 1 }}
+    {{ $verse_num = (delimit (slice "## Chorus " $v_config_idx) "") }}
+    {{ $total_verses = sub $total_verses 1 }}
+    {{ $how_many_chorus = sub $how_many_chorus 1 }}
     {{ else }}
-        {{ $verse_num = (delimit (slice "## " $v_config_idx) "") }}
+    {{ $verse_num = (delimit (slice "## " $v_config_idx) "") }}
     {{ end }}
 
     {{ $verse_num | markdownify }}
@@ -43,32 +43,32 @@ e.g. verse thalama en
     {{/* {{ $verse_num.RenderString }} */}}
 
     {{ range $new_verse := $v_config }}
-        {{ $v_idx := int (index $new_verse "index") }}
-        {{ $v_ara := index $verses_json.verses.ara $v_idx }}
+    {{ $v_idx := int (index $new_verse "index") }}
+    {{ $v_ara := index $verses_json.verses.ara $v_idx }}
 
-        {{ $v_in_lang := index $verses_in_lang $v_idx }}
-        {{ $v_in_lang_translated := index $verses_in_lang_translated $v_idx }}
-        {{ range $w_idx, $word_ara := $v_ara }}
-            <table class="verse">
-                <tbody>
-                    <tr class="arabic">
-                        <td>{{ $word_ara }}</td>
-                    </tr>
-                    <tr class="transliteration-phrase-by-phrase">
-                        <td>{{index $v_in_lang $w_idx }}</td>
-                    </tr>
-                    <tr class="translation-phrase-by-phrase">
-                        <td>{{index $v_in_lang_translated $w_idx }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        {{ end }}
-        <div class="transliteration" style="flex-basis: 100%; text-align: right;">
-            {{ (index $v_in_lang 0) | markdownify }}
-        </div>
-        <div class="translation" style="flex-basis: 100%; text-align: right;">
-            {{ (index $v_in_lang_translated 0) | markdownify }}
-        </div>
+    {{ $v_in_lang := index $verses_in_lang $v_idx }}
+    {{ $v_in_lang_translated := index $verses_in_lang_translated $v_idx }}
+    {{ range $w_idx, $word_ara := $v_ara }}
+    <table class="verse">
+        <tbody>
+            <tr class="arabic">
+                <td>{{ $word_ara }}</td>
+            </tr>
+            <tr class="transliteration-phrase-by-phrase">
+                <td>{{index $v_in_lang $w_idx | markdownify }}</td>
+            </tr>
+            <tr class="translation-phrase-by-phrase">
+                <td>{{index $v_in_lang_translated $w_idx | markdownify }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {{ end }}
+    <div class="transliteration" style="flex-basis: 100%; text-align: right;">
+        {{ (index $v_in_lang 0) | markdownify }}
+    </div>
+    <div class="translation" style="flex-basis: 100%; text-align: right;">
+        {{ (index $v_in_lang_translated 0) | markdownify }}
+    </div>
     {{ end }}
     <div style="flex-basis: 100%;">
         {{ "------" | markdownify }}
