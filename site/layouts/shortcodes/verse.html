@@ -55,7 +55,7 @@ e.g. verse thalama en
                 <td>{{ $word_ara }}</td>
             </tr>
             <tr class="transliteration-phrase-by-phrase">
-                <td>{{index $v_in_lang $w_idx | markdownify }}</td>
+                <td>{{index $v_in_lang $w_idx }}</td>
             </tr>
             <tr class="translation-phrase-by-phrase">
                 <td>{{index $v_in_lang_translated $w_idx | markdownify }}</td>
@@ -64,7 +64,7 @@ e.g. verse thalama en
     </table>
     {{ end }}
     <div class="transliteration" style="flex-basis: 100%; text-align: right;">
-        {{ (index $v_in_lang 0) | markdownify }}
+        {{ (index $v_in_lang 0) }}
     </div>
     <div class="translation" style="flex-basis: 100%; text-align: right;">
         {{ (index $v_in_lang_translated 0) | markdownify }}
