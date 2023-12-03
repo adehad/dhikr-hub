@@ -1,0 +1,146 @@
+{
+    "name": {
+        "ara": "بشرى لنا",
+        "en": "Glad Tidings - (Bushra Lana)"
+    },
+    "verses": {
+        "ara": [
+            ["بُشْرَى لَنَا نِلْنَا المُنىَ "],
+            ["زَالَ العَنَا وَافَى الهَنَا"],
+            ["وَالدَّهْرُ أَنْجَزَ وَعْدَهُ "],
+            ["وَالبِشْرُ أَضْحَى مُعْلَنَا"],
+
+            ["يَا نَفْسِي طِيْبِي بِالِّلقَا"],
+            ["يَا عَيْنُ قَرِّي  أَعْيُنَا"],
+            ["هَذَا جَمَالُ المُصْطَفَى"],
+            ["أَنْوَارُهُ لاَحَتْ لَنَا"],
+
+            ["يَا طَيِّبَةُ مَا ذَا نَقُولْ"],
+            ["وَفِيكَ قَدْ حَلَّ الرَّسُولْ"],
+            ["وَكُلُّنَا يَرْجُو الوُصُولْ"],
+            ["لمُِحَمَّدٍ نَبِيِّنَا"],
+
+            ["يَا رَوْضَةَ الهَادِي الشَّفِيعْ"],
+            ["وَصَاحِبَيْهِ وَالبَقِيعْ"],
+            ["اُكْتُبْ لَنَا نَحْنُ الجَمِيعْ"],
+            ["زِيَارَةً لِنَبِيِّنَا"],
+
+            ["حَيْثُ الأَمَانِي رَوْضُهَا"],
+            ["قَدْ ظَلَّ حُلْوَ المُجْتَنَى"],
+            ["وَبِالحَبِيْبِ المُصْطَفَى"],
+            ["صَفَا وَطَابَ عَيْشُنَا"],
+
+            ["صَلِّ وَسَلِّمْ يَا سَلاَمْ"],
+            ["عَلَى النَِّبي بَدْرِ التَّمَامْ"],
+            ["وَالآلِ وَالصَّحْبِ الكِرَامْ"],
+            ["صَلَّى عَلَيْهِمْ رَبُّنَا"]
+        ],
+        "en": [
+            ["bushrá lanā nilnā almunyā"],
+            ["zāla alʻanā wafā alhanā"],
+            ["walddahru anjaza waʻdahu"],
+            ["walbishru aḍḥā muʻlanā"],
+
+            ["yā nafsī ṭībī bililqā"],
+            ["yā ʻaynu qarrī ʻayūnā"],
+            ["hādhā jamālu almuṣṭafā"],
+            ["anwāruhu lāḥat lanā"],
+
+            ["yā ṭayyibatu mā dhā naqūl"],
+            ["wafīka qad ḥalla alrasūl"],
+            ["wakullunā yarjū alwuṣūl"],
+            ["limuḥammadin nabīyinā"],
+
+            ["yā rawḍata alhādi alshafīʻ"],
+            ["waṣāḥibayhi walbaqīʻ"],
+            ["uktub lanā naḥnu aljamīʻ"],
+            ["zīāratan linabīyinā"],
+
+            ["ḥaythu alamānī rawḍuhā"],
+            ["qad ẓalla ḥulwa almuḥtanyā"],
+            ["wabilḥabībi almuṣṭafā"],
+            ["ṣafā waṭāba ʻayshunā"],
+
+            ["ṣalli wasallim yā salām"],
+            ["ʻalā alnnabī badri alttamām"],
+            ["walāli waalṣaḥbi alkirām"],
+            ["ṣallā ʻalayhim rabbunā"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["Glad tidings for us, we have attained our highest wish"],
+            ["Troubles have ceased, and well-being has come"],
+            ["Destiny has delivered what was promised,"],
+            ["And joy has become manifest everywhere"],
+
+            ["O Soul, enjoy the pleasure in the meeting"],
+            ["O eye, feel comfort"],
+            ["This is beauty of the Chosen one"],
+            ["His Light shines over us"],
+
+            ["O blessed earth, we have no words -"],
+            ["In which the messenger rests!"],
+            ["We all wish to be united"],
+            ["With Muhammad, our Prophet"],
+
+            ["Oh garden (Rawda) of the Guide and Advocate"],
+            ["And his two companions and Al-Baqi"],
+            ["O Lord ordain for us all"],
+            ["That we may visit our Prophet"],
+
+            ["After satisfying the longing"],
+            ["Remains the sweetness of what was harvested"],
+            ["Thanks to the Beloved and Chosen One"],
+            ["Our lives become good and pure"],
+
+            ["Send blessings and peace, O Lord of Peace"],
+            ["Upon the Prophet, the full moon of perfection"],
+            ["And his noble Family and Companions"],
+            ["Send blessings over them, O our Lord"]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 },
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ]
+        ],
+        "verses": [
+
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 },
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 },
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 },
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 1, "index": 17 },
+                {"repeat": 1, "index": 18 },
+                {"repeat": 1, "index": 19 }
+            ],
+            [
+                {"repeat": 1, "index": 20 },
+                {"repeat": 1, "index": 21 },
+                {"repeat": 1, "index": 22 },
+                {"repeat": 1, "index": 23 }
+            ]
+        ]
+    }
+}
