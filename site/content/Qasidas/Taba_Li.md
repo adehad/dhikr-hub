@@ -14,4 +14,4 @@
 
 - Arabic: Songs of Presence Book
 - English Translation: James Wrathall
-- English Transliteration: Reviwed by James Wrathall
+- English Transliteration: Reviewed by James Wrathall

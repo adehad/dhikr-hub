@@ -81,4 +81,3 @@ Using the Library of Congress Arabic Romanization system, transliterate the snip
 
 '''
 ```
-

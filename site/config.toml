@@ -8,7 +8,7 @@ enableRobotsTXT = true
 ######################
 theme = "hugo-book"
 [params]
-# In the left-handside display, show all the pages inthe content/
+# In the left-handside display, show all the pages in the content/
 BookSection = '*'
 
 # Set source repository location.
