@@ -11,9 +11,23 @@
     font-display: swap;
     src: local(''),
         /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/noto-naskh-arabic-v18-arabic-regular.woff2') format('woff2'),
+        url('fonts/noto-naskh-arabic-v34-arabic_latin_latin-ext_symbols-regular.woff2') format('woff2'),
         /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-        url('fonts/noto-naskh-arabic-v18-arabic-regular.woff') format('woff');
+        url('fonts/noto-naskh-arabic-v34-arabic_latin_latin-ext_symbols-regular.woff') format('woff');
+}
+
+
+/* ScheherazadeNew-Regular - arabic */
+@font-face {
+    font-family: 'Scheherazade New';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/scheherazade-new-v15-arabic_latin-regular.woff2') format('woff2'),
+        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url('fonts/scheherazade-new-v15-arabic_latin-regular.woff') format('woff');
 }
 
 /* lexend-regular - latin */
@@ -31,6 +45,8 @@
 
 
 :root {
+    --arabic-font-family: 'Scheherazade New';
+
     --arabic-font-perc: 200%;
 
     --translation-font-perc: 85%;
@@ -39,11 +55,11 @@
 }
 
 body {
-    font-family: 'Lexend', 'Noto Naskh Arabic', 'Roboto', 'Open Sans', sans-serif;
+    font-family: 'Lexend', var(--arabic-font-family), 'Roboto', 'Open Sans', sans-serif;
 }
 
 .arabic {
-    font-family: 'Noto Naskh Arabic', sans-serif;
+    font-family: var(--arabic-font-family), sans-serif;
     font-size: var(--arabic-font-perc);
 }
 
@@ -86,13 +102,15 @@ body {
     border-radius: 0 0 1rem 1rem;
 }
 
-.settings-box input[type=radio] {
-    // appearance: none;
-    // width: 1.5rem;
-    // height: 1.5rem;
-    // outline: 3px solid var(--radio-color, currentColor);
-    // outline-offset: 3px;
-    // border-radius: 50%;
+.settings-box input[type=range] {
+    width: 100%;
+    height: 1.5rem;
+}
+
+.settings-box select {
+    overflow: hidden;
+    width: 6ch;
+    margin-left: 1ch;
 }
 
 .toggle {

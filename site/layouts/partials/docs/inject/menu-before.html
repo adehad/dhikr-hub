@@ -8,6 +8,10 @@
                 onchange="UpdateDisplayState(this.id, this.checked)" checked>
             <div class="toggle-switch"></div>
             <span class="toggle-label">Arabic</span>
+            <select id="arabic-font-family" onchange="UpdateFontFamily('--arabic-font-family',this.value)">
+                <option value="Scheherazade New">Scheherazade</option>
+                <option value="Noto Naskh Arabic">Naskh</option>
+            </select>
         </label>
         <br />
         <label for="arabic-size">Font Size
@@ -84,6 +88,11 @@
         SaveToLocalStorage();
     };
 
+    function UpdateFontFamily(font_family_variable_str, family) {
+        document.querySelector(':root').style.setProperty(font_family_variable_str, `${family}`);
+        SaveToLocalStorage();
+    };
+
     function UpdateFontSize(font_size_variable_str, percentage) {
         document.querySelector(':root').style.setProperty(font_size_variable_str, `${percentage}%`);
         SaveToLocalStorage();
@@ -102,7 +111,7 @@
 
     function SaveToLocalStorage() {
         let saved_data = {}
-        document.querySelectorAll(".settings-box > * input").forEach(
+        document.querySelectorAll(".settings-box > * input, .settings-box > * select").forEach(
             function (element) {
                 switch (element.type) {
                     case "checkbox":
