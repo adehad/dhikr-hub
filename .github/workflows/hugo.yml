@@ -29,19 +29,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.102.3
+      HUGO_VERSION: 0.126.1
     steps:
       - name: Install Hugo CLI
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
       - name: Copy README
         run: cp -a README.md site/content/About.md
       - name: Build with Hugo
@@ -49,15 +51,16 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          TZ: Europe/London
         working-directory: site
         run: |
           hugo \
-            --verbose \
+            --logLevel debug \
             --minify \
             --buildDrafts \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./site/public
 
@@ -71,4 +74,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
