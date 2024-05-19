@@ -56,6 +56,7 @@
 
 body {
     font-family: 'Lexend', var(--arabic-font-family), 'Roboto', 'Open Sans', sans-serif;
+    letter-spacing: normal; // Override the theme, ensures ligatures are correctly displayed
 }
 
 .arabic {
