@@ -1,4 +1,4 @@
-# Nahnu Fi Rawdah - The Sweetest Spring
+# Tashawwaqat Rūḥī li-Shaṭṭi al-Wādī - My soul has longed for the valley's shore
 
 ## Verses
 
