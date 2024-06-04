@@ -1,0 +1,111 @@
+{
+    "name": {
+        "ara": "تَشَوَّقَتْ رُوحِي لِشَطِّ الوَادِي",
+        "en": "Tashawwaqat Rūḥī li-Shaṭṭi al-Wādī - My soul has longed for the valley's shore"
+    },
+    "verses": {
+        "ara": [
+           ["اللَّهُمَّ صَلِّ عَلَى الْمُصْطَفَى"],
+           ["حَبِيبِنَا مُحَمَّدٍ عَلَيْهِ السَّلَامُ"],
+
+           ["تَشَوَّقَتْ رُوحِي لِشَطِّ الوَادِي"],
+           ["فَهَا أَنَا ذَا رَبِّي خُذْ بِيَدِي"],
+
+           ["أَبِيتُ اللَّيَالِيَ جَهْرًا أُنَادِي"],
+           ["فَقَلْبِي يَذُوبُ مِنْ الكَمَدِ"],
+
+           ["رَمَانِي العُذَّالُ بِفَرْطِ الهَوَى"],
+           ["فَقَالُوا جُنِنْتَ فَوَا كَمَدِي"],
+
+           ["مَحَبَّةُ اللهِ نَارٌ مُوقَدَةٌ"],
+           ["تُبِيدُ بِالرُّوحِ وَبِالجَسَدِ"],
+
+           ["فَذَرَةُ حُبِّ لِلمَوْلَى الرَّحِيمِ"],
+           ["تُزِيلُ الهُمُومَ يَوْمَ التَّنَادِي"],
+
+           ["عَشِقْتُ الإِلَهَ وَلَا صَبَرَلِي"],
+           ["فَحُرْقَةُ حُبِّهِ فِي فُؤَادِي"]
+        ],
+        "en": [
+           ["Allāhumma ṣalli ʿalā al-Muṣṭafā"],
+           ["ḥabībunā Muḥammadin ʿalayhi al-salām"],
+
+           ["tashawwaqat rūḥī li-shaṭṭi al-wādī"],
+           ["fahā anā dhā Rabbī khudh bi-yadī"],
+
+           ["ʾabītu al-layālī jahran unādī"],
+           ["fa-qalbī yaḏūbu min al-kamad"],
+
+           ["ramānī al-ʿuḏālu bi-farṭi al-hawā"],
+           ["fa-qālū juninta fawā kamadī"],
+
+           ["maḥabbatu Allāhi nārun muwaqadah"],
+           ["tubīdu bi-al-rūḥi wa-bi-al-jasad"],
+
+           ["fa-ḏaratu ḥubbi li-l-Mawlā al-Raḥīmi"],
+           ["tuzīlu al-humūma yawma al-tanādī"],
+
+           ["ʿašiqtu al-ʾilāha wa-lā ṣabara lī"],
+           ["fa-ḥurqatu ḥubbihi fī fuʾādī"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["May the blessings of Allah be upon The Chosen One ﷺ"],
+            ["Our Beloved Muhammed ﷺ"],
+
+            ["My soul has longed for the valley's shore."],
+            ["Here I am, my Lord, take my hand."],
+
+            ["I spend the nights openly calling."],
+            ["My heart melts from sorrow."],
+
+            ["Critics accused me of excessive passion."],
+            ["They said I had gone mad, oh my sorrow."],
+
+            ["The love of God is a burning fire."],
+            ["It consumes both soul and body."],
+
+            ["A grain of love for the Merciful Lord."],
+            ["Removes worries on the Day of Calling."],
+
+            ["I fell in love with God and have no patience."],
+            ["The burning of His love is in my heart."]
+
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ]
+        ]
+    }
+}
