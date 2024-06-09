@@ -1,0 +1,592 @@
+{
+    "name": {
+        "ara": "المضرية",
+        "en": "al-Muḍariyya"
+    },
+    "verses": {
+        "ara": [
+            ["يَا رَبِّ صَلِّ عَلَى الْمُخْتَارِ مِنْ مُّضَرٍ"],
+            ["وَالْأَنْبِيَا وَجَمِيْعِ الرُّسْلِ مَا ذُكِرُوا"],
+
+            ["وَصَلِّ رَبِّ عَلَى الْهَادِي وَشِيعَتِهِ"],
+            ["وَصَحْبِهِ مَنْ لِطَيِّ الدِّينِ قَدْ نَشَرُوا"],
+
+            ["وَجَاهَدُوا مَعَهُ فِي اللهِ وَاجْتَهَدُوا"],
+            ["وَهَاجَرُوا وَلَهُ آوَوْا وَقَدْ نَصَرُوا"],
+
+            ["وَبَيَّنُوا الْفَرْضَ وَالْمَسْنُونَ وَاعْتَصَبُوا"],
+            ["لِلّٰهِ وَاعْتَصَمُوا بِاللهِ فَانْتَصَرُوا"],
+
+            ["أَزْكَى صَلَاةٍ وَأَنْمَاهَا وَأَشْرَفَهَا"],
+            ["يُعَطِّرُ الْكَوْنَ رَيَّا نَشْرِهَا الْعَطِرُ"],
+
+            ["مَعْبُوقَةً بِعَبِيقِ الْمِسْكِ زَاكِيَةً"],
+            ["مِنْ طِيبِهَا أَرَجُ الرِّضْوَانِ يَنْتَشِرُ"],
+
+            ["عَدَّ الْحَصَى وَالثَّرَى وَالرَّمْلِ يَتْبَعُهَا"],
+            ["نَجْمُ السَّمَا وَنَبَاتُ الْأَرْضِ وَالْمَدَرُ"],
+
+            ["وَعَدَّ وَزْنِ مَثَاقِيلِ الْجِبَالِ كَمَا"],
+            ["يَلِيهِ قَطْرُ جَمِيعِ الْمَاءِ وَالْمَطَرُ"],
+
+            ["وَعَدَّ مَا حَوَتِ الْأَشْجَارُ مِنْ وَرَقٍ"],
+            ["وَكُلِّ حَرْفٍ غَدَا يُتْلَى وَيُسْتَطَرُ"],
+
+            ["وَالْوَحْشِ وَالطَّيْرِ وَالْأَسْمَاكِ مَعْ نَعَمٍ"],
+            ["يَلِيهِمُ الْجِنُّ وَالْأَمْلَاكُ وَالْبَشَرُ"],
+
+            ["وَالذَّرُّ وَالنَّمْلُ مَعْ جَمْعِ الْحُبُوبِ كَذَا"],
+            ["وَالشَّعْرُ وَالصُّوفُ وَالْأَرْيَاشُ وَالْوَبَرُ"],
+
+            ["وَمَا أَحَاطَ بِهِ الْعِلْمُ الْمُحِيطُ وَمَا"],
+            ["جَرَى بِهِ الْقَلَمُ الْمَأْمُورُ وَالْقَدَرُ"],
+
+            ["وَعَدَّ نَعْمَائِكَ اللَّاتِي مَنَنْتَ بِهَا"],
+            ["عَلَى الْخَلَائِقِ مُذْ كَانُوا وَمُذْ حُشِرُوا"],
+
+            ["وَعَدَّ مِقْدَارِهِ السَّامِي الَّذِي شَرُفَتْ"],
+            ["بِهِ النَّبِيُّونَ وَالْأَمْلَاكُ وَافْتَخَرُوا"],
+
+            ["وَعَدَّ مَا كَانَ فِي الْأَكْوَانِ يَا سَنَدِي"],
+            ["وَمَا يَكُوْنُ إِلَى أَنْ تُبْعَثَ الصُّوَرُ"],
+
+            ["فِي كُلِّ طَرْفَةِ عَيْنٍ يَطْرِفُونَ بِهَا"],
+            ["أَهْلُ السَّمَاوَاتِ وَالْأَرْضِينَ أَوْ يَذَرُوا"],
+
+            ["مِلْءَ السَّمَاوَاتِ وَالْأَرْضِيْنَ مَعْ جَبَلٍ"],
+            ["وَالْفَرْشِ وَالْعَرْشِ وَالْكُرْسِي وَمَا حَصَرُوا"],
+
+            ["مَا أَعْدَمَ اللهُ مَوْجُودًا وَأَوْجَدَ مَعْـ"],
+            ["ـدُومًا صَلَاةً دَوَامًا لَيْسَ تَنْحَصِرُ"],
+
+            ["تَسْتَغْرِقُ الْعَدَّ مَعْ جَمْعِ الدُّهُورِ كَمَا"],
+            ["تُحِيطُ بِالْحَدِّ لَا تُبْقِي وَلَا تَذَرُ"],
+
+            ["لَا غَايَةً وَانْتِهَاءً يَا عَظِيمُ لَهَا"],
+            ["وَلَا لَهَا أَمَدٌ يُّقْضَى فَيُعْتَبَرُ"],
+
+            ["وَعَدَّ أَضْعَافِ مَا قَدْ مَرِّ مِنْ عَدَدٍ"],
+            ["مَعْ ضِعْفِ أَضْعَافِهِ يَا مَنْ لَهُ الْقَدَرُ"],
+
+            ["كَمَا تُحِبُّ وَتَرْضَى سَيِّدِي وَكَمَا"],
+            ["أَمَرْتَنَا أَنْ نُصَلِّي أَنْتَ مُقْتَدِرُ"],
+
+            ["مَعَ السَّلَامِ كَمَا قَدْ مَرَّ مِنْ عَدَدٍ"],
+            ["رَبِّي وَضَاعِفْهُمَا وَالْفَضْلُ مُنْتَشِرُ"],
+
+            ["وَكُلُّ ذَلِكَ مَضْرُوبٌ بِحَقِّكَ فِي"],
+            ["أَنْفَاسِ خَلْقِكَ إِنْ قَلُّوا وَإِنْ كَثُرُوا"],
+
+            ["يَا رَبِّ وَاغْفِرْ لِقَارِيهَا وَسَامِعِهَا"],
+            ["وَالْمُسْلِمِينَ جَمِيْعًا أَيْنَمَا حَضَرُوا"],
+
+            ["وَوَالِدِينَا وَأَهْلِينَا وَجِيرَتِنَا"],
+            ["وَكُلُّنَا سَيِّدِي لِلْعَفْوِ مُفْتَقِرُ"],
+
+            ["وَقَدْ أَتَيْتُ ذُنُوبًا لَا عِدَادَ لَهَا"],
+            ["لَكِنَّ عَفْوَكَ لَا يُبْقِي وَلَا يَذَرُ"],
+
+            ["وَالْهَمُّ عَنْ كُلِّ مَا أَبْغِيهِ أَشْغَلَنِي"],
+            ["وَقَدْ أَتَى خَاضِعًا وَالْقَلْبُ مُنْكَسِرُ"],
+
+            ["أَرْجُوكَ يَا رَبِّ فِي الدَّارَيْنِ تَرْحَمُنَا"],
+            ["بِجَاهِ مَنْ فِي يَدَيْهِ سَبَّحَ الْحَجَرُ"],
+
+            ["يَا رَبِّ أَعْظِمْ لَنَا أَجْرًا وَّمَغْفِرَةً"],
+            ["فَإِنَّ جُودَكَ بَحْرٌ لَيْسَ يَنْحَصِرُ"],
+
+            ["وَاقْضِ دُيُونًا لَهَا الْأَخْلَاقُ ضَائِقَةٌ"],
+            ["وَفَرِّجِ الْكَرْبَ عَنَّا أَنْتَ مَقْتَدِرُ"],
+
+            ["وَكُنْ لَطِيْفًا بِنَا فِي كُلِّ نَازِلَةٍ"],
+            ["لُطْفًا جَمِيلًا بِهِ الْأَهْوَالُ تَنْحَسِرُ"],
+
+            ["بِالْمُصْطَفَى الْمُجْتَبَى خَيْرِ الْأَنَامِ وَمَنْ"],
+            ["جَلَالَةً نَزَلَتْ فِي مَدْحِهِ السُّوَرُ"],
+
+            ["ثُمَّ الصَّلَاةُ عَلَى الْمُخْتَارِ مَا طَلَعَتْ"],
+            ["شَمْسُ النَّهَارِ وَمَا قَدْ شَعْشَعَ الْقَمَرُ"],
+
+            ["ثُمَّ الرِّضَا عَنْ أَبِي بَكْرٍ خَلِيفَتِهِ"],
+            ["مَنْ قَامَ مِن بَعْدِهِ لِلدِّينِ يَنْتَصِرُ"],
+
+            ["وَعَنْ أَبِي حَفْصٍ الْفَارُوقِ صَاحِبِهِ"],
+            ["مَنْ قَوْلُهُ الْفَصْلُ فِي أَحْكَامِهِ عُمَرُ"],
+
+            ["وَجُدْ لِعُثْمَانَ ذِي النُّورَيْنِ مَنْ كَمُلَتْ"],
+            ["لَهُ الْمَحَاسِنُ فِي الدَّارَيْنِ وَالظَّفَرُ"],
+
+            ["كَذَا عَلِيٌ مَعَ ابْنَيْهِ وَأُمِّهِمَا"],
+            ["أَهْلُ الْعَبَاءِ كَمَا قَدْ جَاءَنَا الْخَبَرُ"],
+
+            ["كَذَا خَدِيجَتُنَا الْكُبْرَى الَّتِي بَذَلَتْ"],
+            ["أَمْوَالَهَا لِرَسُولِ اللهِ يَنْتَصِرُ"],
+
+            ["وَالطَّاهِرَاتُ نِسَاءُ الْمُصْطَفَى وَكَذَا"],
+            ["بَنَاتُهُ وَبَنُوهُ كُلَّمَا ذُكِرُوا"],
+
+            ["سَعْدٌ سَعِيدُ بْنُ عَوْفٍ طَلْحَةٌ وَأَبُو"],
+            ["عُبَيْدَةٍ وَزُبَيْرٌ سَادَةٌ غُرَرُ"],
+
+            ["وَحَمْزَةٌ وَكَذَا الْعَبَّاسُ سَيِّدُنَا"],
+            ["وَنَجْلُهُ الْ حَبْرُ مَنْ زَالَتْ بِهِ الْغِيَرُ"],
+
+            ["وَالْآلُ وَالصَّحْبُ وَالْأَتْبَاعُ قَاطِبَةً"],
+            ["مَاجَنَّ لَيْلُ الدَّيَاجِي أَوْ بَدَا السَّحَرُ"],
+
+            ["مَعَ الرِّضَا مِنْكَ فِي عَفْوٍ وَعَافِيَةٍ"],
+            ["وَحُسْنِ خَاتِمَةٍ إِنْ يَنْقَضِي الْعُمُرُ"]
+        ],
+        "en": [
+            ["Yā rabbi ṣalli ʿalā l-mukhtāri min Muḍarin"],
+            ["Wa l-anbiyā wa jamiʿi r-rusli mā dhukirū"],
+
+            ["Wa ṣalli rabbi ʿalā l-hādī wa shīʿatihi"],
+            ["Wa ṣaḥbihi man liṭayyi d-dīni qad nasharū"],
+
+            ["Wa jāhadū maʿahu fī Llāhi wa-jtahadū"],
+            ["Wa hājarū wa lahu āwaw wa qad naṣarū"],
+
+            ["Wa bayyanū l-farḍa wa l-masnūna waʿtaṣabū"],
+            ["Li-Llāhi waʿtaṣamū bi-Llāhi fa-ntaṣarū"],
+
+            ["Azkā ṣalātin wa anmāhā wa ashrafahā"],
+            ["Yuʿaṭṭiru l-kawna rayyā nashrihā l-ʿaṭiru"],
+
+            ["Maʿbūqatan bi ʿabīqi l-miski zākiyatan"],
+            ["Min ṭībihā araju r-riḍwāni yantashiru"],
+
+            ["ʿAdda l-haṣā wa-th-tharā wa r-ramli yatbaʿuhā"],
+            ["Najmu s-samā wa nabātu l-arḍi wa l-madaru"],
+
+            ["Wa ʿadda wazni mathāqīli l-jibāli kamā"],
+            ["Yalīhi qaṭru jamiʿi l-mā'i wa l-maṭaru"],
+
+            ["Wa ʿadda mā ḥawati l-ashjāru min waraqin"],
+            ["Wa kulli ḥarfin ghadā yutlā wa yustaṭaru"],
+
+            ["Wa l-waḥshi wa ṭ-ṭayri wa l-asmāki maʿ naʿamin"],
+            ["Yalīhimu l-jinnu wa l-amlāku wa l-basharu"],
+
+            ["Wa dh-dharru wa n-namlu maʿ jamʿi l-ḥubūbi kadhā"],
+            ["Wa sh-shaʿru wa ṣ-ṣūfu wa l-aryāshu wa l-wabaru"],
+
+            ["Wa mā ahāṭa bihi l-ʿilmu l-muḥīṭu wa mā"],
+            ["Jarā bihi l-qalamu l-ma'mūru wa l-qadaru"],
+
+            ["Wa ʿadda naʿmāika llātī mananta bihā"],
+            ["ʿAlā l-khalā'iqi mudh kānū wa mudh ḥushirū"],
+
+            ["Wa ʿadda miqdārihi s-sāmī lladhī sharufat"],
+            ["Bihi n-nabiyyūna wa l-amlāku wa-ftakharū"],
+
+            ["Wa ʿadda mā kāna fi l-akwāni yā sanadī"],
+            ["Wa mā yakūnu ilā an tubʿatha ṣ-ṣuwaru"],
+
+            ["Fī kulli ṭarfati ʿaynin yaṭrifūna bihā"],
+            ["Ahlu s-samāwāti wa l-arḍīna aw yadharū"],
+
+            ["Mil'a s-samāwāti wa l-arḍīna maʿ jabalin"],
+            ["Wa l-farshi wa l-ʿarshi wa l-kursī wa mā ḥaṣarū"],
+
+            ["Mā aʿdama Llāhu mawjūdan wa awjada maʿ"],
+            ["-dūman ṣalātan dawāman laysa tanḥaṣiru"],
+
+            ["Tastaghriqu l-ʿadda maʿ jamʿi d-duhūri kamā"],
+            ["Tuhīṭu bi l- ḥaddi la tubqī wa lā tadharu"],
+
+            ["Lā ghāyatan wa-ntihā'an yā ʿaẓīmu lahā"],
+            ["Wa lā lahā amadun yuqḍā fa-yuʿtabaru"],
+
+            ["Wa ʿadda aḍʿāfi mā qad marra min ʿadadin"],
+            ["Maʿ ḍiʿfi aḍʿāfihi yā man lahu l-qadaru"],
+
+            ["Kamā tuḥibbu wa tarḍā sayyidī wa kamā"],
+            ["Amartanā an nuṣallī anta muqtadiru"],
+
+            ["Maʿa s-salāmi kamā qad marra min ʿadadin"],
+            ["Rabbī wa ḍāʿifhumā wa l-faḍlu muntashiru"],
+
+            ["Wa kullu dhālika maḍrūbun bi ḥaqqika fī"],
+            ["Anfāsi khalqika in qallū wa in kathurū"],
+
+            ["Ya rabbī wa-ghfir li-qārīhā wa sāmiʿihā"],
+            ["Wa l-muslimīna jamīʿan aynamā ḥaḍarū"],
+
+            ["Wa wālidīnā wa ahlīnā wa jīratinā"],
+            ["Wa kullunā sayyidī li-l-ʿafwi muftaqiru"],
+
+            ["Wa qad ataytu dhunūban lā ʿidāda lahā"],
+            ["Lākinna ʿafwaka lā yubqī wa lā yadharu"],
+
+            ["Wa l-hammu ʿan kulli mā abghīhi ashghalanī"],
+            ["Wa qad atā khāḍiʿan wa l-qalbu munkasiru"],
+
+            ["Arjūka yā rabbī fī d-darayni tarḥamunā"],
+            ["Bijāhi man fī yadayhi sabbaḥa l-ḥajaru"],
+
+            ["Yā rabbī aʿẓim lanā ajran wa maghfiratan"],
+            ["Fa-inna jūdaka baḥrun laysa yanḥaṣiru"],
+
+            ["Waqḍi duyūnan lahā l-akhlāqu ḍā'iqatun"],
+            ["Wa farriji l-karba ʿannā anta muqtadiru"],
+
+            ["Wa kun laṭīfan binā fī kulli nāzilatin"],
+            ["Luṭfan jamīlan bihi l-ahwālu tanḥasiru"],
+
+            ["Bi l-Muṣṭafā l-mujtabā khayri l-anāmi wa man"],
+            ["Jalālatan nazalat fī madḥihi s-suwaru"],
+
+            ["Thumma ṣ-ṣalatu ʿalā l-mukhtāri mā ṭalaʿat"],
+            ["Shamsu n-nahāri wa mā qad shaʿshaʿa l-qamaru"],
+
+            ["Thumma r-riḍā ʿan Abī Bakrin khalīfatihi"],
+            ["Man qāma min baʿdihi li d-dīni yantaṣiru"],
+
+            ["Wa ʿan Abī Ḥafṣin l-Fārūqi ṣāḥibihi"],
+            ["Man qawluhu l-faṣlu fī aḥkāmihi ʿUmaru"],
+
+            ["Wa jud li-ʿUthmāna dhī n-nūrayni man kamulat"],
+            ["Lahu l-maḥāsinu fi d-dārayni wa ẓ-ẓafaru"],
+
+            ["Kadhā ʿAliyyun maʿa bnayhi wa ummihimā"],
+            ["Ahlu l-ʿabā'i kamā qad jā'ana l-khabaru"],
+
+            ["Kadhā Khadījatunā l-Kubrā llatī badhalat"],
+            ["Amwālahā li rasūli Llāhi yantaṣiru"],
+
+            ["Wa ṭ-ṭāhirātu nisā'u l-Muṣṭafā wa kadhā"],
+            ["Banātuhu wa banūhu kullamā dhukirū"],
+
+            ["Saʿdun, Saʿīdu-bnu ʿAwfin, Ṭalḥatun wa Abū"],
+            ["ʿUbaydatin wa Zubayrun sādatun ghuraru"],
+
+            ["Wa Ḥamzatun wa kadha l-ʿAbbāsu sayyidunā"],
+            ["Wa najluhu l-ḥabru man zālat bihi l-ghiyaru"],
+
+            ["Wa l-ālu wa ṣ-ṣaḥbu wa l-atbāʿu qāṭibatan"],
+            ["Mā janna laylu d-dayājī aw bads s-saḥaru"],
+
+            ["Maʿa r-riḍā minka fī ʿafwin wa ʿāfiyatin"],
+            ["Wa ḥusni khātimatin in yanqaḍi l-ʿumuru"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["O my Lord, pour Your blessings upon the Chosen One of Mudar"],
+            ["And the Prophets and all of the Messengers whenever they are mentioned"],
+
+            ["And pour blessings, O my Lord, upon the Guide and his Followers"],
+            ["And his Companions, those who spread abroad the teachings of the religion"],
+
+            ["Who fought alongside him in the path of Allah, and struggled valiantly,"],
+            ["Who emigrated, gave him shelter and aided him"],
+
+            ["Who made clear the fard and the sunna, joined forces"],
+            ["For the sake of Allah, clung to Allah and so were victorious"],
+
+            ["The most excellent, the most extensive, and the most noble of blessings,"],
+            ["Their fragrant diffusion sweetly permeates the universe"],
+
+            ["Fragrant with the odour of musk, delightful."],
+            ["From their scent spreads the sweet perfume of acceptance and good pleasure"],
+
+            ["In quantity as great as the pebbles, the moist earth, the grains of sand,"],
+            ["Followed by the stars in the heavens, plants of the earth and mounds of clay"],
+
+            ["As great as the measure of the weight of the mountains,"],
+            ["And the drops of all the water and all the rain"],
+
+            ["In number as great as the leaves of all the trees,"],
+            ["And every letter or character that will be read or written"],
+
+            ["In number as great as the wild animals, the birds, fish and cattle"],
+            ["Followed by the jinn, the angels and human beings"],
+
+            ["The tiny motes and the ants, all the kernels of grain,"],
+            ["As well as hair and wool, feathers and animal fur"],
+
+            ["And all that which comprises the total sum of knowledge,"],
+            ["And whatever was brought by the commanded Pen and the Divine Decree"],
+
+            ["In number as great as Your favours,"],
+            ["Which You have bestowed upon created beings, ever since they came into being and were gathered together"],
+
+            ["As great as his lofty degree"],
+            ["By which the Prophets and the angels were ennobled, and they took pride in this"],
+
+            ["As great as whatever exists in all the universes, O my Support,"],
+            ["And whatever is still to come into existence, until the Day when the forms will be resurrected"],
+
+            ["In every twinkling of the eye by which"],
+            ["The people of the heavens and the earths glance or cease to glance"],
+
+            ["Whatever fills the heavens and the earths, together with the mountains,"],
+            ["The spread-out earth, the Throne, the Footstool and all they contain"],
+
+            ["Whatever existing thing Allah has caused to vanish, or whatever non-existent thing"],
+            ["He has brought into being, blessings without limit and enduring forever"],
+
+            ["Whose number lasts through all the ages, as"],
+            ["They are boundless, leaving out nothing, encompassing all"],
+
+            ["They have no final end and no conclusion, O Mighty One,"],
+            ["And no limit decreed, so consider this well"],
+
+            ["In number as great as the multiples of all numbers there have been,"],
+            ["Together with multiplying these multiples, O One Who decrees"],
+
+            ["Just as You love, O my Master, and in accordance with Your pleasure"],
+            ["And as You have commanded us to send blessings, You are the Owner of Mighty Power"],
+
+            ["Together with peace, to the number of what has been mentioned"],
+            ["O my Lord, and multiply them both so that grace may spread far and wide"],
+
+            ["All of this further multiplied by Your Right in the breaths"],
+            ["Of Your created beings, whether they be few in number or many"],
+
+            ["O my Lord, forgive the one who recites it, as well as the one who hears it,"],
+            ["And all of the Muslims, wherever they may be"],
+
+            ["And our parents, our families and our neighbours"],
+            ["For all of us, O my Master, are in great need of forgiveness"],
+
+            ["I have committed many wrong actions - there is no end to them!"],
+            ["But indeed Your pardon leaves nothing - no sin remains"],
+
+            ["Worry has preoccupied me from all that I hope to attain,"],
+            ["And it came humbly and with a broken heart"],
+
+            ["I beseech You, O my Lord, to show us mercy in the two worlds,"],
+            ["By the rank of the one in whose hands pebbles glorified God"],
+
+            ["O my Lord, increase for us both our reward and forgiveness,"],
+            ["For surely Your Generosity is a sea without a shore"],
+
+            ["Settle the debts which leave noble character in difficult straits,"],
+            ["And release us from our troubles, O You Who are Powerful"],
+
+            ["Be kind to us whenever calamities befall us,"],
+            ["With a beautiful kindness which causes all distress to disappear"],
+
+            ["By Mustafa, the Elected One, the Best of Creation,"],
+            ["In whose praise surahs were revealed to honour him"],
+
+            ["And then prayers be upon the Chosen One"],
+            ["As long as the sun shines upon the day, and the moon casts its radiance about"],
+
+            ["And may You be pleased with Abu Bakr, his caliph,"],
+            ["Who stood up for the religion after he was gone"],
+
+            ["And with Abu Hafs al-Faruq, his companion"],
+            ["Umar, whose word in his rulings was decisive,"],
+
+            ["And bestow good upon Uthman, he of the two lights, for whom"],
+            ["The virtues were perfected in the two worlds, and in the final victory"],
+
+            ["And likewise Ali, as well as his two sons and their mother,"],
+            ["The People of the Cloak, as has come down to us in tradition"],
+
+            ["And also our lady Khadijah al-Kubra who generously gave her wealth"],
+            ["In order to help and support the Messenger of Allah"],
+
+            ["And those pure women, the wives of Mustafa,"],
+            ["And his daughters and sons, whenever they are mentioned"],
+
+            ["As well as Sad, Sad ibn Awf and Talha"],
+            ["And Abu Ubayda and Zubayr, the finest of masters"],
+
+            ["And Hamza and also Abbas, our master, and his son,"],
+            ["The learned one through whom difficulties were resolved"],
+
+            ["And all the Family and Companions, and all the Followers,"],
+            ["As long as darkness still falls upon the night, and the dawn reappears"],
+
+            ["Bless them with good pleasure from You in pardon and well-being"],
+            ["And with a good ending when life draws to a close."]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ],
+            [
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 1, "index": 17 }
+            ],
+            [
+                {"repeat": 1, "index": 18 },
+                {"repeat": 1, "index": 19 }
+            ],
+            [
+                {"repeat": 1, "index": 20 },
+                {"repeat": 1, "index": 21 }
+            ],
+            [
+                {"repeat": 1, "index": 22 },
+                {"repeat": 1, "index": 23 }
+            ],
+            [
+                {"repeat": 1, "index": 24 },
+                {"repeat": 1, "index": 25 }
+            ],
+            [
+                {"repeat": 1, "index": 26 },
+                {"repeat": 1, "index": 27 }
+            ],
+            [
+                {"repeat": 1, "index": 28 },
+                {"repeat": 1, "index": 29 }
+            ],
+            [
+                {"repeat": 1, "index": 30 },
+                {"repeat": 1, "index": 31 }
+            ],
+
+            [
+                {"repeat": 1, "index": 32 },
+                {"repeat": 1, "index": 33 }
+            ],
+            [
+                {"repeat": 1, "index": 34 },
+                {"repeat": 1, "index": 35 }
+            ],
+            [
+                {"repeat": 1, "index": 36 },
+                {"repeat": 1, "index": 37 }
+            ],
+            [
+                {"repeat": 1, "index": 38 },
+                {"repeat": 1, "index": 39 }
+            ],
+            [
+                {"repeat": 1, "index": 40 },
+                {"repeat": 1, "index": 41 }
+            ],
+            [
+                {"repeat": 1, "index": 42 },
+                {"repeat": 1, "index": 43 }
+            ],
+            [
+                {"repeat": 1, "index": 44 },
+                {"repeat": 1, "index": 45 }
+            ],
+            [
+                {"repeat": 1, "index": 46 },
+                {"repeat": 1, "index": 47 }
+            ],
+            [
+                {"repeat": 1, "index": 48 },
+                {"repeat": 1, "index": 49 }
+            ],
+            [
+                {"repeat": 1, "index": 50 },
+                {"repeat": 1, "index": 51 }
+            ],
+            [
+                {"repeat": 1, "index": 52 },
+                {"repeat": 1, "index": 53 }
+            ],
+            [
+                {"repeat": 1, "index": 54 },
+                {"repeat": 1, "index": 55 }
+            ],
+            [
+                {"repeat": 1, "index": 56 },
+                {"repeat": 1, "index": 57 }
+            ],
+            [
+                {"repeat": 1, "index": 58 },
+                {"repeat": 1, "index": 59 }
+            ],
+            [
+                {"repeat": 1, "index": 60 },
+                {"repeat": 1, "index": 61 }
+            ],
+            [
+                {"repeat": 1, "index": 62 },
+                {"repeat": 1, "index": 63 }
+            ],
+            [
+                {"repeat": 1, "index": 64 },
+                {"repeat": 1, "index": 65 }
+            ],
+            [
+                {"repeat": 1, "index": 66 },
+                {"repeat": 1, "index": 67 }
+            ],
+            [
+                {"repeat": 1, "index": 68 },
+                {"repeat": 1, "index": 69 }
+            ],
+            [
+                {"repeat": 1, "index": 70 },
+                {"repeat": 1, "index": 71 }
+            ],
+            [
+                {"repeat": 1, "index": 72 },
+                {"repeat": 1, "index": 73 }
+            ],
+            [
+                {"repeat": 1, "index": 74 },
+                {"repeat": 1, "index": 75 }
+            ],
+            [
+                {"repeat": 1, "index": 76 },
+                {"repeat": 1, "index": 77 }
+            ],
+            [
+                {"repeat": 1, "index": 78 },
+                {"repeat": 1, "index": 79 }
+            ],
+            [
+                {"repeat": 1, "index": 80 },
+                {"repeat": 1, "index": 81 }
+            ],
+            [
+                {"repeat": 1, "index": 82 },
+                {"repeat": 1, "index": 83 }
+            ],
+            [
+                {"repeat": 1, "index": 84 },
+                {"repeat": 1, "index": 85 }
+            ],
+            [
+                {"repeat": 1, "index": 86 },
+                {"repeat": 1, "index": 87 }
+            ]
+        ]
+    }
+}
