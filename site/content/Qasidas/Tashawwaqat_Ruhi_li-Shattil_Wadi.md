@@ -1,4 +1,9 @@
++++
+maqam = ['Bayat']
++++
 # Tashawwaqat Rūḥī li-Shaṭṭi al-Wādī - My soul has longed for the valley's shore
+
+{{< qasida_meta >}}
 
 ## Verses
 

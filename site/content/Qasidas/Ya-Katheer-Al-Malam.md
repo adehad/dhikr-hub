@@ -1,4 +1,9 @@
++++
+maqam = ['Bayat']
++++
 # Yā Kathīra al-Malām – O Constant Blamer
+
+{{< qasida_meta >}}
 
 ## Verses
 

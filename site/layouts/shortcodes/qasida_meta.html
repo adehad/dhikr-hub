@@ -1,0 +1,16 @@
+<table>
+    <tbody>
+        <tr>
+            <th><a href='{{ absURL "maqam" }}'>Maqam</a></th>
+            <td>
+                {{ with .Page.GetTerms "maqam" }}
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
+                    {{ range . }}
+                    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </td>
+        </tr>
+    </tbody>
+</table>
