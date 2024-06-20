@@ -15,10 +15,18 @@ BookSection = '*'
 # Used for 'Last Modified' and 'Edit this page' links.
 BookRepo = 'https://github.com/adehad/dhikr-hub'
 
-  # Enable 'Edit this page' links for 'doc' page type.
-  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-  # Path must point to the site directory.
-  BookEditPath = 'blob/HEAD/site'
+# Enable 'Edit this page' links for 'doc' page type.
+# Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+# Path must point to the site directory.
+BookEditPath = 'blob/HEAD/site'
 
 [markup.tableOfContents]
 startLevel = 1
+
+[taxonomies]
+maqam = 'maqam'
+# Default
+# category = 'categories'
+# series = 'series'
+# tag = 'tags'
+# Default End
