@@ -1,0 +1,95 @@
+{
+    "name": {
+        "ara": "قمر",
+        "en": "Qamarun – Moon"
+    },
+    "verses": {
+        "ara": [
+            ["قَمَرٌ   قَمَرٌ    قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ"],
+            ["وَجَمِيلْ   وَجَمِيلْ    وَجَمِيل سِيدْنَا النَّبِي وَجَمِيلْ"],
+
+            ["وَأَجْمَلُ مِنْكَ لَمْ تَرَ قَطُّ عَيْنٍ"],
+            ["وَأَطْيَبُ مِنْكَ لَمْ تَلِدِ النِّسَآءُ"],
+            ["خُلِقْتَ مُبَرَّأً مِنْ كُلِّ عَيْبٍ"],
+            ["كَأَنْكَ قَدْ خُلِقْتَ كَمَا تَشَآءُ"],
+
+            ["وَكَفُّ الْمُصْطَفَى كَالْوَرْدِ نَادِي "],
+            ["وَعِطْرُهَا يَبْقَى اِذا مَسَّتْ أَيَّادِي"],
+            ["وَعَمَّ نَوَالُهَا كُلَّ الْعِبَادِ"],
+            ["حَبِيبُ اللهِ يَا خَيْرَ الْبَرَايَا"],
+
+            ["وَلَا ظِلُّ لَهُ بَلْ كَانَ نُورَا"],
+            ["تَنَالِ الشَّمْسَ مِنْهُ وَالْبُدُورَا"],
+            ["وَلَمْ يَكُنِ الْهُدَى لَوْلَا ظُهُورَا"],
+            ["وَكُلُّ الْكَوْنِ أَنَارَ بِنُورِ طَهَ"]
+        ],
+        "en": [
+            ["qamarun qamarun qamarun sayyidnā an-nabī qamarun"],
+            ["wajamīl wajamīl wajamīl sayyidnā an-nabī wajamīl"],
+
+            ["wa'ajmalu minka lam tara qattu ʿaynin"],
+            ["wa'aṯyabu minka lam talidi n-nisāʾu"],
+            ["khuliqta mubarraʾan min kulli ʿaybin"],
+            ["ka'annaka qad khuliqta kamā tashāʾu"],
+
+            ["wakaffu l-musṭafā ka-l-wardi nādī"],
+            ["waʿitrūhu yabqā idhā massat ayyādī"],
+            ["waʿamma nawāluhā kulla l-ʿibādī"],
+            ["ḥabību llāhi yā khayra l-barāyā"],
+
+            ["walā ẓillu lahu bal kāna nūran"],
+            ["tanāli sh-shamsa minhu wal-budūra"],
+            ["walam yakuni l-hudā lawlā ẓuhūra"],
+            ["wakullu l-kawni anāra binūri ṭahā"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["Moon….The likeness of our Prophet is like the moon"],
+            ["Beautiful…Our master is truly beautiful"],
+
+            ["More beautiful than you no eye has ever seen"],
+            ["And purer than you no woman ever gave birth to"],
+            ["You were created free from any flaw whatsoever"],
+            ["As if you were created just the way you wanted"],
+
+            ["The palm of the Chosen One is like a fresh rose"],
+            ["Its fragrance remains upon the hands after a brushing touch"],
+            ["Every servant has received from his gifts"],
+            ["Beloved of Allah, O Best of Creation"],
+
+            ["He had no taint of shadow, rather he was light"],
+            ["The moon and sun both benefited from him"],
+            ["There would have been no guidance without his appearance"],
+            ["The whole universe became illuminated through the light of Ta-Ha"]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 2, "index": 2 },
+                {"repeat": 2, "index": 3 },
+                {"repeat": 3, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 2, "index": 6 },
+                {"repeat": 2, "index": 7 },
+                {"repeat": 3, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 2, "index": 10 },
+                {"repeat": 2, "index": 11 },
+                {"repeat": 3, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ]
+        ]
+    }
+}
