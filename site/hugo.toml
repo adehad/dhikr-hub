@@ -20,6 +20,9 @@ BookRepo = 'https://github.com/adehad/dhikr-hub'
 # Path must point to the site directory.
 BookEditPath = 'blob/HEAD/site'
 
+# Enable Experimental Service Worker
+BookServiceWorker = true
+
 [markup.tableOfContents]
 startLevel = 1
 
