@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/web-manifest-combined.json",
+  "id": "dhikr-hub-adehad",
+  "name": "{{ .Site.Title }}",
+  "short_name": "{{ .Site.Title }}",
+  "start_url": "{{ "./" | relURL }}",
+  "scope": "{{ "./" | relURL }}",
+  "display_override": ["fullscreen", "minimal-ui"],
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "Installing Dhikr-Hub allows you to access the content offline!",
+  "icons": [
+    {
+      "src": "{{ "./favicon.svg" | relURL }}",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "(Desktop) Dhikr Hub",
+      "src": "images/pwa/pwa_desktop1.png",
+      "form_factor": "wide",
+      "type": "image/png",
+      "sizes":"1600x842"
+    },
+    {
+      "label": "(Mobile) Dhikr Hub",
+      "src": "images/pwa/pwa_mobile1.png",
+      "form_factor": "narrow",
+      "type": "image/png",
+      "sizes":"1173x2532"
+    },
+    {
+      "label": "(Mobile) Left Menu View",
+      "src": "images/pwa/pwa_mobile2.png",
+      "form_factor": "narrow",
+      "type": "image/png",
+      "sizes":"1173x2532"
+    },
+    {
+      "label": "(Mobile) Right Menu View",
+      "src": "images/pwa/pwa_mobile3.png",
+      "form_factor": "narrow",
+      "type": "image/png",
+      "sizes":"1173x2532"
+    }
+  ]
+}

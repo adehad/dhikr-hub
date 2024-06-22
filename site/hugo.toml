@@ -21,7 +21,7 @@ BookRepo = 'https://github.com/adehad/dhikr-hub'
 BookEditPath = 'blob/HEAD/site'
 
 # Enable Experimental Service Worker
-BookServiceWorker = true
+BookServiceWorker = "precache" # precache caches all webpages
 
 [markup.tableOfContents]
 startLevel = 1
