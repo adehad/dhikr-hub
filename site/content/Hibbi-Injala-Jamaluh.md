@@ -12,3 +12,5 @@
 Omar Alyafi
 
 ### Sources
+- Arabic: Al Diwan (https://www.aldiwan.net/poem35482.html)
+- Transliteration, translation: auto-generated
