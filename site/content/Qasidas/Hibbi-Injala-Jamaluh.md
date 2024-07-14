@@ -1,4 +1,9 @@
++++
+maqam = ['Kurd']
++++
 # Hibbi Injala Jamaluh - My beloved's beauty has been revealed
+
+{{< qasida_meta >}}
 
 ## Verses
 
