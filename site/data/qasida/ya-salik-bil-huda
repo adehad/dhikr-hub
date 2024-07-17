@@ -6,132 +6,75 @@
     "verses": {
         "ara": [
 
-            ["حِبِّيْ اِنْجَلَىْ جَمَاْلُهْ"],
-            ["وَقَدْ حَاْنَ وِصَاْلُهْ"],
-            ["أَرَاْنِيَ كَمَاْلُهْ"],
-            ["بِمِرْآتِيْ مِثَاْلُهْ"],
+            ["يَا سَالِكَ بِالهُدَى طَرِيقَ الْبَكْرِي"],
+            ["غِبْ عَنْ زَيدٍ وَهَكَذَا عَنْ عَمْروِ"],
+            ["وَاشْرَبْ إنْ كُنْتَ مُغْرَمَاً بِالسُكْرِ"],
+            ["مِنْ خَمْرَةِ لَا إلَهَ إلَّا الله"],
 
-            ["يَاْ لَاْئِمِيْ فِيْ سُكْرِيْ"],
-            ["مَهْلَاً فَاْلْهَوَىْ عُذْرِيْ"],
-            ["ثَكِلَتْكَ لَوْ تَدْرِيْ"],
-            ["هَوَىْ جَلَّ جَلَاْلُهْ"],
+            ["كُنْ بِالْذِكْرِ كَبُلْبُلِ الأَقْفَاصِ"],
+            ["لَا تَرْهَبْ مِنْ دَانٍ وَلَا مِنْ قَاصِ"],
+            ["وَادْخُلْ فِيهَا بِسُورَةِ الإخْلَاصِ"],
+            ["كَي تَعْرِفَ لَا إلَهَ إلَّا الله"],
 
-            ["نَعِيْمِيْ بِمَحْبُوْبِيْ"],
-            ["غَدَاْ عَيْنُ تَعْذِيْبِيْ"],
-            ["جَنَاْنِيْ بِمَطْلُوْبِيْ"],
-            ["نَاْرٌ بِهَاْ اِشْتِعَاْلُهْ"],
+            ["أسْرِعْ بِالْسَيرِ واجْتَهِدْ يَا سَالِكْ"],
+            ["حَتَى تَقْضِي وَكُلُ شَيءٍ هَالِكْ"],
+            ["فَالكَونُ بِأسْرِهِ ظَلَامٍ حَالِكْ"],
+            ["قَدْ نَارَ بِلَا إلَهَ إلَّا الله"],
 
-            ["عَذْلٌ عَذُوْلِيْ عَدْلُ"],
-            ["بِلَاْ نُقْطَةٍ تَعْلُوْ"],
-            ["مَاْ لِلْعُذَّاْلِ فِعْلُ"],
-            ["وَكُلُّهَاْ أَفْعَاَلُهْ"],
+            ["أكْثِرْ عَدَدِ الْصَلَاةِ والْتَسْلِيمِ"],
+            ["فِي الْدَهْرِ عَلَى النَبِيِّ ذِي الْتَكْرِيمِ"],
+            ["وَالآلِ مَعَ الْأصْحَابِ بِالْتَعْمِيمِ"],
+            ["يَا قَائِلَ لَا إلَهَ إلَّا الله"]
 
-            ["يَاْ عَاْذِلِيْ لَاْ تَطْمَعْ"],
-            ["فَلَيْسَ مِنِ مَسْمَعْ"],
-            ["فَذُوْ اَلْهَوَىْ لَاْ يَسْمَعْ"],
-            ["مَهْمَاْ لَغَتْ عُذَّاْلُهْ"],
-
-            ["وَكَيْفَ يُصْغِيْ اِلْمُغْرَمْ"],
-            ["لِعَاْذِلٍ لَاْ يَعْلَمْ"],
-            ["جَمَاْلَ اَلَّذِيْ تَيَّمْ"],
-            ["كُلَّ اَلْوَرَىْ جَمَاْلُهْ"],
-
-            ["عَلَيْهِ رَبِّيْ صَلَّىْ"],
-            ["وَسَلَّمَ فِيْ اَلْمَجْلَىْ"],
-            ["لَدَىْ اَلْرَفْرَفِ اِلْأَعْلَىْ"],
-            ["وَقَدْ نَمَاْ إِقْبَاْلُهْ"],
-
-            ["وَعَلَىْ اَلْآلِ اِلْغُرِّ"],
-            ["وَاَلْصَحْبِ ذَوِيْ اَلْقَدْرِ"],
-            ["مَاْ شَدَاْ اَلْيَاْفِيْ اِلْبَكْرِيْ"],
-            ["حِبِّيْ اِنْجَلَىْ جَمَاْلُهْ"]
 
 
         ],
         "en": [
-            ["ḥibbī injalā jamāluh"],
-            ["wa-qad ḥāna wiṣāluh"],
-            ["arānīya kamāluh"],
-            ["bi-mirʾātī mithāluh"],
 
-            ["yā lāʾimī fī sukrī"],
-            ["mahlan fa-l-hawā ʿudhrī"],
-            ["thakilatka law tadrī"],
-            ["hawā jalla jalāluh"],
+            ["yā sālik bi-l-hudā ṭarīq al-bakri"],
+            ["ghib ʿan zayd wa-hakadha ʿan ʿamr"],
+            ["wa-ishrab in kunta mughraman bi-s-sukr"],
+            ["min khamrat lā ilāh illā allāh"],
 
-            ["naʿīmī bi-maḥbūbī"],
-            ["ghadā ʿaynu taʿdhībī"],
-            ["janānī bi-maṭlūbī"],
-            ["nārun bihā ishtʿāluh"],
+            ["kun bi-dh-dhikr ka-bulbul al-aqfāṣ"],
+            ["lā tarhab min dān wa-lā min qāṣ"],
+            ["wa-udkhul fīhā bi-sūrat al-ikhlāṣ"],
+            ["kay taʿrif lā ilāh illā allāh"],
 
-            ["ʿadhlun ʿadhūlī ʿadlu"],
-            ["bilā nuqṭatin taʿlū"],
-            ["mā li-l-ʿudhāl fiʿl"],
-            ["wa-kulluhā afʿāluh"],
+            ["asriʿ bi-s-sayr wa-ijtahid yā sālik"],
+            ["ḥattā taqḍī wa-kullu shayʾ hālik"],
+            ["fa-l-kawn bi-asrih ẓalām ḥālik"],
+            ["qad nār bi-lā ilāh illā allāh"],
 
-            ["yā ʿādhilī lā taṭmaʿ"],
-            ["fa-laysa mini masmaʿ"],
-            ["fa-dhū l-hawā lā yasmaʿ"],
-            ["mahmā laghat ʿudhāluh"],
-
-            ["wa-kayfa yuṣghī il-mughram"],
-            ["li-ʿādhilin lā yaʿlam"],
-            ["jamāla l-ladhī tayyam"],
-            ["kulla l-warā jamāluh"],
-
-            ["ʿalayhi rabbī ṣallā"],
-            ["wa-sallama fī l-majlā"],
-            ["ladā r-rafraf il-aʿlā"],
-            ["wa-qad namā iqbāluh"],
-
-            ["wa-ʿalā l-āli l-ghurri"],
-            ["wa-ṣ-ṣaḥbi dhawi l-qadri"],
-            ["mā shadā l-yāfī l-bakrī"],
-            ["ḥibbī injalā jamāluh"]
+            ["akthir ʿadad aṣ-ṣalāt wa-t-taslīm"],
+            ["fī d-dahr ʿalā n-nabī dhī t-takrīm"],
+            ["wa-l-āl maʿa l-aṣḥāb bi-t-taʿmīm"],
+            ["yā qāʾil lā ilāh illā allāh"]
         ]
     },
     "translation": {
         "en": [
 
-            ["My beloved's beauty has been revealed,"],
-            ["and the time for our union has come..."],
-            ["His perfection is shown to me"],
-            ["in the mirror of His example"],
+            ["O traveler on al-Bakri’s guided path,"],
+            ["Avoid Zayd and likewise Amr,"],
+            ["And drink if you are in love with intoxication,"],
+            ["From the wine of "No god but Allah.""],
 
-            ["Oh, my reproacher during my intoxication,"],
-            ["wait, for my love is pure and platonic..."],
-            ["you are a dead man if you experience"],
-            ["the love of the Most Exalted"],
+            ["Be in remembrance like a caged nightingale,"],
+            ["Do not fear from near or far,"],
+            ["And enter it with the Surah of Sincerity,"],
+            ["So you may know "No god but Allah.""],
 
-            ["My delight in my beloved"],
-            ["has become the essence of my torment..."],
-            ["My heart, with my desired one,"],
-            ["is a fire that ignites within"],
+            ["Hasten your journey and strive, O traveler,"],
+            ["Until you fulfill, for everything will perish,"],
+            ["For the universe, entirely, is dark and bleak,"],
+            ["It is ignited by "No god but Allah.""],
 
-            ["The blame of my reproacher is just"],
-            ["without any blemish..."],
-            ["The reproachers have no effect,"],
-            ["for their actions are, in reality, my Beloved's actions"],
+            ["Increase the number of prayers and peace,"],
+            ["In time, upon the Prophet, the honored one,"],
+            ["And upon his family and companions altogether,"],
+            ["O speaker of "No god but Allah.""]
 
-            ["Oh, my reproacher, do not hope,"],
-            ["for there is no ear to listen..."],
-            ["The lover does not heed,"],
-            ["no matter how much the reproachers chatter"],
-
-            ["How can the enamoured one listen"],
-            ["to a reproacher who does not know..."],
-            ["The beauty of the One who has entranced"],
-            ["all of creation"],
-
-            ["My Lord bestowed prayers and peace upon him,"],
-            ["elevating him to the highest rank..."],
-            ["In the presence of the supreme,"],
-            ["his status has flourished."],
-
-            ["And upon the noble family"],
-            ["and companions of high standing..."],
-            ["As long as al-Yāfī al-Bakrī sings,"],
-            ["my beloved's beauty has been revealed"]
         ]
     },
     "order": {
@@ -161,30 +104,6 @@
                 {"repeat": 1, "index": 13 },
                 {"repeat": 1, "index": 14 },
                 {"repeat": 1, "index": 15 }
-            ],
-            [
-                {"repeat": 1, "index": 16 },
-                {"repeat": 1, "index": 17 },
-                {"repeat": 1, "index": 18 },
-                {"repeat": 1, "index": 19 }
-            ],
-            [
-                {"repeat": 1, "index": 20 },
-                {"repeat": 1, "index": 21 },
-                {"repeat": 1, "index": 22 },
-                {"repeat": 1, "index": 23 }
-            ],
-            [
-                {"repeat": 1, "index": 24 },
-                {"repeat": 1, "index": 25 },
-                {"repeat": 1, "index": 26 },
-                {"repeat": 1, "index": 27 }
-            ],
-            [
-                {"repeat": 1, "index": 28 },
-                {"repeat": 1, "index": 29 },
-                {"repeat": 1, "index": 30 },
-                {"repeat": 1, "index": 31 }
             ]
         ]
     }
