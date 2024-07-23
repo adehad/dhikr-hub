@@ -1,0 +1,128 @@
+{
+    "name": {
+        "ara": "أيها العاشق",
+        "en": "Ayyuha l-ʿāshiqu – Oh you the lover"
+    },
+    "verses": {
+        "ara": [
+            ["لَا إِلَهَ إِلَّا اللهْ اللهْ اللهْ "],
+            ["لَا إِلَهَ إِلَّا اللَّهْ جُدْ عَلَيْنَا"],
+
+            ["أَيُّهَا الْعَاشِقُ مَعْنَى حُسْنِنَا"],
+            ["مَهْرُنَا غَالٍ لِمَنْ يَخْطِبُنَا"],
+
+            ["جَسَدٌ مُضْنَى وَرُوْحٌ فِي الْعَنَا"],
+            ["وَعُيُونٌ لَا تَذُوْقُ الْوَسَنَا"],
+
+            ["وَفُؤَادٌ لَيْسَ فِيْهِ غَيْرُنَا"],
+            ["فَإِذَا مَا شِئْتَ أَدِّ الثَّمَنَا"],
+
+            ["فَافْنَ إِنْ شِئْتَ فَنَاءً سَرْمَداً"],
+            ["فَالْفَنَا يُدْنِي إِلَى ذَاكَ الْفِنَا"],
+
+            ["وَاخْلَعِ النَّعْلَيْنِ إِنْ جِئْتَ إِلَى "],
+            ["ذَلِكَ الْحَيِّ فَفِيْهِ قُدْسُنَا"],
+
+            ["وَعَنِ الْكَوْنَيْنِ كُنْ مُنْخَلِعاً"],
+            ["وَأَزِلْ مَا بَيْنَنَا مِنْ بَيْنِنَا "],
+
+            ["وَإِذَا مَا قِيْلَ مَنْ تَهْوَى فَقُلْ"],
+            ["أَنَا مَنْ أَهْوَى وَمَنْ أَهْوَى أَنَا"]
+        ],
+        "en": [
+            ["lā ilāha illā Allāh Allāh Allāh"],
+            ["lā ilāha illā Allāh jud ʿalaynā"],
+
+            ["ayyuha l-ʿāshiqu maʿnā ḥusninā"],
+            ["mahrnā ghālin liman yakhṭibunā"],
+
+            ["jasadun muḍná wa-rūḥun fī l-ʿanā"],
+            ["wa-ʿuyūnun lā tadhuqu l-wasná"],
+
+            ["wa-fuʾādun laysa fīhi ghayrunā"],
+            ["fa-idhā mā shiʾta addi th-thamná"],
+
+            ["fafna in shiʾta fanāʾan sarmadan"],
+            ["fa-l-faná yudnī ilá dhāka l-finá"],
+
+            ["wa-khlaʿi n-naʿlayni in jiʾta ilá"],
+            ["dhālika l-ḥayyi fa-fīhi qudsunā"],
+
+            ["wa-ʿani l-kawnayni kun munkhaliʿan"],
+            ["wa-aẓil mā baynanā min bayniná"],
+
+            ["wa-idhā mā qīla man tahwá faqul"],
+            ["aná man ahwá wa-man ahwá aná"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["There is no deity except Allah, Allah, Allah."],
+            ["There is no deity except Allah, be generous to us."],
+
+            ["O lover of our beauty's essence"],
+            ["the price is high for those who seek us"],
+
+            ["An exhausted body and a weary soul"],
+            ["and eyes that do not taste slumber"],
+
+            ["A heart that holds nothing but us"],
+            ["So if you desire, pay the price"],
+
+            ["Annihilate yourself eternally if you wish"],
+            ["for annihilation gets you closer to that richness"],
+
+            ["And put off your shoes if you come to"],
+            ["that place, for it is sacred and holy"],
+
+            ["And be detached from both worlds"],
+            ["And remove what stands between us"],
+
+            ["And if asked whom you love, say"],
+            ["I am the one I love, and the one I love is me."]
+        ]
+
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 2, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 2, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 2, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 2, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 2, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 2, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 2, "index": 13 }
+            ],
+            [
+                {"repeat": 1, "index": 14 },
+                {"repeat": 2, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 2, "index": 17 }
+            ]
+        ]
+    }
+}
