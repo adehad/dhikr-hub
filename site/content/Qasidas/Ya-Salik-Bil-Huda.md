@@ -17,5 +17,5 @@ maqam = ['Sika']
 Omar Alyafi
 
 ### Sources
-- Arabic: Al Diwan (https://www.aldiwan.net/poem35429.html)
+- Arabic: Al Diwan (https://www.aldiwan.net/poem35429.html) & Songs of Presence pg 223.
 - Transliteration, translation: auto-generated
