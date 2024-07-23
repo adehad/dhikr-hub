@@ -5,7 +5,6 @@
     },
     "verses": {
         "ara": [
-
             ["يَا سَالِكَ بِالهُدَى طَرِيقَ الْبَكْرِي"],
             ["غِبْ عَنْ زَيدٍ وَهَكَذَا عَنْ عَمْروِ"],
             ["وَاشْرَبْ إنْ كُنْتَ مُغْرَمَاً بِالسُكْرِ"],
@@ -25,12 +24,8 @@
             ["فِي الْدَهْرِ عَلَى النَبِيِّ ذِي الْتَكْرِيمِ"],
             ["وَالآلِ مَعَ الْأصْحَابِ بِالْتَعْمِيمِ"],
             ["يَا قَائِلَ لَا إلَهَ إلَّا الله"]
-
-
-
         ],
         "en": [
-
             ["yā sālik bi-l-hudā ṭarīq al-bakri"],
             ["ghib ʿan zayd wa-hakadha ʿan ʿamr"],
             ["wa-ishrab in kunta mughraman bi-s-sukr"],
@@ -54,27 +49,25 @@
     },
     "translation": {
         "en": [
-
             ["O traveler on al-Bakri’s guided path,"],
             ["Avoid Zayd and likewise Amr,"],
             ["And drink if you are in love with intoxication,"],
-            ["From the wine of "No god but Allah.""],
+            ["From the wine of 'No god but Allah.'"],
 
             ["Be in remembrance like a caged nightingale,"],
             ["Do not fear from near or far,"],
             ["And enter it with the Surah of Sincerity,"],
-            ["So you may know "No god but Allah.""],
+            ["So you may know 'No god but Allah.'"],
 
             ["Hasten your journey and strive, O traveler,"],
             ["Until you fulfill, for everything will perish,"],
             ["For the universe, entirely, is dark and bleak,"],
-            ["It is ignited by "No god but Allah.""],
+            ["It is ignited by 'No god but Allah.'"],
 
             ["Increase the number of prayers and peace,"],
             ["In time, upon the Prophet, the honored one,"],
             ["And upon his family and companions altogether,"],
-            ["O speaker of "No god but Allah.""]
-
+            ["O speaker of 'No god but Allah.'"]
         ]
     },
     "order": {
