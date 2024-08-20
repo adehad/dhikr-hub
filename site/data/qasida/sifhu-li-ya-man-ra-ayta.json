@@ -1,0 +1,214 @@
+{
+    "name": {
+        "ara": "صفه لي",
+        "en": "Ṣifhu Lī – Describe him to me"
+    },
+    "verses": {
+        "ara": [
+            ["صِفْهُ لِي يَا مَنْ رَأَيْتَ الحِبَّ لَيْلاً"],
+            ["إِنَّ عَيْنِي تَشْتَهِي ذَاكَ الجَمَالَا"],
+
+            ["صِفْ جَمِيلاً كَامِلاً خَلْقاً وَخُلُقاً"],
+            ["مِنْ جَمَالِ الذَّاتِ قَدْ حَازَ الكَمَالَا"],
+
+            ["صِفْ مَلِيحاً طَرْفُهُ أسْبَى العَوَالِمْ "],
+            ["صِفْ وَجِيهاً وَجْهُهُ حَازَ الكَمَالَا"],
+
+            ["صِفْهُ لِي بِالسُّنْدُسِيَّةِ حِيْنَ يَبْدُو "],
+            ["كَامِلَ الأَوْصَافِ قَدْ مَلَكَ الدَّلَالَا"],
+
+            ["صِفْ عُيُونَ الهَاشِمِي صِفْ لِي المُحَيَّا"],
+            ["صِفْ لِي ثَغْراً بِابْتِسَامَتِهِ تَلَالَا"],
+
+            ["صِفْ جَمِيلاً أكْحَلاً مِنْ غَيْرِ كُحْلٍ"],
+            ["أدْعَجاً عَيْنَاهُ تُنْسِيكَ الغَزَالَا"],
+
+            ["صِفْ غَضُوضَ الطَّرفِ بَسَّامُ المُحَيَّا "],
+            ["أنْجَلاً تُنْسِيكَ طَلْعَتُهُ الهِلَالَا"],
+
+            ["صِفْ جَمِيلَ القَدِّ وَرْدِيَّ الوِجَانَا "],
+            ["صِفْ مَلِيحاً حُسْنُهُ فَاقَ الخَيَالَا"],
+
+            ["صِفْ بِهِ عُنُقاً مُنِيراً كَوكَبِياً"],
+            ["صِفْ جَمِيْلًا نُورُهُ فِي الكَونِ لَالَا"],
+
+            ["صِفْ ضَلِيعَ الفَمِ بَرَّاقَ الثَّنَايَا"],
+            ["صِفْ نَدِيَّ الرَّاحِ مِنْهُ الغَيْتُ سَالَا"],
+
+            ["صِفْ طَوِيلَ الهُدْبِ صِفْ أنْفَاً كَسَيْفٍ"],
+            ["صِفْ أَزَجَّ الحَاجِبَيْنِ بِلَا اتِّصالَاً"],
+
+            ["صِفْ نَبِيّاً قَدْ أَتَى مِنْ قَبْلِ آدَمْ "],
+            ["جَلَّ مَنْ سَوَّاهُ لَيْسَ لَهُ مِثَالَاً"],
+
+            ["أَبْصَرَتْ عَيْنَاكَ طَلْعَةَ مُصْطَفَانَا"],
+            ["قُلْ بِرَبِّكَ كَيْفَ أَدْرَكْتَ الوِصَالَا"],
+
+            ["كَمْ أُنَادِي يَا أَبَا الزَهْرَاءْ أَقْبِل"],
+            ["كَمْ أُنَادِي يَا أَبَا الزَهرَاء تَعَالَ"],
+
+            ["صِحْتُ وَاشَوْقَاه وَجْداً يَا حَبِيبِي"],
+            ["إِنَّ عَيْنِي تَشْتَهِي ذَاكَ الجَمَالَا"]
+        ],
+        "en": [
+            ["ṣifhu lī yā man raʾayta l-ḥibba laylan"],
+            ["inna ʿaynī tashtahī dhāka l-jamālā"],
+
+            ["ṣif jamīlan kāmilan khalqan wa-khuluqan"],
+            ["min jamāli dh-dhāti qad ḥāza l-kamālā"],
+
+            ["ṣif malīḥan ṭarfuhu asyā l-ʿawālim"],
+            ["ṣif wajīhan wajhuhu ḥāza l-kamālā"],
+
+            ["ṣifhu lī bi-s-sundusiyyati ḥīna yabdū"],
+            ["kāmila l-awṣāfi qad malaka d-dalālā"],
+
+            ["ṣif ʿuyūna l-hāshimī ṣif lī l-muḥayyā"],
+            ["ṣif lī thaghran bi-btisāmatihi talālā"],
+
+            ["ṣif jamīlan akḥala min ghayri kuḥlin"],
+            ["adʿajan ʿaynāhu tunsīka l-ghazālā"],
+
+            ["ṣif ghaḍūḍa ṭ-ṭarfi bassāmu l-muḥayyā"],
+            ["anjalan tunsīka ṭalʿatuhu l-hilālā"],
+
+            ["ṣif jamīla l-qaddi wardiyya l-wijāna"],
+            ["ṣif malīḥan ḥusnuhu fāqa l-khayālā"],
+
+            ["ṣif bihi ʿunuqan munīran kawkabiyyan"],
+            ["ṣif jamīlan nūruhu fī l-kawni lālā"],
+
+            ["ṣif ḍalīʿa l-fami barraqa th-thanāyā"],
+            ["ṣif nadīya r-rāḥi minhu l-ghaytu sālā"],
+
+            ["ṣif ṭawīla l-hudbi ṣif anfān ka-sayfin"],
+            ["ṣif azajja l-ḥājibayni bilā ittiṣālā"],
+
+            ["ṣif nabiyyan qad atā min qabli Ādam"],
+            ["jalla man sawwāhu laysa lahu mithālā"],
+
+            ["abṣarat ʿaynāka ṭalʿata muṣṭafānā"],
+            ["qul bi-rabbika kayfa adraktā l-wiṣālā"],
+
+            ["kam unādī yā abā z-zahrāʾ aqbil"],
+            ["kam unādī yā abā z-zahrā taʿālā"],
+
+            ["ṣiḥtu wa-shawqāh wajdan yā ḥabībī"],
+            ["inna ʿaynī tashtahī dhāka l-jamālā"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["Describe him to me, oh you who saw the beloved at night"],
+            ["my eyes long for that beauty."],
+
+            ["Describe a beautiful being, perfect in creation and manners"],
+            ["From divine beauty, he has attained perfect beauty."],
+
+            ["Describe a captivating one, whose gaze enchanted the worlds"],
+            ["describe a noble face that has achieved perfection."],
+
+            ["Describe him to me in his silken garment"],
+            ["with perfect attributes, he has mastered grace."],
+
+            ["Describe the eyes of the Hashemite, describe to me the countenance"],
+            ["describe to me a mouth whose smile glows."],
+
+            ["Describe a beautiful one with naturally lined eyes"],
+            ["whose dark eyes make you forget the gazelle."],
+
+            ["Describe a modest gaze and a smiling countenance"],
+            ["whose bright appearance makes you forget the moon."],
+
+            ["Describe the beautiful stature with a rosy face"],
+            ["describe a captivating beauty that surpasses imagination."],
+
+            ["Describe a neck that shines like a star"],
+            ["describe a beautiful one whose light fills the universe."],
+
+            ["Describe a mouth with gleaming teeth"],
+            ["describe hands from which rain flows like nectar."],
+
+            ["Describe long eyelashes, describe a sword edge nose"],
+            ["describe arched eyebrows that do not meet."],
+
+            ["Describe a prophet who came before Adam"],
+            ["glorified be the One who created him, with no equal."],
+
+            ["Your eyes beheld the beauty of the chosen one."],
+            ["By your Lord, reveal to me the secret of how you forged that connection."],
+
+            ["How much I call, O father of Zahra, come forth"],
+            ["how much I call, O father of Zahra, come."],
+
+            ["I cried out in longing, oh my beloved"],
+            ["my eyes long for that beauty."]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
+            ],
+            [
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 }
+            ],
+            [
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 1, "index": 17 }
+            ],
+            [
+                {"repeat": 1, "index": 18 },
+                {"repeat": 1, "index": 19 }
+            ],
+            [
+                {"repeat": 1, "index": 20 },
+                {"repeat": 1, "index": 21 }
+            ],
+            [
+                {"repeat": 1, "index": 22 },
+                {"repeat": 1, "index": 23 }
+            ],
+            [
+                {"repeat": 1, "index": 24 },
+                {"repeat": 1, "index": 25 }
+            ],
+            [
+                {"repeat": 1, "index": 26 },
+                {"repeat": 1, "index": 27 }
+            ],
+            [
+                {"repeat": 1, "index": 28 },
+                {"repeat": 1, "index": 29 }
+            ]
+        ]
+    }
+}
