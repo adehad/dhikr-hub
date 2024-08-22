@@ -5,7 +5,6 @@
     },
     "verses": {
         "ara": [
-
             ["حِبِّي انْجَلَى جَمَالُه"],
             ["وَقَدْ حَانَ وِصَالُه"],
             ["أَرَانِيَ كَمَالُه"],
@@ -45,54 +44,51 @@
             ["وَالصَحْبِ ذَوِي القَدْرِ"],
             ["مَا شَدَا اليَاْفِي البَكْرِي"],
             ["حِبِّي انْجَلَى جَمَالُه"]
-
-
         ],
         "en": [
-            ["ḥibbī injalā jamāluh"],
-            ["wa-qad ḥāna wiṣāluh"],
-            ["arānīya kamāluh"],
-            ["bi-mirʾātī mithāluh"],
+            ["ḥibbī injalā jamāluhu"],
+            ["wa-qad ḥāna wiṣāluhu"],
+            ["arāniya kamāluhu"],
+            ["bi-mirʾātī mithāluhu"],
 
             ["yā lāʾimī fī sukrī"],
             ["mahlan fa-l-hawā ʿudhrī"],
             ["thakilatka law tadrī"],
-            ["hawā jalla jalāluh"],
+            ["hawā jalla jalāluhu"],
 
             ["naʿīmī bi-maḥbūbī"],
             ["ghadā ʿaynu taʿdhībī"],
             ["janānī bi-maṭlūbī"],
-            ["nārun bihā ishtʿāluh"],
+            ["nārun bihā ishtiʿāluhu"],
 
-            ["ʿadhlun ʿadhūlī ʿadlu"],
+            ["ʿadhlun ʿadhūlī ʿadhl"],
             ["bilā nuqṭatin taʿlū"],
-            ["mā li-l-ʿudhāl fiʿl"],
-            ["wa-kulluhā afʿāluh"],
+            ["mā li-l-ʿudhāli fiʿl"],
+            ["wa-kulluhā afʿāluhu"],
 
-            ["yā ʿādhilī lā taṭmaʿ"],
-            ["fa-laysa mini masmaʿ"],
+            ["yā ʿādhilī lā ṭamaʿ"],
+            ["fa-laysa min masmaʿ"],
             ["fa-dhū l-hawā lā yasmaʿ"],
-            ["mahmā laghat ʿudhāluh"],
+            ["mah-mā laghat ʿudhāluhu"],
 
-            ["wa-kayfa yuṣghī il-mughram"],
+            ["wa-kayfa yuṣghī l-mughram"],
             ["li-ʿādhilin lā yaʿlam"],
-            ["jamāla l-ladhī tayyam"],
-            ["kulla l-warā jamāluh"],
+            ["jamāla lladhī tayyam"],
+            ["kulla l-warā jamāluhu"],
 
             ["ʿalayhi rabbī ṣallā"],
             ["wa-sallama fī l-majlā"],
-            ["ladā r-rafraf il-aʿlā"],
-            ["wa-qad namā iqbāluh"],
+            ["ladā r-rarfari l-aʿlā"],
+            ["wa-qad namā iqbāluhu"],
 
-            ["wa-ʿalā l-āli l-ghurri"],
-            ["wa-ṣ-ṣaḥbi dhawi l-qadri"],
-            ["mā shadā l-yāfī l-bakrī"],
-            ["ḥibbī injalā jamāluh"]
+            ["wa-ʿalā l-āli l-ghurr"],
+            ["wa-ṣ-ṣaḥbi dhawi l-qadr"],
+            ["mā shadā l-yāfī l-bakriyy"],
+            ["ḥibbī injalā jamāluhu"]
         ]
     },
     "translation": {
         "en": [
-
             ["My beloved's beauty has been revealed,"],
             ["and the time for our union has come..."],
             ["His perfection is shown to me"],
