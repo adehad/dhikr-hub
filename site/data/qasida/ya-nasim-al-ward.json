@@ -29,7 +29,7 @@
             ["in yashaʾ shiʾtu wa-in shiʾtu yashaʾ"],
 
             ["rūḥuhu rūḥī wa-rūḥī rūḥuhu"],
-            ["in ʿāshā ʿishtu wa-in ʿishtu ʿāshā"]   
+            ["in ʿāshā ʿishtu wa-in ʿishtu ʿāshā"]
         ]
     },
     "translation": {
@@ -45,14 +45,14 @@
 
             ["Their soul is my soul, and my soul is theirs."],
             ["If they live, I live, and if I live, they live."]
-           
+
         ]
 
     },
     "order": {
         "chorus": [
             [
-       
+
             ]
         ],
         "verses": [
@@ -72,7 +72,7 @@
                 {"repeat": 1, "index": 6 },
                 {"repeat": 1, "index": 7 }
             ]
- 
+
         ]
     }
 }
