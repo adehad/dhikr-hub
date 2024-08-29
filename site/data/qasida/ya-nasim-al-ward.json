@@ -1,0 +1,78 @@
+{
+    "name": {
+        "ara": "يا نسيم الورد",
+        "en": "Ya Nasim al-Ward – O, Breeze of the Roses"
+    },
+    "verses": {
+        "ara": [
+            ["يَا نَسِيمَ الوَرْدِ خَبِّرْ لِلرَشَا"],
+            ["لَم يَزِدْنِي الوِرْدُ إلَا عَطَشَا"],
+
+            ["لِي حَبِيبٌ حُبُهُ وَسْطَ الحَشَا"],
+            ["إن يَشَأ يَمْشِي عَلَى خَدِّي مَشَا"],
+
+            ["قَولُهُ قَولِي وَقَولِي قَولُهُ"],
+            ["إن يَشَأ شِئتُ وَإن شِئتُ يَشَا"],
+
+            ["رُوحُهُ رُوحِي وَرُوحِي رُوحُهُ"],
+            ["إن عَاشَا عِشْتُ وَإن عِشْتُ عَاشَا"]
+
+          ],
+        "en": [
+            ["yā nasīm al-ward khabbir lil-rashā"],
+            ["lam yazidnī al-wirdu illā ʿaṭashā"],
+
+            ["lī ḥabībun ḥubbuhu wasṭa al-ḥashā"],
+            ["in yashaʾ yamshī ʿalā khaddī mashā"],
+
+            ["qawluhu qawlī wa-qawlī qawluhu"],
+            ["in yashaʾ shiʾtu wa-in shiʾtu yashaʾ"],
+
+            ["rūḥuhu rūḥī wa-rūḥī rūḥuhu"],
+            ["in ʿāshā ʿishtu wa-in ʿishtu ʿāshā"]   
+        ]
+    },
+    "translation": {
+        "en": [
+            ["O breeze of the roses, tell the gazelle,"],
+            ["The litanies have only increased my thirst."],
+
+            ["I have a beloved whose love is deeply rooted within."],
+            ["If they wish to walk on my cheek, they can."],
+
+            ["Their words are my words, and my words are theirs."],
+            ["If they wish, I wish, and if I wish, they wish."],
+
+            ["Their soul is my soul, and my soul is theirs."],
+            ["If they live, I live, and if I live, they live."]
+           
+        ]
+
+    },
+    "order": {
+        "chorus": [
+            [
+       
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ],
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ]
+ 
+        ]
+    }
+}
