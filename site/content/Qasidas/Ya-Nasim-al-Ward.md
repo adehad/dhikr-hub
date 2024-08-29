@@ -1,5 +1,5 @@
 +++
-maqam = ['Jaharka']
+maqam = ['Jaharkah']
 +++
 # Ya Nasim al-Ward – O, Breeze of the Roses
 
