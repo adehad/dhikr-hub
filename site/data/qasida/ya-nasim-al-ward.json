@@ -1,7 +1,7 @@
 {
     "name": {
         "ara": "يا نسيم الورد",
-        "en": "Ya Nasim al-Ward – O, Breeze of the Roses"
+        "en": "Yā Nasīm al-Ward – O, Breeze of the Roses"
     },
     "verses": {
         "ara": [
@@ -16,7 +16,6 @@
 
             ["رُوحُهُ رُوحِي وَرُوحِي رُوحُهُ"],
             ["إن عَاشَا عِشْتُ وَإن عِشْتُ عَاشَا"]
-
           ],
         "en": [
             ["yā nasīm al-ward khabbir lil-rashā"],
@@ -45,9 +44,7 @@
 
             ["Their soul is my soul, and my soul is theirs."],
             ["If they live, I live, and if I live, they live."]
-
         ]
-
     },
     "order": {
         "chorus": [
