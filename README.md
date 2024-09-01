@@ -86,6 +86,8 @@ Using the Library of Congress Arabic Romanization system, transliterate the snip
 
 AI can provide starting point for translations, consider the following prompt:
 
+### Poetic Prompt
+
 ```text
 Using the perspective of a Cambridge University Academic who has studied Sufi Poetry poetically translate the snippet below, returning it in the exact same form:
 '''
@@ -93,10 +95,22 @@ Using the perspective of a Cambridge University Academic who has studied Sufi Po
 '''
 ```
 
-### Guidance on Translations
-
 Using the prompt above there is a tendency for the AI to favour translations that rhyme
 and this may mean it choses words that are less literal in translation.
+
+### Literal Prompt
+
+```text
+Using the perspective of a Cambridge University Academic who has studied Sufi Poetry poetically translate the snippet below, but prefer literal meaning over rhyme, returning it in the exact same form:
+'''
+
+'''
+```
+
+
+### Guidance on Translations
+
+If using prompts it may be helpful to review the output of both and combine them together.
 
 At this stage we will favour translations that are more literal, unless a translation
 has been explicitly approved by a scholar that may deviate from this.
