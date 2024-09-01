@@ -5,6 +5,9 @@
     },
     "verses": {
         "ara": [
+            ["طَلْعَةُ الْمَحْبُوْبْ غَايَةُ الْمَطْلُوْبْ"],
+            ["مَنْ رَأَى يَدْرِيْ وَالسِّوَى مَحْجُوْبْ"],
+
             ["يَا كِتَابَ الْغُيُوبْ قَدْ لَجَأْنَا إِلَيْكْ"],
             ["يَا شِفَاءَ الْقُلُوبْ الْصَّلَاةُ عَلَيْكْ"],
 
@@ -25,10 +28,11 @@
 
             ["وَعَلَيْكَ الْسَلَامْ يَا رَسُولَ الْأَنَامْ"],
             ["مَا شَدَا مُسْتَهَامْ بِالْصَّلَاةِ عَلَيْكْ"]
-
-
         ],
         "en": [
+            ["ṭalʿatu l-maḥbūb ghāyatu l-maṭlūb"],
+            ["man raʾā yadrī wa-s-siwā maḥjūb"],
+
             ["yā kitāb al-ghuyūb qad lajaʾnā ilayk"],
             ["yā shifāʾ al-qulūb al-ṣalāh ʿalayk"],
 
@@ -53,6 +57,9 @@
     },
     "translation": {
         "en": [
+            ["The beloved's visage, the ultimate quest,"],
+            ["Who sees, knows, while others are suppressed."],
+
             ["O book of the unseen, we have sought refuge in you."],
             ["O healing of the hearts, prayers be upon you."],
 
@@ -81,14 +88,14 @@
             [
                 {"repeat": 1, "index": 0 },
                 {"repeat": 1, "index": 1 }
+            ],
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
             ]
 
         ],
         "verses": [
-            [
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
-            ],
             [
                 {"repeat": 1, "index": 4 },
                 {"repeat": 1, "index": 5 }
@@ -108,6 +115,10 @@
             [
                 {"repeat": 1, "index": 12 },
                 {"repeat": 1, "index": 13 }
+            ],
+            [
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
             ]
         ]
     }
