@@ -11,9 +11,12 @@ e.g. verse thalama en
 {{ $verse_file_name := .Get "file" }}
 {{ $verse_lang := .Get "lang" }}
 
-{{/* Join the file parts together and load up the JSON */}}
-{{ $verse_file_list := slice "data/" $verse_file_name ".json" }}
-{{ $verses_json := getJSON (delimit $verse_file_list "") }}
+{{/* Load up the JSON from the Site Data */}}
+{{- $verse_filepath_parts := split $verse_file_name "/" -}}
+{{- $verses_json := .Site.Data -}}
+{{- range $index, $part := $verse_filepath_parts -}}
+    {{- $verses_json = index $verses_json $part -}}
+{{- end -}}
 
 {{/* Access the verses for the language provided */}}
 {{ $verses_in_lang := (index (index $verses_json "verses") $verse_lang) }}
