@@ -23,24 +23,16 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# Default to bash
-defaults:
-  run:
-    shell: bash
-
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.126.1
+    container:
+      image: hugomods/hugo:exts-0.138.0
     steps:
-      - name: Install Hugo CLI
+      - name: Dependencies
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
+          apk add --no-cache tar
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -60,6 +52,7 @@ jobs:
           TZ: Europe/London
         working-directory: site
         run: |
+          git config --global --add safe.directory '*'
           hugo \
             --logLevel debug \
             --minify \
