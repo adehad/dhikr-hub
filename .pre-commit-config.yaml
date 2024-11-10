@@ -24,7 +24,7 @@ repos:
         args: ["-L", "fulfilment"]
         require_serial: false
   - repo: https://github.com/adehad/pre-commit-hooks
-    rev: 15c276568f057c45716447f9c2083dcc81e25971
+    rev: 772a17c8c46f9bc8d2ea276c769bba0e6d788f17
     hooks:
       - id: arabic-presentation-form
         entry: arabic-presentation-form
