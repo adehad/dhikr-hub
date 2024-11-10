@@ -1,5 +1,7 @@
 # https://gohugo.io/getting-started/installing/#docker
-FROM klakegg/hugo:0.101.0-ext-ubuntu
+# https://hub.docker.com/r/hugomods/hugo/tags
+FROM hugomods/hugo:exts-0.138.0
 
+RUN apk add --no-cache tar
 
 ENTRYPOINT ["bin/sh"]
