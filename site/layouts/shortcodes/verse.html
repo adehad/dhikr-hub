@@ -67,10 +67,14 @@ e.g. verse thalama en
     </table>
     {{ end }}
     <div class="transliteration" style="flex-basis: 100%; text-align: right;">
-        {{ (index $v_in_lang 0) }}
+        {{ with $v_in_lang }}
+            {{ delimit $v_in_lang " " }}
+        {{ end }}
     </div>
     <div class="translation" style="flex-basis: 100%; text-align: right;">
-        {{ (index $v_in_lang_translated 0) | markdownify }}
+        {{ with $v_in_lang }}
+            {{ (delimit $v_in_lang_translated " ") | markdownify }}
+        {{ end }}
     </div>
     {{ end }}
     <div style="flex-basis: 100%;">
