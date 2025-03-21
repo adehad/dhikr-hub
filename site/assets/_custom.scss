@@ -188,3 +188,41 @@ body {
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+/* Import persistent chorus styles */
+@import "custom-chorus";
+/* Persistent chorus styles are in _custom-chorus.scss */
+
+/* Ensure relative positioning for the qasida container */
+.qasida-container {
+  position: relative;
+  transition: padding-top 0.3s ease;
+}
+
+/* Qasida list styling */
+.qasida-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.qasida-list li {
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.qasida-list li:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.qasida-list a {
+    display: block;
+    padding: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}

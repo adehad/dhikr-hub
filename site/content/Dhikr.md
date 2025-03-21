@@ -1,3 +1,7 @@
+---
+weight: 20
+---
+
 # Intentions
 
 1. Reset the intention that this is for Allah

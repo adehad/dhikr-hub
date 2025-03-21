@@ -97,6 +97,11 @@
         document.querySelector(':root').style.setProperty(font_size_variable_str, `${percentage}%`);
         SaveToLocalStorage();
     };
+    
+    function UpdatePersistentChorus(isEnabled) {
+        document.body.classList.toggle('show-persistent-chorus', isEnabled);
+        SaveToLocalStorage();
+    };
 
 
     function UpdateLayoutBasedOnUserSettings() {
@@ -136,13 +141,15 @@
         saved_data = getLocalStorageObject(local_storage_key);
         for (const [settings_key, settings_value] of Object.entries(saved_data)) {
             element = document.getElementById(settings_key);
-            switch (element.type) {
-                case "checkbox":
-                    element.checked = settings_value;
-                    break;
-                default:
-                    element.value = settings_value;
-                    break;
+            if (element) { // Make sure element exists
+                switch (element.type) {
+                    case "checkbox":
+                        element.checked = settings_value;
+                        break;
+                    default:
+                        element.value = settings_value;
+                        break;
+                }
             }
         }
         console.debug("Loaded settings", saved_data);

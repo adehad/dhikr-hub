@@ -1,0 +1,233 @@
+/* Persistent Chorus Styles
+ * This file contains all styles related to the Persistent Chorus feature
+ */
+
+/* Original chorus container */
+.chorus-container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Persistent chorus wrapper structure */
+.persistent-chorus-wrapper {
+  position: fixed;
+  top: 4rem; /* Below header */
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Inner container to match book content width */
+.persistent-chorus-inner {
+  box-sizing: border-box;
+  pointer-events: auto;
+  /* Width, max-width, padding, and margin will be set dynamically by JS */
+  /* to match the book content container dimensions */
+}
+
+/* The persistent chorus element itself */
+.persistent-chorus {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 1rem;
+  width: 100%;
+  
+  /* Match verse container styles from the original */
+  & .verse-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    direction: rtl;
+  }
+  
+  /* Match the Arabic text styling */
+  & .arabic {
+    font-family: var(--arabic-font-family, 'Scheherazade New');
+    font-size: var(--arabic-font-perc, 200%);
+    line-height: 1.8;
+  }
+  
+  /* Match transliteration styles */
+  & .transliteration,
+  & .transliteration-phrase-by-phrase {
+    direction: ltr;
+    font-size: var(--transliteration-font-perc, 80%);
+  }
+  
+  /* Match translation styles */
+  & .translation,
+  & .translation-phrase-by-phrase {
+    direction: ltr;
+    font-size: var(--translation-font-perc, 85%);
+  }
+  
+  /* Add a slight indicator that it's the chorus */
+  & .chorus-indicator {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Hidden state for both chorus types */
+.chorus-container.hidden,
+.persistent-chorus.hidden,
+.persistent-chorus-wrapper.hidden {
+  opacity: 0;
+  transform: translateY(-120%);
+  pointer-events: none;
+}
+
+/* Mobile adjustments */
+/* Tablet styles */
+@media screen and (max-width: 1024px) {
+  .persistent-chorus-wrapper {
+    top: 3.5rem;
+  }
+  
+  .persistent-chorus-inner {
+    width: calc(100% - 2rem) !important;
+    padding: 0 1rem !important;
+    max-width: none !important;
+  }
+  
+  .persistent-chorus {
+    max-height: 35vh;
+    overflow-y: auto;
+    
+    & .arabic {
+      font-size: calc(var(--arabic-font-perc) * 0.9);
+      line-height: 1.6;
+    }
+    
+    & .transliteration,
+    & .transliteration-phrase-by-phrase,
+    & .translation,
+    & .translation-phrase-by-phrase {
+      font-size: calc(var(--transliteration-font-perc) * 0.95);
+      line-height: 1.4;
+    }
+  }
+}
+
+/* Phone styles - more aggressive optimizations */
+@media screen and (max-width: 767px) {
+  .persistent-chorus-wrapper {
+    top: 3rem;
+  }
+  
+  .persistent-chorus {
+    max-height: 30vh;
+    padding: 0.3rem;
+    
+    & .arabic {
+      font-size: 120% !important; /* Much smaller Arabic text */
+      line-height: 1.4;
+    }
+    
+    & .transliteration,
+    & .transliteration-phrase-by-phrase,
+    & .translation,
+    & .translation-phrase-by-phrase {
+      font-size: calc(var(--transliteration-font-perc) * 0.85);
+      line-height: 1.2;
+    }
+    
+    /* Fix line height issues found in debug panel */
+    & table.verse {
+      line-height: 18.4px; /* Match the line height shown in debug */
+    }
+    
+    /* Reduce spacing between elements */
+    & .verse-container {
+      margin-bottom: 0.3rem;
+    }
+    
+    /* Make the chorus indicator smaller */
+    & .chorus-indicator {
+      font-size: 0.7rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+}
+
+/* Small phone styles (iPhone SE, etc.) */
+@media screen and (max-width: 375px) {
+  .persistent-chorus {
+    max-height: 25vh;
+    
+    & .arabic {
+      font-size: 100% !important; /* Fixed small size regardless of variable */
+      line-height: 1.3;
+    }
+    
+    /* Create a more compact view for very small screens */
+    & .verse-container {
+      margin-bottom: 0.2rem;
+    }
+    
+    /* Option to hide translation on very small screens initially */
+    & .translation,
+    & .translation-phrase-by-phrase {
+      display: none;
+    }
+  }
+  
+  /* Add a toggle button to show/hide translations */
+  .persistent-chorus-toggle {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.8rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+/* Handle collapsed book sidebar */
+.book-menu-content.collapse-processed:not(.show) ~ .book-page .persistent-chorus-inner {
+  max-width: calc(100% - 2rem) !important;
+}
+
+
+
+/* Handle different screen sizes for TOC */
+@media screen and (min-width: 80rem) {
+  .container-with-toc .persistent-chorus-inner {
+    width: calc(100% - 16rem - 20rem - 4rem) !important; /* Adjust for menu, TOC, and padding */
+  }
+}
+
+/* Print styles */
+@media print {
+  .persistent-chorus-wrapper {
+    display: none !important;
+  }
+}
+
+/* Smooth transitions */
+.persistent-chorus,
+.persistent-chorus-wrapper,
+.chorus-container {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

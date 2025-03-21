@@ -1,0 +1,20 @@
+<ul class="qasida-list">
+{{ $qSection := .Site.GetPage "section" "qasidas" }}
+{{ if $qSection }}
+  {{ range $qSection.Pages }}
+    <li>
+      {{ $displayName := .Title }}
+      {{ if eq $displayName "" }}
+        {{/* If title is empty, generate one from the filename */}}
+        {{ $filename := path.Base .File.Path }}
+        {{ $nameWithoutExt := replaceRE "(.+)\\.[^.]+$" "$1" $filename }}
+        {{ $displayName = replace (replace $nameWithoutExt "_" " ") "-" " " }}
+        {{ $displayName = title $displayName }}
+      {{ end }}
+      <a href="{{ .RelPermalink }}">{{ $displayName }}</a>
+    </li>
+  {{ end }}
+{{ else }}
+  <li>No Qasidas section found</li>
+{{ end }}
+</ul>

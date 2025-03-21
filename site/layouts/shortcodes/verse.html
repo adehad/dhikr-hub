@@ -5,7 +5,6 @@ FILE = filepath relative to data/salawaat
 LANG = language
 
 e.g. verse thalama en
-
 */}}
 
 {{ $verse_file_name := .Get "file" }}
@@ -29,10 +28,17 @@ e.g. verse thalama en
 
 {{ $verse_num := "??" }}
 
-{{/* {{ range $v_idx, $v_ara := $verses_json.verses.ara }} */}}
-{{ range $v_config_idx, $v_config := $verses_to_display }}
-<div class="verse-container">
+<div class="qasida-container" data-has-chorus="{{ if gt $how_many_chorus 0 }}true{{ else }}false{{ end }}">
 
+{{/* Range through all the verses to display */}}
+{{ range $v_config_idx, $v_config := $verses_to_display }}
+{{/* Start Chorus Identification */}}
+{{- $isChorus := false -}}
+{{- if lt $v_config_idx $how_many_chorus -}}
+    {{- $isChorus = true -}}
+{{- end -}}
+
+<div class="verse-container{{ if $isChorus }} chorus-container{{ end }}" data-verse-index="{{ $v_config_idx }}"{{ if $isChorus }} id="chorus-{{ $v_config_idx }}\"{{ end }}>
     {{ if (gt $how_many_chorus 0) }}
     {{ $verse_num = (delimit (slice "## Chorus " $v_config_idx) "") }}
     {{ $total_verses = sub $total_verses 1 }}
@@ -43,7 +49,6 @@ e.g. verse thalama en
 
     {{ $verse_num | markdownify }}
     <p style="flex-basis: 100%; margin: 0;"></p>
-    {{/* {{ $verse_num.RenderString }} */}}
 
     {{ range $new_verse := $v_config }}
     {{ $v_idx := int (index $new_verse "index") }}
@@ -82,3 +87,5 @@ e.g. verse thalama en
     </div>
 </div>
 {{ end }}
+
+</div>
