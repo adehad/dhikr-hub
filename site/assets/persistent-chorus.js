@@ -1,6 +1,6 @@
 /**
  * Persistent Chorus Implementation
- * 
+ *
  * This script implements the following behaviour:
  * 1. The chorus appears at the start of the qasida in its normal position
  * 2. As the user scrolls down, the chorus remains visible until it scrolls out of view
@@ -9,7 +9,7 @@
  * 5. When scrolling up vigorously, the chorus disappears (to allow reading previous verses)
  * 6. When gently scrolling up a little again, the chorus reappears
  * 7. When scrolling down, the chorus disappears again
- * 
+ *
  */
 document.addEventListener('DOMContentLoaded', function() {
   // Configuration constants
@@ -21,52 +21,52 @@ document.addEventListener('DOMContentLoaded', function() {
     ACTIVE_SCROLL_TIMEOUT: 200,        // ms - time after last scroll event to consider scrolling "stopped"
     TOP_MARGIN: 60                     // px - space between top of viewport and persistent chorus
   };
-  
+
   // Find all qasida containers
   const qasidaContainers = document.querySelectorAll('.qasida-container[data-has-chorus="true"]');
-  
+
   // If no qasidas with chorus, exit
   if (qasidaContainers.length === 0) {
     return;
   }
-  
+
   // Process each qasida container
   qasidaContainers.forEach(qasidaContainer => {
     setupPersistentChorus(qasidaContainer);
   });
-  
+
   function setupPersistentChorus(qasidaContainer) {
     // Get original chorus containers within this qasida
     const originalChorusContainers = qasidaContainer.querySelectorAll('.chorus-container');
-    
+
     // If no chorus, exit
     if (originalChorusContainers.length === 0) {
       return;
     }
-    
+
     // Handle empty chorus case - check if the chorus container is empty or has no content
     const hasEmptyChorus = Array.from(originalChorusContainers).some(container => {
       // Check if the container is empty or has only whitespace/formatting elements
-      const hasContent = container.querySelector('.verse') || 
-                         container.querySelector('.arabic') || 
-                         container.querySelector('.transliteration') || 
+      const hasContent = container.querySelector('.verse') ||
+                         container.querySelector('.arabic') ||
+                         container.querySelector('.transliteration') ||
                          container.querySelector('.translation');
       return !hasContent || container.innerText.trim() === '';
     });
-    
+
     if (hasEmptyChorus) {
       return; // Don't create persistent chorus for empty choruses
     }
-    
+
     // Determine the book page and markdown container dimensions for proper positioning
     const bookPage = document.querySelector('.book-page');
     const markdownContainer = document.querySelector('.markdown');
-    
+
     let containerWidth = '100%';
     let containerMaxWidth = 'none';
     let containerPadding = '0 1rem';
     let containerMargin = '0 auto';
-    
+
     if (markdownContainer) {
       const markdownStyles = window.getComputedStyle(markdownContainer);
       containerWidth = markdownStyles.width;
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
       containerPadding = bookPageStyles.padding;
       containerMargin = bookPageStyles.margin;
     }
-    
+
     // Create persistent chorus elements with proper container structure
     const persistentChorusElements = [];
     // Set default visibility - only first chorus visible by default when multiple exist
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
       persistentWrapper.style.display = 'flex';
       persistentWrapper.style.justifyContent = 'center';
       persistentWrapper.style.pointerEvents = 'none'; // Allow clicks to pass through
-      
+
       // Create the inner container that matches content area dimensions
       const innerContainer = document.createElement('div');
       innerContainer.className = 'persistent-chorus-inner';
@@ -106,13 +106,13 @@ document.addEventListener('DOMContentLoaded', function() {
       innerContainer.style.padding = containerPadding;
       innerContainer.style.margin = containerMargin;
       innerContainer.style.pointerEvents = 'auto'; // Re-enable pointer events
-      
+
       // Create a clone of the original chorus
       const persistentChorus = originalChorus.cloneNode(true);
       persistentChorus.classList.remove('chorus-container');
       persistentChorus.classList.add('persistent-chorus');
       persistentChorus.classList.add('hidden'); // Start hidden
-      
+
       // For multiple choruses, special handling for second chorus
       if (hasMultipleChorus && index > 0) {
         persistentChorus.style.display = 'none'; // Initially hidden
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
       persistentChorus.id = `persistent-chorus-${qasidaContainer.id || 'qasida'}-${index}`;
       persistentChorus.setAttribute('aria-hidden', 'true');
       persistentChorus.setAttribute('data-original-id', originalChorus.id || '');
-      
+
       // FIX: Remove duplicated translations (keep only the ones inside tables)
       // This fixes the iPhone 12 Pro duplication issue
       const standaloneTranslations = persistentChorus.querySelectorAll('.translation');
@@ -133,18 +133,18 @@ document.addEventListener('DOMContentLoaded', function() {
       standaloneTransliterations.forEach(elem => {
         elem.remove();
       });
-      
+
       // Add a chorus indicator with number if there are multiple choruses
       const indicator = document.createElement('div');
       indicator.className = 'chorus-indicator';
-      indicator.textContent = originalChorusContainers.length > 1 ? 
+      indicator.textContent = originalChorusContainers.length > 1 ?
         (index === 0 ? 'Chorus 1/2' : 'Chorus 2/2') : 'Chorus';
       indicator.style.textAlign = 'center';
       indicator.style.fontSize = '0.8rem';
       indicator.style.color = '#666';
       indicator.style.marginBottom = '0.5rem';
       persistentChorus.insertBefore(indicator, persistentChorus.firstChild);
-      
+
       // Add chorus toggle button if there are multiple choruses and this is the first chorus
       if (originalChorusContainers.length > 1 && index === 0) {
         const chorusToggle = document.createElement('button');
@@ -162,10 +162,10 @@ document.addEventListener('DOMContentLoaded', function() {
         chorusToggle.style.color = '#666';
         chorusToggle.style.cursor = 'pointer';
         chorusToggle.style.zIndex = '11'; // Higher than translation toggle
-        
+
         // Store which chorus is currently shown (0 = first, 1 = second)
         persistentChorus.setAttribute('data-current-chorus', '0');
-        
+
         chorusToggle.addEventListener('click', function() {
           const currentChorus = persistentChorus.getAttribute('data-current-chorus');
           if (currentChorus === '0') {
@@ -182,10 +182,10 @@ document.addEventListener('DOMContentLoaded', function() {
             persistentChorus.setAttribute('data-current-chorus', '0');
           }
         });
-        
+
         persistentChorus.appendChild(chorusToggle);
       }
-      
+
       // Handle Arabic font size based on screen size (force smaller size on mobile)
       if (window.innerWidth <= 375) { // iPhone SE size screens
         const arabicElements = persistentChorus.querySelectorAll('.arabic');
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
           elem.style.fontSize = '120%';
         });
       }
-      
+
       // Add a toggle button for translations on small screens
       if (window.innerWidth <= 375) { // Small screen detection
         const toggleButton = document.createElement('button');
@@ -216,11 +216,11 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleButton.style.color = '#666';
         toggleButton.style.cursor = 'pointer';
         toggleButton.style.zIndex = '10';
-        
+
         toggleButton.addEventListener('click', function() {
           const translations = persistentChorus.querySelectorAll('.translation-phrase-by-phrase');
           let isVisible = false;
-          
+
           translations.forEach(elem => {
             if (elem.style.display === 'none' || getComputedStyle(elem).display === 'none') {
               elem.style.display = 'table-row';
@@ -230,33 +230,33 @@ document.addEventListener('DOMContentLoaded', function() {
               isVisible = false;
             }
           });
-          
+
           toggleButton.textContent = isVisible ? 'Hide Trans' : 'Show Trans';
         });
-        
+
         persistentChorus.appendChild(toggleButton);
       }
-      
+
       // Assemble the DOM structure
       innerContainer.appendChild(persistentChorus);
       persistentWrapper.appendChild(innerContainer);
       document.body.appendChild(persistentWrapper);
-      
+
       // Store references to all parts
       persistentChorusElements.push({
         wrapper: persistentWrapper,
         inner: innerContainer,
         chorus: persistentChorus
       });
-      
+
       // Associate the persistent chorus with its original
       originalChorus.setAttribute('data-persistent-id', persistentChorus.id);
     });
-    
+
     // Set up scroll behavior for this qasida
     setupScrollBehavior(qasidaContainer, originalChorusContainers, persistentChorusElements);
   }
-  
+
   function setupScrollBehavior(qasidaContainer, originalChorusContainers, persistentChorusElements) {
     // Variables for scroll tracking
     const scrollState = {
@@ -269,14 +269,14 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollDistanceSinceDirectionChange: 0,
       activeScrollTimer: null
     };
-    
+
     function handleScroll() {
       const currentScrollY = window.scrollY;
       const currentTime = Date.now();
-      
+
       // Determine scroll direction
       const newScrollingUp = currentScrollY < scrollState.lastScrollY;
-      
+
       // Detect direction change
       if (newScrollingUp !== scrollState.isScrollingUp) {
         scrollState.scrollStartY = scrollState.lastScrollY;
@@ -285,33 +285,33 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         scrollState.scrollDistanceSinceDirectionChange = Math.abs(currentScrollY - scrollState.scrollStartY);
       }
-      
+
       scrollState.isScrollingUp = newScrollingUp;
-      
+
       // Calculate scroll velocity
       const timeDelta = currentTime - scrollState.lastScrollTime;
       if (timeDelta > 0) {
         scrollState.scrollVelocity = Math.abs(currentScrollY - scrollState.lastScrollY) / timeDelta;
       }
-      
+
       // Determine scroll characteristics
       const isGentleScroll = scrollState.scrollVelocity < CONFIG.GENTLE_SCROLL_THRESHOLD;
       const isVigorousScroll = scrollState.scrollVelocity > CONFIG.VIGOROUS_SCROLL_THRESHOLD;
       const hasScrolledSinceDirectionChange = scrollState.scrollDistanceSinceDirectionChange > CONFIG.DIRECTION_CHANGE_GRACE_PERIOD;
-      
+
       // Process each chorus pair
       originalChorusContainers.forEach((originalChorus, index) => {
         const persistentChorusSet = persistentChorusElements[index];
-        
+
         if (!persistentChorusSet) return;
-        
+
         const persistentWrapper = persistentChorusSet.wrapper;
         const persistentChorus = persistentChorusSet.chorus;
-        
+
         // Check if original chorus is visible in viewport
         const rect = originalChorus.getBoundingClientRect();
         const isOriginalVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        
+
         if (isOriginalVisible) {
           // Original is visible, hide persistent
           persistentWrapper.classList.add('hidden');
@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (isGentleScroll) {
               // Gently scrolling up should show the chorus
               persistentWrapper.classList.remove('hidden');
-              
+
               // For multiple choruses, we need separate behavior
               if (originalChorusContainers.length > 1) {
                 // The display property is used to toggle between choruses
@@ -344,16 +344,16 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       });
-      
+
       // Update tracking variables
       scrollState.lastScrollY = currentScrollY;
       scrollState.lastScrollTime = currentTime;
-      
+
       // Reset the active scroll timer
       if (scrollState.activeScrollTimer) {
         clearTimeout(scrollState.activeScrollTimer);
       }
-      
+
       // Set a timer to indicate when scrolling has "stopped"
       scrollState.activeScrollTimer = setTimeout(() => {
         // After a period of no scrolling, make sure the persistent chorus is shown
@@ -362,13 +362,13 @@ document.addEventListener('DOMContentLoaded', function() {
           originalChorusContainers.forEach((originalChorus, index) => {
             const persistentChorusSet = persistentChorusElements[index];
             if (!persistentChorusSet) return;
-            
+
             const persistentWrapper = persistentChorusSet.wrapper;
             const persistentChorus = persistentChorusSet.chorus;
-            
+
             const rect = originalChorus.getBoundingClientRect();
             const isOriginalVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
+
             if (!isOriginalVisible && scrollState.scrollDirection === 'up') {
               persistentWrapper.classList.remove('hidden');
               persistentChorus.classList.remove('hidden');
@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }, CONFIG.ACTIVE_SCROLL_TIMEOUT);
     }
-    
+
     // Set up scroll listener with throttling
     let scrollTimeout;
     window.addEventListener('scroll', function() {
@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, CONFIG.SCROLL_SAMPLE_RATE);
       }
     }, { passive: true });
-    
+
     // Add click handlers for chorus toggles if multiple choruses exist
     // For both chorus containers, we set initial setup
     if (persistentChorusElements.length > 1) {
@@ -397,17 +397,17 @@ document.addEventListener('DOMContentLoaded', function() {
       persistentChorusElements[0].chorus.style.display = 'block';
       persistentChorusElements[1].chorus.style.display = 'none';
     }
-    
+
     // Initial check
     handleScroll();
-    
+
     // Handle window resize events
     window.addEventListener('resize', function() {
       // Update container dimensions when window resizes
       updateContainerDimensions(persistentChorusElements);
       handleScroll();
     }, { passive: true });
-    
+
     // Clean up when leaving the page
     window.addEventListener('beforeunload', function() {
       // Remove persistent choruses to prevent duplicates on page refresh
@@ -418,17 +418,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-  
+
   // Helper function to update container dimensions when window resizes
   function updateContainerDimensions(persistentChorusElements) {
     const bookPage = document.querySelector('.book-page');
     const markdownContainer = document.querySelector('.markdown');
-    
+
     let containerWidth = '100%';
     let containerMaxWidth = 'none';
     let containerPadding = '0 1rem';
     let containerMargin = '0 auto';
-    
+
     if (markdownContainer) {
       const markdownStyles = window.getComputedStyle(markdownContainer);
       containerWidth = markdownStyles.width;
@@ -442,10 +442,10 @@ document.addEventListener('DOMContentLoaded', function() {
       containerPadding = bookPageStyles.padding;
       containerMargin = bookPageStyles.margin;
     }
-    
+
     const isSmallScreen = window.innerWidth <= 375;
     const isMediumScreen = window.innerWidth <= 767 && window.innerWidth > 375;
-    
+
     persistentChorusElements.forEach(elements => {
       if (elements.inner) {
         elements.inner.style.width = containerWidth;
@@ -453,16 +453,16 @@ document.addEventListener('DOMContentLoaded', function() {
         elements.inner.style.padding = containerPadding;
         elements.inner.style.margin = containerMargin;
       }
-      
 
-      
+
+
       // Handle font sizes and toggle button visibility based on screen size
       if (elements.chorus) {
         const chorus = elements.chorus;
         const existingToggle = chorus.querySelector('.persistent-chorus-toggle');
         const translations = chorus.querySelectorAll('.translation-phrase-by-phrase');
         const arabicElements = chorus.querySelectorAll('.arabic');
-        
+
         // Force smaller Arabic font size on small screens
         if (isSmallScreen) {
           // Very small screens (iPhone SE size)
@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', function() {
             elem.style.fontSize = '120%';
           });
         }
-        
+
         if (isSmallScreen) {
           // Small screen - show toggle button if not already there
           if (!existingToggle) {
@@ -494,10 +494,10 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleButton.style.color = '#666';
             toggleButton.style.cursor = 'pointer';
             toggleButton.style.zIndex = '10';
-            
+
             toggleButton.addEventListener('click', function() {
               let isVisible = false;
-              
+
               translations.forEach(elem => {
                 if (elem.style.display === 'none' || getComputedStyle(elem).display === 'none') {
                   elem.style.display = 'table-row';
@@ -507,13 +507,13 @@ document.addEventListener('DOMContentLoaded', function() {
                   isVisible = false;
                 }
               });
-              
+
               toggleButton.textContent = isVisible ? 'Hide Trans' : 'Show Trans';
             });
-            
+
             chorus.appendChild(toggleButton);
           }
-          
+
           // Make sure translations are hidden by default
           translations.forEach(elem => {
             elem.style.display = 'none';
@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if (existingToggle) {
             existingToggle.remove();
           }
-          
+
           translations.forEach(elem => {
             elem.style.display = '';
           });
@@ -549,18 +549,18 @@ document.addEventListener('DOMContentLoaded', function() {
       pointer-events: none;
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    
+
     .persistent-chorus-wrapper.hidden {
       opacity: 0;
       transform: translateY(-100%);
       pointer-events: none;
     }
-    
+
     .persistent-chorus-inner {
       box-sizing: border-box;
       pointer-events: auto;
     }
-    
+
     .persistent-chorus {
       background-color: #fff;
       border-radius: 0.5rem;
@@ -569,68 +569,68 @@ document.addEventListener('DOMContentLoaded', function() {
       position: relative;
       margin-bottom: 1rem;
     }
-    
+
     /* Mobile adjustments */
     @media screen and (max-width: 768px) {
       .persistent-chorus-wrapper {
         top: 3.5rem;
       }
-      
+
       .persistent-chorus-inner {
         width: calc(100% - 2rem) !important;
         padding: 0 1rem !important;
       }
-      
+
       .persistent-chorus .arabic {
         font-size: 160% !important;
       }
-      
+
       .persistent-chorus .transliteration-phrase-by-phrase,
       .persistent-chorus .translation-phrase-by-phrase {
         font-size: 80% !important;
       }
     }
-    
+
     /* Phone adjustments - force smaller Arabic */
     @media screen and (max-width: 767px) {
       .persistent-chorus .arabic {
         font-size: 120% !important;
       }
     }
-    
+
     /* Small phone adjustments - force even smaller Arabic */
     @media screen and (max-width: 375px) {
       .persistent-chorus .arabic {
         font-size: 100% !important;
       }
     }
-    
+
 
     /* Handle collapsed book sidebar */
     .book-menu-content.collapse-processed:not(.show) ~ .book-page .persistent-chorus-inner {
       max-width: calc(100% - 2rem) !important;
     }
-    
+
     /* Print styles */
     @media print {
       .persistent-chorus-wrapper {
         display: none !important;
       }
     }
-    
+
     /* Show/hide transitions */
     .persistent-chorus,
     .persistent-chorus-wrapper {
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    
+
     .chorus-indicator {
       text-align: center;
       font-size: 0.8rem;
       color: #666;
       margin-bottom: 0.5rem;
     }
-    
+
     /* Chorus toggle button */
     .chorus-toggle {
       position: absolute;
@@ -646,11 +646,11 @@ document.addEventListener('DOMContentLoaded', function() {
       z-index: 10;
       transition: background-color 0.2s ease;
     }
-    
+
     .chorus-toggle:hover {
       background-color: #f0f0f0;
     }
   `;
-  
+
   document.head.appendChild(style);
 });

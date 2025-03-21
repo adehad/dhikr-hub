@@ -46,7 +46,7 @@
   position: relative;
   margin-bottom: 1rem;
   width: 100%;
-  
+
   /* Match verse container styles from the original */
   & .verse-container {
     display: flex;
@@ -54,28 +54,28 @@
     justify-content: right;
     direction: rtl;
   }
-  
+
   /* Match the Arabic text styling */
   & .arabic {
     font-family: var(--arabic-font-family, 'Scheherazade New');
     font-size: var(--arabic-font-perc, 200%);
     line-height: 1.8;
   }
-  
+
   /* Match transliteration styles */
   & .transliteration,
   & .transliteration-phrase-by-phrase {
     direction: ltr;
     font-size: var(--transliteration-font-perc, 80%);
   }
-  
+
   /* Match translation styles */
   & .translation,
   & .translation-phrase-by-phrase {
     direction: ltr;
     font-size: var(--translation-font-perc, 85%);
   }
-  
+
   /* Add a slight indicator that it's the chorus */
   & .chorus-indicator {
     text-align: center;
@@ -100,22 +100,22 @@
   .persistent-chorus-wrapper {
     top: 3.5rem;
   }
-  
+
   .persistent-chorus-inner {
     width: calc(100% - 2rem) !important;
     padding: 0 1rem !important;
     max-width: none !important;
   }
-  
+
   .persistent-chorus {
     max-height: 35vh;
     overflow-y: auto;
-    
+
     & .arabic {
       font-size: calc(var(--arabic-font-perc) * 0.9);
       line-height: 1.6;
     }
-    
+
     & .transliteration,
     & .transliteration-phrase-by-phrase,
     & .translation,
@@ -131,16 +131,16 @@
   .persistent-chorus-wrapper {
     top: 3rem;
   }
-  
+
   .persistent-chorus {
     max-height: 30vh;
     padding: 0.3rem;
-    
+
     & .arabic {
       font-size: 120% !important; /* Much smaller Arabic text */
       line-height: 1.4;
     }
-    
+
     & .transliteration,
     & .transliteration-phrase-by-phrase,
     & .translation,
@@ -148,17 +148,17 @@
       font-size: calc(var(--transliteration-font-perc) * 0.85);
       line-height: 1.2;
     }
-    
+
     /* Fix line height issues found in debug panel */
     & table.verse {
       line-height: 18.4px; /* Match the line height shown in debug */
     }
-    
+
     /* Reduce spacing between elements */
     & .verse-container {
       margin-bottom: 0.3rem;
     }
-    
+
     /* Make the chorus indicator smaller */
     & .chorus-indicator {
       font-size: 0.7rem;
@@ -171,24 +171,24 @@
 @media screen and (max-width: 375px) {
   .persistent-chorus {
     max-height: 25vh;
-    
+
     & .arabic {
       font-size: 100% !important; /* Fixed small size regardless of variable */
       line-height: 1.3;
     }
-    
+
     /* Create a more compact view for very small screens */
     & .verse-container {
       margin-bottom: 0.2rem;
     }
-    
+
     /* Option to hide translation on very small screens initially */
     & .translation,
     & .translation-phrase-by-phrase {
       display: none;
     }
   }
-  
+
   /* Add a toggle button to show/hide translations */
   .persistent-chorus-toggle {
     display: block;
