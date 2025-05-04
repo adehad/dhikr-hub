@@ -33,18 +33,68 @@ One of the most valuable contributions is adding new content to the collection. 
 
 ### Step 1: Prepare the Content
 
-1. Prepare the Arabic text with proper diacritical marks
-   - Consider using Google Translate app for capturing Arabic text from printed sources
-   - For verses where harakaat (diacritical marks) are missing, you can use [RDI Tashkeel](https://rdi-tashkeel.com/en/home)
-   - Make minor adjustments using an [Arabic keyboard](https://www.lexilogos.com/keyboard/arabic.htm)
+#### Arabic
 
-2. Create the transliteration
-   - Follow the Library of Congress Arabic Romanization system
-   - AI tools can provide an excellent starting point for transliterations
+Prepare the Arabic text with proper diacritical marks
+- Consider using Google Translate app for capturing Arabic text from printed sources
+- For verses where harakaat (diacritical marks) are missing, you can use [RDI Tashkeel](https://rdi-tashkeel.com/en/home)
+- Make minor adjustments using an [Arabic keyboard](https://www.lexilogos.com/keyboard/arabic.htm)
 
-3. Prepare the English translation
-   - Focus on conveying the meaning accurately
-   - Balance literal translation with readability
+#### Transliteration
+
+Follow the Library of Congress Arabic Romanization system
+
+AI can provide an excellent starting point for transliterations, consider the following prompt:
+
+```text
+Using the Library of Congress Arabic Romanization system, transliterate the snippet below, returning it in the exact same form:
+'''
+
+'''
+```
+
+#### Translation
+
+AI can provide starting point for translations, consider the following prompt:
+
+##### Poetic Prompt
+
+```text
+Using the perspective of a Cambridge University Academic who has studied Sufi Poetry poetically translate the snippet below, returning it in the exact same form:
+'''
+
+'''
+```
+
+Using the prompt above there is a tendency for the AI to favour translations that rhyme
+and this may mean it choses words that are less literal in translation.
+
+##### Literal Prompt
+
+```text
+Using the perspective of a Cambridge University Academic who has studied Sufi Poetry poetically translate the snippet below, but prefer literal meaning over rhyme, returning it in the exact same form:
+'''
+
+'''
+```
+
+##### Guidance on Translations
+
+If using prompts it may be helpful to review the output of both and combine them together.
+
+At this stage we will favour translations that are more literal, unless a translation
+has been explicitly approved by a scholar that may deviate from this.
+
+Some guidance during reviews of translation include:
+
+1. Linguistic devices should be translated into their equivalent.
+   1. Due to us favouring the literal translation.
+   In the case where metaphors or other idioms are used, the literal translation should be given footnotes or commentary added to  the 'About' section to reflect.
+1. Translations should be clear and accessible, not using exessively academic language.
+1. Translations should respect the poet's intent (when known).
+1. Maintenance of the cultural context of the Arabic traditions referenced instead of trying to translate them to another's cultural specific context.
+   1. Use the 'About' section of the poem to add detail of this context for readers to gain an understanding and appreciation.
+
 
 ### Step 2: Create the JSON File
 
