@@ -89,13 +89,13 @@ body {
 #chorus-toggle {
     display: none;
 
-    &:not(:checked) {
+    &:checked {
         &~label[for="chorus-toggle"] {
             color: pink;
         }
     }
 
-    &:not(:checked)~.sticky-chorus {
+    &:checked~.sticky-chorus {
         position: sticky;
         // position: fixed->sticky is not a transition, this animation helps make less jarring
         animation: slideIn 0.4s ease-out forwards;
