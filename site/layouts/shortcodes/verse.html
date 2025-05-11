@@ -33,7 +33,7 @@ e.g. verse thalama en
     {{ range $v_config_idx, $v_config := $verses_json.order.chorus }}
     <div class="verse-container">
 
-        {{ $verse_num = (delimit (slice "## Chorus " $v_config_idx) "") }}
+        {{ $verse_num = (delimit (slice "## Chorus " (add $v_config_idx 1)) "") }}
 
         {{ $json_string := jsonify (dict
         "verse_num" $verse_num
@@ -50,7 +50,7 @@ e.g. verse thalama en
 {{ end }}
 
 {{ range $v_config_idx, $v_config := $verses_json.order.verses }}
-{{ $verse_num = (delimit (slice "## " $v_config_idx) "") }}
+{{ $verse_num = (delimit (slice "## " (add $v_config_idx 1)) "") }}
 <div class="verse-container">
     {{ $json_string := jsonify (dict
     "verse_num" $verse_num
