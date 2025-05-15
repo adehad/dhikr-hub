@@ -1,0 +1,84 @@
+{
+    "name": {
+        "ara": "خذوني على عيبِي",
+        "en": "Take me as I am, with all my flaws"
+    },
+    "verses": {
+        "ara": [
+            ["خُذُونِي عَلَى عَيْبِي فَإِنِّي فَقِيرُكُمْ"],
+            ["أَوْ تُصْلِحُوا عِوَجِي فَلَيْسَ عَسِيرًا"],
+
+            ["فَلَسْتُ عَلَى مُرِّ الصَّبَابَةِ قَادِرٌ"],
+            ["وَلَسْتُ عَلَى شَرْطِ الْوِدَادِ قَدِيرًا"],
+
+            ["أَيَعْجَزُ أَهْلُ اللَّهِ إِصْلَاحَ عِلَّتِي"],
+            ["خُذُونِي وَدَاوِنِي فَلَيْسَ كَبِيرًا"],
+
+            ["وَ صُبُّوا عَلَى قَلْبِي مَرَاحِمَ غَيْثِكُمْ"],
+            ["وَ خَلُّوا فُؤَادِي فِي الْأَنْوَارِ بَصِيرًا"],
+
+            ["وَ جُودُوا عَلَى نَقْصِي بِثَوْبِ كَمَالِكُمْ"],
+            ["فَسُوقُوا لِمَأْثُورِ الْغَرَامِ بَشِيرًا"]
+        ],
+        "en": [
+            ["Khudhūnī ʿalā ʿaybī faʾinnī faqīrukum"],
+            ["ʾaw tuṣliḥū ʿiwajī fa-laysa ʿasīran"],
+
+            ["fa-lastu ʿalā murr aṣ-ṣabāba qādirun"],
+            ["wa-lastu ʿalā sharṭ al-widād qadīran"],
+
+            ["ʾa-yaʿjaz ʾahlu Allāh ʾiṣlāḥ ʿillatī"],
+            ["Khudhūnī wa-dāwinī fa-laysa kabīran"],
+
+            ["wa ṣubbū ʿalā qalbī marāḥim ghaythikum"],
+            ["wa khallū fuʾādī fī al-ʾanwār baṣīran"],
+
+            ["wa jūdū ʿalā naqṣī bi-thawb kamālikum"],
+            ["fa-sūqū li-maʾthūr al-gharām bashīran"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["Take me as I am, with all my flaws, for I am your humble servant,"],
+            ["Or mend my crooked ways, for it is not too difficult."],
+
+            ["I cannot endure the bitterness of longing,"],
+            ["Nor am I capable of meeting the conditions of love."],
+
+            ["Can the people of God not heal my ailment?"],
+            ["Take me and cure me, for it is not a great task."],
+
+            ["Pour upon my heart the mercies of your rain,"],
+            ["And let my heart see clearly in the light."],
+
+            ["Bestow upon my shortcomings the garment of your perfection,"],
+            ["And bring glad tidings to the legacy of love."]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ]
+        ]
+    }
+}
