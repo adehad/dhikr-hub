@@ -1,0 +1,209 @@
+{
+    "name": {
+        "ara": "أنا مشغولٌ بليلى",
+        "en": "I am pre-occupied with the Divine"
+    },
+    "verses": {
+        "ara": [
+            ["أَنَا مَشْغُولٌ بِـلَيْلَى"],
+            ["عَنْ جَمِيعِ الْكَوْنِ جُمَلَهِ"],
+
+            ["فَإِذَا مَا قِيلَ مَنْ ذَا"],
+            ["قُلْ هُوَ الصَّبُّ الْمُوَلَّهُ"],
+
+            ["أَخَذَتْهُ الرَّاحُ حَتَّى"],
+            ["لَمْ تُبقِّ فِيهِ فَضْلَهُ"],
+
+            ["رَاحُ أُنْسٍ، رَاحُ قُدْسٍ"],
+            ["لَيْسَتِ الرَّاحُ الْمُضَلَّهُ"],
+
+
+            ["نَسَمَاتُ الْقُرْبِ هَبَّتْ"],
+            ["مِنْ رُبُوعِ الْعَامِرِيَّةِ"],
+
+            ["أَطْرَبَتْ رُوحِي وَسِرِّي"],
+            ["حِينَ أَهْدَتْ لِي التَّحِيَّةَ"],
+
+            ["وَسَرَتْ فِي الْكَوْنِ مِنْهَا"],
+            ["نَفَحَاتٌ عَنْبَرِيَّةٌ"],
+
+            ["فَارْوِ عَنِّي مِنْ حَدِيثِي"],
+            ["إِنْ تَكُنْ يَا سَعْدُ أَهْلَهُ"],
+
+
+            ["إِنَّهُ سِرٌّ شَرِيفٌ"],
+            ["لَيْسَ لِلْأَغْيَارِ يُذْكَرُ"],
+
+            ["إِنَّهُ مَعْنًى لَطِيفٌ"],
+            ["عَنْ جَمِيعِ النَّاسِ يُسْتَرُ"],
+
+            ["غَيْرَ عَنْ عَبْدٍ تَقِيٍّ"],
+            ["صُوفِيٌّ صَافٍ مُحَرَّرٌ"],
+
+            ["ذِي شَرِيعَةٍ وَحَقِيقَةٍ"],
+            ["جَمَعَ الْفَرْعَ وَأَصْلَهُ"],
+
+
+            ["أَيْنَ أَرْبَابُ الْمَثَانِي"],
+            ["وَالْعُلُومِ اللَّدُنِّيَّةِ"],
+
+            ["أَيْنَ أَصْحَابُ الْمَعَانِي"],
+            ["وَالنُّفُوسِ الْعُلُوِيَّةِ"],
+
+            ["أَنَا أَدْعُو مَنْ دَعَانِي"],
+            ["هَكَذَا حُكْمُ الْقَضِيَّةِ"],
+
+            ["فِي خُصُوصٍ لِا عُمُومٍ"],
+            ["عَلَّةً مِنْ بَعْدِ نَهْلَهُ"]
+        ],
+        "en": [
+            ["ʾanā mashghūlun bi-Laylā"],
+            ["ʿan jamīʿ al-kawn jumalahu"],
+
+            ["fa-ʾidhā mā qīla man dhā"],
+            ["qul huwa aṣ-ṣabbu al-muwallah"],
+
+            ["ʾakhadhat-hu ar-rāḥu ḥattā"],
+            ["lam tubqi fīhi faḍlahu"],
+
+            ["rāḥu unsin, rāḥu qudsin"],
+            ["laysat ar-rāḥu al-muḍallah"],
+
+            ["nasamātu al-qurbi habbat"],
+            ["min rubūʿi al-ʿāmiriyya"],
+
+            ["ʾaṭrabat rūḥī wa-sirrī"],
+            ["ḥīna ʾahdat lī at-taḥiyya"],
+
+            ["wa-sarat fī al-kawn minhā"],
+            ["nafaḥātun ʿanbariyya"],
+
+            ["fa-rwi ʿannī min ḥadīthī"],
+            ["ʾin takun yā Saʿdu ʾahlahu"],
+
+            ["ʾinnahū sirrun sharīfun"],
+            ["laysa lil-ʾaghyāri yudhkar"],
+
+            ["ʾinnahū maʿnā laṭīfun"],
+            ["ʿan jamīʿ an-nāsi yustar"],
+
+            ["ghayra ʿan ʿabdin taqiyyin"],
+            ["ṣūfiyyun ṣāfin muḥarrar"],
+
+            ["dhī sharīʿatin wa-ḥaqīqatin"],
+            ["jamaʿa al-farʿa wa-ʾaṣlahu"],
+
+            ["ʾayna arbābu al-mathānī"],
+            ["wa-al-ʿulūmi al-laduniyya"],
+
+            ["ʾayna aṣḥābu al-maʿānī"],
+            ["wa-an-nufūsu al-ʿuluwiyya"],
+
+            ["ʾanā ʾadʿū man daʿānī"],
+            ["hakadhā ḥukmu al-qaḍiyya"],
+
+            ["fī khuṣūṣin lī ʿumūmin"],
+            ["ʿillatan min baʿdi nahlahu"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["I am preoccupied with Layla"],
+            ["completely ignoring the entire universe "],
+
+            ["So if someone asks who,"],
+            ["say it is the infatuated lover "],
+
+            ["The wine took him until"],
+            ["nothing of him was left "],
+
+            ["A wine of delight, a holy wine"],
+            ["not the misleading wine"],
+
+
+            ["The breezes of proximity blew"],
+            ["from the lands of Amiriya "],
+
+            ["They delighted my soul and my secret"],
+            ["when they brought me greetings"],
+
+            ["And the universe was filled"],
+            ["with musky fragrances from them"],
+
+            ["So speak of me from my tales"],
+            ["if you are qualified, O Saad"],
+
+
+            ["It is an honorable secret"],
+            ["not to be mentioned to strangers"],
+
+            ["It is a subtle meaning"],
+            ["hidden from all people"],
+
+            ["Except a devout servant"],
+            ["a pure and true Sufi"],
+
+            ["One who combines the law and the truth"],
+            ["uniting the branch and its root"],
+
+
+            ["Where are the masters of the secrets of revelation"],
+            ["and the divinely inspired knowledge?"],
+
+            ["Where are the possessors of meanings"],
+            ["and the exalted souls? "],
+
+            ["I connect to Allah those who connected me to Him"],
+            ["this is the rule of the matter and His decree"],
+
+            ["Yet, I did not do so that with all my teachers"],
+            ["and that only after drinking from the wine of the Gnostics time after time"]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 },
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 },
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 },
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 },
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 },
+                {"repeat": 1, "index": 12 },
+                {"repeat": 1, "index": 13 },
+                {"repeat": 1, "index": 14 },
+                {"repeat": 1, "index": 15 }
+            ],
+            [
+                {"repeat": 1, "index": 16 },
+                {"repeat": 1, "index": 17 },
+                {"repeat": 1, "index": 18 },
+                {"repeat": 1, "index": 19 },
+                {"repeat": 1, "index": 20 },
+                {"repeat": 1, "index": 21 },
+                {"repeat": 1, "index": 22 },
+                {"repeat": 1, "index": 23 }
+            ],
+            [
+                {"repeat": 1, "index": 24 },
+                {"repeat": 1, "index": 25 },
+                {"repeat": 1, "index": 26 },
+                {"repeat": 1, "index": 27 },
+                {"repeat": 1, "index": 28 },
+                {"repeat": 1, "index": 29 },
+                {"repeat": 1, "index": 30 },
+                {"repeat": 1, "index": 31 }
+            ]
+        ]
+    }
+}
