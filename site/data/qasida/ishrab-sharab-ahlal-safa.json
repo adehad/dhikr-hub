@@ -1,0 +1,113 @@
+{
+    "name": {
+        "ara": "إشرب شراب أهل الصَّفا",
+        "en": "Drink the beverage of the people of purity"
+    },
+    "verses": {
+        "ara": [
+            ["إِشْرَبْ شَرَابْ أَهْلِ الصَّفَا (الله الله) تَرَ الْعَجَائِبْ"],
+            ["مَعَ رِجَالِ الْمَعْرِفَة (الله الله) وَالْخَمْرُ طَائِبْ"],
+
+            ["أَحْضَرْتْ أَنَا وَاحَدْ نَهَارْ (الله الله) يَاقَوْمِيْ خَطْرَةْ"],
+
+            ["وَجَدْتُهُمْ أَهْلَ الْغَرَامْ (الله الله) وَهُمْ فِي حَضْرَةْ"],
+
+            ["دَاعْيُونُهُمْ مُدَبَّلَةْ (الله الله) وُجُوهُهُمْ صَفْرَا"],
+
+            ["قُلْتُ لَهُمْ نَدْخُلْ حِمَاكُمْ (الله الله) يَاذَا الْمَوَالَي"],
+
+            ["قَالُوا لِي تَقْبَلْ شَرْطَنَا (الله الله) وَالشَّرْطُ غَالِيْ"],
+
+            ["تَصْبَرْ عَلَى هَذِي الْحَالَةْ (الله الله) طُولَ الْلَّيَالِيْ"],
+
+            ["تَصْبَرْ عَلَى هَذِي الْحَالَةْ (الله الله) سَبْعِيْنَ لَيْلَة"],
+
+            ["تَرْجَعْ سَبِيْكَةْ مِنْ ذَهَبْ (الله الله) يَا مَنْ عَرَفْنَا"],
+
+            ["تَشْرَبْ كُؤُوْسَ الْحَنْظَلِ (الله الله) وَالْمُرُّ يُحْلَى"]
+        ],
+        "en": [
+            ["ʾishrab sharāb ʾahl aṣ-ṣafā (Allāh Allāh) tara al-ʿajāʾib"],
+            ["maʿa rijāl al-maʿrifa (Allāh Allāh) wa-al-khamru ṭāʾib"],
+
+            ["ʾaḥḍartu ʾanā wāḥid nahār (Allāh Allāh) yā qawmī khaṭra"],
+
+            ["wajadtu-hum ʾahl al-gharām (Allāh Allāh) wa-hum fī ḥaḍra"],
+
+            ["dāʿyūnu-hum mudabbala (Allāh Allāh) wujūhu-hum ṣafrā"],
+
+            ["qultu la-hum nadkhul ḥimākum (Allāh Allāh) yā dhā al-mawālī"],
+
+            ["qālū lī taqbal sharṭanā (Allāh Allāh) wa-ash-sharṭu ghālī"],
+
+            ["taṣbir ʿalā hādhihi al-ḥāla (Allāh Allāh) ṭūla al-layālī"],
+
+            ["taṣbir ʿalā hādhihi al-ḥāla (Allāh Allāh) sabʿīna layla"],
+
+            ["tarjaʿ sabīkata min dhahab (Allāh Allāh) yā man ʿarafnā"],
+
+            ["tashrab kuʾūsa al-ḥanẓal (Allāh Allāh) wa-al-murru yuḥlā"]
+        ]
+    },
+    "translation": {
+        "en": [
+            ["Drink the beverage of the people of purity, (Allah Allah), and witness wonders"],
+            ["With the people of gnosis (Allah Allah), and the wine is splendid."],
+
+            ["I was there one day (Allah Allah), O my people, for a fleeting moment."],
+
+            ["I found them, the lovers in devotion (Allah Allah) immersed in divine presence."],
+
+            ["Their faces radiant and entrancing (Allah Allah) their countenances pale"],
+
+            ["I begged: ‘May I enter your sanctuary’ (Allah Allah) ‘Oh possessors of generosity’"],
+
+            ["They replied: ‘You must accept our condition’ (Allah Allah) and the condition was steep"],
+
+            ["Endure this state (Allah Allah) for one entire night"],
+
+            ["Endure this state (Allah Allah) for 70 nights"],
+
+            ["You will return as an ingot of gold (Allah Allah) Oh one who has known us"],
+
+            ["You will drink from the goblets of bitter medicine (Allah Allah) and the bitterness shall sweeten"]
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 }
+            ],
+            [
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 }
+            ],
+            [
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 }
+            ],
+            [
+                {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 }
+            ],
+            [
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 }
+            ]
+        ]
+    }
+}
