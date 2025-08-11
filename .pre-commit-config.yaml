@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
@@ -13,7 +13,7 @@ repos:
       - id: check-yaml
         files: .*\.(yaml|yml)$
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.1
     hooks:
       - id: codespell
         name: codespell
@@ -24,7 +24,7 @@ repos:
         args: ["-L", "fulfilment"]
         require_serial: false
   - repo: https://github.com/adehad/pre-commit-hooks
-    rev: 772a17c8c46f9bc8d2ea276c769bba0e6d788f17
+    rev: b581e6c14a9fbd9c6d37452761b525be6737b97b
     hooks:
       - id: arabic-presentation-form
         entry: arabic-presentation-form
