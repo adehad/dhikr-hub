@@ -1,3 +1,6 @@
++++
+maqam = ['Hijaz']
++++
 # Aqbal al-Sāqī – The cupbearer approached
 
 ## Verses
