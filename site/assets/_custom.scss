@@ -66,13 +66,31 @@ body {
 
 .verse {
     text-align: center;
+    margin-bottom: 2rem;
+    display: inline-block;
+    flex-direction: column;
+    flex-grow: 1;
+    flex: 0 0 100%; // full width = one column
+    box-sizing: border-box; // ensures padding/border don’t overflow
+    margin-left: 1rem; // make sure never too close together
+
+    @media (min-width: 600px) {
+
+        /* Mobile First: two columns on wider screens only */
+        flex: 0 0 47%; //  each item takes up ~ half of the container
+    }
 }
 
 .verse-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
+    justify-content: center;
     direction: rtl;
+}
+
+.verse-container>h2 {
+    margin-top: unset;
+    margin-left: auto; // make the heading element appear on the right
 }
 
 .verse-container .arabic {
@@ -135,15 +153,14 @@ label[for="chorus-toggle"] {
 
 }
 
-.transliteration,
-.transliteration-phrase-by-phrase {
+.transliteration {
     direction: ltr;
     font-size: var(--transliteration-font-perc);
-
+    opacity: 0.8;
+    font-style: italic;
 }
 
-.translation,
-.translation-phrase-by-phrase {
+.translation {
     direction: ltr;
     font-size: var(--translation-font-perc);
 }
