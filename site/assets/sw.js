@@ -4,7 +4,7 @@ const cacheName = self.location.pathname
 const pages = {
   {{ if eq .Site.Params.BookServiceWorker "precache" }}
     {{ range .Site.AllPages -}}
-  "{{ .RelPermalink }}": "{{ .GitInfo.AbbreviatedHash  }}",
+  "{{ .RelPermalink }}": "{{ if .GitInfo }}{{ .GitInfo.AbbreviatedHash }}{{ else }}{{ warnf "No .GitInfo for %s. Using current time as fallback." .RelPermalink }}{{ now.Unix }}{{ end }}",
     {{ end -}}
   {{ end }}
 };
