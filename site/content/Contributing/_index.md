@@ -90,7 +90,7 @@ Some guidance during reviews of translation include:
 1. Linguistic devices should be translated into their equivalent.
    1. Due to us favouring the literal translation.
    In the case where metaphors or other idioms are used, the literal translation should be given footnotes or commentary added to  the 'About' section to reflect.
-1. Translations should be clear and accessible, not using exessively academic language.
+1. Translations should be clear and accessible, not using excessively academic language.
 1. Translations should respect the poet's intent (when known).
 1. Maintenance of the cultural context of the Arabic traditions referenced instead of trying to translate them to another's cultural specific context.
    1. Use the 'About' section of the poem to add detail of this context for readers to gain an understanding and appreciation.

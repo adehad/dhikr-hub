@@ -21,7 +21,7 @@ repos:
         entry: codespell
         language: python
         types_or: [text, json, markdown]
-        args: ["-L", "fulfilment"]
+        args: ["-L", "murr"]
         require_serial: false
   - repo: https://github.com/adehad/pre-commit-hooks
     rev: b581e6c14a9fbd9c6d37452761b525be6737b97b
