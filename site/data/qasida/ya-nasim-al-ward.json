@@ -5,81 +5,81 @@
     },
     "verses": {
         "ara": [
-            ["لَا إِلَهَ إِلاَّ اللهْ اللهْ اللهْ"],
-            ["لَا إِلَهَ إِلَّا اللهْ جُدْ عَلَيْنَا"],
+            "لَا إِلَهَ إِلاَّ اللهْ اللهْ اللهْ",
+            "لَا إِلَهَ إِلَّا اللهْ جُدْ عَلَيْنَا",
 
-            ["يَا نَسِيْمَ الْوَرْدِ خَبِّرْ لِلرَّشَا"],
-            ["لَمْ يَزِدْنِي الْوِرْدُ إِلَّا عَطَشَا"],
+            "يَا نَسِيْمَ الْوَرْدِ خَبِّرْ لِلرَّشَا",
+            "لَمْ يَزِدْنِي الْوِرْدُ إِلَّا عَطَشَا",
 
-            ["لِيْ حَبِيبٌ حُبُّهُ حَشْوُ الْحَشَا"],
-            ["إِنْ يَشَأْ يَمْشِي عَلَى خَدِّيْ مَشَى"],
+            "لِيْ حَبِيبٌ حُبُّهُ حَشْوُ الْحَشَا",
+            "إِنْ يَشَأْ يَمْشِي عَلَى خَدِّيْ مَشَى",
 
-            ["(قَوْلُهُ قَوْلِي وَقَوْلِي قَوْلُهُ)"],
-            ["إِنْ يَشَأْ شِئْتُ وَإِنْ شِئْتُ يَشَا"],
+            "(قَوْلُهُ قَوْلِي وَقَوْلِي قَوْلُهُ)",
+            "إِنْ يَشَأْ شِئْتُ وَإِنْ شِئْتُ يَشَا",
 
-            ["رُوحُهُ رُوْحِيْ وَرُوْحِيْ رُوحُهُ"],
-            ["(إِنْ عَشَا عِشْتُ وَإِنْ عِشْتُ عَشَا)"],
+            "رُوحُهُ رُوْحِيْ وَرُوْحِيْ رُوحُهُ",
+            "(إِنْ عَشَا عِشْتُ وَإِنْ عِشْتُ عَشَا)",
 
-            ["(مِنْ وِشَاحِ الْحُسْنِ يَرْمِيْ رَمْشُهُ"],
-            ["يَا أَعَلُّ الْحُبُّ بَوَّاحاً وَشَى"],
+            "(مِنْ وِشَاحِ الْحُسْنِ يَرْمِيْ رَمْشُهُ",
+            "يَا أَعَلُّ الْحُبُّ بَوَّاحاً وَشَى",
 
-            ["سَلِمَتْ عَيْنَاهُ مِنْ مَقْتُولِهَا "],
-            ["وَحَمَى مَسْتُوْرَهَا دَاءُ الْعَشَى"],
+            "سَلِمَتْ عَيْنَاهُ مِنْ مَقْتُولِهَا ",
+            "وَحَمَى مَسْتُوْرَهَا دَاءُ الْعَشَى",
 
-            ["مَا الَّذِي أَصْنَعُهُ فِي مُتْلِفِي"],
-            ["بَعْدَمَا فِيَّ مِنَ اللُّطْفِ فَشَى)"]
+            "مَا الَّذِي أَصْنَعُهُ فِي مُتْلِفِي",
+            "بَعْدَمَا فِيَّ مِنَ اللُّطْفِ فَشَى)"
           ],
         "en": [
-            ["lā ilāha illā Allāh Allāh Allāh"],
-            ["lā ilāha illā Allāh jud ʿalaynā"],
+            "lā ilāha illā Allāh Allāh Allāh",
+            "lā ilāha illā Allāh jud ʿalaynā",
 
-            ["yā nasīma l-wardi khabbir li-r-rashā"],
-            ["lam yazidnī l-wirdu illā ʿaṭashā"],
+            "yā nasīma l-wardi khabbir li-r-rashā",
+            "lam yazidnī l-wirdu illā ʿaṭashā",
 
-            ["lī ḥabībun ḥubbuhu ḥashwu l-ḥashā"],
-            ["in yashāʾ yamshī ʿalā khaddī mashā"],
+            "lī ḥabībun ḥubbuhu ḥashwu l-ḥashā",
+            "in yashāʾ yamshī ʿalā khaddī mashā",
 
-            ["(qawluhu qawlī wa-qawlī qawluhu)"],
-            ["in yashāʾ shiʾtu wa-in shiʾtu yashā"],
+            "(qawluhu qawlī wa-qawlī qawluhu)",
+            "in yashāʾ shiʾtu wa-in shiʾtu yashā",
 
-            ["rūḥuhu rūḥī wa-rūḥī rūḥuhu"],
-            ["(in ʿashā ʿishtu wa-in ʿishtu ʿashā)"],
+            "rūḥuhu rūḥī wa-rūḥī rūḥuhu",
+            "(in ʿashā ʿishtu wa-in ʿishtu ʿashā)",
 
-            ["(min wishāḥi l-ḥusni yarmī ramshuhu"],
-            ["yā aʿallu l-ḥubbu bawwāḥan wa-shā"],
+            "(min wishāḥi l-ḥusni yarmī ramshuhu",
+            "yā aʿallu l-ḥubbu bawwāḥan wa-shā",
 
-            ["salimat ʿaynāhu min maqtūlihā"],
-            ["wa-ḥamā mastūrahā dāʾu l-ʿashā"],
+            "salimat ʿaynāhu min maqtūlihā",
+            "wa-ḥamā mastūrahā dāʾu l-ʿashā",
 
-            ["mā lladhī aṣnaʿuhu fī mutlifī"],
-            ["baʿdamā fiyya mina l-luṭfi fashā)"]
+            "mā lladhī aṣnaʿuhu fī mutlifī",
+            "baʿdamā fiyya mina l-luṭfi fashā)"
         ]
     },
     "translation": {
         "en": [
-            ["There is no god but Allah, Allah, Allah"],
-            ["There is no god but Allah, be merciful to us"],
+            "There is no god but Allah, Allah, Allah",
+            "There is no god but Allah, be merciful to us",
 
-            ["O breeze of the roses, tell the gazelle,"],
-            ["The litanies have only increased my thirst."],
+            "O breeze of the roses, tell the gazelle,",
+            "The litanies have only increased my thirst.",
 
-            ["I have a beloved whose love is deeply rooted within."],
-            ["If they wish to walk on my cheek, they can."],
+            "I have a beloved whose love is deeply rooted within.",
+            "If they wish to walk on my cheek, they can.",
 
-            ["Their words are my words, and my words are theirs."],
-            ["If they wish, I wish, and if I wish, they wish."],
+            "Their words are my words, and my words are theirs.",
+            "If they wish, I wish, and if I wish, they wish.",
 
-            ["Their soul is my soul, and my soul is theirs."],
-            ["If they live, I live, and if I live, they live."],
+            "Their soul is my soul, and my soul is theirs.",
+            "If they live, I live, and if I live, they live.",
 
-            ["(From the beauty's sash, their glance does throw"],
-            ["O, the highest love, openly it shows"],
+            "(From the beauty's sash, their glance does throw",
+            "O, the highest love, openly it shows",
 
-            ["Their eyes are safe from their slain"],
-            ["And protected from the blindness' pain"],
+            "Their eyes are safe from their slain",
+            "And protected from the blindness' pain",
 
-            ["What can I do in my ruinous state"],
-            ["After the grace within me did permeate)"]
+            "What can I do in my ruinous state",
+            "After the grace within me did permeate)"
         ]
     },
     "order": {

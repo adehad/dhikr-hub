@@ -5,135 +5,135 @@
     },
     "verses": {
         "ara": [
-            ["عَلَيكَ صَلَّى الله"],
-            ["يا خَيرَ خَلْقِ الله"],
+            "عَلَيكَ صَلَّى الله",
+            "يا خَيرَ خَلْقِ الله",
 
-            ["وَالْآلِ وَالأَصْحَابِ "],
-            ["وَالقَومِ أَهْلِ الله"],
+            "وَالْآلِ وَالأَصْحَابِ ",
+            "وَالقَومِ أَهْلِ الله",
 
-            ["يا كَعْبَةَ الأَسْرَارْ"],
-            ["وَمَنْبَعَ الأَنْوَارْ"],
+            "يا كَعْبَةَ الأَسْرَارْ",
+            "وَمَنْبَعَ الأَنْوَارْ",
 
-            ["بِالعَزْمِ يَا مُخْتَارْ"],
-            ["أَيَّدتَّ دِينَ الله"],
+            "بِالعَزْمِ يَا مُخْتَارْ",
+            "أَيَّدتَّ دِينَ الله",
 
-            ["فِدَاؤُكُ الأَرْوَاحْ"],
-            ["وَمِثْلُهَا الأَشْبَاحْ"],
+            "فِدَاؤُكُ الأَرْوَاحْ",
+            "وَمِثْلُهَا الأَشْبَاحْ",
 
-            ["يا خَيْرَةَ الفَتَّاحْ"],
-            ["مِنْ أَنْبِيَاءِ الله"],
+            "يا خَيْرَةَ الفَتَّاحْ",
+            "مِنْ أَنْبِيَاءِ الله",
 
-            ["یا مِنْ لَهُ البُرْهَانَ"],
-            ["وَخُلْقُهُ القُرْآنْ"],
+            "یا مِنْ لَهُ البُرْهَانَ",
+            "وَخُلْقُهُ القُرْآنْ",
 
-            ["مَا كَانَتِ الأَكْوَانْ"],
-            ["ْوَحَـقِّهِ لَــــولَاه"],
+            "مَا كَانَتِ الأَكْوَانْ",
+            "ْوَحَـقِّهِ لَــــولَاه",
 
-            ["لِوَاؤُكَ المَرْفُوعْ "],
-            ["وَقَولُكَ المَسْمُوعْ"],
+            "لِوَاؤُكَ المَرْفُوعْ ",
+            "وَقَولُكَ المَسْمُوعْ",
 
-            ["وَحَبُّكَ المَطْبُوعْ"],
-            ["فِيْ مُهْجَةِ الأَوَّاه"],
+            "وَحَبُّكَ المَطْبُوعْ",
+            "فِيْ مُهْجَةِ الأَوَّاه",
 
-            ["نَدْعُوكَ بِالسِّبْطَين "],
-            ["لِكَشْفِ هَذَا الغَين"],
+            "نَدْعُوكَ بِالسِّبْطَين ",
+            "لِكَشْفِ هَذَا الغَين",
 
-            ["يا مَلْجَأَ الثَّقَلَين"],
-            ["في الخَطْبِ بَعْدَ الله "],
+            "يا مَلْجَأَ الثَّقَلَين",
+            "في الخَطْبِ بَعْدَ الله ",
 
-            ["هَا أَنْتَ فِي الْمَحْشَر "],
-            ["مُؤَيَّدُ المَظْهَر"],
+            "هَا أَنْتَ فِي الْمَحْشَر ",
+            "مُؤَيَّدُ المَظْهَر",
 
-            ["فَكُلَّمَا تُذْكَرْ"],
-            ["عَلَيكَ صَلَّى الله"]
+            "فَكُلَّمَا تُذْكَرْ",
+            "عَلَيكَ صَلَّى الله"
         ],
         "en": [
-            ["ʿalayka ṣallā llāh"],
-            ["yā khayra khalqi llāh"],
+            "ʿalayka ṣallā llāh",
+            "yā khayra khalqi llāh",
 
-            ["wal-ʾāli wal-aṣḥābi"],
-            ["wal-qawmi ahlillāh"],
+            "wal-ʾāli wal-aṣḥābi",
+            "wal-qawmi ahlillāh",
 
-            ["yā kaʿbata al-asrār"],
-            ["wamanbaʿa al-anwār"],
+            "yā kaʿbata al-asrār",
+            "wamanbaʿa al-anwār",
 
-            ["bil-ʿazmi yā mukhtār"],
-            ["ayyadtta dīna llāh"],
+            "bil-ʿazmi yā mukhtār",
+            "ayyadtta dīna llāh",
 
-            ["fidāʾuka al-arwāḥ"],
-            ["wamithluhā al-ashbāḥ"],
+            "fidāʾuka al-arwāḥ",
+            "wamithluhā al-ashbāḥ",
 
-            ["yā khayrata al-fattāḥ"],
-            ["min anbiyāʾi llāh"],
+            "yā khayrata al-fattāḥ",
+            "min anbiyāʾi llāh",
 
-            ["yā min lahu al-burhāna"],
-            ["wakhulquhu al-qurʾān"],
+            "yā min lahu al-burhāna",
+            "wakhulquhu al-qurʾān",
 
-            ["mā kānat al-akwān"],
-            ["waḥaqqihi lāwlah"],
+            "mā kānat al-akwān",
+            "waḥaqqihi lāwlah",
 
-            ["liwāʾuka al-marfūʿ"],
-            ["waqawluka al-masmūʿ"],
+            "liwāʾuka al-marfūʿ",
+            "waqawluka al-masmūʿ",
 
-            ["wahubbuka al-maṭbūʿ"],
-            ["fī muhjati al-awwāh"],
+            "wahubbuka al-maṭbūʿ",
+            "fī muhjati al-awwāh",
 
-            ["nadʿūka bissibṭayn"],
-            ["likashfi hādhā al-ghayn"],
+            "nadʿūka bissibṭayn",
+            "likashfi hādhā al-ghayn",
 
-            ["yā maljaʾa al-thaqalayn"],
-            ["fī al-khuṭbi baʿda llāh"],
+            "yā maljaʾa al-thaqalayn",
+            "fī al-khuṭbi baʿda llāh",
 
-            ["hā anta fī al-maḥshar"],
-            ["muʾayyadu al-maẓhar"],
+            "hā anta fī al-maḥshar",
+            "muʾayyadu al-maẓhar",
 
-            ["fakullamā tuzkhar"],
-            ["ʿalayka ṣallā llāh"]
+            "fakullamā tuzkhar",
+            "ʿalayka ṣallā llāh"
         ]
     },
     "translation": {
         "en": [
-            ["May Allah send blessings upon you,"],
-            ["O Best of the Creation of Allah"],
+            "May Allah send blessings upon you,",
+            "O Best of the Creation of Allah",
 
-            ["And upon the Family and the Companions"],
-            ["And the people who belong to Allah!"],
+            "And upon the Family and the Companions",
+            "And the people who belong to Allah!",
 
-            ["O Ka'ba of secrets,"],
-            ["O fountain of lights -"],
+            "O Ka'ba of secrets,",
+            "O fountain of lights -",
 
-            ["With determination, o you Elect,"],
-            ["You supported the sake of Allah."],
+            "With determination, o you Elect,",
+            "You supported the sake of Allah.",
 
-            ["(Our) souls are your ransom,"],
-            ["And so are (our) persons."],
+            "(Our) souls are your ransom,",
+            "And so are (our) persons.",
 
-            ["O Opener, select"],
-            ["of the Messengers of Allah!"],
+            "O Opener, select",
+            "of the Messengers of Allah!",
 
-            ["O you who (came with) clear proofs,"],
-            ["Whose character is the Quran,"],
+            "O you who (came with) clear proofs,",
+            "Whose character is the Quran,",
 
-            ["The universe would not exist"],
-            ["by the Truth of Allah! - were it not for you."],
+            "The universe would not exist",
+            "by the Truth of Allah! - were it not for you.",
 
-            ["Your flag is raised high,"],
-            ["Your command is obeyed,"],
+            "Your flag is raised high,",
+            "Your command is obeyed,",
 
-            ["Your love is engraved"],
-            ["In the hearts of those who sigh."],
+            "Your love is engraved",
+            "In the hearts of those who sigh.",
 
-            ["We call you by your two grandsons,"],
-            ["For distress to removed,"],
+            "We call you by your two grandsons,",
+            "For distress to removed,",
 
-            ["O you, in who men and jinn take refuge,"],
-            ["- after Allah - in (difficult) circumstances."],
+            "O you, in who men and jinn take refuge,",
+            "- after Allah - in (difficult) circumstances.",
 
-            ["You are the one who, on the (Day of) Gathering,"],
-            ["will be given a mighty position,"],
+            "You are the one who, on the (Day of) Gathering,",
+            "will be given a mighty position,",
 
-            ["So mention us all (in front of Allah) -"],
-            ["May Allah send bless upon you!"]
+            "So mention us all (in front of Allah) -",
+            "May Allah send bless upon you!"
         ]
     },
     "order": {

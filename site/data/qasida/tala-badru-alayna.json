@@ -5,39 +5,39 @@
     },
     "verses": {
         "ara": [
-            ["طَلَعَ الْبَدْرُ عَلَيْنَا"],
-            ["مِنْ ثَنِيَّاتِ الْوَدَاعْ"],
-            ["وَجَبَ الشُّكْرُ عَلَيْنَا"],
-            ["مَا دَعَا لِلّٰهِ دَاعْ"],
+            "طَلَعَ الْبَدْرُ عَلَيْنَا",
+            "مِنْ ثَنِيَّاتِ الْوَدَاعْ",
+            "وَجَبَ الشُّكْرُ عَلَيْنَا",
+            "مَا دَعَا لِلّٰهِ دَاعْ",
 
-            ["أَيُّهَا الْمَبْعُوثُ فِينَا"],
-            ["جِئْتَ بِالْأَمْرِ الْمُطَاعْ"],
-            ["جِئْتَ شَرَّفْتَ الْمَدِينَةْ"],
-            ["مَرْحَباً يَا خَيْرَ دَاعْ"]
+            "أَيُّهَا الْمَبْعُوثُ فِينَا",
+            "جِئْتَ بِالْأَمْرِ الْمُطَاعْ",
+            "جِئْتَ شَرَّفْتَ الْمَدِينَةْ",
+            "مَرْحَباً يَا خَيْرَ دَاعْ"
         ],
         "en": [
-            ["ṭalaʿa l-badru ʿalaynā"],
-            ["min thaniyyāti l-wadāʿ"],
-            ["wajaba sh-shukru ʿalaynā"],
-            ["mā daʿā lillāhi dāʿ"],
+            "ṭalaʿa l-badru ʿalaynā",
+            "min thaniyyāti l-wadāʿ",
+            "wajaba sh-shukru ʿalaynā",
+            "mā daʿā lillāhi dāʿ",
 
-            ["ayyuha l-mabʿūthu fīnā"],
-            ["jiʾta bil-amri l-muṭāʿ"],
-            ["jiʾta sharraf-ta l-madīnah"],
-            ["marḥaban yā khayra dāʿ"]
+            "ayyuha l-mabʿūthu fīnā",
+            "jiʾta bil-amri l-muṭāʿ",
+            "jiʾta sharraf-ta l-madīnah",
+            "marḥaban yā khayra dāʿ"
         ]
     },
     "translation": {
         "en": [
-            ["The (full) white moon rose over us,"],
-            ["from the Valley of Wada"],
-            ["And we owe it to show gratefullness,"],
-            ["where call is to Allah"],
+            "The (full) white moon rose over us,",
+            "from the Valley of Wada",
+            "And we owe it to show gratefullness,",
+            "where call is to Allah",
 
-            ["Oh you who were raised amongst us,"],
-            ["coming with a work to be obeyed "],
-            ["You have brought to this city nobleness"],
-            ["Welcome! Best call to God's way"]
+            "Oh you who were raised amongst us,",
+            "coming with a work to be obeyed ",
+            "You have brought to this city nobleness",
+            "Welcome! Best call to God's way"
         ]
     },
     "order": {

@@ -5,90 +5,90 @@
     },
     "verses": {
         "ara": [
-            ["مَا رَاحَتِي"],
-            ["إِلَّا لِقَا الْأَحْبَابْ"],
+            "مَا رَاحَتِي",
+            "إِلَّا لِقَا الْأَحْبَابْ",
 
-            ["هُمْ سَادَتِي"],
-            ["عَيْشِي بِهِمْ قَدْ طَابْ"],
+            "هُمْ سَادَتِي",
+            "عَيْشِي بِهِمْ قَدْ طَابْ",
 
-            ["عَيْشِي يَطِيبْ"],
-            ["وَيَنْجَلِي كَرْبِي"],
+            "عَيْشِي يَطِيبْ",
+            "وَيَنْجَلِي كَرْبِي",
 
-            ["وَلِي نَصِيبْ"],
-            ["خَلْوَةْ مَعَ الْحِبِّ"],
+            "وَلِي نَصِيبْ",
+            "خَلْوَةْ مَعَ الْحِبِّ",
 
-            ["طَلَعَ الْنَّهَارْ"],
-            ["وَأَشْرَقَتْ شَمْسِي"],
+            "طَلَعَ الْنَّهَارْ",
+            "وَأَشْرَقَتْ شَمْسِي",
 
-            ["وَالْكَاسُ دَارْ"],
-            ["مَا بَيْنَ جُلَّاسِي"],
+            "وَالْكَاسُ دَارْ",
+            "مَا بَيْنَ جُلَّاسِي",
 
-            ["زَالَ الْغِيَارْ"],
-            ["بِلُطْفِ إِينَاسِي"],
+            "زَالَ الْغِيَارْ",
+            "بِلُطْفِ إِينَاسِي",
 
-            ["زَارَنِي الْمَحْبُوبْ"],
-            ["وَأَشْعَلْ مِصْبَاحِي"],
+            "زَارَنِي الْمَحْبُوبْ",
+            "وَأَشْعَلْ مِصْبَاحِي",
 
-            ["طَابَ الْشَّرَابْ"],
-            ["وَطَابَتْ أَقْدَاحِي"]
+            "طَابَ الْشَّرَابْ",
+            "وَطَابَتْ أَقْدَاحِي"
         ],
         "en": [
-            ["mā rāḥatī"],
-            ["illā liqā’l-aḥbāb"],
+            "mā rāḥatī",
+            "illā liqā’l-aḥbāb",
 
-            ["hum sādatī"],
-            ["ʿayshī bihim qad ṭāb"],
+            "hum sādatī",
+            "ʿayshī bihim qad ṭāb",
 
-            ["ʿayshī yaṭīb"],
-            ["wa-yanjalī karbī"],
+            "ʿayshī yaṭīb",
+            "wa-yanjalī karbī",
 
-            ["wa-lī naṣīb"],
-            ["khalwah maʿa’l-ḥibb"],
+            "wa-lī naṣīb",
+            "khalwah maʿa’l-ḥibb",
 
-            ["ṭalaʿa’n-nahār"],
-            ["wa-ashraqat shamsī"],
+            "ṭalaʿa’n-nahār",
+            "wa-ashraqat shamsī",
 
-            ["wa’l-kāsu dār"],
-            ["mā bayna jullāsī"],
+            "wa’l-kāsu dār",
+            "mā bayna jullāsī",
 
-            ["zāla’l-ghiyār"],
-            ["bi-luṭfi īnāsī"],
+            "zāla’l-ghiyār",
+            "bi-luṭfi īnāsī",
 
-            ["zāranī’l-Maḥbūb"],
-            ["wa-ashʿal miṣbāḥī"],
+            "zāranī’l-Maḥbūb",
+            "wa-ashʿal miṣbāḥī",
 
-            ["ṭāba’sh-sharāb"],
-            ["wa-ṭabat aqdāḥī"]
+            "ṭāba’sh-sharāb",
+            "wa-ṭabat aqdāḥī"
         ]
     },
     "translation": {
         "en": [
-            ["What is my rest"],
-            ["But the meeting of the beloveds."],
+            "What is my rest",
+            "But the meeting of the beloveds.",
 
-            ["They are my lords."],
-            ["My life through them has become good."],
+            "They are my lords.",
+            "My life through them has become good.",
 
-            ["My life is becoming good"],
-            ["And my anguish is vanishing."],
+            "My life is becoming good",
+            "And my anguish is vanishing.",
 
-            ["And it is my lot,"],
-            ["To be secluded with love."],
+            "And it is my lot,",
+            "To be secluded with love.",
 
-            ["The day arose,"],
-            ["And my sun shone."],
+            "The day arose,",
+            "And my sun shone.",
 
-            ["And the chalice passed around"],
-            ["Among my seated companions ."],
+            "And the chalice passed around",
+            "Among my seated companions .",
 
-            ["The exchange ceased"],
-            ["By the kindness of my cordiality."],
+            "The exchange ceased",
+            "By the kindness of my cordiality.",
 
-            ["The Beloved visited me,"],
-            ["And my lamp sparked alight."],
+            "The Beloved visited me,",
+            "And my lamp sparked alight.",
 
-            ["Liquor became good,"],
-            ["As did my goblets."]
+            "Liquor became good,",
+            "As did my goblets."
         ]
     },
     "order": {

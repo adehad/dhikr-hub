@@ -5,33 +5,26 @@
     },
     "verses": {
         "ara": [
-            [
-                "طَالَمَا",
-                "اَشْكُوْ",
-                "غَرَامِي"
-            ]
+            "طَالَمَا",
+            "اَشْكُوْ",
+            "غَرَامِي"
         ],
         "en": [
-            [
-                "Tholama",
-                "ashku",
-                "gharami"
-            ]
+            "Tholama",
+            "ashku",
+            "gharami"
         ]
     },
     "translation": {
         "en": [
-            [
-                "How long",
-                "will I yearn, infaturated",
-                ""
-            ]
+            "How long",
+            "will I yearn, infaturated",
+            ""
         ]
     },
     "order": {
         "chorus": [
-            [
-            ]
+            [ ]
         ],
         "verses": [
             [
