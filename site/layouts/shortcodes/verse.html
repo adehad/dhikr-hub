@@ -82,30 +82,17 @@ e.g. verse thalama en
 
 {{ $v_in_lang := index $verses_in_lang $v_idx }}
 {{ $v_in_lang_translated := index $verses_in_lang_translated $v_idx }}
-{{ range $w_idx, $word_ara := $v_ara }}
-<table class="verse">
-    <tbody>
-        <tr class="arabic">
-            <td>{{ $word_ara }}</td>
-        </tr>
-        <tr class="transliteration-phrase-by-phrase">
-            <td>{{index $v_in_lang $w_idx }}</td>
-        </tr>
-        <tr class="translation-phrase-by-phrase">
-            <td>{{index $v_in_lang_translated $w_idx | markdownify }}</td>
-        </tr>
-    </tbody>
-</table>
-{{ end }}
-<div class="transliteration" style="flex-basis: 100%; text-align: right;">
-    {{ with $v_in_lang }}
-    {{ delimit $v_in_lang " " }}
-    {{ end }}
-</div>
-<div class="translation" style="flex-basis: 100%; text-align: right;">
-    {{ with $v_in_lang }}
-    {{ (delimit $v_in_lang_translated " ") | markdownify }}
-    {{ end }}
+
+<div class="verse">
+    <div class="arabic">
+        {{ $v_ara }}
+    </div>
+    <div class="transliteration">
+        {{ $v_in_lang }}
+    </div>
+    <div class="translation">
+        {{ $v_in_lang_translated | markdownify }}
+    </div>
 </div>
 {{ end }}
 <div style="flex-basis: 100%;">

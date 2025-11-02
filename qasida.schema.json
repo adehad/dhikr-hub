@@ -44,33 +44,18 @@
           "default": [],
           "title": "The verses in Arabic",
           "items": {
-            "type": "array",
+            "type": "string",
             "title": "Arabic verse",
-            "items": {
-              "type": "string",
-              "title": "Word by word Arabic verse",
-              "examples": [
-                "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
-                "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
-                "ﻃَﺎﻟَﻤَﺎ",
-                "ﺍَﺷْﻜُﻮْ",
-                "ﻏَﺮَﺍﻣِﻰ",
-                "ﻳَﺎ ﻧُﻮْ ﺭَ ",
-                "ﺍﻟْﻮُﺟُﻮْﺩ"
-              ]
-            },
             "examples": [
-              ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
-              ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
-              ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
+              "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
+              "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
+              "ﻃَﺎﻟَﻤَﺎ ﺍَﺷْﻜُﻮْ ﻏَﺮَﺍﻣِﻰ ﻳَﺎ ﻧُﻮْ ﺭَ ﺍﻟْﻮُﺟُﻮْﺩ"
             ]
           },
           "examples": [
-            [
-              ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
-              ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
-              ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
-            ]
+            "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
+            "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
+            "ﻃَﺎﻟَﻤَﺎ ﺍَﺷْﻜُﻮْ ﻏَﺮَﺍﻣِﻰ ﻳَﺎ ﻧُﻮْ ﺭَ ﺍﻟْﻮُﺟُﻮْﺩ"
           ]
         },
         "en": {
@@ -78,47 +63,32 @@
           "default": [],
           "title": "The verses in English (transliteration)",
           "items": {
-            "type": "array",
+            "type": "string",
             "title": "English (transliteration) verse",
-            "items": {
-              "type": "string",
-              "title": "Word by word English (transliteration) verse",
-              "examples": [
-                "Ṣalātu Llāh salāmu Llāh",
-                "ʿalā Ṭāhā rasūli Llāh",
-                "Tholama",
-                "ashku",
-                "gharami",
-                "yaa nurol",
-                "wujud"
-              ]
-            },
             "examples": [
-              ["Ṣalātu Llāh salāmu Llāh"],
-              ["ʿalā Ṭāhā rasūli Llāh"],
-              ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
+              "Ṣalātu Llāh salāmu Llāh",
+              "ʿalā Ṭāhā rasūli Llāh",
+              "Tholama ashku gharami yaa nurol wujud"
             ]
           },
           "examples": [
-            [
-              ["Ṣalātu Llāh salāmu Llāh"],
-              ["ʿalā Ṭāhā rasūli Llāh"],
-              ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
-            ]
+            "Ṣalātu Llāh salāmu Llāh",
+            "ʿalā Ṭāhā rasūli Llāh",
+            "Tholama ashku gharami yaa nurol wujud"
           ]
         }
       },
       "examples": [
         {
           "ara": [
-            ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
-            ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
-            ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
+            "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
+            "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
+            "ﻃَﺎﻟَﻤَﺎ ﺍَﺷْﻜُﻮْ ﻏَﺮَﺍﻣِﻰ ﻳَﺎ ﻧُﻮْ ﺭَ ﺍﻟْﻮُﺟُﻮْﺩ"
           ],
           "en": [
-            ["Ṣalātu Llāh salāmu Llāh"],
-            ["ʿalā Ṭāhā rasūli Llāh"],
-            ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
+            "Ṣalātu Llāh salāmu Llāh",
+            "ʿalā Ṭāhā rasūli Llāh",
+            "Tholama ashku gharami yaa nurol wujud"
           ]
         }
       ]
@@ -134,29 +104,18 @@
           "default": [],
           "title": "The English verse translation",
           "items": {
-            "type": "array",
-            "title": "The English translation",
-            "items": {
-              "type": "string",
-              "title": "Word by word English translation",
-              "examples": [
-                "May the blessings of Allah, may the peace of Allah",
-                "be upon Ta-Ha, the Messenger of Allah ﷺ",
-                "How long will I yearn infatuated O light of the universe"
-              ]
-            },
+            "type": "string",
+            "title": "English translation",
             "examples": [
-              ["May the blessings of Allah, may the peace of Allah"],
-              ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
-              ["How long will I yearn infatuated O light of the universe"]
+              "May the blessings of Allah, may the peace of Allah",
+              "be upon Ta-Ha, the Messenger of Allah ﷺ",
+              "How long will I yearn infatuated O light of the universe"
             ]
           },
           "examples": [
-            [
-              ["May the blessings of Allah, may the peace of Allah"],
-              ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
-              ["How long will I yearn infatuated O light of the universe"]
-            ]
+            "May the blessings of Allah, may the peace of Allah",
+            "be upon Ta-Ha, the Messenger of Allah ﷺ",
+            "How long will I yearn infatuated O light of the universe"
           ]
         }
       },
