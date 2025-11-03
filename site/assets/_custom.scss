@@ -100,7 +100,7 @@ body {
 .sticky-chorus {
     top: 30px;
     z-index: 90;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: color-mix(in srgb, var(--body-background), transparent 10%);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -109,7 +109,7 @@ body {
 
     &:checked {
         &~label[for="chorus-toggle"] {
-            color: pink;
+            color: #b27d54;
         }
     }
 
@@ -141,14 +141,14 @@ label[for="chorus-toggle"] {
     position: sticky;
     top: 35px;
     z-index: 95;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--body-font-color);
     transition: transform 0.3s ease-in-out;
     transform: translateX(-10px);
 
     padding: 5px;
     border-radius: 5px 15px 15px 5px;
 
-    color: white;
+    color: var(--body-background);
     writing-mode: sideways-rl;
 
 }
@@ -172,10 +172,7 @@ label[for="chorus-toggle"] {
     flex-wrap: wrap;
     flex-basis: 100%;
     flex-direction: column;
-    // gap: 2rem;
     width: fit-content;
-    background: #fff;
-    // padding: 1rem 3rem;
     margin-inline: auto;
     border-radius: 0 0 1rem 1rem;
 }
@@ -259,5 +256,5 @@ label[for="chorus-toggle"] {
     z-index: 100;
 
     backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: color-mix(in srgb, var(--body-background), transparent 20%);
 }
