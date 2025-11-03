@@ -8,6 +8,15 @@ enableRobotsTXT = true
 ######################
 theme = "hugo-book"
 [params]
+# light / dark
+BookTheme = 'auto'
+
+# path: static/<path-to-logo.png>
+BookLogo = 'favicon.svg'
+
+# path: static/<path-to-favicon>
+BookFavicon = 'favicon.svg'
+
 # In the left-handside display, show all the pages in the content/
 BookSection = '*'
 

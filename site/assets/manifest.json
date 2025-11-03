@@ -7,13 +7,21 @@
   "scope": "{{ "./" | relURL }}",
   "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#aa622b",
+  "theme_color": "#aa622b",
   "description": "Installing Dhikr-Hub allows you to access the content offline!",
   "icons": [
+        {
+      "src": "/icon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
-      "src": "{{ "./favicon.svg" | relURL }}",
-      "sizes": "512x512"
+      "src": "/icon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
