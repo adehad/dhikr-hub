@@ -172,7 +172,7 @@ label[for="chorus-toggle"] {
     flex-wrap: wrap;
     flex-basis: 100%;
     flex-direction: column;
-    width: fit-content;
+    width: 100%;
     margin-inline: auto;
     border-radius: 0 0 1rem 1rem;
 }
@@ -184,7 +184,7 @@ label[for="chorus-toggle"] {
 
 .settings-box select {
     overflow: hidden;
-    width: 6ch;
+    width: 10ch;
     margin-left: 1ch;
 }
 
