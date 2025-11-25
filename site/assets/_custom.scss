@@ -59,6 +59,11 @@ body {
     letter-spacing: normal; // Override the theme, ensures ligatures are correctly displayed
 }
 
+.container {
+    // the main page width is controlled by this class
+    max-width: 90dvw;
+}
+
 .arabic {
     font-family: var(--arabic-font-family), sans-serif;
     font-size: var(--arabic-font-perc);
