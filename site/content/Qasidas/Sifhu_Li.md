@@ -1,5 +1,5 @@
 +++
-maqam = ['Kurd']
+maqam = ['Bayat']
 +++
 # Ṣifhu Lī – Describe him to me
 
