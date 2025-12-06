@@ -23,6 +23,31 @@ Content is stored in JSON files following a defined schema. Each Qasida has:
 
 See `qasida.schema.json` in the project root for the complete schema.
 
+## Qasida Page Front Matter
+
+Each Qasida markdown file should include front matter parameters:
+
+```toml
++++
+json_file = 'file-name'
+maqam = ['Bayat']
++++
+```
+
+### json_file (required)
+
+Links the page to its JSON data file in `site/data/qasida/`. This parameter:
+- Enables the "Edit in Editor" link on the page footer
+- Allows shortcodes to auto-detect the data file (no need to specify `file` param)
+
+### maqam (optional)
+
+Specifies the musical mode(s) for the Qasida. This is a Hugo taxonomy that:
+- Creates a tag link displayed by the `qasida_meta` shortcode
+- Generates a taxonomy page listing all Qasidas in that maqam (e.g., `/maqam/bayat/`)
+
+Common maqam values include: `Bayat`, `Sika`, `Hijaz`, `Nahawand`, `Rast`, `Jaharkah`, etc.
+
 ## Working with Shortcodes
 
 The project uses custom shortcodes to render content. The main ones are:
@@ -36,8 +61,13 @@ Usage:
 {{</* verse file="qasida/file-name" lang="en" */>}}
 ```
 
+Or, if `json_file` is set in front matter, the `file` parameter can be omitted:
+```
+{{</* verse lang="en" */>}}
+```
+
 Parameters:
-- `file` - Path to the JSON file relative to the data directory
+- `file` - Path to the JSON file relative to the data directory (optional if `json_file` is in front matter)
 - `lang` - Language code (currently only `en` is supported)
 
 ### get_title
@@ -49,13 +79,27 @@ Usage:
 {{%/* get_title file="qasida/file-name" lang="en" */%}}
 ```
 
+Or with `json_file` in front matter:
+```
+{{%/* get_title lang="en" */%}}
+```
+
 ### qasida_meta
 
-Adds metadata for a Qasida page.
+Displays metadata for a Qasida page, including maqam tags. Should be placed near the top of the page.
 
 Usage:
 ```
 {{</* qasida_meta */>}}
+```
+
+### qasida_editor
+
+Embeds the WYSIWYG Qasida editor. Used on the [Submit page](/Contributing/Submit/).
+
+Usage:
+```
+{{</* qasida_editor */>}}
 ```
 
 ## Phrase by Phrase (not so much Word by Word)
@@ -70,6 +114,32 @@ Hence a 'phrase by phrase' is more appropriate.
 Have a look at this example of the implementation:
 
 {{< verse file="salawaat/example" lang="en" >}}
+
+## Qasida Editor
+
+The site includes a WYSIWYG editor for creating and editing Qasidas at [/Contributing/Submit/](/Contributing/Submit/).
+
+Features:
+- Edit existing Qasidas by clicking "Edit in Editor" on any Qasida page
+- Create new Qasidas from scratch
+- Add/remove chorus sections and verse sections
+- Add/remove individual lines within sections
+- Live preview using the same styling as the published site
+- Auto-save to localStorage (preserves work across page refreshes)
+- Export to JSON format compatible with the data schema
+
+The editor can load existing Qasidas via the `?file=` query parameter (e.g., `/Contributing/Submit/?file=sifhu-li`).
+
+### JSON API
+
+Qasida JSON files are exposed at `/api/qasida/*.json` via Hugo module mounts. This allows the editor to fetch existing content at runtime. The mount is configured in `hugo.toml`:
+
+```toml
+[module]
+  [[module.mounts]]
+    source = "data/qasida"
+    target = "static/api/qasida"
+```
 
 ## Settings Functionality
 

@@ -1,0 +1,91 @@
+name: Submit a Qasida
+description: Submit a new Qasida to be added to Dhikr Hub
+title: "[Qasida]: "
+labels: ["qasida-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing a Qasida to Dhikr Hub!
+
+        جزاكم الله خيرا وبارك الله فيكم
+
+        You can use the [Editor](https://adehad.github.io/dhikr-hub/Contributing/Submit/) to create your Qasida and then copy the JSON output here.
+
+  - type: input
+    id: title
+    attributes:
+      label: Qasida Title
+      description: The name of the Qasida in English (transliterated or translated)
+      placeholder: e.g., Ya Hanana, Tala'al Badru Alayna
+    validations:
+      required: true
+
+  - type: textarea
+    id: json-content
+    attributes:
+      label: JSON Content
+      description: |
+        Paste the JSON output from the editor here.
+        Use the "Copy JSON" button in the [Submit Editor](https://adehad.github.io/dhikr-hub/Contributing/Submit/) to get this.
+      placeholder: |
+        {
+          "name": { "ara": "...", "en": "..." },
+          "verses": { "ara": [...], "en": [...] },
+          "translation": { "en": [...] },
+          "order": { "chorus": [...], "verses": [...] }
+        }
+      render: json
+    validations:
+      required: true
+
+  - type: dropdown
+    id: maqam
+    attributes:
+      label: Maqam (Musical Mode)
+      description: Select the maqam if known (optional)
+      multiple: true
+      options:
+        - Bayat
+        - Sika
+        - Hijaz
+        - Nahawand
+        - Rast
+        - Jaharkah
+        - Ajam
+        - Kurd
+        - Saba
+        - Other (specify in notes)
+    validations:
+      required: false
+
+  - type: input
+    id: author
+    attributes:
+      label: Author/Composer
+      description: The author or composer of this Qasida, if known
+      placeholder: e.g., Imam al-Haddad, Omar Alyafi
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: |
+        List your sources for the Arabic text, transliteration, and translation.
+        This helps us verify accuracy and give proper attribution.
+      placeholder: |
+        - Arabic: [Source name and/or URL]
+        - Transliteration: [auto-generated / manually transcribed / source]
+        - Translation: [Translator name / source]
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any other information about this Qasida (context, occasions when it's recited, etc.)
+    validations:
+      required: false

@@ -263,3 +263,267 @@ label[for="chorus-toggle"] {
     backdrop-filter: blur(2px);
     background-color: color-mix(in srgb, var(--body-background), transparent 20%);
 }
+
+// ============================================
+// Qasida Editor Styles
+// ============================================
+
+.qasida-editor {
+
+    // Toolbar
+    .editor-toolbar {
+        position: sticky;
+        top: 60px;
+        z-index: 50;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1.5rem;
+        background-color: var(--body-background);
+        border: 1px solid rgba(128, 128, 128, 0.3);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .toolbar-left,
+        .toolbar-right {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .toolbar-center {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    }
+
+    // Buttons
+    .btn {
+        padding: 0.4rem 0.8rem;
+        border: 1px solid rgba(128, 128, 128, 0.4);
+        border-radius: 4px;
+        background: var(--body-background);
+        color: var(--body-font-color);
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: all 0.2s;
+
+        &:hover {
+            background: rgba(128, 128, 128, 0.1);
+            border-color: rgba(128, 128, 128, 0.6);
+        }
+
+        &.btn-primary {
+            background: var(--color-link);
+            color: white;
+            border-color: var(--color-link);
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        &.btn-add {
+            color: var(--color-link);
+            border-color: var(--color-link);
+        }
+
+        &.btn-delete {
+            color: #e74c3c;
+            border: none;
+            background: transparent;
+            font-size: 1.2rem;
+            padding: 0.2rem 0.5rem;
+
+            &:hover {
+                background: rgba(231, 76, 60, 0.1);
+            }
+        }
+
+        &.btn-small {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    // Sections
+    .editor-section {
+        margin-bottom: 2rem;
+
+        h2 {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            h2 {
+                margin-bottom: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    // Name fields
+    .name-section {
+        .name-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            @media (min-width: 600px) {
+                flex-direction: row;
+            }
+        }
+
+        .name-field {
+            flex: 1;
+
+            label {
+                display: block;
+                margin-bottom: 0.25rem;
+                font-size: 0.85rem;
+                opacity: 0.7;
+            }
+
+            [contenteditable] {
+                width: 100%;
+                padding: 0.5rem;
+            }
+
+            #name-ara {
+                text-align: right;
+                direction: rtl;
+            }
+        }
+    }
+
+    // Verse sections (chorus/verse groups)
+    .verse-section {
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        border-radius: 8px;
+        padding: 1rem;
+
+        .section-title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            h3 {
+                margin: 0;
+                font-size: 1rem;
+                opacity: 0.8;
+            }
+
+            .section-actions {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+            }
+        }
+
+    }
+
+    // Verse lines in editor - extends base .verse styles
+    .verse {
+        // Override base margin for tighter spacing in editor
+        position: relative;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px dashed rgba(128, 128, 128, 0.2);
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .line-delete {
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        &:hover .line-delete,
+        &:focus-within .line-delete {
+            opacity: 1;
+        }
+    }
+
+    // Editable elements - visual cues
+    [contenteditable] {
+        border: 1px dashed transparent;
+        border-radius: 4px;
+        padding: 2px 4px;
+        transition: border-color 0.2s, background-color 0.2s;
+
+        &:hover {
+            border-color: rgba(128, 128, 128, 0.4);
+        }
+
+        &:focus {
+            border-color: var(--color-link);
+            background-color: rgba(255, 255, 255, 0.05);
+            outline: none;
+        }
+    }
+
+    // Placeholder for empty fields
+    [contenteditable]:empty {
+        min-height: 1.5em;
+        display: inline-block;
+
+        &::before {
+            content: attr(data-placeholder);
+            color: rgba(128, 128, 128, 0.6);
+            font-style: italic;
+        }
+    }
+
+    // Section delete button visibility
+    .section-delete {
+        opacity: 0.3;
+        transition: opacity 0.2s;
+    }
+
+    .verse-section:hover .section-delete {
+        opacity: 1;
+    }
+
+    // JSON output section
+    .json-output-section {
+        margin-top: 2rem;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        border-radius: 8px;
+
+        summary {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            font-weight: 500;
+
+            &:hover {
+                background: rgba(128, 128, 128, 0.05);
+            }
+        }
+
+        .json-output {
+            margin: 0;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.03);
+            border-top: 1px solid rgba(128, 128, 128, 0.2);
+            overflow-x: auto;
+            font-size: 0.8rem;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    }
+}

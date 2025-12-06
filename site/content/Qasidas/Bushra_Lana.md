@@ -1,10 +1,13 @@
++++
+json_file = 'bushra_lana'
++++
 # Bushra Lana - Glad Tidings
 
 ## Verses
 
-{{% get_title  file="qasida/bushra_lana" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/bushra_lana" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

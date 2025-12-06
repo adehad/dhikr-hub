@@ -1,10 +1,13 @@
++++
+json_file = 'thalama'
++++
 # Tholama Ashku Gharami  - How Long will my heart ache
 
 ## Verses
 
-{{% get_title  file="qasida/thalama" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/thalama" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

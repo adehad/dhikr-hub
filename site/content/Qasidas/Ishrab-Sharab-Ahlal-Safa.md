@@ -1,13 +1,14 @@
 +++
 maqam = ['Rast', 'Jaharkah']
+json_file = 'ishrab-sharab-ahlal-safa'
 +++
 # ʾIshrab Sharāb ʾahl aṣ-ṣafā - Drink the beverage of the people of purity
 
 ## Verses
 
-{{% get_title  file="qasida/ishrab-sharab-ahlal-safa" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ishrab-sharab-ahlal-safa" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

@@ -1,5 +1,6 @@
 +++
 maqam = ['Hijaz']
+json_file = 'ana_mashghulun_bi_layla'
 +++
 # ʾAnā Mashghūlun bi-Laylā – I am pre-occupied with the Divine
 
@@ -7,9 +8,9 @@ maqam = ['Hijaz']
 
 ## Verses
 
-{{% get_title  file="qasida/kun-ma'a-llahiana_mashghulun_bi_layla" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ana_mashghulun_bi_layla" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

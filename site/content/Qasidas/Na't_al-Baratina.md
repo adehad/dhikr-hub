@@ -1,10 +1,13 @@
++++
+json_file = 'nat-al-baratina'
++++
 # Na't Al-Baratina  - Hymn of the Britons
 
 ## Verses
 
-{{% get_title  file="qasida/nat-al-baratina" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/nat-al-baratina" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

@@ -1,10 +1,13 @@
++++
+json_file = 'taba-li'
++++
 # Ṭāba lī khalʻu ʻidhārī – My wantonness befits me
 
 ## Verses
 
-{{% get_title  file="qasida/taba-li" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/taba-li" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

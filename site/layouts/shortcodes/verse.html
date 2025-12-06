@@ -1,15 +1,21 @@
 {{/*
 USAGE:
 verse FILE LANG
-FILE = filepath relative to data/salawaat
+FILE = filepath relative to data/ (e.g. "qasida/thalama")
+       OR omit to use json_file from page front matter
 LANG = language
 
-e.g. verse thalama en
+e.g. {{< verse file="qasida/thalama" lang="en" >}}
+     {{< verse lang="en" >}}  (uses json_file from front matter)
 
 */}}
 
 
 {{ $verse_file_name := .Get "file" }}
+{{/* Fall back to page front matter json_file if file not provided */}}
+{{ if not $verse_file_name }}
+    {{ $verse_file_name = printf "qasida/%s" .Page.Params.json_file }}
+{{ end }}
 {{ $verse_lang := .Get "lang" }}
 
 {{/* Load up the JSON from the Site Data */}}

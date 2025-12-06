@@ -1,12 +1,15 @@
++++
+json_file = 'ya-man-dana-wa-tadalla'
++++
 # Yā Man Danā wa-Tadallā – O the one who descended & rose high
 
 {{< qasida_meta >}}
 
 ## Verses
 
-{{% get_title  file="qasida/ya-man-dana-wa-tadalla" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ya-man-dana-wa-tadalla" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

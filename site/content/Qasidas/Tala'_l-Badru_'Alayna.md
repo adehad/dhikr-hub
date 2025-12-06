@@ -1,10 +1,13 @@
++++
+json_file = 'tala-badru-alayna'
++++
 # ṬalaʿA l-Badru ʿAlaynā - The (full) White Moon Rose Over Us
 
 ## Verses
 
-{{% get_title  file="qasida/tala-badru-alayna" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/tala-badru-alayna" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

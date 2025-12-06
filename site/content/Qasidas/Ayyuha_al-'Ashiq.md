@@ -1,5 +1,6 @@
 +++
 maqam = ['Bayat']
+json_file = 'ayyuha_al_ashiq'
 +++
 # Ayyuha l-ʿāshiqu – Oh you the lover
 
@@ -7,9 +8,9 @@ maqam = ['Bayat']
 
 ## Verses
 
-{{% get_title  file="qasida/ayyuha_al_ashiq" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ayyuha_al_ashiq" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

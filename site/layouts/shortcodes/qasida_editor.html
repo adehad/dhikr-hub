@@ -1,0 +1,568 @@
+{{/* Qasida WYSIWYG Editor */}}
+
+<div class="qasida-editor" id="qasida-editor">
+    {{/* Sticky Toolbar */}}
+    <div class="editor-toolbar">
+        <div class="toolbar-left">
+            <button type="button" class="btn btn-secondary" onclick="QasidaEditor.reset()"
+                title="Reload from source">Reset</button>
+            <button type="button" class="btn btn-secondary" onclick="QasidaEditor.clear()"
+                title="Clear all content">Clear</button>
+        </div>
+        <div class="toolbar-center">
+            <span id="editor-status">New Qasida</span>
+        </div>
+        <div class="toolbar-right">
+            <button type="button" class="btn btn-primary" onclick="QasidaEditor.copyJSON()">Copy JSON</button>
+        </div>
+    </div>
+
+    {{/* Name Section */}}
+    <div class="editor-section name-section">
+        <h2>Name</h2>
+        <div class="name-fields">
+            <div class="name-field">
+                <label>Arabic</label>
+                <div id="name-ara" class="arabic" contenteditable="true" data-placeholder="اسم القصيدة"></div>
+            </div>
+            <div class="name-field">
+                <label>English</label>
+                <div id="name-en" contenteditable="true" data-placeholder="Qasida name in English"></div>
+            </div>
+        </div>
+    </div>
+
+    {{/* Choruses Section */}}
+    <div class="editor-section">
+        <div class="section-header">
+            <h2>Choruses</h2>
+            <button type="button" class="btn btn-add" onclick="QasidaEditor.addSection('chorus')">+ Add Chorus</button>
+        </div>
+        <div id="choruses-container" class="sections-container">
+            {{/* Chorus sections will be added here dynamically */}}
+        </div>
+    </div>
+
+    {{/* Verses Section */}}
+    <div class="editor-section">
+        <div class="section-header">
+            <h2>Verses</h2>
+            <button type="button" class="btn btn-add" onclick="QasidaEditor.addSection('verse')">+ Add Verse</button>
+        </div>
+        <div id="verses-container" class="sections-container">
+            {{/* Verse sections will be added here dynamically */}}
+        </div>
+    </div>
+
+    {{/* JSON Output (collapsible) */}}
+    <details class="json-output-section">
+        <summary>JSON Output</summary>
+        <pre id="json-output" class="json-output"></pre>
+    </details>
+</div>
+
+<script>
+    const QasidaEditor = (function () {
+        const STORAGE_KEY = 'qasida-editor';
+
+        let state = {
+            editSource: null,
+            choruses: [],
+            verses: []
+        };
+
+        // =========================================================================
+        // Initialization
+        // =========================================================================
+
+        function init() {
+            const fileParam = getFileParamFromURL();
+            const cached = loadFromStorage();
+
+            if (fileParam) {
+                initWithFileParam(fileParam, cached);
+            } else if (cached) {
+                initFromCache(cached);
+            }
+
+            setupAutoSaveOnInput();
+            preventThemeSearchHotkeyWhileEditing();
+            updateJSONOutput();
+        }
+
+        function getFileParamFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('file');
+        }
+
+        function initWithFileParam(fileParam, cached) {
+            if (cached && cached.editSource === fileParam) {
+                restoreFromCache(cached);
+                updateStatus(`Editing: ${fileParam} (cached)`);
+            } else {
+                fetchQasidaFromAPI(fileParam);
+            }
+        }
+
+        function initFromCache(cached) {
+            restoreFromCache(cached);
+            if (cached.editSource) {
+                updateStatus(`Editing: ${cached.editSource} (cached)`);
+                updateURLToReflectEditSource(cached.editSource);
+            } else {
+                updateStatus('New Qasida (cached)');
+            }
+        }
+
+        function restoreFromCache(cached) {
+            state = cached;
+            renderAllSections();
+        }
+
+        function updateURLToReflectEditSource(editSource) {
+            window.history.replaceState({}, '', `${window.location.pathname}?file=${editSource}`);
+        }
+
+        function setupAutoSaveOnInput() {
+            const editor = document.getElementById('qasida-editor');
+            editor.addEventListener('input', debounce(saveToStorage, 500));
+        }
+
+        function preventThemeSearchHotkeyWhileEditing() {
+            const editor = document.getElementById('qasida-editor');
+            editor.addEventListener('keypress', function (e) {
+                if (e.target.hasAttribute('contenteditable')) {
+                    e.stopPropagation();
+                }
+            });
+        }
+
+        // =========================================================================
+        // API Loading
+        // =========================================================================
+
+        async function fetchQasidaFromAPI(filename) {
+            updateStatus(`Loading: ${filename}...`);
+            try {
+                const response = await fetch(`/api/qasida/${filename}.json`);
+                if (!response.ok) throw new Error('File not found');
+                const data = await response.json();
+
+                state.editSource = filename;
+                parseQasidaJSONIntoState(data);
+                renderAllSections();
+                saveToStorage();
+                updateStatus(`Editing: ${filename}`);
+            } catch (err) {
+                console.error('Failed to load qasida:', err);
+                updateStatus(`Error loading: ${filename}`);
+            }
+        }
+
+        function parseQasidaJSONIntoState(data) {
+            setNameFieldsFromData(data);
+            state.choruses = parseOrderedSectionsFromData(data, 'chorus');
+            state.verses = parseOrderedSectionsFromData(data, 'verses');
+        }
+
+        function setNameFieldsFromData(data) {
+            document.getElementById('name-ara').textContent = data.name?.ara || '';
+            document.getElementById('name-en').textContent = data.name?.en || '';
+        }
+
+        function parseOrderedSectionsFromData(data, sectionType) {
+            const sections = [];
+            const orderArray = data.order?.[sectionType];
+            if (!orderArray) return sections;
+
+            orderArray.forEach(group => {
+                const lines = group.map(item => ({
+                    ara: data.verses.ara[item.index] || '',
+                    en: data.verses.en[item.index] || '',
+                    translation: data.translation.en[item.index] || ''
+                }));
+                sections.push({ lines });
+            });
+            return sections;
+        }
+
+        // =========================================================================
+        // Rendering
+        // =========================================================================
+
+        function renderAllSections() {
+            renderSectionsIntoContainer('chorus', state.choruses, document.getElementById('choruses-container'));
+            renderSectionsIntoContainer('verse', state.verses, document.getElementById('verses-container'));
+            updateJSONOutput();
+        }
+
+        function renderSectionsIntoContainer(type, sections, container) {
+            container.innerHTML = '';
+            sections.forEach((section, index) => {
+                const sectionEl = createSectionElement(type, index, section);
+                container.appendChild(sectionEl);
+            });
+        }
+
+        function createSectionElement(type, index, section) {
+            const div = document.createElement('div');
+            div.className = 'verse-section';
+            div.dataset.type = type;
+            div.dataset.index = index;
+
+            const label = type === 'chorus' ? `Chorus ${index + 1}` : `${index + 1}`;
+
+            div.innerHTML = `
+            <div class="section-title-bar">
+                <h3>${label}</h3>
+                <div class="section-actions">
+                    <button type="button" class="btn btn-small" onclick="QasidaEditor.addLine('${type}', ${index})">+ Add Line</button>
+                    <button type="button" class="btn btn-delete section-delete" onclick="QasidaEditor.removeSection('${type}', ${index})">×</button>
+                </div>
+            </div>
+            <div class="verse-container lines-container" data-section-type="${type}" data-section-index="${index}">
+            </div>
+        `;
+
+            const linesContainer = div.querySelector('.lines-container');
+            section.lines.forEach((line, lineIdx) => {
+                const lineEl = createLineElement(type, index, lineIdx, line);
+                linesContainer.appendChild(lineEl);
+            });
+
+            return div;
+        }
+
+        function createLineElement(type, sectionIdx, lineIdx, line) {
+            const div = document.createElement('div');
+            div.className = 'verse';
+            div.dataset.lineIndex = lineIdx;
+
+            div.innerHTML = `
+            <button type="button" class="btn btn-delete line-delete" onclick="QasidaEditor.removeLine('${type}', ${sectionIdx}, ${lineIdx})">×</button>
+            <div class="arabic" contenteditable="true" data-placeholder="Arabic text" data-field="ara">${escapeHtml(line.ara)}</div>
+            <div class="transliteration" contenteditable="true" data-placeholder="Transliteration" data-field="en">${escapeHtml(line.en)}</div>
+            <div class="translation" contenteditable="true" data-placeholder="Translation" data-field="translation">${escapeHtml(line.translation)}</div>
+        `;
+
+            return div;
+        }
+
+        // =========================================================================
+        // Section & Line Management
+        // =========================================================================
+
+        function getSectionsArray(type) {
+            return type === 'chorus' ? state.choruses : state.verses;
+        }
+
+        function createEmptyLine() {
+            return { ara: '', en: '', translation: '' };
+        }
+
+        function addSection(type) {
+            const sections = getSectionsArray(type);
+            sections.push({ lines: [createEmptyLine()] });
+            renderAllSections();
+            saveToStorage();
+        }
+
+        function removeSection(type, index) {
+            const sections = getSectionsArray(type);
+            sections.splice(index, 1);
+            renderAllSections();
+            saveToStorage();
+        }
+
+        function addLine(type, sectionIdx) {
+            const sections = getSectionsArray(type);
+            sections[sectionIdx].lines.push(createEmptyLine());
+            renderAllSections();
+            saveToStorage();
+        }
+
+        function removeLine(type, sectionIdx, lineIdx) {
+            const sections = getSectionsArray(type);
+            sections[sectionIdx].lines.splice(lineIdx, 1);
+            removeSectionIfEmpty(sections, sectionIdx);
+            renderAllSections();
+            saveToStorage();
+        }
+
+        function removeSectionIfEmpty(sections, sectionIdx) {
+            if (sections[sectionIdx].lines.length === 0) {
+                sections.splice(sectionIdx, 1);
+            }
+        }
+
+        // =========================================================================
+        // State Collection from DOM
+        // =========================================================================
+
+        function collectStateFromDOM() {
+            const nameAra = document.getElementById('name-ara').textContent.trim();
+            const nameEn = document.getElementById('name-en').textContent.trim();
+
+            state.choruses = collectSectionsFromContainer('choruses-container');
+            state.verses = collectSectionsFromContainer('verses-container');
+
+            return { nameAra, nameEn };
+        }
+
+        function collectSectionsFromContainer(containerId) {
+            const container = document.getElementById(containerId);
+            const sections = [];
+
+            container.querySelectorAll('.verse-section').forEach(sectionEl => {
+                const lines = collectLinesFromSection(sectionEl);
+                sections.push({ lines });
+            });
+
+            return sections;
+        }
+
+        function collectLinesFromSection(sectionEl) {
+            const lines = [];
+            sectionEl.querySelectorAll('.verse').forEach(lineEl => {
+                lines.push({
+                    ara: lineEl.querySelector('[data-field="ara"]').textContent.trim(),
+                    en: lineEl.querySelector('[data-field="en"]').textContent.trim(),
+                    translation: lineEl.querySelector('[data-field="translation"]').textContent.trim()
+                });
+            });
+            return lines;
+        }
+
+        // =========================================================================
+        // JSON Generation
+        // =========================================================================
+
+        function generateJSON() {
+            const { nameAra, nameEn } = collectStateFromDOM();
+            const builder = createJSONBuilder(nameAra, nameEn);
+
+            processChorusesForJSON(builder);
+            processVersesForJSON(builder);
+
+            return builder.build();
+        }
+
+        function createJSONBuilder(nameAra, nameEn) {
+            return {
+                nameAra,
+                nameEn,
+                versesAra: [],
+                versesEn: [],
+                translationEn: [],
+                orderChorus: [],
+                orderVerses: [],
+                currentIndex: 0,
+
+                addLine(line) {
+                    this.versesAra.push(line.ara);
+                    this.versesEn.push(line.en);
+                    this.translationEn.push(line.translation);
+                    const indexRef = { repeat: 1, index: this.currentIndex };
+                    this.currentIndex++;
+                    return indexRef;
+                },
+
+                build() {
+                    return {
+                        name: { ara: this.nameAra, en: this.nameEn },
+                        verses: { ara: this.versesAra, en: this.versesEn },
+                        translation: { en: this.translationEn },
+                        order: { chorus: this.orderChorus, verses: this.orderVerses }
+                    };
+                }
+            };
+        }
+
+        function processChorusesForJSON(builder) {
+            state.choruses.forEach(section => {
+                const group = section.lines.map(line => builder.addLine(line));
+                builder.orderChorus.push(group);
+            });
+        }
+
+        function processVersesForJSON(builder) {
+            state.verses.forEach(section => {
+                const group = section.lines.map(line => builder.addLine(line));
+                builder.orderVerses.push(group);
+            });
+        }
+
+        function updateJSONOutput() {
+            const json = generateJSON();
+            document.getElementById('json-output').textContent = JSON.stringify(json, null, 2);
+        }
+
+        // =========================================================================
+        // Clipboard
+        // =========================================================================
+
+        async function copyJSONToClipboard() {
+            const json = generateJSON();
+            const text = JSON.stringify(json, null, 2);
+
+            const success = await copyTextToClipboard(text);
+            if (success) {
+                showTemporaryStatus('Copied to clipboard!');
+            }
+        }
+
+        async function copyTextToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                return copyTextToClipboardFallback(text);
+            }
+        }
+
+        function copyTextToClipboardFallback(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            return true;
+        }
+
+        function showTemporaryStatus(message, duration = 2000) {
+            updateStatus(message);
+            setTimeout(() => {
+                updateStatus(state.editSource ? `Editing: ${state.editSource}` : 'New Qasida');
+            }, duration);
+        }
+
+        // =========================================================================
+        // Reset & Clear
+        // =========================================================================
+
+        function resetToSource() {
+            if (state.editSource) {
+                if (confirm('Reload from original source? This will discard your changes.')) {
+                    clearStorage();
+                    fetchQasidaFromAPI(state.editSource);
+                }
+            } else {
+                if (confirm('Reset to empty form?')) {
+                    clearAllContent();
+                }
+            }
+        }
+
+        function clearWithConfirmation() {
+            if (confirm('Clear all content?')) {
+                clearAllContent();
+            }
+        }
+
+        function clearAllContent() {
+            state = { editSource: null, choruses: [], verses: [] };
+            document.getElementById('name-ara').textContent = '';
+            document.getElementById('name-en').textContent = '';
+            renderAllSections();
+            clearStorage();
+            updateStatus('New Qasida');
+            removeFileParamFromURL();
+        }
+
+        function removeFileParamFromURL() {
+            window.history.replaceState({}, '', window.location.pathname);
+        }
+
+        // =========================================================================
+        // localStorage Persistence
+        // =========================================================================
+
+        function saveToStorage() {
+            collectStateFromDOM();
+            const data = {
+                editSource: state.editSource,
+                lastModified: new Date().toISOString(),
+                nameAra: document.getElementById('name-ara').textContent.trim(),
+                nameEn: document.getElementById('name-en').textContent.trim(),
+                choruses: state.choruses,
+                verses: state.verses
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            updateJSONOutput();
+        }
+
+        function loadFromStorage() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (!stored) return null;
+
+            try {
+                const data = JSON.parse(stored);
+                restoreNameFieldsFromStoredData(data);
+                return {
+                    editSource: data.editSource,
+                    choruses: data.choruses || [],
+                    verses: data.verses || []
+                };
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function restoreNameFieldsFromStoredData(data) {
+            if (data.nameAra) document.getElementById('name-ara').textContent = data.nameAra;
+            if (data.nameEn) document.getElementById('name-en').textContent = data.nameEn;
+        }
+
+        function clearStorage() {
+            localStorage.removeItem(STORAGE_KEY);
+        }
+
+        // =========================================================================
+        // Utilities
+        // =========================================================================
+
+        function updateStatus(message) {
+            document.getElementById('editor-status').textContent = message;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function debounce(fn, delay) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => fn.apply(this, args), delay);
+            };
+        }
+
+        // =========================================================================
+        // Bootstrap
+        // =========================================================================
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+
+        // =========================================================================
+        // Public API
+        // =========================================================================
+
+        return {
+            addSection,
+            removeSection,
+            addLine,
+            removeLine,
+            copyJSON: copyJSONToClipboard,
+            reset: resetToSource,
+            clear: clearWithConfirmation
+        };
+    })();
+</script>

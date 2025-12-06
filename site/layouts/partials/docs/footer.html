@@ -1,0 +1,36 @@
+<div class="flex flex-wrap justify-between">
+
+{{ if and .GitInfo .Site.Params.BookRepo }}
+  <div>
+    {{- $date := partial "docs/date" (dict "Date" .GitInfo.AuthorDate.Local "Format" .Site.Params.BookDateFormat) -}}
+    <a class="flex align-center" href="{{ partial "docs/links/commit" . }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
+      <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="" />
+      <span>{{ $date }}</span>
+    </a>
+  </div>
+{{ end }}
+
+{{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
+  <div>
+    {{ if .Params.json_file }}
+      {{/* Link to WYSIWYG editor for qasida pages with json_file param */}}
+      <a class="flex align-center" href="{{ "/Contributing/Submit/" | relURL }}?file={{ .Params.json_file }}">
+        <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="" />
+        <span>Edit in Editor</span>
+      </a>
+    {{ else }}
+      {{/* Original GitHub link for other pages */}}
+      <a class="flex align-center" href="{{ partial "docs/links/edit" . }}" target="_blank" rel="noopener">
+        <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="" />
+        <span>{{ i18n "Edit this page" }}</span>
+      </a>
+    {{ end }}
+  </div>
+{{ end }}
+
+</div>
+
+{{ $script := resources.Get "clipboard.js" | resources.Minify }}
+{{ with $script.Content }}
+  <script>{{ . | safeJS }}</script>
+{{ end }}

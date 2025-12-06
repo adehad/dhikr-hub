@@ -1,10 +1,13 @@
++++
+json_file = 'ya_hanana'
++++
 # Ya Hanana - Oh My Joy
 
 ## Verses
 
-{{% get_title  file="qasida/ya_hanana" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ya_hanana" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

@@ -1,5 +1,6 @@
 +++
 maqam = ['Bayat']
+json_file = "tashawwaqat-rūḥī-li-shaṭṭi-al-wādī"
 +++
 # Tashawwaqat Rūḥī li-Shaṭṭi al-Wādī - My soul has longed for the valley's shore
 
@@ -7,9 +8,9 @@ maqam = ['Bayat']
 
 ## Verses
 
-{{% get_title  file="qasida/tashawwaqat-rūḥī-li-shaṭṭi-al-wādī" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/tashawwaqat-rūḥī-li-shaṭṭi-al-wādī" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

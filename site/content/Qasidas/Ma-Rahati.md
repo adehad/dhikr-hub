@@ -1,10 +1,13 @@
++++
+json_file = 'ma-ra-hati'
++++
 # Mā Rāḥatī – What is my Rest?
 
 ## Verses
 
-{{% get_title  file="qasida/ma-ra-hati" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ma-ra-hati" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

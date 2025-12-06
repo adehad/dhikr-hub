@@ -1,10 +1,13 @@
++++
+json_file = 'salawatun-tayyibatun'
++++
 # Salawatun-Tayyibatun - Purest Prayers
 
 ## Verses
 
-{{% get_title  file="qasida/salawatun-tayyibatun" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/salawatun-tayyibatun" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

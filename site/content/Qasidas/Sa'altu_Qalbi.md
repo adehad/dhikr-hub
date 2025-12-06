@@ -1,10 +1,13 @@
++++
+json_file = 'sa-altu-qalbi'
++++
 # Sa'altu Qalbi - The Oneness of Action and Existence
 
 ## Verses
 
-{{% get_title  file="qasida/sa-altu-qalbi" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/sa-altu-qalbi" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

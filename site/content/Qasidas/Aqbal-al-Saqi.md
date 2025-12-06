@@ -1,13 +1,14 @@
 +++
 maqam = ['Hijaz']
+json_file = 'aqbal-al-saqi'
 +++
 # Aqbal al-Sāqī – The cupbearer approached
 
 ## Verses
 
-{{% get_title  file="qasida/aqbal-al-saqi" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/aqbal-al-saqi" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

@@ -1,5 +1,6 @@
 +++
 maqam = ['Bayat']
+json_file = 'sifhu-li-ya-man-ra-ayta'
 +++
 # Ṣifhu Lī – Describe him to me
 
@@ -7,9 +8,9 @@ maqam = ['Bayat']
 
 ## Verses
 
-{{% get_title  file="qasida/sifhu-li-ya-man-ra-ayta" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/sifhu-li-ya-man-ra-ayta" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

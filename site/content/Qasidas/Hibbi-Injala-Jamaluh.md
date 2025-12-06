@@ -1,5 +1,6 @@
 +++
 maqam = ['Kurd']
+json_file = 'hibbi-injala-jamaluh'
 +++
 # Hibbi Injala Jamaluh - My beloved's beauty has been revealed
 
@@ -7,9 +8,9 @@ maqam = ['Kurd']
 
 ## Verses
 
-{{% get_title file="qasida/hibbi-injala-jamaluh" lang="en" %}}
+{{% get_title lang="en" %}}
 
-{{< verse file="qasida/hibbi-injala-jamaluh" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

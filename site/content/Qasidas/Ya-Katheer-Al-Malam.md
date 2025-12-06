@@ -1,5 +1,6 @@
 +++
 maqam = ['Bayat']
+json_file = 'ya-katheer-al-malam'
 +++
 # Yā Kathīra al-Malām – O Constant Blamer
 
@@ -7,9 +8,9 @@ maqam = ['Bayat']
 
 ## Verses
 
-{{% get_title  file="qasida/ya-katheer-al-malam" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ya-katheer-al-malam" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

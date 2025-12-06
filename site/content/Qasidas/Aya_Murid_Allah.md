@@ -1,3 +1,6 @@
++++
+json_file = 'aya-mureed-allah'
++++
 # Ayā Murīd Allāhi – O Seeker of God
 
 {{< qasida_meta >}}
@@ -5,9 +8,9 @@
 
 ## Verses
 
-{{% get_title  file="qasida/aya-mureed-allah" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/aya-mureed-allah" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

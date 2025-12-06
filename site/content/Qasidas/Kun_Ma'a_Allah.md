@@ -1,5 +1,6 @@
 +++
 maqam = ['Bayat']
+json_file = "kun-ma'a-llahi"
 +++
 # Kun Ma'a Llāhi Tarā Llāha Maʿak – Be with God and you will see God with you
 
@@ -7,9 +8,9 @@ maqam = ['Bayat']
 
 ## Verses
 
-{{% get_title  file="qasida/kun-ma'a-llahi" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/kun-ma'a-llahi" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

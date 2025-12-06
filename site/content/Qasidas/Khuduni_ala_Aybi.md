@@ -1,10 +1,13 @@
++++
+json_file = 'khudhuni_ala_aybi'
++++
 # Khudhūnī ʿalā ʿaybī - Take me as I am, with all my flaws
 
 ## Verses
 
-{{% get_title  file="qasida/khudhuni_ala_aybi" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/khudhuni_ala_aybi" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

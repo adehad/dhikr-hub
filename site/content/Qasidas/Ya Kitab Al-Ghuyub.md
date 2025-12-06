@@ -1,5 +1,6 @@
 +++
 maqam = ['Rast', 'Sika']
+json_file = 'ya-kitab-al-ghuyub'
 +++
 # Yā Kitāb al-Ghuyūb – O Book of the Unseen
 
@@ -8,9 +9,9 @@ maqam = ['Rast', 'Sika']
 
 ## Verses
 
-{{% get_title  file="qasida/ya-kitab-al-ghuyub" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ya-kitab-al-ghuyub" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

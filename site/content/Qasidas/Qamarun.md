@@ -1,10 +1,13 @@
++++
+json_file = 'qamarun'
++++
 # Qamarun - Moon
 
 ## Verses
 
-{{% get_title  file="qasida/qamarun" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/qamarun" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

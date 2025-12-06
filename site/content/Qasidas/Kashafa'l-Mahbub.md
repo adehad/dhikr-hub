@@ -1,10 +1,13 @@
-# Kashafa’l-Maḥbūb - The Beloved lifted the Veil
++++
+json_file = 'kashaf-al-mahbub'
++++
+# Kashafa'l-Maḥbūb - The Beloved lifted the Veil
 
 ## Verses
 
-{{% get_title  file="qasida/kashaf-al-mahbub" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/kashaf-al-mahbub" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 
