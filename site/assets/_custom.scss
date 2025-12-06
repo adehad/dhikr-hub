@@ -61,7 +61,11 @@ body {
 
 .container {
     // the main page width is controlled by this class
-    max-width: 90dvw;
+    max-width: 98dvw; // mobile
+
+    @media screen and (min-width: $container-max-width) {
+        max-width: 90dvw; //desktop
+    }
 }
 
 .arabic {
