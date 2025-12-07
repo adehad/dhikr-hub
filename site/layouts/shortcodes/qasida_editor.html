@@ -144,7 +144,7 @@
         async function fetchQasidaFromAPI(filename) {
             updateStatus(`Loading: ${filename}...`);
             try {
-                const response = await fetch(`/api/qasida/${filename}.json`);
+                const response = await fetch(`{{ "api/qasida/" | relURL }}${filename}.json`);
                 if (!response.ok) throw new Error('File not found');
                 const data = await response.json();
 

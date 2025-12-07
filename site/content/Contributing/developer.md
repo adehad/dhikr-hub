@@ -95,7 +95,7 @@ Usage:
 
 ### qasida_editor
 
-Embeds the WYSIWYG Qasida editor. Used on the [Submit page](/Contributing/Submit/).
+Embeds the WYSIWYG Qasida editor. Used on the [Submit page](/contributing/submit/).
 
 Usage:
 ```
@@ -117,7 +117,7 @@ Have a look at this example of the implementation:
 
 ## Qasida Editor
 
-The site includes a WYSIWYG editor for creating and editing Qasidas at [/Contributing/Submit/](/Contributing/Submit/).
+The site includes a WYSIWYG editor for creating and editing Qasidas at [/contributing/submit/](/contributing/submit/).
 
 Features:
 - Edit existing Qasidas by clicking "Edit in Editor" on any Qasida page
@@ -128,7 +128,7 @@ Features:
 - Auto-save to localStorage (preserves work across page refreshes)
 - Export to JSON format compatible with the data schema
 
-The editor can load existing Qasidas via the `?file=` query parameter (e.g., `/Contributing/Submit/?file=sifhu-li`).
+The editor can load existing Qasidas via the `?file=` query parameter (e.g., `/contributing/submit/?file=sifhu-li`).
 
 ### JSON API
 

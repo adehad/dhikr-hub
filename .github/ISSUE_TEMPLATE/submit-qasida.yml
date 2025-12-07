@@ -10,7 +10,7 @@ body:
 
         جزاكم الله خيرا وبارك الله فيكم
 
-        You can use the [Editor](https://adehad.github.io/dhikr-hub/Contributing/Submit/) to create your Qasida and then copy the JSON output here.
+        You can use the [Editor](https://adehad.github.io/dhikr-hub/contributing/submit/) to create your Qasida and then copy the JSON output here.
 
   - type: input
     id: title
@@ -27,7 +27,7 @@ body:
       label: JSON Content
       description: |
         Paste the JSON output from the editor here.
-        Use the "Copy JSON" button in the [Submit Editor](https://adehad.github.io/dhikr-hub/Contributing/Submit/) to get this.
+        Use the "Copy JSON" button in the [Submit Editor](https://adehad.github.io/dhikr-hub/contributing/submit/) to get this.
       placeholder: |
         {
           "name": { "ara": "...", "en": "..." },

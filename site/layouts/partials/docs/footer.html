@@ -14,7 +14,7 @@
   <div>
     {{ if .Params.json_file }}
       {{/* Link to WYSIWYG editor for qasida pages with json_file param */}}
-      <a class="flex align-center" href="{{ "/Contributing/Submit/" | relURL }}?file={{ .Params.json_file }}">
+      <a class="flex align-center" href="{{ "contributing/submit/" | relURL }}?file={{ .Params.json_file }}">
         <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="" />
         <span>Edit in Editor</span>
       </a>
