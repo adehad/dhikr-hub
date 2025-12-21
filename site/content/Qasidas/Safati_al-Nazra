@@ -1,0 +1,23 @@
++++
+maqam = ['Nahawand']
+json_file = 'safati-al-nazra'
++++
+# Safati al-Nazra - clear was the vision
+
+{{< qasida_meta >}}
+
+## Verses
+
+{{% get_title lang="en" %}}
+
+{{< verse lang="en" >}}
+
+## About
+
+### Author
+Imam Ahmad al-Allawi
+
+### Sources
+- Arabic - Poem gate (https://poetsgate.com/poem.php?pm=138246)
+- English Transliteration - AI Transliterated
+- English Translation - AI assisted and reviewed by Sh Ma’n
