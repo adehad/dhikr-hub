@@ -118,10 +118,6 @@
             [
                 {"repeat": 1, "index": 14 },
                 {"repeat": 2, "index": 15 }
-            ],
-            [
-                {"repeat": 1, "index": 16 },
-                {"repeat": 2, "index": 17 }
             ]
         ]
     }
