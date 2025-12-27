@@ -1,165 +1,136 @@
 {
-    "name": {
-      "ara": "صَفَتِ النَّظْرَةُ",
-      "en": "Clear was the vision"
-    },
-    "verses": {
-      "ara": [
-        "صَفَتِ النَّظْرَةُ طَابَتِ الْحَضْرَةُ",
-        "جَاءَتِ الْبُشْرَى لِأَهْلِ اللَّهِ",
-        "قَامُوا سُكَارَى لِذِي الْبِشَارَةِ",
-        "جَعَلُوا عِمَارَةً شُكْرًا لِلَّهِ",
-        "أَيُّهَا الْحَاضِرُ أُذْكُرْ وَذَاكِرْ",
-        "إِيَّاكَ تُنْكُرْ حَالَ أَهْلِ اللَّهِ",
-        "فَسَلِّمْ لَهُمْ فِيمَا عَرَاهُمْ",
-        "وَاعْلَمْ أَنَّهُمْ غَابُوا فِي اللَّهِ",
-        "فَالْوَجْدُ بِهِمْ دَاعٍ يَدْعِيهِمْ",
-        "يَطْرَا عَلَيْهِمْ فِي ذِكْرِ اللَّهِ",
-        "وَمَنْ لَمْ يَجِدْ فَلْيَتَوَاجَدْ",
-        "قَصْدًا يَتَعَرَّضُ لِفَضْلِ اللَّهِ",
-        "هَكَذَا قَالُوا وَلِذَا مَالُوا",
-        "وَلَقَدْ غَالُوا فِي ذِكْرِ اللَّهِ",
-        "حَتَّى قَدْ ظَنَّا مَنْ لَيْسَ مِنَّا",
-        "أَنَّا جُنِنَّا بِذِكْرِ اللَّهِ",
-        "هَنِيئًا لَنَا ثُمَّ بَشَرَانَا",
-        "إِنْ كَانَ لَنَا حُمْقٌ فِي اللَّهِ"
+  "name": {
+    "ara": "صَفَتِ النَّظْرَةُ",
+    "en": "Clear was the Vision"
+  },
+  "verses": {
+    "ara": [
+      "صَفَتِ النَّظْرَةُ طَابَتِ الْحَضْرَةُ",
+      "جَاءَتِ الْبُشْرَى لِأَهْلِ اللَّهِ",
+
+      "قَامُوا سُكَارَى لِذِي الْبِشَارَةِ",
+      "جَعَلُوا عِمَارَةً شُكْرًا لِلَّهِ",
+
+      "أَيُّهَا الْحَاضِرُ أُذْكُرْ وَذَاكِرْ",
+      "إِيَّاكَ تُنْكُرْ حَالَ أَهْلِ اللَّهِ",
+
+      "فَسَلِّمْ لَهُمْ فِيمَا عَرَاهُمْ",
+      "وَاعْلَمْ أَنَّهُمْ غَابُوا فِي اللَّهِ",
+
+      "فَالْوَجْدُ بِهِمْ دَاعٍ يَدْعِيهِمْ",
+      "يَطْرَا عَلَيْهِمْ فِي ذِكْرِ اللَّهِ",
+
+      "وَمَنْ لَمْ يَجِدْ فَلْيَتَوَاجَدْ",
+      "قَصْدًا يَتَعَرَّضُ لِفَضْلِ اللَّهِ",
+
+      "هَكَذَا قَالُوا وَلِذَا مَالُوا",
+      "وَلَقَدْ غَالُوا فِي ذِكْرِ اللَّهِ",
+
+      "حَتَّى قَدْ ظَنَّا مَنْ لَيْسَ مِنَّا",
+      "أَنَّا جُنِنَّا بِذِكْرِ اللَّهِ",
+
+      "هَنِيئًا لَنَا ثُمَّ بَشَرَانَا",
+      "إِنْ كَانَ لَنَا حُمْقٌ فِي اللَّهِ"
+    ],
+    "en": [
+      "ṣafati al-naẓra(tu) ṭābati al-ḥaḍra(tu)",
+      "jā’ati al-bushrā li-hal(i) al-lāh(i)",
+
+      "qāmū sukārā li-dhī al-bishārah",
+      "ja‘alū ‘imāra(tan) shukran li-llāh(i)",
+
+      "ayyuhā al-ḥāḍir(u) udhkur wa-dhākir",
+      "iyyāka tankur ḥāla ahli al-lāh(i)",
+
+      "fassilm lahum fīmā ‘arāhum",
+      "wa-‘lam annahum ghābū fī al-lāh(i)",
+
+      "fa-al-wajdu bihim dā‘in yad‘īhim",
+      "yaṭrā ‘alayhim fī dhikri al-lāh(i)",
+
+      "wa-man lam yajid fa-l-yatawājad",
+      "qaṣdan yata‘arraḍ(u) li-faḍli al-lāh(i)",
+
+      "hakadhā qālū wa-li-dhā mālū",
+      "wa-laqad ghālū fī dhikri al-lāh(i)",
+
+      "ḥattā qad ẓannā man laysa minnā",
+      "annā juninnā bi-dhikri al-lāh(i)",
+
+      "hanī’an lanā thumma bushrānā",
+      "in kāna lanā ḥumqun fī al-lāh(i)"
+    ]
+  },
+  "translation": {
+    "en": [
+      "Clear was the vision, the Presence made sweet",
+      "Good News arrived for the people of Allah.",
+
+      "Drunken, they arose for the Possessor of Glad Tidings",
+      "and held an ‘imārah (hadrah) in gratitude of Allah",
+
+      "O you who are present, bear in mind and remind!",
+      "Never deny the state of the people of Allah.",
+
+      "Acknowledge their dispossession",
+      "and know that they are vanished in Allah.",
+
+      "Their state of ecstasy is a caller, calling,",
+      "seizing them in the remembrance of Allah.",
+
+      "Those who have not found, let Him expose Himself.",
+      "Be exposed intentionally to the grace of Allah.",
+
+      "Thus they have said and therefore swayed,",
+      "and went unrestrained in the remembrance of Allah.",
+
+      "Till it was thought by those not of us",
+      "that we are deranged from the remembrance of Allah.",
+
+      "Congratulations to us and glad tidings then,",
+      "if we are dim-witted in Allah!"
+    ]
+  },
+  "order": {
+    "chorus": [
+      [
+        {"repeat": 1, "index": 0 },
+        {"repeat": 1, "index": 1 }
+      ] 
+    ],
+    "verses": [
+      [
+        {"repeat": 1, "index": 2 },
+        {"repeat": 1, "index": 3 }
       ],
-      "en": [
-        "ṣafati al-naẓra(tu) ṭābati al-ḥaḍra(tu)",
-        "jā’ati al-bushrā li-hal(i) al-lāh(i)",
-        "qāmū sukārā li-dhī al-bishārah",
-        "ja‘alū ‘imāra(tan) shukran li-llāh(i)",
-        "ayyuhā al-ḥāḍir(u) udhkur wa-dhākir",
-        "iyyāka tankur ḥāla ahli al-lāh(i)",
-        "fassilm lahum fīmā ‘arāhum",
-        "wa-‘lam annahum ghābū fī al-lāh(i)",
-        "fa-al-wajdu bihim dā‘in yad‘īhim",
-        "yaṭrā ‘alayhim fī dhikri al-lāh(i)",
-        "wa-man lam yajid fa-l-yatawājad",
-        "qaṣdan yata‘arraḍ(u) li-faḍli al-lāh(i)",
-        "hakadhā qālū wa-li-dhā mālū",
-        "wa-laqad ghālū fī dhikri al-lāh(i)",
-        "ḥattā qad ẓannā man laysa minnā",
-        "annā juninnā bi-dhikri al-lāh(i)",
-        "hanī’an lanā thumma bushrānā",
-        "in kāna lanā ḥumqun fī al-lāh(i)"
+      [
+        {"repeat": 1, "index": 4 },
+        {"repeat": 1, "index": 5 }
+      ],
+      [
+        {"repeat": 1, "index": 6 },
+        {"repeat": 1, "index": 7 }
+      ],
+      [
+        {"repeat": 1, "index": 8 },
+        {"repeat": 1, "index": 9 }
+      ],
+      [
+        {"repeat": 1, "index": 10 },
+        {"repeat": 1, "index": 11 }
+      ],
+      [
+        {"repeat": 1, "index": 12 },
+        {"repeat": 1, "index": 13 }
+      ],
+      [
+        {"repeat": 1, "index": 14 },
+        {"repeat": 1, "index": 15 }
+      ],
+      [
+        {"repeat": 1, "index": 16 },
+        {"repeat": 1, "index": 17 }
       ]
-    },
-    "translation": {
-      "en": [
-        "Clear was the vision, the Presence made sweet",
-        "Good News arrived for the people of Allah.",
-        "Drunken, they arose for the Possessor of Glad Tidings",
-        "and held an ‘imārah (hadrah) in gratitude of Allah",
-        "O you who are present, bear in mind and remind!",
-        "Never deny the state of the people of Allah.",
-        "Acknowledge their dispossession",
-        "and know that they are vanished in Allah.",
-        "Their state of ecstasy is a caller, calling,",
-        "seizing them in the remembrance of Allah.",
-        "Those who have not found, let Him expose Himself.",
-        "Be exposed intentionally to the grace of Allah.",
-        "Thus they have said and therefore swayed,",
-        "and went unrestrained in the remembrance of Allah.",
-        "Till it was thought by those not of us",
-        "that we are deranged from the remembrance of Allah.",
-        "Congratulations to us and glad tidings then,",
-        "if we are dim-witted in Allah!"
-      ]
-    },
-    "order": {
-      "chorus": [],
-      "verses": [
-        [
-          {
-            "repeat": 1,
-            "index": 0
-          },
-          {
-            "repeat": 1,
-            "index": 1
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 2
-          },
-          {
-            "repeat": 1,
-            "index": 3
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 4
-          },
-          {
-            "repeat": 1,
-            "index": 5
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 6
-          },
-          {
-            "repeat": 1,
-            "index": 7
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 8
-          },
-          {
-            "repeat": 1,
-            "index": 9
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 10
-          },
-          {
-            "repeat": 1,
-            "index": 11
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 12
-          },
-          {
-            "repeat": 1,
-            "index": 13
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 14
-          },
-          {
-            "repeat": 1,
-            "index": 15
-          }
-        ],
-        [
-          {
-            "repeat": 1,
-            "index": 16
-          },
-          {
-            "repeat": 1,
-            "index": 17
-          }
-        ]
-      ]
-    }
+    ]
   }
+}
