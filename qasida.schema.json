@@ -1,308 +1,198 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "http://example.com/example.json",
+  "$id": "https://raw.githubusercontent.com/adehad/dhikr-hub/refs/heads/main/qasida.schema.json",
   "type": "object",
-  "default": {},
-  "$comment": "https://www.jsonschema.net/app/schemas/286834",
   "title": "Qasida Schema",
+  "description": "Schema for Islamic poetry (Qasida) data files in the Dhikr Hub project. FORMATTING: Use blank lines to group related verses visually (matching the order groupings). The 'order' object uses compact single-line format: { \"repeat\": 1, \"index\": 0 } with spaces after braces and colons.",
   "required": ["name", "verses", "translation", "order"],
   "properties": {
     "name": {
       "type": "object",
-      "default": {},
       "title": "The Qasida name",
+      "description": "Contains the qasida title in Arabic and English",
       "required": ["ara", "en"],
       "properties": {
         "ara": {
           "type": "string",
-          "default": "",
-          "title": "The Qasida name in Arabic",
-          "examples": ["صَلَاةُ الْبَدْرِ يَا"]
+          "title": "Arabic name",
+          "description": "The qasida name in Arabic script with tashkeel (vowel marks)",
+          "minLength": 1,
+          "examples": ["صَفَتِ النَّظْرَةُ", "طَلَعَ الْبَدْرُ عَلَيْنَا", "يَا هَنَانَا"]
         },
         "en": {
           "type": "string",
-          "default": "",
-          "title": "The Qasida name in English",
-          "examples": ["Salat-al Badriyya"]
+          "title": "English name",
+          "description": "Format: 'Transliteration - Translation' using Library of Congress Arabic Romanization. Transliteration should use proper diacritics (ā, ī, ū for long vowels; ṣ, ḍ, ṭ, ẓ for emphatics; ʿ for ayn; ḥ for ḥā')",
+          "minLength": 1,
+          "pattern": ".+ - .+",
+          "examples": [
+            "Ṣafati al-Naẓra - Clear was the Vision",
+            "Ṭalaʿa l-Badru ʿAlaynā - The Full Moon Rose Over Us",
+            "Ya Hanana - Oh Our Joy!"
+          ]
         }
       },
-      "examples": [
-        {
-          "ara": "صَلَاةُ الْبَدْرِ يَا",
-          "en": "Salat-al Badriyya"
-        }
-      ]
+      "additionalProperties": false
     },
     "verses": {
       "type": "object",
-      "default": {},
       "title": "The verses",
+      "description": "Contains Arabic verses and their transliterations. Both arrays must have the same length.",
       "required": ["ara", "en"],
       "properties": {
         "ara": {
           "type": "array",
-          "default": [],
-          "title": "The verses in Arabic",
+          "title": "Arabic verses",
+          "description": "Verses in Arabic script with tashkeel (vowel marks: fatḥa, kasra, ḍamma, sukūn, shadda)",
+          "minItems": 1,
           "items": {
             "type": "string",
-            "title": "Arabic verse",
-            "examples": [
-              "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
-              "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
-              "ﻃَﺎﻟَﻤَﺎ ﺍَﺷْﻜُﻮْ ﻏَﺮَﺍﻣِﻰ ﻳَﺎ ﻧُﻮْ ﺭَ ﺍﻟْﻮُﺟُﻮْﺩ"
-            ]
-          },
-          "examples": [
-            "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
-            "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
-            "ﻃَﺎﻟَﻤَﺎ ﺍَﺷْﻜُﻮْ ﻏَﺮَﺍﻣِﻰ ﻳَﺎ ﻧُﻮْ ﺭَ ﺍﻟْﻮُﺟُﻮْﺩ"
-          ]
+            "minLength": 1,
+            "title": "Arabic verse"
+          }
         },
         "en": {
           "type": "array",
-          "default": [],
-          "title": "The verses in English (transliteration)",
+          "title": "Transliterated verses",
+          "description": "Verses transliterated using Library of Congress Arabic Romanization with proper diacritics",
+          "minItems": 1,
           "items": {
             "type": "string",
-            "title": "English (transliteration) verse",
-            "examples": [
-              "Ṣalātu Llāh salāmu Llāh",
-              "ʿalā Ṭāhā rasūli Llāh",
-              "Tholama ashku gharami yaa nurol wujud"
-            ]
-          },
-          "examples": [
-            "Ṣalātu Llāh salāmu Llāh",
-            "ʿalā Ṭāhā rasūli Llāh",
-            "Tholama ashku gharami yaa nurol wujud"
-          ]
+            "minLength": 1,
+            "title": "Transliterated verse"
+          }
         }
       },
-      "examples": [
-        {
-          "ara": [
-            "صَلَاةُ اللّٰهِ سَلَامُ اللّٰه ",
-            "عَلَىٰ طٰهٰ رَسُولِ اللّٰه",
-            "ﻃَﺎﻟَﻤَﺎ ﺍَﺷْﻜُﻮْ ﻏَﺮَﺍﻣِﻰ ﻳَﺎ ﻧُﻮْ ﺭَ ﺍﻟْﻮُﺟُﻮْﺩ"
-          ],
-          "en": [
-            "Ṣalātu Llāh salāmu Llāh",
-            "ʿalā Ṭāhā rasūli Llāh",
-            "Tholama ashku gharami yaa nurol wujud"
-          ]
-        }
-      ]
+      "additionalProperties": false
     },
     "translation": {
       "type": "object",
-      "default": {},
-      "title": "The verse translation",
+      "title": "The verse translations",
+      "description": "Translations of the verses. The array length should match verses.ara and verses.en.",
       "required": ["en"],
       "properties": {
         "en": {
           "type": "array",
-          "default": [],
-          "title": "The English verse translation",
+          "title": "English translations",
+          "description": "English meaning translations of each verse",
+          "minItems": 1,
           "items": {
             "type": "string",
-            "title": "English translation",
-            "examples": [
-              "May the blessings of Allah, may the peace of Allah",
-              "be upon Ta-Ha, the Messenger of Allah ﷺ",
-              "How long will I yearn infatuated O light of the universe"
-            ]
-          },
-          "examples": [
-            "May the blessings of Allah, may the peace of Allah",
-            "be upon Ta-Ha, the Messenger of Allah ﷺ",
-            "How long will I yearn infatuated O light of the universe"
-          ]
+            "minLength": 1,
+            "title": "English translation"
+          }
         }
       },
-      "examples": [
-        {
-          "en": [
-            ["May the blessings of Allah, may the peace of Allah"],
-            ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
-            ["How long will I yearn infatuated O light of the universe"]
-          ]
-        }
-      ]
+      "additionalProperties": false
     },
     "order": {
       "type": "object",
-      "default": {},
       "title": "The verse order",
+      "description": "Defines the performance order of chorus and verses, with repeat counts",
       "required": ["chorus", "verses"],
       "properties": {
         "chorus": {
           "type": "array",
-          "default": [],
-          "title": "The chorus",
+          "title": "Chorus sections",
+          "description": "Groups of verse references that form the chorus/refrain",
           "items": {
             "type": "array",
-            "default": [],
-            "title": "The grouped chorus entries",
+            "title": "Chorus group",
+            "description": "A group of verses sung together as part of the chorus",
+            "minItems": 1,
             "items": {
-              "type": "object",
-              "title": "The chorus entry",
-              "required": ["repeat", "index"],
-              "properties": {
-                "repeat":{
-                  "type": "integer",
-                  "title": "How many times to repeat the chorus",
-                  "examples": [1]
-                },
-                "index": {
-                  "type": "integer",
-                  "title": "The index of the verse array",
-                  "examples": [0, 1, 2, 3]
-                }
-              },
-              "examples": [
-                { "repeat": 1, "index": 0 },
-                { "repeat": 1, "index": 1 },
-                { "repeat": 1, "index": 2 },
-                { "repeat": 1, "index": 3 }
-              ]
-            },
-            "examples": [
-              [
-                { "repeat": 1, "index": 0 },
-                { "repeat": 1, "index": 1 },
-                { "repeat": 1, "index": 2 },
-                { "repeat": 1, "index": 3 }
-              ]
-            ]
-          },
-          "examples": [
-            [
-              [
-                { "repeat": 1, "index": 0 },
-                { "repeat": 1, "index": 1 },
-                { "repeat": 1, "index": 2 },
-                { "repeat": 1, "index": 3 }
-              ]
-            ]
-          ]
+              "$ref": "#/$defs/verseReference"
+            }
+          }
         },
         "verses": {
           "type": "array",
-          "default": [],
-          "title": "The verses",
+          "title": "Verse sections",
+          "description": "Groups of verse references that form the main verses/stanzas",
           "items": {
             "type": "array",
-            "default": [],
-            "title": "The grouped verse entry",
+            "title": "Verse group",
+            "description": "A group of verses sung together as a stanza",
+            "minItems": 1,
             "items": {
-              "type": "object",
-              "title": "The verse entry",
-              "required": ["repeat", "index"],
-              "properties": {
-                "repeat":{
-                  "type": "integer",
-                  "title": "How many times to repeat the verse",
-                  "examples": [1]
-                },
-                "index": {
-                  "type": "integer",
-                  "title": "The index in the verse array",
-                  "examples": [4, 5, 6, 7]
-                }
-              },
-              "examples": [
-                { "repeat": 1, "index": 4 },
-                { "repeat": 1, "index": 5 },
-                { "repeat": 1, "index": 6 },
-                { "repeat": 1, "index": 7 }
-              ]
-            },
-            "examples": [
-              [
-                { "repeat": 1, "index": 4 },
-                { "repeat": 1, "index": 5 },
-                { "repeat": 1, "index": 6 },
-                { "repeat": 1, "index": 7 }
-              ]
-            ]
-          },
-          "examples": [
-            [
-              [
-                { "repeat": 1, "index": 4 },
-                { "repeat": 1, "index": 5 },
-                { "repeat": 1, "index": 6 },
-                { "repeat": 1, "index": 7 }
-              ]
-            ]
-          ]
+              "$ref": "#/$defs/verseReference"
+            }
+          }
         }
       },
-      "examples": [
-        {
-          "chorus": [
-            [
-              { "repeat": 1, "index": 0 },
-              { "repeat": 1, "index": 1 },
-              { "repeat": 1, "index": 2 },
-              { "repeat": 1, "index": 3 }
-            ]
-          ],
-          "verses": [
-            [
-              { "repeat": 1, "index": 4 },
-              { "repeat": 1, "index": 5 },
-              { "repeat": 1, "index": 6 },
-              { "repeat": 1, "index": 7 }
-            ]
-          ]
-        }
-      ]
+      "additionalProperties": false
     }
   },
+  "additionalProperties": false,
   "examples": [
     {
       "name": {
-        "ara": "صَلَاةُ الْبَدْرِ يَا",
-        "en": "Salat-al Badriyya  - "
+        "ara": "طَلَعَ الْبَدْرُ عَلَيْنَا",
+        "en": "Ṭalaʿa l-Badru ʿAlaynā - The Full Moon Rose Over Us"
       },
       "verses": {
         "ara": [
-          ["صَلَاةُ اللّٰهِ سَلَامُ اللّٰه "],
-          ["عَلَىٰ طٰهٰ رَسُولِ اللّٰه"],
-          ["ﻃَﺎﻟَﻤَﺎ", "ﺍَﺷْﻜُﻮْ", "ﻏَﺮَﺍﻣِﻰ", "ﻳَﺎ ﻧُﻮْ ﺭَ ", "ﺍﻟْﻮُﺟُﻮْﺩ"]
+          "طَلَعَ الْبَدْرُ عَلَيْنَا",
+          "مِنْ ثَنِيَّاتِ الْوَدَاعْ",
+
+          "أَيُّهَا الْمَبْعُوثُ فِينَا",
+          "جِئْتَ بِالْأَمْرِ الْمُطَاعْ"
         ],
         "en": [
-          ["Ṣalātu Llāh salāmu Llāh"],
-          ["ʿalā Ṭāhā rasūli Llāh"],
-          ["Tholama", "ashku", "gharami", "yaa nurol", "wujud"]
+          "ṭalaʿa l-badru ʿalaynā",
+          "min thaniyyāti l-wadāʿ",
+
+          "ayyuha l-mabʿūthu fīnā",
+          "jiʾta bil-amri l-muṭāʿ"
         ]
       },
       "translation": {
         "en": [
-          ["May the blessings of Allah, may the peace of Allah"],
-          ["be upon Ta-Ha, the Messenger of Allah ﷺ"],
-          ["How long will I yearn infatuated O light of the universe"]
+          "The full moon rose over us",
+          "from the valley of Wadāʿ",
+
+          "O you who were raised amongst us",
+          "you came with a command to be obeyed"
         ]
       },
       "order": {
         "chorus": [
           [
             { "repeat": 1, "index": 0 },
-            { "repeat": 1, "index": 1 },
-            { "repeat": 1, "index": 2 },
-            { "repeat": 1, "index": 3 }
+            { "repeat": 1, "index": 1 }
           ]
         ],
         "verses": [
           [
-            { "repeat": 1, "index": 4 },
-            { "repeat": 1, "index": 5 },
-            { "repeat": 1, "index": 6 },
-            { "repeat": 1, "index": 7 }
+            { "repeat": 2, "index": 2 },
+            { "repeat": 2, "index": 3 }
           ]
         ]
       }
     }
-  ]
+  ],
+  "$defs": {
+    "verseReference": {
+      "type": "object",
+      "title": "Verse reference",
+      "description": "References a verse by index with a repeat count",
+      "required": ["repeat", "index"],
+      "properties": {
+        "repeat": {
+          "type": "integer",
+          "title": "Repeat count",
+          "description": "Number of times to repeat this verse (typically 1-3)",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "index": {
+          "type": "integer",
+          "title": "Verse index",
+          "description": "Zero-based index into the verses arrays (ara, en, translation.en)",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
 }
