@@ -25,6 +25,9 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 {{- $verses_json = index $verses_json $part -}}
 {{- end -}}
 
+{{/* Validate qasida data - fails build if invalid */}}
+{{ template "inline/partials/validate_qasida" (dict "file_name" $verse_file_name "data" $verses_json) }}
+
 {{/* Access the verses for the language provided */}}
 {{ $verses_in_lang := (index (index $verses_json "verses") $verse_lang) }}
 {{ $verses_in_lang_translated := (index (index $verses_json "translation") $verse_lang) }}
@@ -70,6 +73,43 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 </div>
 {{ end }}
 
+
+{{ define "inline/partials/validate_qasida" }}
+{{/*
+  Validates qasida data structure and fails build if invalid.
+  Checks: array lengths match, order indices within bounds.
+*/}}
+{{ $file_name := .file_name }}
+{{ $data := .data }}
+{{ $ara_len := len $data.verses.ara }}
+{{ $en_len := len $data.verses.en }}
+{{ $trans_len := len $data.translation.en }}
+
+{{ if ne $ara_len $en_len }}
+    {{ errorf "[%s] Array length mismatch: verses.ara (%d) != verses.en (%d)" $file_name $ara_len $en_len }}
+{{ end }}
+{{ if ne $ara_len $trans_len }}
+    {{ errorf "[%s] Array length mismatch: verses.ara (%d) != translation.en (%d)" $file_name $ara_len $trans_len }}
+{{ end }}
+
+{{ range $chorus_idx, $chorus_group := $data.order.chorus }}
+    {{ range $entry_idx, $entry := $chorus_group }}
+        {{ $idx := int $entry.index }}
+        {{ if or (lt $idx 0) (ge $idx $ara_len) }}
+            {{ errorf "[%s] Invalid index: order.chorus[%d][%d].index = %d (valid: 0-%d)" $file_name $chorus_idx $entry_idx $idx (sub $ara_len 1) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ range $verse_idx, $verse_group := $data.order.verses }}
+    {{ range $entry_idx, $entry := $verse_group }}
+        {{ $idx := int $entry.index }}
+        {{ if or (lt $idx 0) (ge $idx $ara_len) }}
+            {{ errorf "[%s] Invalid index: order.verses[%d][%d].index = %d (valid: 0-%d)" $file_name $verse_idx $entry_idx $idx (sub $ara_len 1) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ end }}
 
 {{ define "inline/partials/verse_renderer" }}
 {{ $params_obj := unmarshal .params_json }}
