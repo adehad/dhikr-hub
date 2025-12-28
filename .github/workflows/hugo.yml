@@ -28,7 +28,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: hugomods/hugo:exts-0.138.0
+      image: hugomods/hugo:exts-0.153.3
     steps:
       - name: Dependencies
         run: |
