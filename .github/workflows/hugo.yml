@@ -34,7 +34,7 @@ jobs:
         run: |
           apk add --no-cache tar
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
           # Fetch depth 0 ensures the last modified is correct by getting a deep clone
