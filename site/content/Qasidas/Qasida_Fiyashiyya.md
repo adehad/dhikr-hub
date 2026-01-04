@@ -1,7 +1,10 @@
 +++
+maqam = ['Jaharkah']
 json_file = 'qasida_fiyashiyya'
 +++
 # Qasida Fiyashiyya - I Have Not a Thing
+
+{{< qasida_meta >}}
 
 ## Verses
 

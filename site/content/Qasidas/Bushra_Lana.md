@@ -1,7 +1,10 @@
 +++
+maqam = ['Bayat']
 json_file = 'bushra_lana'
 +++
 # Bushra Lana - Glad Tidings
+
+{{< qasida_meta >}}
 
 ## Verses
 

@@ -1,7 +1,10 @@
 +++
+maqam = ['Bayat']
 json_file = 'qamarun'
 +++
 # Qamarun - Moon
+
+{{< qasida_meta >}}
 
 ## Verses
 

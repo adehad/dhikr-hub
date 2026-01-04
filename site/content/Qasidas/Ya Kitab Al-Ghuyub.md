@@ -1,5 +1,5 @@
 +++
-maqam = ['Rast', 'Sika']
+maqam = ['Sika']
 json_file = 'ya-kitab-al-ghuyub'
 +++
 # Yā Kitāb al-Ghuyūb – O Book of the Unseen

@@ -1,8 +1,10 @@
 +++
-maqam = ['Rast', 'Jaharkah']
+maqam = ['Jaharkah']
 json_file = 'ishrab-sharab-ahlal-safa'
 +++
 # ʾIshrab Sharāb ʾahl aṣ-ṣafā - Drink the beverage of the people of purity
+
+{{< qasida_meta >}}
 
 ## Verses
 

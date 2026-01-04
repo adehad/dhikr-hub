@@ -1,7 +1,10 @@
 +++
+maqam = ['Sika']
 json_file = 'tala-badru-alayna'
 +++
 # ṬalaʿA l-Badru ʿAlaynā - The (full) White Moon Rose Over Us
+
+{{< qasida_meta >}}
 
 ## Verses
 

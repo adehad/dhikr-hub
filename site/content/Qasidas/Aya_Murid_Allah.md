@@ -1,4 +1,5 @@
 +++
+maqam = ['Hijaz','Bayat']
 json_file = 'aya-mureed-allah'
 +++
 # Ayā Murīd Allāhi – O Seeker of God
