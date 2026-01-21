@@ -1,0 +1,161 @@
+{
+  "name": {
+    "ara": "يَا حَيَاتِي وَأَنْتَ فِي ذَاتِي",
+    "en": "yā ḥayātī wa-anta fī dhātī"
+  },
+  "verses": {
+    "ara": [
+      "يَا حَيَاتِي وَأَنْتَ فِي ذَاتِي",
+      "حَاضِرٌ لَا تَغِيبْ",
+
+
+      "أَنْتَ أَسْكَرْتَنِي عَلَى سُكْرِي",
+      "مِنْ لَذِيذِ الشَّرَابْ",
+      "ثُمَّ خَاطَبْتَنِي كَمَا تَدْرِي",
+      "فَفَهِمْتُ الْخِطَابْ",
+      "ثُمَّ شَاهَدْتُ وَجْهَكَ الْبَدْرِي",
+      "عِنْدَ رَفْعِ الْحِجَابْ",
+      "ثُمَّ صَيَّرْتَنِي رَقِيبْ ذَاتِي",
+      "كُنْتَ أَنْتَ الرَّقِيبْ",
+
+
+      "اُدْخُلْ الْحَانَ وَشَاهِدِ الْمَعْنَى",
+      "لِتَنَالَ الْأَمَانْ",
+      "كَيْ تَرَانِي بَيْنَ الدَّنَانِ عَاكِفًا",
+      "شَاخِصاً لِلدِيَانْ",
+      "وَسَقَانِي سَاقِي الْمُدَامْ دَوْرِي",
+      "قَبْلَ دَوْرِ الزَّمَانْ",
+      "أنْتَ تَدْرِي مَنْ كَانَ سَاقِيَنَا",
+      "الْقَرِيبُ الْمُجِيبْ",
+
+      "أَنَا مِنْ فَيْضِ فَضْلِ سَادَاتِي",
+      "نِلْتُ أَعْلَى الرُّتَبْ",
+      "وَعَلَى قَدْرِ هِمَّةِ الطَّالِبِ",
+      "سَيَكُونُ الطَّلَبْ",
+      "ثُمَّ قَضَيْتُ سَايرْ أَوْقَاتِي",
+      "بِالْفَرَحْ وَالطَّرَبْ",
+      "وَسَمِعْتُ الْخِطَابَ مِنْ ذَاتِي",
+      "مِنْ مَكَانٍ قَرِيبْ"
+    ],
+    "en": [
+      "yā ḥayātī wa-anta fī dhātī",
+      "ḥāḍirun lā taghīb",
+      "anta askartanī ʿalā sukrī",
+      "min ladhīdh ash-sharāb",
+      "thumma khāṭabtanī kamā tadrī",
+      "fa-fahimtu al-khiṭāb",
+      "thumma shāhadtu wajhaka al-badrī",
+      "ʿinda rafʿi al-ḥijāb",
+      "thumma ṣayyartanī raqīb dhātī",
+      "kunta anta ar-raqīb",
+      "udkhul al-ḥān wa-shāhidi al-maʿnā",
+      "li-tanāla al-amān",
+      "kay tarānī bayna ad-danān ʿākifan",
+      "shākhiṣan liddiyān",
+      "wa-saqānī sāqī al-mudām dawrī",
+      "qabla dawri az-zamān",
+      "anta tadrī man kāna sāqīnā",
+      "al-qarīb al-mujīb",
+      "anā min fayḍ faḍl sādatī",
+      "niltu aʿlā ar-rutab",
+      "wa-ʿalā qadri himmat aṭ-ṭālib",
+      "sayakūnu aṭ-ṭalab",
+      "thumma qaḍaytu sāyir awqātī",
+      "bi-l-faraḥ wa-ṭ-ṭarab",
+      "wa-samiʿtu al-khiṭāb min dhātī",
+      "min makānin qarīb"
+    ]
+  },
+  "translation": {
+    "en": [
+      "O my Life, and You who are within my very self,",
+      "present, never absent.",
+      "You made me drunk upon my own drunkenness",
+      "from that exquisite drink;",
+      "then You addressed me—as You know—",
+      "and I understood the address.",
+      "Then I beheld Your full-moon face",
+      "when the veil was lifted;",
+      "then You made me the watcher over my own self—",
+      "You had been the Watcher.",
+      "Enter the tavern and behold the meaning,",
+      "that you may attain safety,",
+      "so that you may see me among the jars, devoted,",
+      "my gaze fixed upon the One.",
+      "And the Cupbearer of the wine served me my turn",
+      "before time itself had its turn.",
+      "You know who our Cupbearer was—",
+      "the One near, the One who responds.",
+      "From the overflowing grace of my masters",
+      "I attained the highest ranks;",
+      "and according to the aspirant’s resolve",
+      "so will be the quest.",
+      "Then I passed all my moments",
+      "in joy and inner exultation,",
+      "and I heard the address from within my own self,",
+      "from a place very near."
+    ]
+  },
+  "order": {
+    "chorus": [
+      [
+        {"repeat": 1,"index": 0},
+        {"repeat": 1,"index": 1}
+      ]
+    ],
+    "verses": [
+      [
+        {"repeat": 1,"index": 2},
+        {"repeat": 1,"index": 3}
+      ],
+      [
+        {"repeat": 1,"index": 4},
+        {"repeat": 1,"index": 5}
+      ],
+      [
+        {"repeat": 1,"index": 6},
+        {"repeat": 1,"index": 7}
+      ],
+      [
+        {"repeat": 1,"index": 8},
+        {"repeat": 1,"index": 9}
+      ],
+
+
+      [
+        {"repeat": 1,"index": 10},
+        {"repeat": 1,"index": 11}
+      ],
+      [
+        {"repeat": 1,"index": 12},
+        {"repeat": 1,"index": 13}
+      ],
+      [
+        {"repeat": 1,"index": 14},
+        {"repeat": 1,"index": 15}
+      ],
+      [
+        {"repeat": 1,"index": 16},
+        {"repeat": 1,"index": 17}
+      ],
+
+
+      [
+        {"repeat": 1,"index": 18},
+        {"repeat": 1,"index": 19}
+      ],
+      [
+        {"repeat": 1,"index": 20},
+        {"repeat": 1,"index": 21}
+      ],
+      [
+        {"repeat": 1,"index": 22},
+        {"repeat": 1,"index": 23}
+      ],
+      [
+        {"repeat": 1,"index": 24},
+        {"repeat": 1,"index": 25}
+      ]
+    ]
+  }
+}
