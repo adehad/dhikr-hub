@@ -1,7 +1,10 @@
 +++
+maqam = ['Hijaz']
 json_file = 'ma-ra-hati'
 +++
 # Mā Rāḥatī – What is my Rest?
+
+{{< qasida_meta >}}
 
 ## Verses
 

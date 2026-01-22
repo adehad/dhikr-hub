@@ -1,7 +1,10 @@
 +++
+maqam = ['Nahawand']
 json_file = 'thalama'
 +++
-# Tholama Ashku Gharami  - How Long will my heart ache
+# Thalama Ashku Gharami  - How Long will my heart ache
+
+{{< qasida_meta >}}
 
 ## Verses
 

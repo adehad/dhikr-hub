@@ -1,5 +1,5 @@
 +++
-maqam = ['Hijaz']
+maqam = ['Bayat']
 json_file = 'ana_mashghulun_bi_layla'
 +++
 # ʾAnā Mashghūlun bi-Laylā – I am pre-occupied with the Divine

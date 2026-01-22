@@ -1,7 +1,10 @@
 +++
+maqam = ['Hijaz',"'Ajam"]
 json_file = 'kashaf-al-mahbub'
 +++
 # Kashafa'l-Maḥbūb - The Beloved lifted the Veil
+
+{{< qasida_meta >}}
 
 ## Verses
 

@@ -4,6 +4,8 @@ json_file = 'aqbal-al-saqi'
 +++
 # Aqbal al-Sāqī – The cupbearer approached
 
+{{< qasida_meta >}}
+
 ## Verses
 
 {{% get_title  lang="en" %}}
