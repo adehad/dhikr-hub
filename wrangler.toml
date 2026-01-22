@@ -3,4 +3,4 @@ name = "dhikr-hub"
 compatibility_date = "2026-01-21"
 
 [assets]
-directory = "./site/public/”
+directory = "./site/public/"
