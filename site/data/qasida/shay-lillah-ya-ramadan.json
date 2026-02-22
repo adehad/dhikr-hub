@@ -1,0 +1,72 @@
+{
+    "name": {
+        "ara": "شَيْء لِلَّهِ يَا رَمَضَان",
+        "en": "Shay li-llāh yā Ramaḍān - Grant us for Allah's sake, O Ramadan"
+    },
+    "verses": {
+        "ara": [
+            "شَيْء لِلَّهِ يَا رَمَضَان، شَيْء لِلَّهِ يَا رَمَضَان",
+            "شَيْء لِلَّهِ يَا رَمَضَان، بِالْقَبُولِ وَالْغُفْرَانِ",
+
+            "يَا حَنَّانُ يَا مَنَّانُ، يَا قَدِيمَ الْإِحْسَانِ",
+            "بَحْرُ جُودِكَ مَلْيَانُ، جُدْ لَنَا بِالْغُفْرَانِ",
+
+            "رَبَّنَا نَسْتَعْفِيكَ، رَبَّنَا نَسْتَرْضِيكَ",
+            "وَلَنَا ظَنٌّ فِيك، يَا رَجَاءَ أَهْلِ الْإِيمَانِ",
+
+            "بِالنَّبِيِّ الْأُمِّيِّ وَخَدِيجَةَ أُمِّي",
+            "وَالْبَتُولِ الْخَتْمِ سَيِّدَاتِ النِّسْوَانِ"
+        ],
+        "en": [
+            "shay li-llāh yā Ramaḍān, shay li-llāh yā Ramaḍān",
+            "shay li-llāh yā Ramaḍān, bi-l-qabūli wa-l-ghufrāni",
+
+            "yā Ḥannān yā Mannān, yā Qadīma l-Iḥsāni",
+            "baḥru jūdika malyān, jud lanā bi-l-ghufrāni",
+
+            "rabbanā nastaʿfīka, rabbanā nastarḍīka",
+            "wa-lanā ẓannun fīka, yā rajā'a ahli l-īmāni",
+
+            "bi-n-nabiyyi l-ummī wa-Khadīja ummī",
+            "wa-l-Batūli l-Khatmi sayyidāti n-niswān"
+        ]
+    },
+    "translation": {
+        "en": [
+            "O Ramadan, for the sake of Allah, O Ramadan,",
+            "O Ramadan, for the sake of Allah, with acceptance and forgiveness.",
+
+            "O Tenderly Compassionate, O Ever‑Bestowing, O Eternal Giver of kindness,",
+            "Your sea of generosity is overflowing—grant us Your forgiveness.",
+
+            "Our Lord, we seek Your pardon, Our Lord, we seek to please You.",
+            "We hold hope in You, refuge for the faithful hearts.",
+
+            "By the unlettered Prophet and Khadijah, Mother of Believers,",
+            "And the chaste Fatimah, leader of virtuous women."
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                {"repeat": 1, "index": 0 },
+                {"repeat": 1, "index": 1 }
+
+            ]
+        ],
+        "verses": [
+            [
+                {"repeat": 1, "index": 2 },
+                {"repeat": 1, "index": 3 }
+            ],
+            [
+                {"repeat": 1, "index": 4 },
+                {"repeat": 1, "index": 5 }
+            ],
+            [
+                {"repeat": 1, "index": 6 },
+                {"repeat": 1, "index": 7 }
+            ]
+        ]
+    }
+}
