@@ -14,8 +14,14 @@
             "رَبَّنَا نَسْتَعْفِيكَ، رَبَّنَا نَسْتَرْضِيكَ",
             "وَلَنَا ظَنٌّ فِيك، يَا رَجَاءَ أَهْلِ الْإِيمَانِ",
 
+            "لاَ تُخَيِّبْ رَاجِيْ تَحْتَ بَابِكْ لاَجِيْ",
+            "لَمْ يَزَلْ فِي الدّاجِيْ قَائِلاً يَا حَنَّانْ",
+
             "بِالنَّبِيِّ الْأُمِّيِّ وَخَدِيجَةَ أُمِّي",
-            "وَالْبَتُولِ الْخَتْمِ سَيِّدَاتِ النِّسْوَانِ"
+            "وَالْبَتُولِ الْخَتْمِ سَيِّدَاتِ النِّسْوَانِ",
+
+            "وَالصّلاَةُ الدّائِمْ عَلَىَ النَّبِي بْنِ هَاشِمْ",
+            "عَدّ مَنْ هُوْ قَائِمْ بِالْعِبَادَةْ سَهْرَانْ"
         ],
         "en": [
             "shay li-llāh yā Ramaḍān, shay li-llāh yā Ramaḍān",
@@ -27,8 +33,14 @@
             "rabbanā nastaʿfīka, rabbanā nastarḍīka",
             "wa-lanā ẓannun fīka, yā rajā'a ahli l-īmāni",
 
+            "lā tukhayyib rājī taḥta bābik lājī",  
+            "lam yazal fī al-dājī qāʾilan yā ḥannān",  
+
             "bi-n-nabiyyi l-ummī wa-Khadīja ummī",
-            "wa-l-Batūli l-Khatmi sayyidāti n-niswān"
+            "wa-l-Batūli l-Khatmi sayyidāti n-niswān",
+
+            "wa-s-ṣalāh al-dāʾim ʿalā al-nabī bin Hāshim",  
+            "ʿad man huwa qāʾim bi-al-ʿibādah sahrān"  
         ]
     },
     "translation": {
@@ -42,8 +54,14 @@
             "Our Lord, we seek Your pardon, Our Lord, we seek to please You.",
             "We hold hope in You, refuge for the faithful hearts.",
 
+            "Do not disappoint one who hopes, who seeks refuge beneath Your door,",
+            "He has not ceased, in the dark night, saying: O Most Tenderly Merciful,",
+
             "By the unlettered Prophet and Khadijah, Mother of Believers,",
-            "And the chaste Fatimah, leader of virtuous women."
+            "And the chaste Fatimah, leader of virtuous women.",
+
+            "And blessings perpetual upon the Prophet, son of Hashim,",
+            "As numerous as those who stand in worship, wakeful through the night."
         ]
     },
     "order": {
@@ -66,6 +84,14 @@
             [
                 {"repeat": 1, "index": 6 },
                 {"repeat": 1, "index": 7 }
+            ],
+            [
+                {"repeat": 1, "index": 8 },
+                {"repeat": 1, "index": 9 }
+            ],
+            [
+                {"repeat": 1, "index": 10 },
+                {"repeat": 1, "index": 11 }
             ]
         ]
     }
