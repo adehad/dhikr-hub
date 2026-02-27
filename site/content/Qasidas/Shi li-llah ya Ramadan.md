@@ -1,9 +1,7 @@
 +++
-json_file = 'shay-lillah-ya-ramadan'
+json_file = 'shi-lillah-ya-ramadan'
 +++
-# Shay li-llāh yā Ramaḍān - Grant us for Allah's sake, O Ramadan
-
-{{< qasida_meta >}}
+# Shī li-llāh yā Ramaḍān - Grant us for Allah's sake, O Ramadan
 
 ## Verses
 
@@ -20,5 +18,5 @@ read this poem.
 
 ### Sources
 
-- Arabic:
+- Arabic: [Scribd](https://www.scribd.com/document/502550621/teks-syailillah-ya-ramadhan)
 - Transliteration, translation: auto-generated
