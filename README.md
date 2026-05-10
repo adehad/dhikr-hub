@@ -43,4 +43,3 @@ this effort to be converted into a PWA. Allowing users to access data offline wh
 Contributions are welcome and encouraged! Whether you're adding new content, improving existing translations, or enhancing the website's functionality, your contributions help preserve and share these spiritual treasures with the community.
 
 See our [Contributing guide](/Contributing/) (or [here if viewing on GitHub](./site/content/Contributing/_index.md)) for more information on how to get involved.
-
