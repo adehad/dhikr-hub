@@ -52,7 +52,7 @@ export type ServerMessage =
   | { type: "ended" }
   | { type: "error"; code: string; message: string };
 
-function isNonEmptyString(v: unknown): v is string {
+export function isNonEmptyString(v: unknown): v is string {
   return typeof v === "string" && v.length > 0;
 }
 
@@ -75,7 +75,7 @@ function isBoundedString(v: unknown, maxLength: number): v is string {
   return isNonEmptyString(v) && v.length <= maxLength;
 }
 
-function isSetlist(v: unknown): v is Setlist {
+export function isSetlist(v: unknown): v is Setlist {
   if (typeof v !== "object" || v === null) return false;
   const s = v as { id?: unknown; name?: unknown; items?: unknown; updatedAt?: unknown };
   return (
