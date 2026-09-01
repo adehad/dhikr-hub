@@ -53,3 +53,12 @@ maqam = 'maqam'
   [[module.mounts]]
     source = "data/qasida"
     target = "static/api/qasida"
+
+[outputFormats.QasidaIndex]
+mediaType = "application/json"
+baseName = "qasida-index"
+isPlainText = true
+notAlternative = true
+
+[outputs]
+home = ["html", "rss", "QasidaIndex"]
