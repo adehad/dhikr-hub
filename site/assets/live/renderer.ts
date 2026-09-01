@@ -79,18 +79,33 @@ function buildDivider(doc: Document, divider: Divider): HTMLElement {
   return box;
 }
 
-function chorusIcon(doc: Document, kind: "pin" | "live"): SVGSVGElement {
+function chorusLiveIcon(doc: Document): SVGSVGElement {
   const svg = doc.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("class", `live-icon live-chorus-icon-${kind}`);
-  svg.setAttribute("aria-hidden", "true");
-  svg.setAttribute("focusable", "false");
-  svg.setAttribute("width", "20");
-  svg.setAttribute("height", "20");
-  svg.setAttribute("viewBox", "0 0 24 24");
+  const attrs: Record<string, string> = {
+    class: "live-icon live-chorus-live",
+    "aria-hidden": "true",
+    focusable: "false",
+    width: "16",
+    height: "16",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+  };
+  for (const [name, value] of Object.entries(attrs)) svg.setAttribute(name, value);
   const use = doc.createElementNS("http://www.w3.org/2000/svg", "use");
-  use.setAttribute("href", kind === "pin" ? "#li-pin" : "#li-repeat");
+  use.setAttribute("href", "#li-repeat");
   svg.appendChild(use);
   return svg;
+}
+
+function srSpan(doc: Document, className: string, text: string): HTMLSpanElement {
+  const span = doc.createElement("span");
+  span.className = `sr-only ${className}`;
+  span.textContent = text;
+  return span;
 }
 
 function buildGroup(
@@ -198,16 +213,16 @@ export function renderQasida(
     const toggle = doc.createElement("input");
     toggle.type = "checkbox";
     toggle.id = "chorus-toggle";
-    toggle.setAttribute("aria-label", "Chorus panel");
+    // The tab markup follows the verse.html shortcode, plus the repeat icon
+    // shown while the host has the chorus on.
     const label = doc.createElement("label");
     label.htmlFor = "chorus-toggle";
-    label.title = "Pin the chorus to the top";
-    const text = doc.createElement("span");
-    text.textContent = "Chorus";
-    const pill = doc.createElement("span");
-    pill.className = "live-chorus-pill";
-    pill.append(chorusIcon(doc, "pin"), chorusIcon(doc, "live"), text);
-    label.appendChild(pill);
+    label.append(
+      chorusLiveIcon(doc),
+      srSpan(doc, "chorus-tab-show", "Show "),
+      srSpan(doc, "chorus-tab-hide", "Hide "),
+      "Chorus",
+    );
     const sticky = doc.createElement("div");
     sticky.className = "sticky-chorus";
     data.order.chorus.forEach((entries, i) => {
