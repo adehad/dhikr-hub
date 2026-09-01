@@ -32,6 +32,10 @@ BookEditPath = 'blob/HEAD/site'
 # Enable Experimental Service Worker
 BookServiceWorker = "precache" # precache caches all webpages
 
+# Origin of the live worker (wss/https host). Empty = same origin as the page.
+# GitHub Pages needs this set to the production Workers URL once known.
+LiveEndpoint = ''
+
 [markup.tableOfContents]
 startLevel = 1
 

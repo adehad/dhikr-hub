@@ -193,7 +193,7 @@ describe("FollowerScroller", () => {
   }
 
   it("apply() stores the position while detached and does not scroll; jumpToHost re-attaches and scrolls to it", () => {
-    const { window, root, groupA } = setupDom();
+    const { window, root } = setupDom();
     const view = asView(window);
     const scrollToSpy = vi.fn();
     view.scrollTo = scrollToSpy as unknown as typeof view.scrollTo;
@@ -207,19 +207,17 @@ describe("FollowerScroller", () => {
 
     scroller.apply({ section: "verses", group: 0 });
     expect(scrollToSpy).not.toHaveBeenCalled();
-    expect(groupA.classList.contains("live-current")).toBe(false);
 
     scroller.jumpToHost();
     expect(scroller.isDetached()).toBe(false);
     expect(detachChanges).toEqual([true, false]);
     expect(scrollToSpy).toHaveBeenCalledTimes(1);
-    expect(groupA.classList.contains("live-current")).toBe(true);
 
     scroller.destroy();
   });
 
   it("reattach() clears detachment and forgets the previous qasida's position", () => {
-    const { window, root, groupA } = setupDom();
+    const { window, root } = setupDom();
     const view = asView(window);
     const scrollToSpy = vi.fn();
     view.scrollTo = scrollToSpy as unknown as typeof view.scrollTo;
@@ -233,15 +231,17 @@ describe("FollowerScroller", () => {
     expect(detachChanges).toEqual([true, false]);
     expect(scrollToSpy).not.toHaveBeenCalled();
 
-    // The stale position is gone: jumpToHost has nothing to scroll to.
+    // The stale position is gone: jumpToHost goes to the start of the new
+    // qasida, where the host's navigate left them.
     scroller.jumpToHost();
-    expect(scrollToSpy).not.toHaveBeenCalled();
-    expect(groupA.classList.contains("live-current")).toBe(false);
+    expect(scrollToSpy).toHaveBeenCalledTimes(1);
     scroller.destroy();
   });
 
   it("jumpTo() re-attaches and scrolls to the given position, not lastPosition", () => {
-    const { window, root, groupA, groupB } = setupDom();
+    const { window, root, groupB } = setupDom();
+    (groupB as unknown as { getBoundingClientRect(): Partial<DOMRect> }).getBoundingClientRect =
+      () => ({ top: 500, bottom: 550, height: 50 });
     const view = asView(window);
     const scrollToSpy = vi.fn();
     view.scrollTo = scrollToSpy as unknown as typeof view.scrollTo;
@@ -258,29 +258,35 @@ describe("FollowerScroller", () => {
     scroller.jumpTo({ section: "verses", group: 1 });
     expect(scroller.isDetached()).toBe(false);
     expect(scrollToSpy).toHaveBeenCalledTimes(1);
-    expect(groupA.classList.contains("live-current")).toBe(false);
-    expect(groupB.classList.contains("live-current")).toBe(true);
+    // groupB.top (500) minus the 16px gap; nothing is stuck above it.
+    expect(scrollToSpy).toHaveBeenCalledWith({ top: 484, behavior: "smooth" });
 
     scroller.destroy();
   });
 
-  it("jumpTo() with highlight: false scrolls without outlining and clears an earlier outline", () => {
-    const { window, root, groupA, groupB } = setupDom();
+  it("does not scroll to a chorus group pinned by a checked #chorus-toggle", () => {
+    const { window, root } = setupDom();
+    const doc = window.document;
+    const toggle = doc.createElement("input");
+    toggle.type = "checkbox";
+    toggle.id = "chorus-toggle";
+    toggle.checked = true;
+    const sticky = doc.createElement("div");
+    sticky.className = "sticky-chorus";
+    (root as unknown as HappyElement).prepend(toggle, sticky);
+    addGroup(doc, sticky, "chorus", 0);
     const view = asView(window);
     const scrollToSpy = vi.fn();
     view.scrollTo = scrollToSpy as unknown as typeof view.scrollTo;
+
     const scroller = new FollowerScroller(root, () => {}, view);
+    scroller.apply({ section: "chorus", group: 0 });
+    scroller.jumpTo({ section: "chorus", group: 0 });
+    expect(scrollToSpy).not.toHaveBeenCalled();
 
-    scroller.apply({ section: "verses", group: 0 });
-    expect(groupA.classList.contains("live-current")).toBe(true);
-
-    window.dispatchEvent(new window.Event("wheel"));
-    scroller.jumpTo({ section: "verses", group: 1 }, { highlight: false });
-    expect(scroller.isDetached()).toBe(false);
-    expect(scrollToSpy).toHaveBeenCalledTimes(2);
-    expect(groupA.classList.contains("live-current")).toBe(false);
-    expect(groupB.classList.contains("live-current")).toBe(false);
-
+    toggle.checked = false;
+    scroller.jumpTo({ section: "chorus", group: 0 });
+    expect(scrollToSpy).toHaveBeenCalledTimes(1);
     scroller.destroy();
   });
 
@@ -335,22 +341,6 @@ describe("FollowerScroller", () => {
     scroller.destroy();
   });
 
-  it("highlight has a single owner: moving to a new group clears the previous one's .live-current", () => {
-    const { window, root, groupA, groupB } = setupDom();
-    const view = asView(window);
-    view.scrollTo = vi.fn() as unknown as typeof view.scrollTo;
-
-    const scroller = new FollowerScroller(root, () => {}, view);
-    scroller.apply({ section: "verses", group: 0 });
-    expect(groupA.classList.contains("live-current")).toBe(true);
-
-    scroller.apply({ section: "verses", group: 1 });
-    expect(groupA.classList.contains("live-current")).toBe(false);
-    expect(groupB.classList.contains("live-current")).toBe(true);
-
-    scroller.destroy();
-  });
-
   it("a keydown on a focused button does not detach (Space activates buttons, not scroll)", () => {
     const { window, root } = setupDom();
     const doc = window.document;
@@ -382,25 +372,6 @@ describe("FollowerScroller", () => {
     scroller.destroy();
   });
 
-  it("re-highlighting within 2s does not cut the newer highlight short", () => {
-    vi.useFakeTimers();
-    const { window, root, groupA, groupB } = setupDom();
-    const view = asView(window);
-    view.scrollTo = vi.fn() as unknown as typeof view.scrollTo;
-
-    const scroller = new FollowerScroller(root, () => {}, view);
-    scroller.apply({ section: "verses", group: 0 });
-    vi.advanceTimersByTime(1000);
-    scroller.apply({ section: "verses", group: 1 });
-    vi.advanceTimersByTime(1500);
-    expect(groupA.classList.contains("live-current")).toBe(false);
-    expect(groupB.classList.contains("live-current")).toBe(true);
-    vi.advanceTimersByTime(500);
-    expect(groupB.classList.contains("live-current")).toBe(false);
-
-    scroller.destroy();
-    vi.useRealTimers();
-  });
 });
 
 describe("jumpDirection", () => {

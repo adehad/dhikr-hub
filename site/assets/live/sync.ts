@@ -115,8 +115,6 @@ export class FollowerScroller {
   private detached = false;
   private lastPosition: VersePosition | null = null;
   private userIntent: () => void;
-  private highlighted: HTMLElement | null = null;
-  private highlightTimer: number | undefined;
 
   constructor(
     private root: HTMLElement,
@@ -163,9 +161,12 @@ export class FollowerScroller {
     this.scrollTo(pos);
   }
 
+  // With no position yet for the host's current qasida, the host is at its
+  // start: a navigate resets the host's view to the top.
   jumpToHost(): void {
     this.setDetached(false);
-    if (this.lastPosition) this.scrollTo(this.lastPosition);
+    const target = this.lastPosition ?? groupElements(this.root)[0]?.pos;
+    if (target) this.scrollTo(target);
   }
 
   // A new qasida from the host supersedes any local scrolling: re-attach and
@@ -177,10 +178,10 @@ export class FollowerScroller {
 
   // Like jumpToHost, but scrolls to an explicit position rather than the last
   // one recorded (e.g. a chorus tap, which is not the host's tracked position).
-  jumpTo(pos: VersePosition, options: { highlight?: boolean } = {}): void {
+  jumpTo(pos: VersePosition): void {
     this.lastPosition = pos;
     this.setDetached(false);
-    this.scrollTo(pos, options.highlight ?? true);
+    this.scrollTo(pos);
   }
 
   private occlusionOffset(): number {
@@ -200,36 +201,17 @@ export class FollowerScroller {
     return bottom + 16;
   }
 
-  private scrollTo(pos: VersePosition, highlight = true): void {
-    const el = this.root.querySelector<HTMLElement>(
-      `.verse-container[data-section="${pos.section}"][data-group="${pos.group}"]`,
-    );
+  private scrollTo(pos: VersePosition): void {
+    const el = groupElements(this.root).find(
+      (g) => g.pos.section === pos.section && g.pos.group === pos.group,
+    )?.el;
     if (!el) return;
     const offset = this.occlusionOffset();
     const top = el.getBoundingClientRect().top + this.view.scrollY - offset;
     this.view.scrollTo({ top, behavior: "smooth" });
-    if (highlight) this.highlight(el);
-    else this.clearHighlight();
-  }
-
-  private clearHighlight(): void {
-    clearTimeout(this.highlightTimer);
-    this.highlighted?.classList.remove("live-current");
-    this.highlighted = null;
-  }
-
-  private highlight(el: HTMLElement): void {
-    this.clearHighlight();
-    this.highlighted = el;
-    el.classList.add("live-current");
-    this.highlightTimer = setTimeout(() => {
-      el.classList.remove("live-current");
-      this.highlighted = null;
-    }, 2000) as unknown as number;
   }
 
   destroy(): void {
-    this.clearHighlight();
     for (const type of ["wheel", "touchmove"] as const) {
       this.view.removeEventListener(type, this.userIntent);
     }
