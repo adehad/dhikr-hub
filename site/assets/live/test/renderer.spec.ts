@@ -65,15 +65,21 @@ describe("renderQasida", () => {
     expect(el.querySelectorAll(".sticky-chorus > .verse-container")).toHaveLength(1);
   });
 
-  it("wraps the chorus label in a pill holding the pin and live icons and its text", () => {
+  it("renders the chorus tab as verse.html does, plus the repeat icon", () => {
     const el = renderIntoDoc(SAMPLE);
-    expect(el.querySelector("#chorus-toggle")!.getAttribute("aria-label")).toBe("Chorus panel");
     const label = el.querySelector("label[for='chorus-toggle']")!;
-    expect(label.children).toHaveLength(1);
-    expect(label.firstElementChild!.className).toBe("live-chorus-pill");
-    expect(label.querySelector(".live-chorus-pill > .live-chorus-icon-pin use")!.getAttribute("href")).toBe("#li-pin");
-    expect(label.querySelector(".live-chorus-pill > .live-chorus-icon-live use")!.getAttribute("href")).toBe("#li-repeat");
-    expect(label.textContent).toBe("Chorus");
+    const icons = [...label.querySelectorAll("svg")];
+    expect(icons).toHaveLength(1);
+    const icon = icons[0]!;
+    expect(label.firstElementChild).toBe(icon);
+    expect(icon.getAttribute("class")).toBe("live-icon live-chorus-live");
+    expect(icon.querySelector("use")!.getAttribute("href")).toBe("#li-repeat");
+    expect(icon.getAttribute("aria-hidden")).toBe("true");
+    expect(icon.getAttribute("fill")).toBe("none");
+    expect(icon.getAttribute("stroke")).toBe("currentColor");
+    expect(label.querySelector(".sr-only.chorus-tab-show")!.textContent).toBe("Show ");
+    expect(label.querySelector(".sr-only.chorus-tab-hide")!.textContent).toBe("Hide ");
+    expect(label.textContent).toBe("Show Hide Chorus");
   });
 
   it("re-runs the settings hook on the rendering document's window", () => {
