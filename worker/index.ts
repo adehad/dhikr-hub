@@ -1,4 +1,4 @@
-import { publicIdOf, IdentityRegistry } from "./identity";
+import { publicIdOf, normalizeName, IdentityRegistry } from "./identity";
 import type { Env } from "./identity";
 import { LiveRoom } from "./room";
 
@@ -20,7 +20,7 @@ export function json(body: unknown, status = 200): Response {
 function bearerId(request: Request): string | null {
   const auth = (request.headers.get("Authorization") ?? "").trim();
   const m = /^bearer (.+)$/i.exec(auth);
-  return m ? m[1]! : null;
+  return m && m[1]!.length <= 256 ? m[1]! : null;
 }
 
 // Unambiguous alphabet: no 0/o/1/l, readable aloud at a gathering.
@@ -34,6 +34,34 @@ function newRoomHash(): string {
 
 function identityStub(env: Env, publicId: string): DurableObjectStub {
   return env.IDENTITY.get(env.IDENTITY.idFromName(publicId));
+}
+
+const MAX_BODY_BYTES = 4096;
+
+// Buffers and bounds a client body so no unbounded stream reaches a DO.
+async function boundedBody(request: Request): Promise<string | null> {
+  if (Number(request.headers.get("Content-Length")) > MAX_BODY_BYTES) return null;
+  if (!request.body) return "";
+  const reader = request.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > MAX_BODY_BYTES) {
+      void reader.cancel().catch(() => {});
+      return null;
+    }
+    chunks.push(value);
+  }
+  const buf = new Uint8Array(total);
+  let offset = 0;
+  for (const chunk of chunks) {
+    buf.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return new TextDecoder().decode(buf);
 }
 
 export default {
@@ -61,12 +89,17 @@ export default {
       // The secret never crosses another API boundary: the DO is addressed by
       // the derived publicId and receives only that.
       const publicId = await publicIdOf(fullId);
+      let body: string | null = null;
+      if (request.method === "POST") {
+        body = await boundedBody(request);
+        if (body === null) return json({ error: "body too large" }, 413);
+      }
       const forwarded = new Request(
         new URL(path.replace("/api/live/identity", ""), "https://do"),
         {
           method: request.method,
           headers: { "Content-Type": "application/json", "X-Public-Id": publicId },
-          body: request.method === "POST" ? request.body : null,
+          body,
         },
       );
       const res = await identityStub(env, publicId).fetch(forwarded);
@@ -88,11 +121,15 @@ export default {
       );
       if (!profile.ok) return json({ error: "unregistered identity" }, 403);
 
-      const body = (await request.json().catch(() => ({}))) as { name?: unknown };
-      const name =
-        typeof body.name === "string" && body.name.trim()
-          ? body.name.trim().slice(0, 64)
-          : "Listener";
+      const rawBody = await boundedBody(request);
+      if (rawBody === null) return json({ error: "body too large" }, 413);
+      let parsedBody: { name?: unknown };
+      try {
+        parsedBody = JSON.parse(rawBody || "{}") as { name?: unknown };
+      } catch {
+        parsedBody = {};
+      }
+      const name = normalizeName(parsedBody.name, "Listener");
 
       for (let attempt = 0; attempt < 3; attempt++) {
         const room = newRoomHash();
