@@ -100,7 +100,6 @@
 
             "مُسَلِّمًا فِيْ كُلِّ حِيْنٍ أَبَدًا",
             "وَالْحَمْدُ لِلرَّحْمٰنِ دَأَبًا سَرْمَدًا"
-
         ],
         "en": [
             "Allāhu yā raḥmānu ya raḥīmu",
@@ -116,7 +115,7 @@
             "Yā bāri’un innī bifaḍlika wāthiqu",
 
             "Muṣawwirun ghaffāru yā qahhāru",
-            "Wahhābu ghaythuka dā’iman midrāru." ,
+            "Wahhābu ghaythuka dā’iman midrāru.",
 
             "Razzāqu yā fattāḥu yā ‛alīmu",
             "Ifḍāluhū wa khayruhū ‛amīmu",
@@ -198,16 +197,15 @@
 
             "Musalliman fī kulli ḥīnin abadan",
             "Walḥamdu lirraḥmāni da’aban sarmadan. "
-
         ]
     },
     "translation": {
         "en": [
-             "O Allāh, All-Compassionate and Merciful",
-             "King, whose Gifts are Boundless," ,
+            "O Allāh, All-Compassionate and Merciful",
+            "King, whose Gifts are Boundless,",
 
-             "O Most Holy, sanctify my soul with Purity, " ,
-             "and grant us the biggest Spiritual Openings. " ,
+            "O Most Holy, sanctify my soul with Purity, ",
+            "and grant us the biggest Spiritual Openings. ",
 
             "O Source of Peace, Inspirer of Faith, relieve my fear, ",
             "Guardian, Most Mighty, elevate my rank. ",
@@ -298,139 +296,138 @@
 
             "I shall be a Muslim for all time, ",
             "and Praise be to the Merciful, eternally."
-
         ]
     },
     "order": {
-        "chorus": [ ],
+        "chorus": [],
         "verses": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
             ],
             [
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ],
             [
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 }
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
             ],
             [
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 }
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
             ],
             [
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 }
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
             ],
             [
-                {"repeat": 1, "index": 10 },
-                {"repeat": 1, "index": 11 }
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
             ],
             [
-                {"repeat": 1, "index": 12 },
-                {"repeat": 1, "index": 13 }
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
             ],
             [
-                {"repeat": 1, "index": 14 },
-                {"repeat": 1, "index": 15 }
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
             ],
             [
-                {"repeat": 1, "index": 16 },
-                {"repeat": 1, "index": 17 }
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
             ],
             [
-                {"repeat": 1, "index": 18 },
-                {"repeat": 1, "index": 19 }
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
             ],
             [
-                {"repeat": 1, "index": 20 },
-                {"repeat": 1, "index": 21 }
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 }
             ],
             [
-                {"repeat": 1, "index": 22 },
-                {"repeat": 1, "index": 23 }
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 }
             ],
             [
-                {"repeat": 1, "index": 24 },
-                {"repeat": 1, "index": 25 }
+                { "repeat": 1, "index": 24 },
+                { "repeat": 1, "index": 25 }
             ],
             [
-                {"repeat": 1, "index": 26 },
-                {"repeat": 1, "index": 27 }
+                { "repeat": 1, "index": 26 },
+                { "repeat": 1, "index": 27 }
             ],
             [
-                {"repeat": 1, "index": 28 },
-                {"repeat": 1, "index": 29 }
+                { "repeat": 1, "index": 28 },
+                { "repeat": 1, "index": 29 }
             ],
             [
-                {"repeat": 1, "index": 30 },
-                {"repeat": 1, "index": 31 }
+                { "repeat": 1, "index": 30 },
+                { "repeat": 1, "index": 31 }
             ],
             [
-                {"repeat": 1, "index": 32 },
-                {"repeat": 1, "index": 33 }
+                { "repeat": 1, "index": 32 },
+                { "repeat": 1, "index": 33 }
             ],
             [
-                {"repeat": 1, "index": 34 },
-                {"repeat": 1, "index": 35 }
+                { "repeat": 1, "index": 34 },
+                { "repeat": 1, "index": 35 }
             ],
             [
-                {"repeat": 1, "index": 36 },
-                {"repeat": 1, "index": 37 }
+                { "repeat": 1, "index": 36 },
+                { "repeat": 1, "index": 37 }
             ],
             [
-                {"repeat": 1, "index": 38 },
-                {"repeat": 1, "index": 39 }
+                { "repeat": 1, "index": 38 },
+                { "repeat": 1, "index": 39 }
             ],
             [
-                {"repeat": 1, "index": 40 },
-                {"repeat": 1, "index": 41 }
+                { "repeat": 1, "index": 40 },
+                { "repeat": 1, "index": 41 }
             ],
             [
-                {"repeat": 1, "index": 42 },
-                {"repeat": 1, "index": 43 }
+                { "repeat": 1, "index": 42 },
+                { "repeat": 1, "index": 43 }
             ],
             [
-                {"repeat": 1, "index": 44 },
-                {"repeat": 1, "index": 45 }
+                { "repeat": 1, "index": 44 },
+                { "repeat": 1, "index": 45 }
             ],
             [
-                {"repeat": 1, "index": 46 },
-                {"repeat": 1, "index": 47 }
+                { "repeat": 1, "index": 46 },
+                { "repeat": 1, "index": 47 }
             ],
             [
-                {"repeat": 1, "index": 48 },
-                {"repeat": 1, "index": 49 }
+                { "repeat": 1, "index": 48 },
+                { "repeat": 1, "index": 49 }
             ],
             [
-                {"repeat": 1, "index": 50 },
-                {"repeat": 1, "index": 51 }
+                { "repeat": 1, "index": 50 },
+                { "repeat": 1, "index": 51 }
             ],
             [
-                {"repeat": 1, "index": 52 },
-                {"repeat": 1, "index": 53 }
+                { "repeat": 1, "index": 52 },
+                { "repeat": 1, "index": 53 }
             ],
             [
-                {"repeat": 1, "index": 54 },
-                {"repeat": 1, "index": 55 }
+                { "repeat": 1, "index": 54 },
+                { "repeat": 1, "index": 55 }
             ],
             [
-                {"repeat": 1, "index": 56 },
-                {"repeat": 1, "index": 57 }
+                { "repeat": 1, "index": 56 },
+                { "repeat": 1, "index": 57 }
             ],
             [
-                {"repeat": 1, "index": 58 },
-                {"repeat": 1, "index": 59 }
+                { "repeat": 1, "index": 58 },
+                { "repeat": 1, "index": 59 }
             ],
             [
-                {"repeat": 1, "index": 60 },
-                {"repeat": 1, "index": 61 }
+                { "repeat": 1, "index": 60 },
+                { "repeat": 1, "index": 61 }
             ],
             [
-                {"repeat": 1, "index": 62 },
-                {"repeat": 2, "index": 63 }
+                { "repeat": 1, "index": 62 },
+                { "repeat": 2, "index": 63 }
             ]
         ]
     }
