@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "dhikr-hub",
+  "main": "worker/index.ts",
+  // The tests run on the workerd bundled with @cloudflare/vitest-plugin (1.20261006 for
+  // 1.3.7), which rejects later dates; raise this together with that package.
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site/public/",
+    "binding": "ASSETS"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "LIVE_ROOM", "class_name": "LiveRoom" },
+      { "name": "IDENTITY", "class_name": "IdentityRegistry" }
+    ]
+  },
+  // Append-only: deployed tags must never be edited or removed.
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["LiveRoom", "IdentityRegistry"] }
+  ]
+}
