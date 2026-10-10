@@ -1,0 +1,226 @@
+{
+    "name": {
+        "ara": "قَصِيدَةٌ مُحَمَّدِيَّة",
+        "en": "Qaṣīda Muḥammadiyya - The Muhammadan Ode"
+    },
+    "verses": {
+        "ara": [
+            "مُحَمَّدٌ أَشْرَفُ الْأَعْرَابِ وَالْعَجَمِ",
+            "مُحَمَّدٌ خَيْرُ مَنْ يَمْشِي عَلَى قَدَمِ",
+
+            "مُحَمَّدٌ بَاسِطُ الْمَعْرُوفِ جَامِعُهُ",
+            "مُحَمَّدٌ صَاحِبُ الْإِحْسَانِ وَالْكَرَمِ",
+
+            "مُحَمَّدٌ تَاجُ رُسْلِ اللَّهِ قَاطِبَةً",
+            "مُحَمَّدٌ صَادِقُ الْأَقْوَالِ وَالْكَلِمِ",
+
+            "مُحَمَّدٌ ثَابِتُ الْمِيثَاقِ حَافِظُهُ",
+            "مُحَمَّدٌ طَيِّبُ الْأَخْلَاقِ وَالشِّيَمِ",
+
+            "مُحَمَّدٌ رُوِيَتْ بِالنُّورِ طِينَتُهُ",
+            "مُحَمَّدٌ لَمْ يَزَلْ نُورًا مِنَ الْقِدَمِ",
+
+            "مُحَمَّدٌ حَاكِمٌ بِالْعَدْلِ ذُو شَرَفٍ",
+            "مُحَمَّدٌ مَعْدِنُ الْإِنْعَامِ وَالْحِكَمِ",
+
+            "مُحَمَّدٌ خَيْرُ خَلْقِ اللَّهِ مِنْ مُضَرٍ",
+            "مُحَمَّدٌ خَيْرُ رُسْلِ اللَّهِ كُلِّهِمِ",
+
+            "مُحَمَّدٌ دِينُهُ حَقٌّ نَدِينُ بِهِ",
+            "مُحَمَّدٌ مُجْمِلًا حَقًّا عَلَى عَلَمِ",
+
+            "مُحَمَّدٌ ذِكْرُهُ رَوْحٌ لِأَنْفُسِنَا",
+            "مُحَمَّدٌ شُكْرُهُ فَرْضٌ عَلَى الْأُمَمِ",
+
+            "مُحَمَّدٌ زِينَةُ الدُّنْيَا وَبَهْجَتُهَا",
+            "مُحَمَّدٌ كَاشِفُ الْغُمَّاتِ وَالظُّلَمِ",
+
+            "مُحَمَّدٌ سَيِّدٌ طَابَتْ مَنَاقِبُهُ",
+            "مُحَمَّدٌ صَاغَهُ الرَّحْمَنُ بِالنِّعَمِ",
+
+            "مُحَمَّدٌ صَفْوَةُ الْبَارِي وَخِيرَتُهُ",
+            "مُحَمَّدٌ طَاهِرٌ مِنْ سَائِرِ التُّهَمِ",
+
+            "مُحَمَّدٌ ضَاحِكٌ لِلضَّيْفِ مُكْرِمُهُ",
+            "مُحَمَّدٌ جَارُهُ وَاللَّهِ لَمْ يُضَمِ",
+
+            "مُحَمَّدٌ طَابَتِ الدُّنْيَا بِبِعْثَتِهِ",
+            "مُحَمَّدٌ جَاءَ بِالْآيَاتِ وَالْحِكَمِ",
+
+            "مُحَمَّدٌ يَوْمَ بَعْثِ النَّاسِ شَافِعُنَا",
+            "مُحَمَّدٌ نُورُهُ الْهَادِي مِنَ الظُّلَمِ",
+
+            "مُحَمَّدٌ قَائِمٌ لِلَّهِ ذُو هِمَمٍ",
+            "مُحَمَّدٌ خَاتَمٌ لِلرُّسْلِ كُلِّهِمِ"
+        ],
+        "en": [
+            "Muḥammadun ashrafu l-aʿrābi wa-l-ʿajami",
+            "Muḥammadun khayru man yamshī ʿalā qadami",
+
+            "Muḥammadun bāsiṭu l-maʿrūfi jāmiʿuhu",
+            "Muḥammadun ṣāḥibu l-iḥsāni wa-l-karami",
+
+            "Muḥammadun tāju rusli Llāhi qāṭibatan",
+            "Muḥammadun ṣādiqu l-aqwāli wa-l-kalimi",
+
+            "Muḥammadun thābitu l-mīthāqi ḥāfiẓuhu",
+            "Muḥammadun ṭayyibu l-akhlāqi wa-sh-shiyami",
+
+            "Muḥammadun ruwiyat bi-n-nūri ṭīnatuhu",
+            "Muḥammadun lam yazal nūran mina l-qidami",
+
+            "Muḥammadun ḥākimun bi-l-ʿadli dhū sharafin",
+            "Muḥammadun maʿdinu l-inʿāmi wa-l-ḥikami",
+
+            "Muḥammadun khayru khalqi Llāhi min Muḍarin",
+            "Muḥammadun khayru rusli Llāhi kullihimi",
+
+            "Muḥammadun dīnuhu ḥaqqun nadīnu bihi",
+            "Muḥammadun mujmilan ḥaqqan ʿalā ʿalami",
+
+            "Muḥammadun dhikruhu rawḥun li-anfusinā",
+            "Muḥammadun shukruhu farḍun ʿalā l-umami",
+
+            "Muḥammadun zīnatu d-dunyā wa-bahjatuhā",
+            "Muḥammadun kāshifu l-ghummāti wa-ẓ-ẓulami",
+
+            "Muḥammadun sayyidun ṭābat manāqibuhu",
+            "Muḥammadun ṣāghahu r-Raḥmānu bi-n-niʿami",
+
+            "Muḥammadun ṣafwatu l-Bārī wa-khīratuhu",
+            "Muḥammadun ṭāhirun min sā'iri t-tuhami",
+
+            "Muḥammadun ḍāḥikun li-ḍ-ḍayfi mukrimuhu",
+            "Muḥammadun jāruhu wa-Llāhi lam yuḍami",
+
+            "Muḥammadun ṭābati d-dunyā bi-biʿthatihi",
+            "Muḥammadun jā'a bi-l-āyāti wa-l-ḥikami",
+
+            "Muḥammadun yawma baʿthi n-nāsi shāfiʿunā",
+            "Muḥammadun nūruhu l-hādī mina ẓ-ẓulami",
+
+            "Muḥammadun qā'imun li-Llāhi dhū himamin",
+            "Muḥammadun khātamun li-r-rusli kullihimi"
+        ]
+    },
+    "translation": {
+        "en": [
+            "Muhammad, the noblest of the Arabs and the non-Arabs.",
+            "Muhammad, the best of all who walk on foot.",
+
+            "Muhammad, the bestower of goodness who embodies it all.",
+            "Muhammad, the master of excellence and generosity.",
+
+            "Muhammad, the crown of all the Messengers of Allah.",
+            "Muhammad, truthful in his words and speech.",
+
+            "Muhammad, steadfast in the covenant and its keeper.",
+            "Muhammad, whose character and qualities are good.",
+
+            "Muhammad, whose clay was steeped in light.",
+            "Muhammad, a light that has shone since pre-eternity.",
+
+            "Muhammad, the noble judge who rules with justice.",
+            "Muhammad, the fountain of generosity and wisdom.",
+
+            "Muhammad, the finest of Allah’s creation from the line of Mudar.",
+            "Muhammad, the best of all the Messengers of Allah.",
+
+            "Muhammad, whose religion is the truth that we follow.",
+            "Muhammad, exalted and manifest in truth.",
+
+            "Muhammad, whose remembrance brings comfort to our souls.",
+            "Muhammad, to whom all nations owe gratitude.",
+
+            "Muhammad, the beauty and delight of this world.",
+            "Muhammad, the one who dispels distress and darkness.",
+
+            "Muhammad, a master whose virtues are excellent.",
+            "Muhammad, whom the Most Compassionate fashioned with blessings.",
+
+            "Muhammad, the Creator’s Chosen One and His Elect.",
+            "Muhammad, pure and free from every accusation.",
+
+            "Muhammad, who smiles at the guest and honours him.",
+            "Muhammad, by Allah, whose neighbour was never wronged.",
+
+            "Muhammad, by whose mission the world was made blessed.",
+            "Muhammad, who came with signs and wisdom.",
+
+            "Muhammad, our intercessor on the Day mankind is resurrected.",
+            "Muhammad, whose light guides us out of darkness.",
+
+            "Muhammad, devoted to Allah and possessed of high resolve.",
+            "Muhammad, the Seal of all the Messengers."
+        ]
+    },
+    "order": {
+        "chorus": [],
+        "verses": [
+            [
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
+            ],
+            [
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
+            ],
+            [
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
+            ],
+            [
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
+            ],
+            [
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
+            ],
+            [
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
+            ],
+            [
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
+            ],
+            [
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
+            ],
+            [
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
+            ],
+            [
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
+            ],
+            [
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 }
+            ],
+            [
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 }
+            ],
+            [
+                { "repeat": 1, "index": 24 },
+                { "repeat": 1, "index": 25 }
+            ],
+            [
+                { "repeat": 1, "index": 26 },
+                { "repeat": 1, "index": 27 }
+            ],
+            [
+                { "repeat": 1, "index": 28 },
+                { "repeat": 1, "index": 29 }
+            ],
+            [
+                { "repeat": 1, "index": 30 },
+                { "repeat": 1, "index": 31 }
+            ]
+        ]
+    }
+}
