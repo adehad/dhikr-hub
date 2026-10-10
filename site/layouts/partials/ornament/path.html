@@ -1,0 +1,79 @@
+{{- /*
+Returns SVG path data for one ornament from data/ornaments.json, drawn in a
+-100..100 box with the first petal pointing up. Fill it with fill-rule="evenodd":
+nested rings alternate between ink and paper.
+Must stay in step with the geometry in assets/ornament/morph.js.
+
+USAGE: partialCached "ornament/path.html" (dict "name" "rub_lotus" "level" "detail") "rub_lotus" "detail"
+*/ -}}
+{{- $def := index (index site.Data.ornaments.shapes .name) .level -}}
+{{- $N := 120 -}}
+{{- $SN := 16 -}}
+{{- $tau := mul 2.0 math.Pi -}}
+{{- $up := mul -0.5 math.Pi -}}
+{{- $d := slice -}}
+
+{{- range $ring := $def.rings -}}
+  {{- if isset $ring "c" -}}
+    {{- $r := printf "%.0f" (mul $ring.c 100.0) -}}
+    {{- $d = $d | append (printf "M%s 0A%s %s 0 1 0 -%s 0A%s %s 0 1 0 %s 0Z" $r $r $r $r $r $r $r) -}}
+  {{- else -}}
+    {{- $n := float $ring.n -}}
+    {{- $ri := float $ring.ri -}}
+    {{- $ro := 1.0 }}{{ if isset $ring "ro" }}{{ $ro = float $ring.ro }}{{ end -}}
+    {{- $k := 1.0 }}{{ if isset $ring "k" }}{{ $k = float $ring.k }}{{ end -}}
+    {{- $p := 0.5 }}{{ if isset $ring "p" }}{{ $p = float $ring.p }}{{ end -}}
+    {{- $tw := 0.0 }}{{ if isset $ring "tw" }}{{ $tw = float $ring.tw }}{{ end -}}
+    {{- $rot := 0.0 }}{{ if isset $ring "rot" }}{{ $rot = float $ring.rot }}{{ end -}}
+    {{- $sp := 0.0 }}{{ if isset $ring "sp" }}{{ $sp = float $ring.sp }}{{ end -}}
+    {{- $sw := 0.08 }}{{ if isset $ring "sw" }}{{ $sw = float $ring.sw }}{{ end -}}
+    {{- $seg := div $tau $n -}}
+    {{- $q := div $ri $ro -}}
+    {{- $dx := sub (mul $q (math.Cos (div $seg 2.0))) 1.0 -}}
+    {{- $dy := mul $q (math.Sin (div $seg 2.0)) -}}
+    {{- $pts := slice -}}
+    {{- range $j := seq 0 (sub $N 1) -}}
+      {{- $th := div (mul $tau (float $j)) (float $N) -}}
+      {{- $a := sub $th (mul $rot (div math.Pi 180.0)) -}}
+      {{- $local := div (sub $a (mul $seg (math.Floor (div $a $seg)))) $seg -}}
+      {{- if $tw -}}
+        {{- $local = sub $local (div (mul $tw (math.Sin (mul $tau $local))) $tau) -}}
+      {{- end -}}
+      {{- $dd := math.Min $local (sub 1.0 $local) -}}
+      {{- $x := mul 2.0 $dd -}}
+      {{- $phi := mul $dd $seg -}}
+      {{- $straight := div $dy (sub (mul (math.Cos $phi) $dy) (mul (math.Sin $phi) $dx)) -}}
+      {{- $f := math.Pow (math.Max 0.0 (sub 1.0 (mul $x $x))) $p -}}
+      {{- if $sp -}}
+        {{- $f = add (mul $sp (math.Pow 2.718281828459045 (div (mul -1.0 $x) $sw))) (mul (sub 1.0 $sp) $f) -}}
+      {{- end -}}
+      {{- $r := mul 100.0 (mul $ro (add (mul $straight (sub 1.0 $k)) (mul (add $q (mul (sub 1.0 $q) $f)) $k))) -}}
+      {{- $t := add $th $up -}}
+      {{- $pts = $pts | append (printf "%.0f %.0f" (mul $r (math.Cos $t)) (mul $r (math.Sin $t))) -}}
+    {{- end -}}
+    {{- $d = $d | append (printf "M%sZ" (delimit $pts "L")) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range $s := $def.sats -}}
+  {{- $m := 0.0 }}{{ if isset $s "m" }}{{ $m = float $s.m }}{{ end -}}
+  {{- $srot := 0.0 }}{{ if isset $s "rot" }}{{ $srot = float $s.rot }}{{ end -}}
+  {{- $c := float $s.c -}}
+  {{- $l := float $s.l -}}
+  {{- $w := float $s.w -}}
+  {{- range $i := seq 0 (sub (int $s.n) 1) -}}
+    {{- $a := add (add (mul $srot (div math.Pi 180.0)) (div (mul $tau (float $i)) (float $s.n))) $up -}}
+    {{- $ca := math.Cos $a -}}
+    {{- $sa := math.Sin $a -}}
+    {{- $pts := slice -}}
+    {{- range $j := seq 0 (sub $SN 1) -}}
+      {{- $t := div (mul $tau (float $j)) (float $SN) -}}
+      {{- $u := add $c (div (mul (math.Cos $t) $l) 2.0) -}}
+      {{- $v := div (mul (mul (math.Sin $t) (math.Pow (math.Abs (math.Sin (div $t 2.0))) $m)) $w) 2.0 -}}
+      {{- $pts = $pts | append (printf "%.0f %.0f" (mul 100.0 (sub (mul $u $ca) (mul $v $sa))) (mul 100.0 (add (mul $u $sa) (mul $v $ca)))) -}}
+    {{- end -}}
+    {{- $d = $d | append (printf "M%sZ" (delimit $pts "L")) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return delimit $d "" -}}

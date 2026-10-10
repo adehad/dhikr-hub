@@ -34,6 +34,15 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 
 {{ $verse_num := "??" }}
 
+{{/* Each section ends in an ornament, stepping through the divider shapes and colours.
+     The last verse section ends in the animated divider instead. */}}
+{{ $orn := site.Data.ornaments }}
+{{ $chorus_count := len $verses_json.order.chorus }}
+{{ $divider_count := add $chorus_count (sub (len $verses_json.order.verses) 1) }}
+{{ $sprite := slice }}
+{{ range $i, $name := $orn.dividers }}{{ if lt $i $divider_count }}{{ $sprite = $sprite | append $name }}{{ end }}{{ end }}
+{{ with $sprite }}{{ partial "ornament/sprite.html" . }}{{ end }}
+
 {{ if (gt (len $verses_json.order.chorus) 0) }}
 <input type="checkbox" id="chorus-toggle">
 <label for="chorus-toggle">Chorus</label>
@@ -49,7 +58,10 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
         "v_config" $v_config
         "verses_json" $verses_json
         "verses_in_lang" $verses_in_lang
-        "verses_in_lang_translated" $verses_in_lang_translated)
+        "verses_in_lang_translated" $verses_in_lang_translated
+        "divider" (dict
+            "shape" (index $orn.dividers (mod $v_config_idx (len $orn.dividers)))
+            "colour" (add (mod $v_config_idx $orn.colours) 1)))
         }}
 
         {{ template "inline/partials/verse_renderer" (dict "params_json" $json_string) }}
@@ -60,18 +72,26 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 
 {{ range $v_config_idx, $v_config := $verses_json.order.verses }}
 {{ $verse_num = (delimit (slice "## " (add $v_config_idx 1)) "") }}
+{{ $n := add $chorus_count $v_config_idx }}
+{{ $divider := dict }}
+{{ if lt $n $divider_count }}
+{{ $divider = dict "shape" (index $orn.dividers (mod $n (len $orn.dividers))) "colour" (add (mod $n $orn.colours) 1) }}
+{{ end }}
 <div class="verse-container">
     {{ $json_string := jsonify (dict
     "verse_num" $verse_num
     "v_config" $v_config
     "verses_json" $verses_json
     "verses_in_lang" $verses_in_lang
-    "verses_in_lang_translated" $verses_in_lang_translated)
+    "verses_in_lang_translated" $verses_in_lang_translated
+    "divider" $divider)
     }}
 
     {{ template "inline/partials/verse_renderer" (dict "params_json" $json_string) }}
 </div>
 {{ end }}
+
+{{ partial "ornament/morph.html" . }}
 
 
 {{ define "inline/partials/validate_qasida" }}
@@ -118,6 +138,7 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 {{ $verses_json := index $params_obj "verses_json" }}
 {{ $verses_in_lang := index $params_obj "verses_in_lang" }}
 {{ $verses_in_lang_translated := index $params_obj "verses_in_lang_translated" }}
+{{ $divider := index $params_obj "divider" }}
 
 {{ $verse_num | markdownify }}
 <p style="flex-basis: 100%; margin: 0;"></p>
@@ -141,7 +162,5 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
     </div>
 </div>
 {{ end }}
-<div style="flex-basis: 100%;">
-    {{ "------" | markdownify }}
-</div>
+{{ with $divider }}{{ partial "ornament/divider.html" . }}{{ end }}
 {{ end }}
