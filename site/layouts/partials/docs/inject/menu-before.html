@@ -78,7 +78,8 @@
 
     function UpdateDisplayState(classname_str, is_checked) {
         const new_state = is_checked ? "" : "none";
-        const class_selector = `.${classname_str}`;
+        // The qasida editor reuses the layer classes on its inputs, which must stay editable
+        const class_selector = `.${classname_str}:not(.qasida-editor *)`;
         document.querySelectorAll(class_selector).forEach(
             function (element) {
                 element.style.display = new_state;
