@@ -1,0 +1,221 @@
+{
+    "name": {
+        "ara": "دَعْ جَمَالَ الوَجْهِ يَظْهَرْ",
+        "en": "Daʿ Jamāla l-Wajhi Yaẓhar - Let the Beauty of the Face Appear"
+    },
+    "verses": {
+        "ara": [
+            "صَلَّى اللَّهُ عَلَى مُحَمَّدْ",
+            "وَعَلَى آلِهِ وَسَلَّمْ",
+
+            "دَعْ جَمَالَ الوَجْهِ يَظْهَرْ",
+            "لا تُغَطِّي يا حَبِيبِي",
+            "طُولَ لَيْلِي فِيكَ أَسْهَرْ",
+            "زَادَ شَوْقِي وَنَحِيبِي",
+
+            "هَكَذَا المَحْبُوبُ يَقْهَرْ",
+            "بِالجَفَا قَلْبَ الكَئِيبِ",
+            "كُلُّ شَيْءٍ عِقْدُ جَوْهَرْ",
+            "حِلْيَةُ الحُسْنِ المَهِيبِ",
+
+            "كَانَ قَلْبِي عَنْهُ غَافِلْ",
+            "وَهْوَ لا يَغْفُلْ عَنِّي",
+            "فَانْثَنَى يَخْتَالُ رَافِلْ",
+            "بِثِيَابِ النَّفْسِ مِنِّي",
+
+            "يا مُسَمًّى بِالأَسَامِي",
+            "كُلُّهَا وَهْوَ المُنَزَّهْ",
+            "أَنْتَ فِي الكُلِّ مُرَامِي",
+            "فِيكَ عَيْنِي تَتَنَزَّهْ",
+
+            "يا سُقَاةَ الرَّاحِ قُومُوا",
+            "طَلَعَ الفَجْرُ عَلَيْنَا",
+            "عَنْ سِوَى الخَمْرَةِ صُومُوا",
+            "أَيْنَ مَنْ يَفْهَمُ أَيْنَا",
+
+            "خَمْرُنَا خَمْرُ المَعَانِي",
+            "عُتِّقَتْ مِنْ قَبْلِ آدَمْ",
+            "وَلَهَا نَحْنُ القَنَانِي",
+            "مِنْ زَمَانٍ قَدْ تَقَادَمْ",
+
+            "لَمَعَتْ أَنْوَارُ سَلْمَى",
+            "لَكَ مِنْ خَلْفِ السَّتَايِرْ",
+            "لا يَكُنْ طَرْفُكَ أَعْمَى",
+            "عَنْ تَنَاوِيعِ الأَشَايِرْ",
+
+            "إِنَّ أَمْرَ الحَقِّ أَظْهَرْ",
+            "عِنْدَ غَيْرِ المُسْتَرِيبِ",
+            "كُلُّ شَيْءٍ عِقْدُ جَوْهَرْ",
+            "حِلْيَةُ الحُسْنِ المَهِيبِ",
+
+            "صَلِّ يَا رَبِّ وَسَلِّمْ",
+            "لِي عَلَى المُخْتَارِ طَهْ",
+            "مَنْ لَهُ كُنْتَ تُكَلِّمْ",
+            "لَيْلَةَ الإِسْرَا شِفَاهَا"
+        ],
+        "en": [
+            "ṣalla llāhu ʿalā Muḥammad",
+            "wa-ʿalā ālihi wa-sallam",
+
+            "daʿ jamāla l-wajhi yaẓhar",
+            "lā tughaṭṭī yā ḥabībī",
+            "ṭūla laylī fīka asʹhar",
+            "zāda shawqī wa-naḥībī",
+
+            "hākadhā l-maḥbūbu yaqhar",
+            "bi-l-jafā qalba l-kaʾībi",
+            "kullu shayʾin ʿiqdu jawhar",
+            "ḥilyatu l-ḥusni l-mahībi",
+
+            "kāna qalbī ʿanhu ghāfil",
+            "wa-hwa lā yaghful ʿannī",
+            "fa-nthanā yakhtālu rāfil",
+            "bi-thiyābi n-nafsi minnī",
+
+            "yā musamman bi-l-asāmī",
+            "kulluhā wa-hwa l-munazzah",
+            "anta fī l-kulli murāmī",
+            "fīka ʿaynī tatanazzah",
+
+            "yā suqāta r-rāḥi qūmū",
+            "ṭalaʿa l-fajru ʿalaynā",
+            "ʿan siwā l-khamrati ṣūmū",
+            "ayna man yafhamu aynā",
+
+            "khamrunā khamru l-maʿānī",
+            "ʿuttiqat min qabli Ādam",
+            "wa-lahā naḥnu l-qanānī",
+            "min zamānin qad taqādam",
+
+            "lamaʿat anwāru Salmā",
+            "laka min khalfi s-satāyir",
+            "lā yakun ṭarfuka aʿmā",
+            "ʿan tanāwīʿi l-ashāyir",
+
+            "inna amra l-ḥaqqi aẓhar",
+            "ʿinda ghayri l-mustarībi",
+            "kullu shayʾin ʿiqdu jawhar",
+            "ḥilyatu l-ḥusni l-mahībi",
+
+            "ṣalli yā rabbi wa-sallim",
+            "lī ʿalā l-mukhtāri Ṭāhā",
+            "man lahu kunta tukallim",
+            "laylata l-isrā shifāhā"
+        ]
+    },
+    "translation": {
+        "en": [
+            "Allah send blessings upon Muhammad",
+            "and upon his family, and grant them peace",
+
+            "Let the beauty of the face appear",
+            "don’t cover it, my beloved",
+            "All night long I stay awake for you",
+            "my longing and wailing have increased",
+
+            "Thus the beloved breaks",
+            "the heart of the sorrowful with abandonment",
+            "Everything is a string of jewels",
+            "an ornament of majestic beauty",
+
+            "My heart was heedless of Him",
+            "while He never was heedless of me",
+            "Then He turned, strutting in majesty",
+            "clothed in garments from my very soul",
+
+            "O You who are named by all names",
+            "yet transcendent above them all",
+            "You are my aim in all things",
+            "in You my eye finds delight",
+
+            "O servers of wine, rise!",
+            "the dawn has risen upon us",
+            "Fast from all but this wine",
+            "where is the one who understands where is he?",
+
+            "Our wine is the wine of meanings",
+            "aged before the time of Adam",
+            "And we are its flasks",
+            "from a time long past",
+
+            "The lights of Salma sparkled",
+            "for you, from behind the curtains",
+            "Let not your eye be blind",
+            "to the varied signs and symbols",
+
+            "Indeed, the matter of Truth is clear",
+            "to the one free of doubt",
+            "Everything is a string of pearls",
+            "an ornament of majestic beauty",
+
+            "Send Your prayers and peace, O Lord",
+            "upon the Chosen One, Ṭāhā",
+            "The one to whom You spoke",
+            "on the night of the Ascension, directly"
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                { "repeat": 2, "index": 0 },
+                { "repeat": 2, "index": 1 }
+            ]
+        ],
+        "verses": [
+            [
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 },
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
+            ],
+            [
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 },
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
+            ],
+            [
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 },
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
+            ],
+            [
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 },
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
+            ],
+            [
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 },
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 }
+            ],
+            [
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 },
+                { "repeat": 1, "index": 24 },
+                { "repeat": 1, "index": 25 }
+            ],
+            [
+                { "repeat": 1, "index": 26 },
+                { "repeat": 1, "index": 27 },
+                { "repeat": 1, "index": 28 },
+                { "repeat": 1, "index": 29 }
+            ],
+            [
+                { "repeat": 1, "index": 30 },
+                { "repeat": 1, "index": 31 },
+                { "repeat": 1, "index": 32 },
+                { "repeat": 1, "index": 33 }
+            ],
+            [
+                { "repeat": 1, "index": 34 },
+                { "repeat": 1, "index": 35 },
+                { "repeat": 1, "index": 36 },
+                { "repeat": 1, "index": 37 }
+            ]
+        ]
+    }
+}
