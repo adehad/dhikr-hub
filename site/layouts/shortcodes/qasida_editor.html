@@ -64,6 +64,8 @@
 <script>
     const QasidaEditor = (function () {
         const STORAGE_KEY = 'qasida-editor';
+        const REPEAT_MIN = 1;
+        const REPEAT_MAX = 10;
 
         let state = {
             editSource: null,
@@ -179,7 +181,8 @@
                 const lines = group.map(item => ({
                     ara: data.verses.ara[item.index] || '',
                     en: data.verses.en[item.index] || '',
-                    translation: data.translation.en[item.index] || ''
+                    translation: data.translation.en[item.index] || '',
+                    repeat: clampRepeat(item.repeat)
                 }));
                 sections.push({ lines });
             });
@@ -243,6 +246,9 @@
             <div class="arabic" contenteditable="true" data-placeholder="Arabic text" data-field="ara">${escapeHtml(line.ara)}</div>
             <div class="transliteration" contenteditable="true" data-placeholder="Transliteration" data-field="en">${escapeHtml(line.en)}</div>
             <div class="translation" contenteditable="true" data-placeholder="Translation" data-field="translation">${escapeHtml(line.translation)}</div>
+            <label class="line-repeat">Times sung
+                <input type="number" min="${REPEAT_MIN}" max="${REPEAT_MAX}" step="1" data-field="repeat" value="${clampRepeat(line.repeat)}">
+            </label>
         `;
 
             return div;
@@ -257,7 +263,7 @@
         }
 
         function createEmptyLine() {
-            return { ara: '', en: '', translation: '' };
+            return { ara: '', en: '', translation: '', repeat: REPEAT_MIN };
         }
 
         function addSection(type) {
@@ -327,7 +333,8 @@
                 lines.push({
                     ara: lineEl.querySelector('[data-field="ara"]').textContent.trim(),
                     en: lineEl.querySelector('[data-field="en"]').textContent.trim(),
-                    translation: lineEl.querySelector('[data-field="translation"]').textContent.trim()
+                    translation: lineEl.querySelector('[data-field="translation"]').textContent.trim(),
+                    repeat: clampRepeat(lineEl.querySelector('[data-field="repeat"]').value)
                 });
             });
             return lines;
@@ -362,7 +369,7 @@
                     this.versesAra.push(line.ara);
                     this.versesEn.push(line.en);
                     this.translationEn.push(line.translation);
-                    const indexRef = { repeat: 1, index: this.currentIndex };
+                    const indexRef = { repeat: clampRepeat(line.repeat), index: this.currentIndex };
                     this.currentIndex++;
                     return indexRef;
                 },
@@ -379,22 +386,30 @@
         }
 
         function processChorusesForJSON(builder) {
-            state.choruses.forEach(section => {
+            state.choruses.filter(section => section.lines.length > 0).forEach(section => {
                 const group = section.lines.map(line => builder.addLine(line));
                 builder.orderChorus.push(group);
             });
         }
 
         function processVersesForJSON(builder) {
-            state.verses.forEach(section => {
+            state.verses.filter(section => section.lines.length > 0).forEach(section => {
                 const group = section.lines.map(line => builder.addLine(line));
                 builder.orderVerses.push(group);
             });
         }
 
         function updateJSONOutput() {
-            const json = generateJSON();
-            document.getElementById('json-output').textContent = JSON.stringify(json, null, 2);
+            document.getElementById('json-output').textContent = formatQasidaJSON(generateJSON());
+        }
+
+        // Matches the files in site/data/qasida: 4-space indent, and each order entry on one
+        // line as qasida.schema.json asks: { "repeat": 1, "index": 0 }
+        function formatQasidaJSON(json) {
+            return JSON.stringify(json, null, 4).replace(
+                /\{\s*"repeat": (\d+),\s*"index": (\d+)\s*\}/g,
+                '{ "repeat": $1, "index": $2 }'
+            );
         }
 
         // =========================================================================
@@ -402,8 +417,7 @@
         // =========================================================================
 
         async function copyJSONToClipboard() {
-            const json = generateJSON();
-            const text = JSON.stringify(json, null, 2);
+            const text = formatQasidaJSON(generateJSON());
 
             const success = await copyTextToClipboard(text);
             if (success) {
@@ -525,6 +539,12 @@
 
         function updateStatus(message) {
             document.getElementById('editor-status').textContent = message;
+        }
+
+        function clampRepeat(value) {
+            const n = parseInt(value, 10);
+            if (Number.isNaN(n)) return REPEAT_MIN;
+            return Math.min(REPEAT_MAX, Math.max(REPEAT_MIN, n));
         }
 
         function escapeHtml(text) {

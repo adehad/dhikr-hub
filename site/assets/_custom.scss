@@ -449,6 +449,20 @@ label[for="chorus-toggle"] {
             margin-bottom: 0;
         }
 
+        .line-repeat {
+            display: block;
+            direction: ltr;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            opacity: 0.8;
+
+            input {
+                width: 4em;
+                margin-inline-start: 0.4em;
+                font: inherit;
+            }
+        }
+
         .line-delete {
             position: absolute;
             top: 0;
