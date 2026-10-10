@@ -52,6 +52,15 @@
                 onchange="UpdateFontSize('--translation-font-perc',this.value)">
         </label>
 
+        <!--Repeat Marks Display-->
+        <hr style="width: 100%" />
+        <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="repeat-marks"
+                onchange="UpdateDisplayState(this.id, this.checked)">
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Repeat marks</span>
+        </label>
+
     </fieldset>
 </form>
 
@@ -76,6 +85,7 @@
             }
         )
         document.body.classList.toggle(`hide-${classname_str}`, !is_checked);
+        document.body.classList.toggle(`show-${classname_str}`, is_checked);
         SaveToLocalStorage();
     };
 
