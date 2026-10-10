@@ -52,6 +52,15 @@
     --translation-font-perc: 85%;
 
     --transliteration-font-perc: 80%;
+
+    --repeat-mark-color: #aa622b;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        // Lighter copper keeps at least 3:1 on the dark theme's #343a40
+        --repeat-mark-color: #e0a172;
+    }
 }
 
 body {
@@ -172,6 +181,51 @@ label[for="chorus-toggle"] {
 .translation {
     direction: ltr;
     font-size: var(--translation-font-perc);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.repeat-mark {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-inline: 0.45em;
+    padding: 0.2em 0.55em 0.22em;
+    border: 1.5px solid var(--repeat-mark-color);
+    border-radius: 999px;
+    color: var(--repeat-mark-color);
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.verse-container>h2 .repeat-mark {
+    font-size: 0.8rem;
+}
+
+// A line's mark moves to the first visible layer when the Arabic is hidden
+.repeat-mark-fallback-transliteration,
+.repeat-mark-fallback-translation {
+    display: none;
+}
+
+body.hide-arabic .repeat-mark-fallback-transliteration,
+body.hide-arabic.hide-transliteration .repeat-mark-fallback-translation {
+    display: inline-flex;
 }
 
 
