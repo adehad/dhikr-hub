@@ -1,5 +1,6 @@
 {
   "dividers": ["rub_lotus", "girih_12", "rub_khatam", "ayah_florette", "girih_10", "rub_pointed", "rub_layered"],
+  "morph": ["rub_lotus", "girih_12", "rub_layered", "ayah_florette", "rub_khatam", "girih_10", "rub_pointed"],
   "colours": 5,
   "shapes": {
     "rub_lotus": {

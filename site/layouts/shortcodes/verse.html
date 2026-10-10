@@ -34,10 +34,11 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 
 {{ $verse_num := "??" }}
 
-{{/* Each section ends in an ornament, stepping through the divider shapes and colours. */}}
+{{/* Each section ends in an ornament, stepping through the divider shapes and colours.
+     The last verse section ends in the animated divider instead. */}}
 {{ $orn := site.Data.ornaments }}
 {{ $chorus_count := len $verses_json.order.chorus }}
-{{ $divider_count := add $chorus_count (len $verses_json.order.verses) }}
+{{ $divider_count := add $chorus_count (sub (len $verses_json.order.verses) 1) }}
 {{ $sprite := slice }}
 {{ range $i, $name := $orn.dividers }}{{ if lt $i $divider_count }}{{ $sprite = $sprite | append $name }}{{ end }}{{ end }}
 {{ with $sprite }}{{ partial "ornament/sprite.html" . }}{{ end }}
@@ -72,7 +73,10 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 {{ range $v_config_idx, $v_config := $verses_json.order.verses }}
 {{ $verse_num = (delimit (slice "## " (add $v_config_idx 1)) "") }}
 {{ $n := add $chorus_count $v_config_idx }}
-{{ $divider := dict "shape" (index $orn.dividers (mod $n (len $orn.dividers))) "colour" (add (mod $n $orn.colours) 1) }}
+{{ $divider := dict }}
+{{ if lt $n $divider_count }}
+{{ $divider = dict "shape" (index $orn.dividers (mod $n (len $orn.dividers))) "colour" (add (mod $n $orn.colours) 1) }}
+{{ end }}
 <div class="verse-container">
     {{ $json_string := jsonify (dict
     "verse_num" $verse_num
@@ -86,6 +90,8 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
     {{ template "inline/partials/verse_renderer" (dict "params_json" $json_string) }}
 </div>
 {{ end }}
+
+{{ partial "ornament/morph.html" . }}
 
 
 {{ define "inline/partials/validate_qasida" }}

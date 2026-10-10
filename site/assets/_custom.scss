@@ -598,3 +598,22 @@ label[for="chorus-toggle"] {
         height: 2.1rem;
     }
 }
+
+.ornament-morph {
+    max-width: 36rem;
+    margin-block: -0.75rem 0;
+    transition: color 1.8s ease-in-out;
+
+    svg {
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+.ornament-morph+h2 {
+    margin-top: 1rem;
+}
