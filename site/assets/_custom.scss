@@ -217,15 +217,32 @@ label[for="chorus-toggle"] {
     font-size: 0.8rem;
 }
 
-// A line's mark moves to the first visible layer when the Arabic is hidden
-.repeat-mark-fallback-transliteration,
-.repeat-mark-fallback-translation {
+// Off by default: hidden until the settings script adds show-repeat-marks after load,
+// so readers who never opt in don't see the marks flash before onload
+.repeat-mark,
+.repeat-sr {
     display: none;
 }
 
-body.hide-arabic .repeat-mark-fallback-transliteration,
-body.hide-arabic.hide-transliteration .repeat-mark-fallback-translation {
-    display: inline-flex;
+body.show-repeat-marks {
+    .repeat-mark {
+        display: inline-flex;
+    }
+
+    .repeat-sr {
+        display: inline;
+    }
+
+    // A line's mark moves to the first visible layer when the Arabic is hidden
+    .repeat-mark-fallback-transliteration,
+    .repeat-mark-fallback-translation {
+        display: none;
+    }
+
+    &.hide-arabic .repeat-mark-fallback-transliteration,
+    &.hide-arabic.hide-transliteration .repeat-mark-fallback-translation {
+        display: inline-flex;
+    }
 }
 
 
