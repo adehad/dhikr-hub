@@ -32,7 +32,6 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 {{ $verses_in_lang := (index (index $verses_json "verses") $verse_lang) }}
 {{ $verses_in_lang_translated := (index (index $verses_json "translation") $verse_lang) }}
 
-{{ $verse_num := "??" }}
 
 {{/* Each section ends in an ornament, stepping through the divider shapes and colours.
      The last verse section ends in the animated divider instead. */}}
@@ -51,10 +50,8 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
     {{ range $v_config_idx, $v_config := $verses_json.order.chorus }}
     <div class="verse-container">
 
-        {{ $verse_num = (delimit (slice "## Chorus " (add $v_config_idx 1)) "") }}
-
         {{ $json_string := jsonify (dict
-        "verse_num" $verse_num
+        "heading" (printf "Chorus %d" (add $v_config_idx 1))
         "v_config" $v_config
         "verses_json" $verses_json
         "verses_in_lang" $verses_in_lang
@@ -71,7 +68,6 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 {{ end }}
 
 {{ range $v_config_idx, $v_config := $verses_json.order.verses }}
-{{ $verse_num = (delimit (slice "## " (add $v_config_idx 1)) "") }}
 {{ $n := add $chorus_count $v_config_idx }}
 {{ $divider := dict }}
 {{ if lt $n $divider_count }}
@@ -79,7 +75,8 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 {{ end }}
 <div class="verse-container">
     {{ $json_string := jsonify (dict
-    "verse_num" $verse_num
+    "heading" (string (add $v_config_idx 1))
+    "sr_prefix" "Stanza "
     "v_config" $v_config
     "verses_json" $verses_json
     "verses_in_lang" $verses_in_lang
@@ -131,21 +128,48 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 {{ end }}
 {{ end }}
 
+{{ define "inline/partials/repeat_times" }}
+{{- if eq . 2 }}twice{{ else }}{{ . }} times{{ end -}}
+{{ end }}
+
+{{ define "inline/partials/repeat_mark" -}}
+<span class="repeat-mark{{ with .class }} {{ . }}{{ end }}" dir="ltr" aria-hidden="true">×{{ .repeat }}</span>
+{{- end }}
+
 {{ define "inline/partials/verse_renderer" }}
 {{ $params_obj := unmarshal .params_json }}
-{{ $verse_num := index $params_obj "verse_num" }}
+{{ $heading := index $params_obj "heading" }}
+{{ $sr_prefix := index $params_obj "sr_prefix" }}
 {{ $v_config := index $params_obj "v_config" }}
 {{ $verses_json := index $params_obj "verses_json" }}
 {{ $verses_in_lang := index $params_obj "verses_in_lang" }}
 {{ $verses_in_lang_translated := index $params_obj "verses_in_lang_translated" }}
 {{ $divider := index $params_obj "divider" }}
 
-{{ $verse_num | markdownify }}
+{{/* A stanza whose lines all share one repeat count gets a single mark on its heading */}}
+{{ $stanza_repeat := int (index (index $v_config 0) "repeat") }}
+{{ range $v_config }}
+{{ if ne (int (index . "repeat")) $stanza_repeat }}{{ $stanza_repeat = 1 }}{{ end }}
+{{ end }}
+
+{{ $heading_id := anchorize $heading }}
+<h2 id="{{ $heading_id }}">
+{{- if gt $stanza_repeat 1 -}}
+{{ with $sr_prefix }}<span class="sr-only repeat-sr">{{ . }}</span>{{ end -}}
+{{ $heading }}
+{{- template "inline/partials/repeat_mark" (dict "repeat" $stanza_repeat) -}}
+<span class="sr-only repeat-sr">, sung {{ template "inline/partials/repeat_times" $stanza_repeat }}</span>
+{{- else -}}
+{{ $heading }}
+{{- end -}}
+<a class="anchor" href="#{{ $heading_id }}">#</a></h2>
 <p style="flex-basis: 100%; margin: 0;"></p>
 
 {{ range $new_verse := $v_config }}
 {{ $v_idx := int (index $new_verse "index") }}
 {{ $v_ara := index $verses_json.verses.ara $v_idx }}
+{{ $line_repeat := 1 }}
+{{ if le $stanza_repeat 1 }}{{ $line_repeat = int (index $new_verse "repeat") }}{{ end }}
 
 {{ $v_in_lang := index $verses_in_lang $v_idx }}
 {{ $v_in_lang_translated := index $verses_in_lang_translated $v_idx }}
@@ -153,13 +177,19 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 <div class="verse">
     <div class="arabic">
         {{ $v_ara }}
+        {{- if gt $line_repeat 1 }} {{ template "inline/partials/repeat_mark" (dict "repeat" $line_repeat) }}{{ end }}
     </div>
     <div class="transliteration">
         {{ $v_in_lang }}
+        {{- if gt $line_repeat 1 }} {{ template "inline/partials/repeat_mark" (dict "repeat" $line_repeat "class" "repeat-mark-fallback-transliteration") }}{{ end }}
     </div>
     <div class="translation">
         {{ $v_in_lang_translated | markdownify }}
+        {{- if gt $line_repeat 1 }} {{ template "inline/partials/repeat_mark" (dict "repeat" $line_repeat "class" "repeat-mark-fallback-translation") }}{{ end }}
     </div>
+    {{- if gt $line_repeat 1 }}
+    <span class="sr-only repeat-sr">Sung {{ template "inline/partials/repeat_times" $line_repeat }}</span>
+    {{- end }}
 </div>
 {{ end }}
 {{ with $divider }}{{ partial "ornament/divider.html" . }}{{ end }}

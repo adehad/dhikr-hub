@@ -75,6 +75,7 @@
                 element.style.display = new_state;
             }
         )
+        document.body.classList.toggle(`hide-${classname_str}`, !is_checked);
         SaveToLocalStorage();
     };
 
