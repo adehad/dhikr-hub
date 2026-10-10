@@ -1,0 +1,166 @@
+{
+    "name": {
+        "ara": "قُلْ لِلَّذِي لَامَنِي",
+        "en": "Qul li-lladhī Lāmanī - Say to the One Who Blamed Me"
+    },
+    "verses": {
+        "ara": [
+            "لَا إِلَهَ إِلَّا اللَّهُ",
+            "لَا إِلَهَ إِلَّا اللَّهُ",
+            "لَا إِلَهَ إِلَّا اللَّهُ",
+            "مُحَمَّدٌ رَسُولُ اللَّهِ",
+
+            "قُلْ لِلَّذِي لَامَنِي",
+            "فِيهَا وَعَنَّفَنِي",
+            "حَيْثُ لَمْ يَعْرِفْ شَأْنِي",
+            "لِذَاكَ هُوَ الْمَعْذُورُ",
+
+            "لَوْ عَرَفَ عُذَّالِي",
+            "حَقِيقَةَ الْوِصَالِ",
+            "لَصَارُوا مِثْلَ حَالِي",
+            "وَلَكِنْ جَرَى الْمَقْدُورُ",
+
+            "جَلَسْنَا عَلَى حَضْرَةٍ",
+            "مَعَ مُلُوكِ الْخَمْرَةِ",
+            "مِنْ عَجَائِبِ الْقُدْرَةِ",
+            "كَأْسُهَا عَنْهَا يَدُورُ",
+
+            "هَذِي لَيْلَى قَدْ بَدَتْ",
+            "بِالْحُسْنِ تَلَوَّنَتْ",
+            "لِبَعْضِهَا ظَهَرَتْ",
+            "وَبَطَنَتْ فِي الظُّهُورِ",
+
+            "سَقَتْنِي كَأْسَ التَّحْقِيقِ",
+            "وَهَدَتْنِي لِلطَّرِيقِ",
+            "أَغْرَقَتْنِي فِي الْعَمِيقِ",
+            "بَحْرُهَا فَاقَ الْبُحُورَ",
+
+            "فَوَاللَّهِ مَنْ دَنَا",
+            "وَذَاقَ سِرَّ الْفَنَا",
+            "لَبَاحَ بِمَا بُحْنَا",
+            "قَهْرًا وَهُوَ الْمَعْذُورُ"
+        ],
+        "en": [
+            "lā ilāha illā Llāhu",
+            "lā ilāha illā Llāhu",
+            "lā ilāha illā Llāhu",
+            "Muḥammadun rasūlu Llāhi",
+
+            "qul li-lladhī lāmanī",
+            "fīhā wa-ʿannafanī",
+            "ḥaythu lam yaʿrif shaʾnī",
+            "li-dhāka huwa l-maʿdhūru",
+
+            "law ʿarafa ʿudhdhālī",
+            "ḥaqīqata l-wiṣāli",
+            "la-ṣārū mithla ḥālī",
+            "wa-lākin jarā l-maqdūru",
+
+            "jalasnā ʿalā ḥaḍratin",
+            "maʿa mulūki l-khamrati",
+            "min ʿajāʾibi l-qudrati",
+            "kaʾsuhā ʿanhā yadūru",
+
+            "hādhī Laylā qad badat",
+            "bi-l-ḥusni talawwanat",
+            "li-baʿḍihā ẓaharat",
+            "wa-baṭanat fī ẓ-ẓuhūri",
+
+            "saqatnī kaʾsa t-taḥqīqi",
+            "wa-hadatnī li-ṭ-ṭarīqi",
+            "aghraqatnī fī l-ʿamīqi",
+            "baḥruhā fāqa l-buḥūra",
+
+            "fa-wa-Llāhi man danā",
+            "wa-dhāqa sirra l-fanā",
+            "la-bāḥa bi-mā buḥnā",
+            "qahran wa-huwa l-maʿdhūru"
+        ]
+    },
+    "translation": {
+        "en": [
+            "There is no god but Allah",
+            "There is no god but Allah",
+            "There is no god but Allah",
+            "Muhammad is the Messenger of Allah",
+
+            "Say to the one who blamed me",
+            "for this love and reproached me,",
+            "He knew not my state",
+            "and thus he is excused.",
+
+            "If my critics had known",
+            "the truth of this union,",
+            "They would have become as I am",
+            "but fate has decreed its course.",
+
+            "We sat in the Presence",
+            "among the kings of wine,",
+            "A marvel of divine power",
+            "its cup passes from her hand.",
+
+            "Here is Layla, revealed",
+            "adorned in beauty’s hues,",
+            "Half unveiled to the sight",
+            "and half concealed within the appearing.",
+
+            "She gave me the cup of realization",
+            "and guided me to the Path,",
+            "She drowned me in the deep",
+            "her ocean surpasses all seas.",
+
+            "By God! Whoever draws near",
+            "and tastes the secret of annihilation,",
+            "Will utter what we have uttered",
+            "by compulsion — and he is excused."
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
+            ]
+        ],
+        "verses": [
+            [
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 },
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
+            ],
+            [
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 },
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
+            ],
+            [
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 },
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
+            ],
+            [
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 },
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
+            ],
+            [
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 },
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 }
+            ],
+            [
+                { "repeat": 1, "index": 24 },
+                { "repeat": 1, "index": 25 },
+                { "repeat": 1, "index": 26 },
+                { "repeat": 1, "index": 27 }
+            ]
+        ]
+    }
+}
