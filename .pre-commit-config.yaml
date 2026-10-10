@@ -24,6 +24,13 @@ repos:
         args: ["-L", "murr"]
         exclude: ^site/static/favicon\.svg$
         require_serial: false
+  - repo: local
+    hooks:
+      - id: format-qasida-json
+        name: format qasida JSON
+        entry: python scripts/format_qasida_json.py
+        language: python
+        files: ^site/data/qasida/.*\.json$
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.38.2
     hooks:
