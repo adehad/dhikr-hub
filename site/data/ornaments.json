@@ -1,0 +1,150 @@
+{
+  "dividers": ["rub_lotus", "girih_12", "rub_khatam", "ayah_florette", "girih_10", "rub_pointed", "rub_layered"],
+  "colours": 5,
+  "shapes": {
+    "rub_lotus": {
+      "about": "Rub el hizb, lotus form, after Scheherazade New U+06DE",
+      "detail": {
+        "rings": [
+          { "n": 8, "ri": 0.5, "p": 0.55, "sp": 0.28, "sw": 0.07 },
+          { "n": 8, "ri": 0.42, "ro": 0.87, "p": 0.6, "sp": 0.22, "sw": 0.06 },
+          { "c": 0.31 },
+          { "c": 0.21 },
+          { "c": 0.11 }
+        ],
+        "sats": [
+          { "n": 8, "c": 0.63, "l": 0.3, "w": 0.13, "m": 1.2 },
+          { "n": 8, "rot": 22.5, "c": 0.84, "l": 0.24, "w": 0.08, "m": 1.5 }
+        ]
+      },
+      "plain": {
+        "rings": [
+          { "n": 8, "ri": 0.5, "p": 0.6 },
+          { "n": 8, "ri": 0.42, "ro": 0.86, "p": 0.6 },
+          { "c": 0.25 }
+        ]
+      }
+    },
+    "rub_layered": {
+      "about": "Rub el hizb, layered florette, after Noto Nastaliq Urdu U+06DE",
+      "detail": {
+        "rings": [
+          { "n": 16, "ri": 0.8, "p": 0.5 },
+          { "n": 16, "ri": 0.75, "ro": 0.95, "p": 0.5 },
+          { "n": 8, "ri": 0.22, "ro": 0.72, "p": 0.7, "tw": 0.35, "rot": 11.25 },
+          { "n": 8, "ri": 0.17, "ro": 0.66, "p": 0.8, "tw": 0.35, "rot": 11.25 },
+          { "c": 0.09 }
+        ]
+      },
+      "plain": {
+        "rings": [
+          { "n": 16, "ri": 0.78, "p": 0.5 },
+          { "n": 16, "ri": 0.7, "ro": 0.93, "p": 0.5 },
+          { "c": 0.2 }
+        ]
+      }
+    },
+    "rub_khatam": {
+      "about": "Rub el hizb, khatam form, after Noto Naskh Arabic U+06DE",
+      "detail": {
+        "rings": [
+          { "n": 4, "ri": 0.7071, "k": 0 },
+          { "n": 4, "ri": 0.6152, "ro": 0.87, "k": 0 },
+          { "n": 4, "ri": 0.7071, "k": 0, "rot": 45 },
+          { "n": 4, "ri": 0.6152, "ro": 0.87, "k": 0, "rot": 45 },
+          { "c": 0.2 },
+          { "c": 0.13 }
+        ]
+      },
+      "plain": {
+        "rings": [
+          { "n": 8, "ri": 0.7654, "k": 0 },
+          { "c": 0.5 },
+          { "c": 0.36 }
+        ]
+      }
+    },
+    "rub_pointed": {
+      "about": "Rub el hizb, pointed lotus, after Harmattan U+06DE",
+      "detail": {
+        "rings": [
+          { "n": 8, "ri": 0.42, "k": 0.75, "p": 0.9, "sp": 0.15, "sw": 0.05 },
+          { "n": 8, "ri": 0.36, "ro": 0.84, "k": 0.75, "p": 1, "sp": 0.1, "sw": 0.05 },
+          { "c": 0.34 },
+          { "n": 16, "ri": 0.25, "ro": 0.3, "k": 0 },
+          { "c": 0.15 },
+          { "c": 0.07 }
+        ],
+        "sats": [
+          { "n": 8, "c": 0.6, "l": 0.32, "w": 0.1, "m": 1.4 }
+        ]
+      },
+      "plain": {
+        "rings": [
+          { "n": 8, "ri": 0.45, "k": 0.7, "p": 0.9 },
+          { "n": 8, "ri": 0.38, "ro": 0.8, "k": 0.7, "p": 0.9 },
+          { "c": 0.2 }
+        ]
+      }
+    },
+    "ayah_florette": {
+      "about": "Scalloped verse marker in the style of printed mushafs",
+      "detail": {
+        "rings": [
+          { "n": 12, "ri": 0.84, "p": 0.5 },
+          { "c": 0.78 },
+          { "c": 0.72 },
+          { "c": 0.62 }
+        ],
+        "sats": [
+          { "n": 12, "c": 0.9, "l": 0.07, "w": 0.07 },
+          { "n": 12, "rot": 15, "c": 0.67, "l": 0.045, "w": 0.045 }
+        ]
+      },
+      "plain": {
+        "rings": [
+          { "n": 12, "ri": 0.82, "p": 0.5 },
+          { "c": 0.66 }
+        ]
+      }
+    },
+    "girih_10": {
+      "about": "Ten-fold girih rosette",
+      "detail": {
+        "rings": [
+          { "n": 10, "ri": 0.6, "k": 0 },
+          { "n": 10, "ri": 0.52, "ro": 0.86, "k": 0 },
+          { "n": 10, "ri": 0.18, "ro": 0.48, "k": 0.6, "p": 1, "rot": 18 },
+          { "c": 0.12 },
+          { "c": 0.06 }
+        ]
+      },
+      "plain": {
+        "rings": [
+          { "n": 10, "ri": 0.6, "k": 0 },
+          { "n": 10, "ri": 0.5, "ro": 0.84, "k": 0 },
+          { "c": 0.2 }
+        ]
+      }
+    },
+    "girih_12": {
+      "about": "Twelve-fold girih rosette",
+      "detail": {
+        "rings": [
+          { "n": 12, "ri": 0.63, "k": 0 },
+          { "n": 12, "ri": 0.56, "ro": 0.87, "k": 0 },
+          { "n": 6, "ri": 0.2887, "ro": 0.5, "k": 0 },
+          { "n": 6, "ri": 0.248, "ro": 0.43, "k": 0 },
+          { "c": 0.12 }
+        ]
+      },
+      "plain": {
+        "rings": [
+          { "n": 12, "ri": 0.62, "k": 0 },
+          { "n": 12, "ri": 0.54, "ro": 0.86, "k": 0 },
+          { "c": 0.2 }
+        ]
+      }
+    }
+  }
+}

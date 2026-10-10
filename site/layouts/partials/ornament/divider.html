@@ -1,0 +1,7 @@
+{{- /*
+A static section divider showing one ornament from the sprite.
+USAGE: partial "ornament/divider.html" (dict "shape" "rub_lotus" "colour" 1)
+*/ -}}
+<div class="ornament-divider ornament-c{{ .colour }}" role="separator">
+    <svg aria-hidden="true" focusable="false"><use href="#ornament-{{ .shape }}"></use></svg>
+</div>
