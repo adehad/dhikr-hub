@@ -1,0 +1,330 @@
+{
+    "name": {
+        "ara": "قَصِيدَةٌ دَالِيَّةٌ فِي مَدْحِ النَّبِيِّ ﷺ",
+        "en": "Dāliyya fī Madḥ al-Nabī - A Dāliyya in Praise of the Prophet ﷺ"
+    },
+    "verses": {
+        "ara": [
+            "يَا سَيِّدِي، يَا رَسُولَ اللهِ، يَا سَنَدِي",
+            "يَا وَاسِعَ الْفَضْلِ، وَالْإِحْسَانِ، وَالْمَدَدِ",
+
+            "يَا مَنْ هُوَ الْمُرْتَجَى فِي كُلِّ نَازِلَةٍ",
+            "وَمَنْ هُوَ الْمَوْرِدُ الْأَحْلَى لِكُلِّ صَدِي",
+
+            "يُمْنَاكَ فَوْقَ الْبِحَارِ الزَّاخِرَاتِ نَدًى",
+            "تُعْطِي الْجَزِيلَ بِلَا حَصْرٍ، وَلَا عَدَدِ",
+
+            "كَمْ شِدَّةٍ أَنْتَ كَافِيهَا، وَكَمْ مِحَنٍ",
+            "حَلَّتْ يَمِينُكَ مِنْهَا سَائِرَ الْعُقَدِ",
+
+            "أَبْوَابُ سَاحَتِكَ الْفَيْحَاءِ قَدْ وَسِعَتْ",
+            "كُلَّ الْأَنَامِ، وَمَا ضَاقَتْ عَلَى أَحَدِ",
+
+            "وَقَفْتُ بِالْبَابِ -يَا مَوْلَايَ- لِي أَمَلٌ",
+            "فَاجْبُرْ بِهِ خَاطِرِي، وَاشْدُدْ بِهِ عَضُدِي",
+
+            "وَقَفْتُ بِالْبَابِ أَرْجُو كَشْفَ ضَائِقَتِي",
+            "يَا أَكْرَمَ الْخَلْقِ، أَدْرِكْنِي، وَخُذْ بِيَدِي",
+
+            "فِي الْقَلْبِ، وَالْجِسْمِ آلَامٌ تُعَاوِدُنِي",
+            "إِذَا نَظَرْتَ إِلَيْهَا الْيَوْمَ لَمْ تَعُدِ",
+
+            "طَالَتْ عَلَيَّ، وَقَدْ ضَاقَتْ مَسَالِكُهَا",
+            "وَضَاعَفَتْ وَقْعَ مَا أَلْقَاهُ مِنْ كَبَدِ",
+
+            "لَا يَسْتَطِيعُ لَهَا جُهْدِي مُقَاوَمَةً",
+            "وَلَا أَفِيءُ إِلَى صَبْرٍ، وَلَا جَلَدِ",
+
+            "مَا لِي أَخَافُ الرَّدَى فِي ظِلِّ سَاحَتِكُمْ",
+            "وَهْيَ الْأَمَانُ، وَمَهْدُ الْعِيشَةِ الرَّغَدِ",
+
+            "أَفِي جِوَارِكَ -يَا مَأْمُونُ- يَلْحَقُنِي",
+            "ضَيْمٌ، وَأُصْبِحُ فِي هَمٍّ، وَفِي نَكَدِ؟!",
+
+            "أَأَشْتَكِي الضِّيقَ، وَالْحِرْمَانَ فِي بَلَدٍ",
+            "فِيهَا غِيَاثُ الْبَرَايَا مِنْحَةُ الصَّمَدِ؟!",
+
+            "فِيهَا الْحَبِيبُ الَّذِي تُرْجَى شَفَاعَتُهُ",
+            "وَيُسْتَجَارُ بِهِ فِي أَعْظَمِ الشِّدَدِ",
+
+            "كُلُّ الْمَطَالِبِ، وَالْحَاجَاتِ إِنْ فُقِدَتْ",
+            "فَإِنَّهَا تُرْتَجَى فِي هَذِهِ الْبَلَدِ",
+
+            "مِنْ أَيْنَ لِي مَوْرِدٌ أَسْقِي بِهِ ظَمَئِي",
+            "إِنْ كُنْتُ فِي بَحْرِكَ الْمَوْرُودِ لَمْ أَرِدِ؟!",
+
+            "وَأَيْنَ أَحْظَى بِعَطْفٍ شَامِلٍ، وَرِضًى",
+            "إِنْ كُنْتُ عِنْدَكَ هَذَا الْعَطْفَ لَمْ أَجِدِ؟!",
+
+            "وَمَنْ يُقَوِّمُ لِي مَا فِيَّ مِنْ عِوَجٍ",
+            "إِنْ كُنْتَ لَمْ تَبْغِ تَقْوِيمِي، وَلَمْ تُرِدِ؟!",
+
+            "وَافَيْتُ مُعْتَقِدًا: أَنَّ الْمَسِيرَ إِلَى",
+            "مَغْنَاكَ فِيهِ حَيَاةُ الرُّوحِ، وَالْجَسَدِ",
+
+            "فَانْظُرْ إِلَيَّ بِعَيْنِ الْعَطْفِ، وَارْعَ حَشًا",
+            "بَاقٍ عَلَى الْعَهْدِ، لَمْ يَنْكُثْ، وَلَمْ يَحِدِ",
+
+            "وَارْعَ صَحْبِي، وَأَحْبَابِي، وَمَنْ طَمِعُوا",
+            "فِي نَيْلِ عَطْفِكَ مِنْ أَهْلِي، وَمِنْ وَلَدِي",
+
+            "وَانْظُرْ لِجَيْشِكَ جَيْشِ الْمُسْلِمِينَ تَعُدْ",
+            "إِلَيْهِ هَيْبَتُهُ فِي سَالِفِ الْأَمَدِ",
+
+            "وَاهْزِمْ جُيُوشَ الْعِدَى مَهْمَا يَكُنْ لَهُمُ",
+            "مِنْ شِدَّةِ الْبَأْسِ، أَوْ مِنْ كَثْرَةِ الْعَدَدِ",
+
+            "دَامَتْ عَلَيْكَ صَلَاةُ اللهِ عَاطِرَةً",
+            "وَدَامَ ذِكْرُكَ مَرْفُوعًا إِلَى الْأَبَدِ"
+        ],
+        "en": [
+            "Yā sayyidī, yā Rasūla-llāhi, yā sanadī",
+            "yā wāsiʿa l-faḍli wa-l-iḥsāni wa-l-madadi",
+
+            "Yā man huwa l-murtajā fī kulli nāzilatin",
+            "wa-man huwa l-mawridu l-aḥlā li-kulli ṣadī",
+
+            "Yumnāka fawqa l-biḥāri z-zākhirāti nadan",
+            "tuʿṭī l-jazīla bi-lā ḥaṣrin wa-lā ʿadadi",
+
+            "Kam shiddatin anta kāfīhā, wa-kam miḥanin",
+            "ḥallat yamīnuka minhā sāʾira l-ʿuqadi",
+
+            "Abwābu sāḥatika l-fayḥāʾi qad wasiʿat",
+            "kulla l-anāmi, wa-mā ḍāqat ʿalā aḥadi",
+
+            "Waqaftu bi-l-bābi, yā mawlāya, lī amalun",
+            "fa-jbur bihi khāṭirī, wa-shdud bihi ʿaḍudī",
+
+            "Waqaftu bi-l-bābi arjū kashfa ḍāʾiqatī",
+            "yā akrama l-khalqi, adriknī, wa-khudh bi-yadī",
+
+            "Fī l-qalbi wa-l-jismi ālāmun tuʿāwidunī",
+            "idhā naẓarta ilayhā l-yawma lam taʿudi",
+
+            "Ṭālat ʿalayya, wa-qad ḍāqat masālikuhā",
+            "wa-ḍāʿafat waqʿa mā alqāhu min kabadi",
+
+            "Lā yastaṭīʿu lahā juhdī muqāwamatan",
+            "wa-lā afīʾu ilā ṣabrin wa-lā jaladi",
+
+            "Mā lī akhāfu r-radā fī ẓilli sāḥatikum",
+            "wa-hya l-amānu wa-mahdu l-ʿīshati r-raghadi",
+
+            "A-fī jiwārika, yā Maʾmūnu, yalḥaqunī",
+            "ḍaymun, wa-uṣbiḥu fī hammin wa-fī nakadi?!",
+
+            "A-ashtakī ḍ-ḍīqa wa-l-ḥirmāna fī baladin",
+            "fīhā ghiyāthu l-barāyā minḥatu ṣ-Ṣamadi?!",
+
+            "Fīhā l-ḥabību lladhī turjā shafāʿatuhu",
+            "wa-yustajāru bihi fī aʿẓami sh-shidadi",
+
+            "Kullu l-maṭālibi wa-l-ḥājāti in fuqidat",
+            "fa-innahā turtajā fī hādhihi l-baladi",
+
+            "Min ayna lī mawridun asqī bihi ẓamaʾī",
+            "in kuntu fī baḥrika l-mawrūdi lam aridi?!",
+
+            "Wa-ayna aḥẓā bi-ʿaṭfin shāmilin wa-riḍan",
+            "in kuntu ʿindaka hādhā l-ʿaṭfa lam ajidi?!",
+
+            "Wa-man yuqawwimu lī mā fiyya min ʿiwajin",
+            "in kunta lam tabghi taqwīmī wa-lam turidi?!",
+
+            "Wāfaytu muʿtaqidan anna l-masīra ilā",
+            "maghnāka fīhi ḥayātu r-rūḥi wa-l-jasadi",
+
+            "Fa-nẓur ilayya bi-ʿayni l-ʿaṭfi, wa-rʿa ḥashan",
+            "bāqin ʿalā l-ʿahdi, lam yankuth wa-lam yaḥidi",
+
+            "Wa-rʿa ṣaḥbī wa-aḥbābī wa-man ṭamiʿū",
+            "fī nayli ʿaṭfika min ahlī wa-min waladī",
+
+            "Wa-nẓur li-jayshika jayshi l-muslimīna taʿud",
+            "ilayhi haybatuhu fī sālifi l-amadi",
+
+            "Wa-hzim juyūsha l-ʿidā mahmā yakun lahumu",
+            "min shiddati l-baʾsi aw min kathrati l-ʿadadi",
+
+            "Dāmat ʿalayka ṣalātu-llāhi ʿāṭiratan",
+            "wa-dāma dhikruka marfūʿan ilā l-abadi"
+        ]
+    },
+    "translation": {
+        "en": [
+            "O my master, O Messenger of God, O my support,",
+            "O you whose bounty, beneficence and succour are vast.",
+
+            "O you who are hoped for in every calamity,",
+            "the sweetest spring for every thirsting soul.",
+
+            "Your right hand surpasses the brimming seas in generosity;",
+            "it gives abundantly, beyond limit or count.",
+
+            "How many hardships you have warded off, and how many trials",
+            "whose every knot your right hand has untied!",
+
+            "The doors of your spacious court have embraced all mankind,",
+            "and never grown narrow for anyone.",
+
+            "I have stood at the door, O my master, with a hope;",
+            "through it mend my broken heart and strengthen my arm.",
+
+            "I stood at the door hoping my distress would be lifted.",
+            "O most generous of creation, rescue me and take me by the hand.",
+
+            "In heart and body are pains that keep returning to me;",
+            "if you look upon them today, they will return no more.",
+
+            "They have lingered long upon me, their ways out grown narrow,",
+            "doubling the weight of the hardship I endure.",
+
+            "My strength cannot withstand them,",
+            "and I find no refuge in patience or endurance.",
+
+            "Why should I fear ruin in the shade of your court,",
+            "when it is safety itself and the cradle of an ample life?",
+
+            "In your neighbourhood, O Trustworthy One, shall injustice overtake me,",
+            "and shall I wake in worry and misery?!",
+
+            "Shall I complain of hardship and deprivation in a land",
+            "where dwells the succour of all creatures, the gift of the Eternal Refuge?!",
+
+            "In it is the Beloved whose intercession is hoped for,",
+            "in whom refuge is sought in the gravest hardships.",
+
+            "Every aim and need, if it could not be found or granted elsewhere,",
+            "may be hoped for in this city.",
+
+            "Where else would I find a spring to quench my thirst,",
+            "if I did not come to drink from your much-visited sea?!",
+
+            "And where would I be granted all-embracing kindness and good pleasure,",
+            "if I did not find this kindness with you?!",
+
+            "And who would straighten the crookedness within me,",
+            "if you did not seek to set me right, nor did you want it?!",
+
+            "I have come believing that the journey to your abode",
+            "holds life for soul and body alike.",
+
+            "So look upon me with the eye of kindness, and care for a heart",
+            "that stays true to its covenant; it has neither broken it nor swerved.",
+
+            "And care for my companions and loved ones,",
+            "and those of my family and children who long for your kindness.",
+
+            "And look upon your army, the army of the Muslims,",
+            "so its awe may return to it as in ages past.",
+
+            "And rout the armies of the foe,",
+            "however great their might or however many their numbers.",
+
+            "May God's fragrant blessings rest upon you always,",
+            "and may your mention stay exalted forever."
+        ]
+    },
+    "order": {
+        "chorus": [],
+        "verses": [
+            [
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
+            ],
+            [
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
+            ],
+            [
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
+            ],
+            [
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
+            ],
+            [
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
+            ],
+            [
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
+            ],
+            [
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
+            ],
+            [
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
+            ],
+            [
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
+            ],
+            [
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
+            ],
+            [
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 }
+            ],
+            [
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 }
+            ],
+            [
+                { "repeat": 1, "index": 24 },
+                { "repeat": 1, "index": 25 }
+            ],
+            [
+                { "repeat": 1, "index": 26 },
+                { "repeat": 1, "index": 27 }
+            ],
+            [
+                { "repeat": 1, "index": 28 },
+                { "repeat": 1, "index": 29 }
+            ],
+            [
+                { "repeat": 1, "index": 30 },
+                { "repeat": 1, "index": 31 }
+            ],
+            [
+                { "repeat": 1, "index": 32 },
+                { "repeat": 1, "index": 33 }
+            ],
+            [
+                { "repeat": 1, "index": 34 },
+                { "repeat": 1, "index": 35 }
+            ],
+            [
+                { "repeat": 1, "index": 36 },
+                { "repeat": 1, "index": 37 }
+            ],
+            [
+                { "repeat": 1, "index": 38 },
+                { "repeat": 1, "index": 39 }
+            ],
+            [
+                { "repeat": 1, "index": 40 },
+                { "repeat": 1, "index": 41 }
+            ],
+            [
+                { "repeat": 1, "index": 42 },
+                { "repeat": 1, "index": 43 }
+            ],
+            [
+                { "repeat": 1, "index": 44 },
+                { "repeat": 1, "index": 45 }
+            ],
+            [
+                { "repeat": 1, "index": 46 },
+                { "repeat": 1, "index": 47 }
+            ]
+        ]
+    }
+}
