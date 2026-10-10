@@ -1,0 +1,175 @@
+{
+    "name": {
+        "ara": "إِلْزَمْ بَابْ رَبِّكْ",
+        "en": "Ilzam Bāb Rabbik - Hold Fast to the Door of Your Lord"
+    },
+    "verses": {
+        "ara": [
+            "لَا يَكْثُرُ هَمُّكْ مَا قُدِّرْ يَكُونْ",
+
+            "إِلْزَمْ بَابْ رَبِّكْ وَاتْرُكْ كُلَّ دُونْ",
+            "وَاسْأَلْهُ السَّلَامَهْ مِنْ دَارِ الْفُتُونْ",
+            "لَا يَضِيقُ صَدْرُكْ فَالْحَادِثْ يَهُونْ",
+            "اللَّهُ الْمُقَدِّرْ وَالْعَالَمْ شُؤُونْ",
+
+            "فِكْرَكْ وَاخْتِيَارَكْ دَعْهُمَا وَرَاكْ",
+            "وَالتَّدْبِيرْ أَيْضًا وَاشْهَدْ مَنْ بَرَاكْ",
+            "مَوْلَاكَ الْمُهَيْمِنْ إِنَّهُ يَرَاكْ",
+            "فَوِّضْ لُهْ أُمُورَكْ وَحْسِنْ فِي الظُّنُونْ",
+
+            "لَوْ وَلِمْ وَكَيْفَ قَوْلُ ذِي الْحَمَقْ",
+            "يَعْتَرِضْ عَلَى اللَّهِ الَّذِي خَلَقْ",
+            "وَقَضَى وَقَدَّرْ كُلَّ شَيْ بِحَقْ",
+            "يَا قَلْبِي تَنَبَّهْ وَاتْرُكِ الْمُجُونْ",
+
+            "قَدْ ضَمِنْ تَعَالَى بِالرِّزْقِ الْقَوَامْ",
+            "فِي الْكِتَابِ الْمُنْزَلْ نُورًا لِلْأَنَامْ",
+            "فَالرِّضَا فَرِيضَهْ وَالسَّخَطْ حَرَامْ",
+            "وَالْقُنُوعْ رَاحَهْ وَالطَّمَعْ جُنُونْ",
+
+            "أَنْتَ وَالْخَلَائِقْ كُلُّهُمْ عَبِيدْ",
+            "وَالْإِلٰهُ فِينَا يَفْعَلْ مَا يُرِيدْ",
+            "هَمُّكْ وَاغْتِمَامُكْ وَيْحَكْ مَا يُفِيدْ",
+            "الْقَضَا تَقَدَّمْ فَاغْنَمِ السُّكُونْ",
+
+            "الَّذِي لِغَيْرِكْ لَا يَصِلْ إِلَيْكْ",
+            "وَالَّذِي قُسِمْ لَكْ حَاصِلٌ لَدَيْكْ",
+            "فَاشْتَغِلْ بِرَبِّكْ وَالَّذِي عَلَيْكْ",
+            "فِي فَرْضِ الْحَقِيقَهْ وَالشَّرْعِ الْمَصُونْ",
+
+            "شَرْعِ الْمُصْطَفَى أَلْهَادِي الْبَشِيرْ",
+            "خَتْمِ الْأَنْبِيَاءِ الْبَدْرِ الْمُنِيرْ",
+            "صَلَّى اللَّهُ عَلَيْهِ الرَّبُّ الْقَدِيرْ",
+            "مَا رِيحُ الصَّبَا مَالَتْ بِالْغُصُونْ"
+        ],
+        "en": [
+            "lā yakthuru hammuk mā quddir yakūn",
+
+            "ilzam bāb rabbik wa-truk kulla dūn",
+            "wa-sʾalhu s-salāmah min dāri l-futūn",
+            "lā yaḍīqu ṣadruk fa-l-ḥādith yahūn",
+            "allāhu l-muqaddir wa-l-ʿālam shuʾūn",
+
+            "fikrak wa-khtiyārak daʿhumā warāk",
+            "wa-t-tadbīr ayḍan wa-shhad man barāk",
+            "mawlāka l-muhaymin innahū yarāk",
+            "fawwiḍ luh umūrak wa-ḥsin fi ẓ-ẓunūn",
+
+            "law wa-lim wa-kayfa qawlu dhi l-ḥamaq",
+            "yaʿtariḍ ʿala llāhi lladhī khalaq",
+            "wa-qaḍā wa-qaddar kulla shay bi-ḥaqq",
+            "yā qalbī tanabbah wa-truki l-mujūn",
+
+            "qad ḍamin taʿālā bi-r-rizqi l-qawām",
+            "fi l-kitābi l-munzal nūran li-l-anām",
+            "fa-r-riḍā farīḍah wa-s-sakhaṭ ḥarām",
+            "wa-l-qunūʿ rāḥah wa-ṭ-ṭamaʿ junūn",
+
+            "anta wa-l-khalāʾiq kulluhum ʿabīd",
+            "wa-l-ilāhu fīnā yafʿal mā yurīd",
+            "hammuk wa-ghtimāmuk wayḥak mā yufīd",
+            "al-qaḍā taqaddam fa-ghnami s-sukūn",
+
+            "alladhī li-ghayrik lā yaṣil ilayk",
+            "wa-lladhī qusim lak ḥāṣilun ladayk",
+            "fa-shtaghil bi-rabbik wa-lladhī ʿalayk",
+            "fī farḍi l-ḥaqīqah wa-sh-sharʿi l-maṣūn",
+
+            "sharʿi l-muṣṭafā al-hādi l-bashīr",
+            "khatmi l-anbiyāʾi l-badri l-munīr",
+            "ṣalla llāhu ʿalayhi r-rabbu l-qadīr",
+            "mā rīḥu ṣ-ṣabā mālat bi-l-ghuṣūn"
+        ]
+    },
+    "translation": {
+        "en": [
+            "Let not your worries overwhelm you; whatever was ordained will come to pass",
+
+            "Cling to the door of your Lord, leave everything else aside",
+            "Ask Him for safety from the abode of tribulations",
+            "Let not your heart be restricted, every temporal thing will soon fade",
+            "Allah is the Ordainer, and this world is His affair",
+
+            "Your thoughts and preferences, leave them behind",
+            "Together with your plans. And witness the One who created you alone",
+            "Your Patron Lord, the Guardian, indeed He sees you",
+            "Entrust all your affairs to Him, and then maintain the best of opinions",
+
+            "If? Why? How? Is the speech of fools",
+            "Opposing Allah, the One who created [everything]",
+            "And [the One who] preordained and decreed everything in truth",
+            "O my heart take heed, and abandon your impertinence",
+
+            "The Exalted has guaranteed all necessary provisions",
+            "In the Revealed Book, a light for all creation",
+            "So contentment [with the decree] is obligatory, and discontent forbidden",
+            "Frugality in everything is comfort, while covetousness is insanity",
+
+            "You and the whole of creation are all mere servants [of Allah]",
+            "And the Lord does to us whatever He wills",
+            "Your worries and sorrows – woe to you – bring you no benefit",
+            "The decree has already foregone, so seize this tranquility",
+
+            "That which is meant for others will never come to you",
+            "And that which has been apportioned for you will soon be attained",
+            "So occupy yourself solely with your Lord and what is required of you",
+            "With regards to the obligatory realities and the protected Sacred Law",
+
+            "The Law of the Chosen One, the Guide, the Bringer of Glad Tidings",
+            "The Seal of Prophets, the Illumined Full Moon",
+            "The Blessings of Allah, the All-Powerful Lord, be upon him",
+            "So long as the morning breeze sways branches"
+        ]
+    },
+    "order": {
+        "chorus": [
+            [
+                { "repeat": 1, "index": 0 }
+            ]
+        ],
+        "verses": [
+            [
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 },
+                { "repeat": 1, "index": 4 }
+            ],
+            [
+                { "repeat": 1, "index": 5 },
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 },
+                { "repeat": 1, "index": 8 }
+            ],
+            [
+                { "repeat": 1, "index": 9 },
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 },
+                { "repeat": 1, "index": 12 }
+            ],
+            [
+                { "repeat": 1, "index": 13 },
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 },
+                { "repeat": 1, "index": 16 }
+            ],
+            [
+                { "repeat": 1, "index": 17 },
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 },
+                { "repeat": 1, "index": 20 }
+            ],
+            [
+                { "repeat": 1, "index": 21 },
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 },
+                { "repeat": 1, "index": 24 }
+            ],
+            [
+                { "repeat": 1, "index": 25 },
+                { "repeat": 1, "index": 26 },
+                { "repeat": 1, "index": 27 },
+                { "repeat": 1, "index": 28 }
+            ]
+        ]
+    }
+}
