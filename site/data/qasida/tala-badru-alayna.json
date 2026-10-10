@@ -13,7 +13,28 @@
             "أَيُّهَا الْمَبْعُوثُ فِينَا",
             "جِئْتَ بِالْأَمْرِ الْمُطَاعْ",
             "جِئْتَ شَرَّفْتَ الْمَدِينَةْ",
-            "مَرْحَباً يَا خَيْرَ دَاعْ"
+            "مَرْحَبًا يَا خَيْرَ دَاعْ",
+
+            "بَيْنَ كَتْفَهِ عَلَامَةْ",
+            "خَاتِمُ الرُّسْلِ الْكِرَامْ",
+
+            "أَشْرَقَ الْبَدْرُ عَلَيْنَا",
+            "وَاخْتَفَى بَدْرُ التَّمَامْ",
+
+            "مِثْلَ حُسْنِكْ مَا رَأَيْنَا",
+            "فِي الْعِرَاقَيْنِ وَشَامْ",
+
+            "رَبِّ فَاجْعَلْ مُجْتَمَعْنَا",
+            "غَايَتُهْ حُسْنُ الْخِتَامْ",
+
+            "وَاعْطِنَا مَا قَدْ سَأَلْنَا",
+            "مِنْ عَطَايَاكَ الْجِسَامْ",
+
+            "وَاكْرِمِ الْأَرْوَاحَ مِنَّا",
+            "بِلِّقَاءْ خَيْرِ الْأَنَامْ",
+
+            "وَابْلِغِ الْمُخْتَارَ عَنَّا",
+            "مِنْ صَلَاةٍ وَسَلَامْ"
         ],
         "en": [
             "ṭalaʿa l-badru ʿalaynā",
@@ -23,21 +44,63 @@
 
             "ayyuha l-mabʿūthu fīnā",
             "jiʾta bil-amri l-muṭāʿ",
-            "jiʾta sharraf-ta l-madīnah",
-            "marḥaban yā khayra dāʿ"
+            "jiʾta sharrafta l-madīnah",
+            "marḥaban yā khayra dāʿ",
+
+            "bayna katfahi ʿalāmah",
+            "khātimu r-rusli l-kirām",
+
+            "ashraqa l-badru ʿalaynā",
+            "wa-khtafā badru t-tamām",
+
+            "mithla ḥusnik mā raʾaynā",
+            "fi l-ʿirāqayni wa-shām",
+
+            "rabbi fajʿal mujtamaʿnā",
+            "ghāyatuh ḥusnu l-khitām",
+
+            "wa-ʿṭinā mā qad saʾalnā",
+            "min ʿaṭāyāka l-jisām",
+
+            "wa-krimi l-arwāḥa minnā",
+            "billiqāʾ khayri l-anām",
+
+            "wa-blighi l-mukhtāra ʿannā",
+            "min ṣalātin wa-salām"
         ]
     },
     "translation": {
         "en": [
-            "The (full) white moon rose over us,",
-            "from the Valley of Wada",
-            "And we owe it to show gratefullness,",
-            "where call is to Allah",
+            "O the white moon rose over us,",
+            "from the valley of Wadāʿ",
+            "And we owe it to show gratefulness,",
+            "where the call is to Allah",
 
-            "Oh you who were raised amongst us,",
-            "coming with a work to be obeyed",
-            "You have brought to this city nobleness",
-            "Welcome! Best call to God's way"
+            "O you who were raised amongst us,",
+            "coming with a word to be obeyed",
+            "You have brought to this city nobleness,",
+            "welcome best caller to God's way",
+
+            "Between his shoulder blades is a distinguished mark:",
+            "[for he is] the Seal of all the Noble Messengers",
+
+            "The full moon has illumined us,",
+            "and all other moons have been totally eclipsed",
+
+            "The likeness of your beauty we have never seen,",
+            "not in Iraq nor the Levant",
+
+            "My Lord, make the final outcome of our gathering",
+            "a beautiful seal [to our lives]",
+
+            "And grant us all that we asked for,",
+            "from Your Immense, Overflowing Gifts",
+
+            "And ennoble our spirits immeasurably,",
+            "[by granting us] a meeting with the Best of Creation",
+
+            "And convey to the Chosen One",
+            "blessings and salutations from us"
         ]
     },
     "order": {
@@ -55,6 +118,34 @@
                 { "repeat": 2, "index": 5 },
                 { "repeat": 2, "index": 6 },
                 { "repeat": 2, "index": 7 }
+            ],
+            [
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
+            ],
+            [
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
+            ],
+            [
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
+            ],
+            [
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
+            ],
+            [
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
+            ],
+            [
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
+            ],
+            [
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 }
             ]
         ]
     }
