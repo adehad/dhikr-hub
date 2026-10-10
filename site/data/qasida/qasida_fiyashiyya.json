@@ -140,10 +140,7 @@
         ]
     },
     "order": {
-        "chorus": [
-            [
-            ]
-        ],
+        "chorus": [],
         "verses": [
             [
                 {"repeat": 1, "index": 0 },
