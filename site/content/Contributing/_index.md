@@ -155,6 +155,11 @@ Each line (for poetry, each half of a couplet) is one string, and `verses.ara`, 
 and `translation.en` must have the same length, so index `n` is the same line in all three.
 Blank lines between groups are only for readability.
 
+You do not need to lay the file out by hand. If you use [pre-commit](https://pre-commit.com/),
+the `format-qasida-json` hook rewrites qasida JSON into the house style on commit: 4-space
+indent, one string per line, a blank line between the groups in `order`, and each order
+entry on one line. Run it yourself with `python scripts/format_qasida_json.py <file>`.
+
 #### Chorus and verse order
 
 `order` lists which lines are sung and in what grouping. `index` points into the arrays
