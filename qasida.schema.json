@@ -94,7 +94,7 @@
         "chorus": {
           "type": "array",
           "title": "Chorus sections",
-          "description": "Groups of verse references that form the chorus/refrain",
+          "description": "Groups of verse references that form the chorus/refrain. List the refrain here once; the site shows it in its own toggleable panel. Use an empty array when there is no refrain, not [[]].",
           "items": {
             "type": "array",
             "title": "Chorus group",
@@ -108,7 +108,7 @@
         "verses": {
           "type": "array",
           "title": "Verse sections",
-          "description": "Groups of verse references that form the main verses/stanzas",
+          "description": "Groups of verse references that form the main verses/stanzas, one group per stanza. Do not include chorus indices here, even if the source prints the refrain after each stanza.",
           "items": {
             "type": "array",
             "title": "Verse group",
