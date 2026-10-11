@@ -1,10 +1,16 @@
++++
+maqam = ['Jaharkah']
+json_file = 'ya_imam_al_rusli'
++++
 # Yā ʾImāma R-Rusli - O Leader of the Messengers
+
+{{< qasida_meta >}}
 
 ## Verses
 
-{{% get_title  file="qasida/ya_imam_al_rusli" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ya_imam_al_rusli" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

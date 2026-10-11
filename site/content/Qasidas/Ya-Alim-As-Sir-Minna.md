@@ -1,10 +1,13 @@
++++
+json_file = 'ya-alim-as-sir-minna'
++++
 # Ya Alim as-Sir Minna - O Knower of our secrets
 
 ## Verses
 
-{{% get_title file="qasida/ya-alim-as-sir-minna" lang="en" %}}
+{{% get_title lang="en" %}}
 
-{{< verse file="qasida/ya-alim-as-sir-minna" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

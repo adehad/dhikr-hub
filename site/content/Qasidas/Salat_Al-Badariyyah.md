@@ -1,10 +1,13 @@
++++
+json_file = 'salat-al-badariyya'
++++
 # Salat Al-Badariyyah -
 
 ## Verses
 
-{{% get_title  file="qasida/salat-al-badariyya" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/salat-al-badariyya" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

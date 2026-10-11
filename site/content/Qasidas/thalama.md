@@ -1,10 +1,16 @@
-# Tholama Ashku Gharami  - How Long will my heart ache
++++
+maqam = ['Nahawand']
+json_file = 'thalama'
++++
+# Thalama Ashku Gharami  - How Long will my heart ache
+
+{{< qasida_meta >}}
 
 ## Verses
 
-{{% get_title  file="qasida/thalama" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/thalama" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

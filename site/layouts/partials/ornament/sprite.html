@@ -1,0 +1,9 @@
+{{- /*
+Emits one hidden SVG holding a <symbol> per ornament name, for dividers to reference with <use>.
+USAGE: partial "ornament/sprite.html" (slice "rub_lotus" "girih_12")
+*/ -}}
+<svg class="ornament-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+{{- range . }}
+<symbol id="ornament-{{ . }}" viewBox="-104 -104 208 208"><path fill="currentColor" fill-rule="evenodd" d="{{ partialCached "ornament/path.html" (dict "name" . "level" "detail") . "detail" }}"></path></symbol>
+{{- end }}
+</svg>

@@ -1,10 +1,13 @@
++++
+json_file = 'mudariyya'
++++
 # al-Muḍariyya
 
 ## Verses
 
-{{% get_title  file="qasida/mudariyya" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/mudariyya" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

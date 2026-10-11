@@ -1,10 +1,13 @@
-# Alā Yā Allah Binaẓrat – Seeking a Gaze from Allah
++++
+json_file = 'ala-ya-allah-binadhra'
++++
+# Alā Yā Allah Binaẓrat – Seeking a Gaze from Allah
 
 ## Verses
 
-{{% get_title  file="qasida/ala-ya-allah-binadhra" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ala-ya-allah-binadhra" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

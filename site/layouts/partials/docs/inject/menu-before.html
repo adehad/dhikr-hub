@@ -52,6 +52,15 @@
                 onchange="UpdateFontSize('--translation-font-perc',this.value)">
         </label>
 
+        <!--Repeat Marks Display-->
+        <hr style="width: 100%" />
+        <label class="toggle">
+            <input class="toggle-checkbox" type="checkbox" id="repeat-marks"
+                onchange="UpdateDisplayState(this.id, this.checked)">
+            <div class="toggle-switch"></div>
+            <span class="toggle-label">Repeat marks</span>
+        </label>
+
     </fieldset>
 </form>
 
@@ -69,12 +78,15 @@
 
     function UpdateDisplayState(classname_str, is_checked) {
         const new_state = is_checked ? "" : "none";
-        const class_selector = `.${classname_str}`;
+        // The qasida editor reuses the layer classes on its inputs, which must stay editable
+        const class_selector = `.${classname_str}:not(.qasida-editor *)`;
         document.querySelectorAll(class_selector).forEach(
             function (element) {
                 element.style.display = new_state;
             }
         )
+        document.body.classList.toggle(`hide-${classname_str}`, !is_checked);
+        document.body.classList.toggle(`show-${classname_str}`, is_checked);
         SaveToLocalStorage();
     };
 

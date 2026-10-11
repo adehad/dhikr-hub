@@ -42,3 +42,14 @@ maqam = 'maqam'
 # series = 'series'
 # tag = 'tags'
 # Default End
+
+# Mount data/qasida as static files for API access
+# This makes JSON files available at /api/qasida/*.json
+# Hugo watches these files and serves them during development
+[module]
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "data/qasida"
+    target = "static/api/qasida"

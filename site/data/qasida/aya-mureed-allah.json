@@ -1,7 +1,7 @@
 {
     "name": {
         "ara": "أيا مريد الله",
-        "en": "Ayā Murīd Allāhi – O seeker of God"
+        "en": "Ayā Murīd Allāhi - O seeker of God"
     },
     "verses": {
         "ara": [
@@ -34,7 +34,7 @@
 
             "الْعَلَاوِيُّ يَقُولُ قَوْلًا مِنْهُ مَقْبُولٌ",
             "تَهِيمُ بِهِ العُقُولُ تَغِيبُ فِي ذَاتِ الله"
-          ],
+        ],
         "en": [
             "ayā murīda llāhi nuʿīdu laka qawlī iṣghihi",
             "idhā tafham qawlī bihi taṣil lillāh",
@@ -103,46 +103,46 @@
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
             ]
         ],
         "verses": [
             [
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ],
             [
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 }
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
             ],
             [
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 }
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
             ],
             [
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 }
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
             ],
             [
-                {"repeat": 1, "index": 10 },
-                {"repeat": 1, "index": 11 }
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
             ],
             [
-                {"repeat": 1, "index": 12 },
-                {"repeat": 1, "index": 13 }
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
             ],
             [
-                {"repeat": 1, "index": 14 },
-                {"repeat": 1, "index": 15 }
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
             ],
             [
-                {"repeat": 1, "index": 16 },
-                {"repeat": 1, "index": 17 }
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
             ],
             [
-                {"repeat": 1, "index": 18 },
-                {"repeat": 1, "index": 19 }
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
             ]
         ]
     }

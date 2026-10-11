@@ -5,7 +5,7 @@
     },
     "verses": {
         "ara": [
-            "يَا إِمَامَ الرُّسْلِ يَا سَنَدِي ",
+            "يَا إِمَامَ الرُّسْلِ يَا سَنَدِي",
             "أَنْتَ بَابُ اللهِ مُعْتَمَدِي",
             "فَبِدُنْيَايَ وَآخِرَتِي",
             "يَا رَسُولَ اللهِ خُذْ بِيَدِي",
@@ -25,9 +25,9 @@
             "صَفْوَةُ الْبَارِي وَخِيرَتُهُ",
             "عَدْلُ أَهْلِ الْحِلِّ وَالْحَرَمِ",
 
-            "مَا رَأَتْ عَيْنٌ وَلَيْسَ تَرَى ",
+            "مَا رَأَتْ عَيْنٌ وَلَيْسَ تَرَى",
             "مِثْلَ طَهَ فِي الْوَرَى بَشَرَا",
-            "خَيْرُ مَنْ فَوْقَ الثَّرَى أَثَرَا ",
+            "خَيْرُ مَنْ فَوْقَ الثَّرَى أَثَرَا",
             "طَاهِرُ الْأَخْلَاقِ وَالشِّيَمِ",
 
             "جَاوَزَ السَّبْعَ الطَّبَاقَ إِلَى",
@@ -79,19 +79,19 @@
     },
     "translation": {
         "en": [
-            "O Leader of the Messengers, O My Support, ",
+            "O Leader of the Messengers, O My Support,",
             "you are the door to Allah, my reliance!",
-            "In my life and in my hereafter, ",
+            "In my life and in my hereafter,",
             "O Messenger of Allah take my hand",
 
-            "I swear by the falling star, ",
+            "I swear by the falling star,",
             "the healthy and the sick are not alike",
             "So renounce both worlds",
             "apart from love for the master of the Arabs and non-Arabs",
 
-            "The master of masters from Mudar, ",
+            "The master of masters from Mudar,",
             "the saviour of people of the desert and cities",
-            "The owner of the verses and chapters (Holy Quran), ",
+            "The owner of the verses and chapters (Holy Quran),",
             "the source of laws and wisdom",
 
             "The illuminated Prophet, whose heart was sweet",
@@ -118,48 +118,48 @@
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 },
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ]
         ],
         "verses": [
             [
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 },
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 }
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 },
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
             ],
             [
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 },
-                {"repeat": 1, "index": 10 },
-                {"repeat": 1, "index": 11 }
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 },
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
             ],
             [
-                {"repeat": 1, "index": 12 },
-                {"repeat": 1, "index": 13 },
-                {"repeat": 1, "index": 14 },
-                {"repeat": 1, "index": 15 }
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 },
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
             ],
             [
-                {"repeat": 1, "index": 16 },
-                {"repeat": 1, "index": 17 },
-                {"repeat": 1, "index": 18 },
-                {"repeat": 1, "index": 19 }
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 },
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
             ],
             [
-                {"repeat": 1, "index": 20 },
-                {"repeat": 1, "index": 21 },
-                {"repeat": 1, "index": 22 },
-                {"repeat": 1, "index": 23 }
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 },
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 }
             ],
             [
-                {"repeat": 1, "index": 24 },
-                {"repeat": 1, "index": 25 },
-                {"repeat": 1, "index": 26 },
-                {"repeat": 1, "index": 27 }
+                { "repeat": 1, "index": 24 },
+                { "repeat": 1, "index": 25 },
+                { "repeat": 1, "index": 26 },
+                { "repeat": 1, "index": 27 }
             ]
         ]
     }

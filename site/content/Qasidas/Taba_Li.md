@@ -1,10 +1,16 @@
++++
+maqam = ['Nahawand']
+json_file = 'taba-li'
++++
 # Ṭāba lī khalʻu ʻidhārī – My wantonness befits me
+
+{{< qasida_meta >}}
 
 ## Verses
 
-{{% get_title  file="qasida/taba-li" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/taba-li" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

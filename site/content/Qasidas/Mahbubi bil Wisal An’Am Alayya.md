@@ -1,10 +1,13 @@
++++
+json_file = 'mahbubi-bil-wisal-an-am-alayya'
++++
 # Mahbubi bil Wisal An’Am Alayya – My beloved has blessed me with union
 
 ## Verses
 
-{{% get_title  file="qasida/mahbubi-bil-wisal-an-am-alayya" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/mahbubi-bil-wisal-an-am-alayya" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

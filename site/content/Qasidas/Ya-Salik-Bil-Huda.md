@@ -1,5 +1,6 @@
 +++
 maqam = ['Sika']
+json_file = 'ya-salik-bil-huda'
 +++
 # Ya Salik Bil-Huda Tariq al-Bakri - O traveler on al-Bakri's guided way
 
@@ -7,9 +8,9 @@ maqam = ['Sika']
 
 ## Verses
 
-{{% get_title file="qasida/ya-salik-bil-huda" lang="en" %}}
+{{% get_title lang="en" %}}
 
-{{< verse file="qasida/ya-salik-bil-huda" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

@@ -1,0 +1,13 @@
+{{- /*
+The single animated divider at the end of a qasida's verses. It renders the first
+shape statically, so it still works without script or with reduced motion.
+*/ -}}
+{{- $orn := site.Data.ornaments -}}
+{{- $shapes := slice -}}
+{{- range $orn.morph }}{{ $shapes = $shapes | append (index $orn.shapes . "detail") }}{{ end -}}
+{{- $first := index $orn.morph 0 -}}
+{{- $js := resources.Get "ornament/morph.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+<div class="ornament-divider ornament-morph ornament-c1" role="separator" data-colours="{{ $orn.colours }}" data-shapes="{{ $shapes | jsonify }}">
+    <svg aria-hidden="true" focusable="false" viewBox="-104 -104 208 208"><path fill="currentColor" fill-rule="evenodd" d="{{ partialCached "ornament/path.html" (dict "name" $first "level" "detail") $first "detail" }}"></path></svg>
+</div>

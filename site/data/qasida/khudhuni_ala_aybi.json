@@ -1,7 +1,7 @@
 {
     "name": {
         "ara": "خذوني على عيبِي",
-        "en": "Take me as I am, with all my flaws"
+        "en": "Khudhūnī ʿalā ʿAybī - Take Me as I Am, with All My Flaws"
     },
     "verses": {
         "ara": [
@@ -58,26 +58,26 @@
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
             ]
         ],
         "verses": [
             [
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ],
             [
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 }
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
             ],
             [
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 }
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
             ],
             [
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 }
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
             ]
         ]
     }

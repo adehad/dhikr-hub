@@ -1,10 +1,16 @@
++++
+maqam = ['Bayat',"'Ajam"]
+json_file = 'qad-kafani'
++++
 # Qad Kafani - (My Lord) Sufficed for me
+
+{{< qasida_meta >}}
 
 ## Verses
 
-{{% get_title  file="qasida/qad-kafani" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/qad-kafani" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

@@ -1,10 +1,13 @@
++++
+json_file = 'sweetest_spring'
++++
 # Al-Mashrab Al-Ahna - The Sweetest Spring
 
 ## Verses
 
-{{% get_title  file="qasida/sweetest_spring" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/sweetest_spring" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

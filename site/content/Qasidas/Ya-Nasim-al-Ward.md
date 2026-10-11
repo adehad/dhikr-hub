@@ -1,5 +1,6 @@
 +++
 maqam = ['Jaharkah']
+json_file = 'ya-nasim-al-ward'
 +++
 # Ya Nasim al-Ward – O, Breeze of the Roses
 
@@ -7,9 +8,9 @@ maqam = ['Jaharkah']
 
 ## Verses
 
-{{% get_title  file="qasida/ya-nasim-al-ward" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/ya-nasim-al-ward" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

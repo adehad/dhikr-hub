@@ -100,48 +100,77 @@ Some guidance during reviews of translation include:
 
 Create a new JSON file in the `site/data/qasida/` directory. The filename should be a simplified version of the Qasida title, using kebab-case (hyphen-separated words).
 
-Each Qasida file must follow this structure:
+Each Qasida file must follow this structure, and is checked against
+[`qasida.schema.json`](https://github.com/adehad/dhikr-hub/blob/main/qasida.schema.json):
 
 ```json
 {
     "name": {
         "ara": "Arabic title with diacritical marks",
-        "en": "English title - with transliteration"
+        "en": "Transliterated Title - English Title"
     },
     "verses": {
         "ara": [
-            ["First line in Arabic"],
-            ["Second line in Arabic"],
-            ["Third line with", "multiple", "segments"]
+            "Chorus line in Arabic",
+            "Second chorus line in Arabic",
+
+            "First verse line in Arabic",
+            "Second verse line in Arabic"
         ],
         "en": [
-            ["First line transliteration"],
-            ["Second line transliteration"],
-            ["Third line", "with multiple", "segments"]
+            "Chorus line transliteration",
+            "Second chorus line transliteration",
+
+            "First verse line transliteration",
+            "Second verse line transliteration"
         ]
     },
     "translation": {
         "en": [
-            ["English translation of first line"],
-            ["English translation of second line"],
-            ["English translation", "of third line", "with multiple segments"]
+            "Chorus line translation",
+            "Second chorus line translation",
+
+            "First verse line translation",
+            "Second verse line translation"
         ]
     },
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0},
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
             ]
         ],
         "verses": [
             [
-                {"repeat": 1, "index": 1},
-                {"repeat": 1, "index": 2}
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ]
         ]
     }
 }
 ```
+
+Each line (for poetry, each half of a couplet) is one string, and `verses.ara`, `verses.en`
+and `translation.en` must have the same length, so index `n` is the same line in all three.
+Blank lines between groups are only for readability.
+
+You do not need to lay the file out by hand. If you use [pre-commit](https://pre-commit.com/),
+the `format-qasida-json` hook rewrites qasida JSON into the house style on commit: 4-space
+indent, one string per line, a blank line between the groups in `order`, and each order
+entry on one line. Run it yourself with `python scripts/format_qasida_json.py <file>`.
+
+#### Chorus and verse order
+
+`order` lists which lines are sung and in what grouping. `index` points into the arrays
+above and `repeat` is how many times that line is sung in a row.
+
+- Put the refrain in `order.chorus` once. The site shows the chorus in its own panel that
+  readers can toggle while they scroll, so it is always to hand.
+- Do not repeat chorus lines inside `order.verses`, even if your source prints the refrain
+  after every stanza. A chorus index in `order.verses` prints the refrain twice.
+- If the qasida has no refrain, use `"chorus": []`. Writing `[[]]` fails validation.
+- Each group in `order.verses` is one numbered stanza on the page.
 
 ### Step 3: Create the Markdown Template
 

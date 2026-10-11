@@ -5,13 +5,13 @@
     },
     "verses": {
         "ara": [
-            "بُشْرَى لَنَا نِلْنَا المُنىَ ",
+            "بُشْرَى لَنَا نِلْنَا المُنىَ",
             "زَالَ العَنَا وَافَى الهَنَا",
-            "وَالدَّهْرُ أَنْجَزَ وَعْدَهُ ",
+            "وَالدَّهْرُ أَنْجَزَ وَعْدَهُ",
             "وَالبِشْرُ أَضْحَى مُعْلَنَا",
 
             "يَا نَفْسِي طِيْبِي بِالِّلقَا",
-            "يَا عَيْنُ قَرِّي  أَعْيُنَا",
+            "يَا عَيْنُ قَرِّي أَعْيُنَا",
             "هَذَا جَمَالُ المُصْطَفَى",
             "أَنْوَارُهُ لاَحَتْ لَنَا",
 
@@ -103,43 +103,42 @@
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 },
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ]
         ],
         "verses": [
-
             [
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 },
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 }
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 },
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
             ],
             [
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 },
-                {"repeat": 1, "index": 10 },
-                {"repeat": 1, "index": 11 }
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 },
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
             ],
             [
-                {"repeat": 1, "index": 12 },
-                {"repeat": 1, "index": 13 },
-                {"repeat": 1, "index": 14 },
-                {"repeat": 1, "index": 15 }
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 },
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
             ],
             [
-                {"repeat": 1, "index": 16 },
-                {"repeat": 1, "index": 17 },
-                {"repeat": 1, "index": 18 },
-                {"repeat": 1, "index": 19 }
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 },
+                { "repeat": 1, "index": 18 },
+                { "repeat": 1, "index": 19 }
             ],
             [
-                {"repeat": 1, "index": 20 },
-                {"repeat": 1, "index": 21 },
-                {"repeat": 1, "index": 22 },
-                {"repeat": 1, "index": 23 }
+                { "repeat": 1, "index": 20 },
+                { "repeat": 1, "index": 21 },
+                { "repeat": 1, "index": 22 },
+                { "repeat": 1, "index": 23 }
             ]
         ]
     }

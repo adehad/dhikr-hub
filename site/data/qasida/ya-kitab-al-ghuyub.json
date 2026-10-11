@@ -1,7 +1,7 @@
 {
     "name": {
         "ara": "يا كتاب الغيوب",
-        "en": "Yā Kitāb al-Ghuyūb - O Book of the Unseen "
+        "en": "Yā Kitāb al-Ghuyūb - O Book of the Unseen"
     },
     "verses": {
         "ara": [
@@ -80,45 +80,43 @@
 
             "And upon you be peace, O Messenger of Mankind,",
             "So long as the besotted sings prayers upon you."
-
         ]
     },
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
             ],
             [
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ]
-
         ],
         "verses": [
             [
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 }
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
             ],
             [
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 }
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
             ],
             [
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 }
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
             ],
             [
-                {"repeat": 1, "index": 10 },
-                {"repeat": 1, "index": 11 }
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
             ],
             [
-                {"repeat": 1, "index": 12 },
-                {"repeat": 1, "index": 13 }
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
             ],
             [
-                {"repeat": 1, "index": 14 },
-                {"repeat": 1, "index": 15 }
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
             ]
         ]
     }

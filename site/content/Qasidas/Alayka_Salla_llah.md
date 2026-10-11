@@ -1,10 +1,16 @@
++++
+maqam = ['Hijaz']
+json_file = 'alayka-salla-llah'
++++
 # 'Alayka ṣallā llāh – May Allah Send Blessings Upon You
+
+{{< qasida_meta >}}
 
 ## Verses
 
-{{% get_title  file="qasida/alayka-salla-llah" lang="en" %}}
+{{% get_title  lang="en" %}}
 
-{{< verse file="qasida/alayka-salla-llah" lang="en" >}}
+{{< verse lang="en" >}}
 
 ## About
 

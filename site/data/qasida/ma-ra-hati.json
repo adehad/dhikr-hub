@@ -1,7 +1,7 @@
 {
     "name": {
         "ara": "ما راحتي",
-        "en": "Mā Rāḥatī – What is my Rest?"
+        "en": "Mā Rāḥatī - What is my Rest?"
     },
     "verses": {
         "ara": [
@@ -79,7 +79,7 @@
             "And my sun shone.",
 
             "And the chalice passed around",
-            "Among my seated companions .",
+            "Among my seated companions.",
 
             "The exchange ceased",
             "By the kindness of my cordiality.",
@@ -94,43 +94,42 @@
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 }
             ]
-
         ],
         "verses": [
             [
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 }
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 }
             ],
             [
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 }
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
             ],
             [
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 }
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 }
             ],
             [
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 }
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
             ],
             [
-                {"repeat": 1, "index": 10 },
-                {"repeat": 1, "index": 11 }
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 }
             ],
             [
-                {"repeat": 1, "index": 12 },
-                {"repeat": 1, "index": 13 }
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
             ],
             [
-                {"repeat": 1, "index": 14 },
-                {"repeat": 1, "index": 15 }
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 }
             ],
             [
-                {"repeat": 1, "index": 16 },
-                {"repeat": 1, "index": 17 }
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
             ]
         ]
     }

@@ -18,12 +18,10 @@
             "مَنْ ذَاقَ خَمْرَ الْعَاشِقِينَ ذَاقَ أطْيَبَ الْمُدَامْ",
             "هَذَا صِرَاطِي مُسْتَقِيْمًا لَا يُنَالُ بِفَنِّ الْكَلَامْ",
 
-
             "سَرَى فِي لَيْلَةِ الْإِسْرَاءِ ظَاهِرًا بِعَالَمِ الْخَفَاء",
-            "دَنَا مِنْ رَبِّ الْعَرْشِ حَتَّى نَالَ مِنْ عَطَايَاهٌ الْأَوْفَى ",
+            "دَنَا مِنْ رَبِّ الْعَرْشِ حَتَّى نَالَ مِنْ عَطَايَاهٌ الْأَوْفَى",
             "مَا زَاغَتْ عَينُ الْمُصْطَفَىْ فَكَانَتْ عَهْدًا وَوَفَا",
             "هَذَا النَّبِي أدْرِكْ بِهِ نَوَالًا وَ مَنَازِلَ الصَّفَا",
-
 
             "شَفِيعِي عِنْدَ هَوْلِ الْحَشْرِ رَافِعًا لِرَايَةِ الْآمَالْ",
             "تَرَى الْبَرَايَا غُبْرًا شُعْثًا خَوْفُهُم مِنْ رُؤْيَةِ الْأَعْمَالْ",
@@ -44,19 +42,16 @@
             "man dhaqa khamra al-'ashiqin dhaqa atyaba al-mudam",
             "hada sirati mustaqiman la yunalu bi-fanni al-kalam",
 
-
             "sara fi laylati al-isra' dhahiran bi-'alam al-khafa",
-            "dana min rabbi al-'arshi hatta nala min 'atayahu al-awfa ",
+            "dana min rabbi al-'arshi hatta nala min 'atayahu al-awfa",
             "ma zaghat 'aynu al-mustafa fakana 'ahdan wawafa",
             "hada al-nabi adrik bihi nawalan wa manazila al-safa",
-
 
             "shafi'i 'indi hawli al-hashri rafi'an li-rayati al-amal",
             "tara al-bara'a ghubran shu'than khawfuhum min ru'yati al-a'mal",
             "la ghawtha 'inda dhaka al-khawfi hin tanqadi al-ajal",
             "illa bi-man 'alayhi manna al-mawla bi-al-qabuli wal-kamal"
         ]
-
     },
     "translation": {
         "en": [
@@ -87,37 +82,36 @@
     "order": {
         "chorus": [
             [
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 0 },
-                {"repeat": 1, "index": 1 },
-                {"repeat": 1, "index": 0 }
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 0 },
+                { "repeat": 1, "index": 1 },
+                { "repeat": 1, "index": 0 }
             ]
-
         ],
         "verses": [
             [
-                {"repeat": 1, "index": 2 },
-                {"repeat": 1, "index": 3 },
-                {"repeat": 1, "index": 4 },
-                {"repeat": 1, "index": 5 }
+                { "repeat": 1, "index": 2 },
+                { "repeat": 1, "index": 3 },
+                { "repeat": 1, "index": 4 },
+                { "repeat": 1, "index": 5 }
             ],
             [
-                {"repeat": 1, "index": 6 },
-                {"repeat": 1, "index": 7 },
-                {"repeat": 1, "index": 8 },
-                {"repeat": 1, "index": 9 }
+                { "repeat": 1, "index": 6 },
+                { "repeat": 1, "index": 7 },
+                { "repeat": 1, "index": 8 },
+                { "repeat": 1, "index": 9 }
             ],
             [
-                {"repeat": 1, "index": 10 },
-                {"repeat": 1, "index": 11 },
-                {"repeat": 1, "index": 12 },
-                {"repeat": 1, "index": 13 }
+                { "repeat": 1, "index": 10 },
+                { "repeat": 1, "index": 11 },
+                { "repeat": 1, "index": 12 },
+                { "repeat": 1, "index": 13 }
             ],
             [
-                {"repeat": 1, "index": 14 },
-                {"repeat": 1, "index": 15 },
-                {"repeat": 1, "index": 16 },
-                {"repeat": 1, "index": 17 }
+                { "repeat": 1, "index": 14 },
+                { "repeat": 1, "index": 15 },
+                { "repeat": 1, "index": 16 },
+                { "repeat": 1, "index": 17 }
             ]
         ]
     }

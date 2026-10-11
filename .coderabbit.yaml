@@ -1,0 +1,102 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: en-US
+
+reviews:
+  profile: chill
+  high_level_summary: true
+  collapse_walkthrough: true
+  changed_files_summary: true
+
+  # Reduce review noise
+  poem: false
+  sequence_diagrams: false
+
+  auto_review:
+    enabled: true
+    drafts: false
+    ignore_title_keywords:
+      - "wip"
+      - "draft"
+
+  path_instructions:
+    - path: "site/data/qasida/**"
+      instructions: "Verify Arabic text & vowel accuracy, schema compliance, and transliteration accuracy."
+    - path: "site/content/Qasidas/**"
+      instructions: "Verify front matter metadata, JSON file references, and source attribution."
+    - path: "site/content/maqam/**"
+      instructions: "Verify maqam classification accuracy."
+    - path: "site/layouts/**"
+      instructions: "Check Hugo template syntax, web accessibility, and RTL text rendering."
+    - path: "qasida.schema.json"
+      instructions: "Flag breaking changes and required field modifications."
+    - path: ".github/workflows/**"
+      instructions: "Review for CI security and deployment safety."
+    - path: "site/hugo.toml"
+      instructions: "Check config impact and module mount changes."
+
+  # Exclude non-code files from review
+  path_filters:
+    - "!site/public/**"
+    - "!site/resources/**"
+    - "!site/themes/**"
+    - "!**/*.min.js"
+    - "!**/*.min.css"
+    - "!site/static/fonts/**"
+
+  tools:
+    # Keep useful ones
+    yamllint:
+      enabled: true
+    actionlint:
+      enabled: true
+    markdownlint:
+      enabled: true
+    languagetool:
+      enabled: true
+    shellcheck:
+      enabled: true
+
+    # Disable irrelevant linters for this content-focused repo
+    swiftlint:
+      enabled: false
+    phpstan:
+      enabled: false
+    detekt:
+      enabled: false
+    rubocop:
+      enabled: false
+    buf:
+      enabled: false
+    regal:
+      enabled: false
+    pmd:
+      enabled: false
+    cppcheck:
+      enabled: false
+    clippy:
+      enabled: false
+    sqlfluff:
+      enabled: false
+    prismaLint:
+      enabled: false
+    oxc:
+      enabled: false
+    shopifyThemeCheck:
+      enabled: false
+    luacheck:
+      enabled: false
+    brakeman:
+      enabled: false
+    htmlhint:
+      enabled: false
+    hadolint:
+      enabled: false
+    checkov:
+      enabled: false
+    flake8:
+      enabled: false
+    circleci:
+      enabled: false
+
+chat:
+  auto_reply: true
