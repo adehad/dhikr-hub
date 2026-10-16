@@ -88,7 +88,7 @@ body {
     display: inline-block;
     flex-direction: column;
     flex-grow: 1;
-    flex: 0 0 100%; // full width = one column
+    flex: 0 0 calc(100% - 1rem); // full width = one column
     box-sizing: border-box; // ensures padding/border don’t overflow
     margin-left: 1rem; // make sure never too close together
 
@@ -136,7 +136,7 @@ body {
         // position: fixed->sticky is not a transition, this animation helps make less jarring
         animation: slideIn 0.4s ease-out forwards;
         max-height: 70vh;
-        overflow-y: scroll;
+        overflow-y: auto;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
     }
 }
