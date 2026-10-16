@@ -1,8 +1,10 @@
 import { publicIdOf, normalizeName, IdentityRegistry } from "./identity";
 import type { Env } from "./identity";
 import { LiveRoom } from "./room";
+import { injectPreview, type RoomMeta } from "./preview";
 
 export { IdentityRegistry, LiveRoom };
+export { injectPreview };
 
 const CORS_HEADERS: Record<string, string> = {
   "Access-Control-Allow-Origin": "*",
@@ -64,10 +66,51 @@ async function boundedBody(request: Request): Promise<string | null> {
   return new TextDecoder().decode(buf);
 }
 
+function roomStub(env: Env, room: string): DurableObjectStub {
+  return env.LIVE_ROOM.get(env.LIVE_ROOM.idFromName(room));
+}
+
+const PREVIEW_CACHE_CONTROL = "public, max-age=30";
+
+// Link-preview crawlers do not run the client, so the invite page carries the
+// room's title in its static HTML. Any failure falls back to the plain page.
+async function invitePage(request: Request, env: Env, ctx: ExecutionContext, room: string): Promise<Response> {
+  const cache = caches.default;
+  try {
+    const cached = await cache.match(request.url);
+    if (cached) return cached;
+    const metaRes = await roomStub(env, room).fetch("https://do/meta");
+    if (metaRes.status !== 200) return env.ASSETS.fetch(request);
+    const meta = (await metaRes.json()) as RoomMeta;
+    const asset = await env.ASSETS.fetch(request);
+    if (!asset.ok || !(asset.headers.get("Content-Type") ?? "").includes("text/html")) return asset;
+    const page = injectPreview(asset, meta, request.url);
+    // The host's own first load arrives before the setlist does; caching that
+    // would pin "0 qasidas" on the first shares of a fresh room.
+    if (meta.trackCount > 0) {
+      page.headers.set("Cache-Control", PREVIEW_CACHE_CONTROL);
+      ctx.waitUntil(cache.put(request.url, page.clone()).catch(() => {}));
+    }
+    return page;
+  } catch {
+    return env.ASSETS.fetch(request);
+  }
+}
+
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     const path = url.pathname;
+
+    const inviteRoom = url.searchParams.get("room");
+    if (
+      request.method === "GET" &&
+      (path === "/live/" || path === "/live/index.html") &&
+      inviteRoom !== null &&
+      /^[a-z2-9]{8}$/.test(inviteRoom)
+    ) {
+      return invitePage(request, env, ctx, inviteRoom);
+    }
 
     if (!path.startsWith("/api/live/")) {
       return env.ASSETS.fetch(request);
@@ -123,22 +166,22 @@ export default {
 
       const rawBody = await boundedBody(request);
       if (rawBody === null) return json({ error: "body too large" }, 413);
-      let parsedBody: { name?: unknown };
+      let parsedBody: { name?: unknown; roomName?: unknown };
       try {
-        parsedBody = JSON.parse(rawBody || "{}") as { name?: unknown };
+        parsedBody = JSON.parse(rawBody || "{}") as { name?: unknown; roomName?: unknown };
       } catch {
         parsedBody = {};
       }
       const name = normalizeName(parsedBody.name, "Listener");
+      const roomName = normalizeName(parsedBody.roomName, `${name}'s room`);
 
       for (let attempt = 0; attempt < 3; attempt++) {
         const room = newRoomHash();
-        const stub = env.LIVE_ROOM.get(env.LIVE_ROOM.idFromName(room));
-        const res = await stub.fetch(
+        const res = await roomStub(env, room).fetch(
           new Request("https://do/init", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ creator: publicId, name }),
+            body: JSON.stringify({ creator: publicId, name, roomName }),
           }),
         );
         if (res.status === 409) continue;
@@ -150,8 +193,7 @@ export default {
 
     const wsMatch = /^\/api\/live\/room\/([a-z2-9]{8})\/ws$/.exec(path);
     if (wsMatch) {
-      const stub = env.LIVE_ROOM.get(env.LIVE_ROOM.idFromName(wsMatch[1]!));
-      return stub.fetch(new Request("https://do/ws", request));
+      return roomStub(env, wsMatch[1]!).fetch(new Request("https://do/ws", request));
     }
 
     return json({ error: "not found" }, 404);
