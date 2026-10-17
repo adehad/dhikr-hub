@@ -1,9 +1,8 @@
-// Morphs the end-of-verses divider through the shapes in data/ornaments.json.
+// Morphs each .ornament-morph element through the shapes in data/ornaments.json.
 // The geometry must stay in step with layouts/partials/ornament/path.html.
 (() => {
-  const el = document.querySelector(".ornament-morph");
-  if (!el || !("IntersectionObserver" in window)) return;
-  const path = el.querySelector("path");
+  const els = document.querySelectorAll(".ornament-morph");
+  if (!els.length || !("IntersectionObserver" in window)) return;
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
 
   const N = 120;
@@ -46,8 +45,6 @@
     return { rings: def.rings.map(ring), sats, n: def.rings[0].n || 0 };
   };
 
-  const shapes = JSON.parse(el.dataset.shapes).map(geometry);
-  const colours = Number(el.dataset.colours) || 1;
   const zero = new Float64Array(N);
   const tmp = new Float64Array(N);
   const num = (v) => (v * 100).toFixed(1);
@@ -106,52 +103,61 @@
   const spin = (g) => (g.n && TAU / g.n <= Math.PI / 3 ? TAU / g.n : 0);
   const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
-  let elapsed = 0;
-  let last = 0;
-  let raf = 0;
-  let visible = false;
-  let colour = 1;
+  const animate = (el) => {
+    const path = el.querySelector("path");
+    const shapes = JSON.parse(el.dataset.shapes).map(geometry);
+    const colours = Number(el.dataset.colours) || 1;
+    let elapsed = 0;
+    let last = 0;
+    let raf = 0;
+    let visible = false;
+    let colour = 1;
 
-  const setColour = (c) => {
-    if (c === colour) return;
-    el.classList.replace("ornament-c" + colour, "ornament-c" + c);
-    colour = c;
-  };
+    const setColour = (c) => {
+      if (c === colour) return;
+      el.classList.replace("ornament-c" + colour, "ornament-c" + c);
+      colour = c;
+    };
 
-  const frame = (now) => {
-    elapsed += Math.max(0, now - last) / 1000;
-    last = now;
-    const x = elapsed / STEP;
-    const i = Math.floor(x);
-    const ph = x - i;
-    const from = shapes[i % shapes.length];
-    const to = shapes[(i + 1) % shapes.length];
-    const m = ph < HOLD ? 0 : ease((ph - HOLD) / (1 - HOLD));
-    path.setAttribute("d", morph(from, to, m, UP + m * spin(to)));
-    setColour(((ph < HOLD ? i : i + 1) % colours) + 1);
-    raf = requestAnimationFrame(frame);
-  };
-
-  const update = () => {
-    const run = visible && !motion.matches && !document.hidden;
-    if (run && !raf) {
-      last = performance.now();
+    const frame = (now) => {
+      elapsed += Math.max(0, now - last) / 1000;
+      last = now;
+      const x = elapsed / STEP;
+      const i = Math.floor(x);
+      const ph = x - i;
+      const from = shapes[i % shapes.length];
+      const to = shapes[(i + 1) % shapes.length];
+      const m = ph < HOLD ? 0 : ease((ph - HOLD) / (1 - HOLD));
+      path.setAttribute("d", morph(from, to, m, UP + m * spin(to)));
+      setColour(((ph < HOLD ? i : i + 1) % colours) + 1);
       raf = requestAnimationFrame(frame);
-    } else if (!run && raf) {
-      cancelAnimationFrame(raf);
-      raf = 0;
-      if (motion.matches) {
-        elapsed = 0;
-        path.setAttribute("d", morph(shapes[0], shapes[0], 0, UP));
-        setColour(1);
+    };
+
+    const update = () => {
+      const run = visible && !motion.matches && !document.hidden;
+      if (run && !raf) {
+        last = performance.now();
+        raf = requestAnimationFrame(frame);
+      } else if (!run && raf) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+        if (motion.matches) {
+          elapsed = 0;
+          path.setAttribute("d", morph(shapes[0], shapes[0], 0, UP));
+          setColour(1);
+        }
       }
-    }
+    };
+
+    new IntersectionObserver((entries) => {
+      visible = entries[0].isIntersecting;
+      update();
+    }).observe(el);
+    return update;
   };
 
-  new IntersectionObserver((entries) => {
-    visible = entries[0].isIntersecting;
-    update();
-  }).observe(el);
-  motion.addEventListener("change", update);
-  document.addEventListener("visibilitychange", update);
+  const updates = Array.from(els, animate);
+  const updateAll = () => updates.forEach((update) => update());
+  motion.addEventListener("change", updateAll);
+  document.addEventListener("visibilitychange", updateAll);
 })();

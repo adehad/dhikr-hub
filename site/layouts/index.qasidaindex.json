@@ -1,0 +1,11 @@
+{{- $items := slice -}}
+{{- range where site.RegularPages "Params.json_file" "!=" nil -}}
+{{- $d := index site.Data.qasida .Params.json_file -}}
+{{- $items = $items | append (dict
+      "slug" .Params.json_file
+      "title" (or (and $d $d.name.en) .File.ContentBaseName)
+      "titleAra" (or (and $d $d.name.ara) "")
+      "url" .RelPermalink
+      "maqam" (.Params.maqam | default slice)) -}}
+{{- end -}}
+{{- jsonify (dict "qasidas" $items) -}}

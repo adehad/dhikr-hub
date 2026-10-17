@@ -1,4 +1,7 @@
 ---
+ci:
+  # pre-commit.ci runners have no npm; the Live worker checks workflow runs the typecheck.
+  skip: [tsc]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -22,7 +25,7 @@ repos:
         language: python
         types_or: [text, json, markdown]
         args: ["-L", "murr"]
-        exclude: ^site/static/favicon\.svg$
+        exclude: ^(site/static/favicon\.svg|package-lock\.json)$
         require_serial: false
   - repo: local
     hooks:
@@ -49,3 +52,11 @@ repos:
         types_or: [text, json, markdown]
         args: [--excluded-chars, (ﷺ)]
         files: ^site/data/
+  - repo: local
+    hooks:
+      - id: tsc
+        name: tsc typecheck
+        entry: npm run typecheck
+        language: system
+        pass_filenames: false
+        files: (\.ts$|tsconfig.*\.json$|^package\.json$)

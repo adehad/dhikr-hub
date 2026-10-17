@@ -1,0 +1,212 @@
+{{- $orn := site.Data.ornaments -}}
+<div id="live-app"
+     data-endpoint="{{ site.Params.LiveEndpoint | default `` }}"
+     data-qasida-base="{{ "api/qasida/" | relURL }}"
+     data-index-url="{{ "qasida-index.json" | relURL }}"
+     data-dividers="{{ $orn.dividers | jsonify }}"
+     data-ornament-colours="{{ $orn.colours }}">
+
+  {{ partial "live/icons.html" . }}
+  {{ partial "ornament/sprite.html" $orn.dividers }}
+
+  <section id="live-lobby" hidden>
+    <div class="live-card live-card-join">
+      <h2>Join a room</h2>
+      <p class="live-hint">Ask the host for the 8-letter room code, or open their invite link.</p>
+      <form id="live-join-form" class="live-row">
+        <label class="live-sr-only" for="live-join-code">Room code</label>
+        <input type="text" id="live-join-code" class="live-code-input" maxlength="8"
+               autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="room code">
+        <button class="live-btn live-btn-primary" id="live-join-room" type="submit">Join</button>
+      </form>
+    </div>
+
+    <div class="live-card live-card-host">
+      <div class="live-card-head">
+        <h2>Host a room</h2>
+        <button class="live-btn" id="live-setlist-new" type="button">
+          <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-plus"></use></svg>New setlist
+        </button>
+      </div>
+      <table class="live-table" id="live-setlist-table">
+        <thead><tr><th scope="col">Setlist</th><th scope="col">Qasidas</th><th scope="col"><span class="live-sr-only">Actions</span></th></tr></thead>
+        <tbody id="live-setlist-list"></tbody>
+      </table>
+      <p id="live-setlist-empty" class="live-hint">No setlists yet. Make one here, or start an empty room and add qasidas as you go.</p>
+      <div class="live-row">
+        <button class="live-btn" id="live-create-room" type="button">
+          <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-radio"></use></svg>Start an empty room
+        </button>
+      </div>
+    </div>
+
+    <div class="live-card live-card-editor" id="live-editor" hidden>
+      <div class="live-card-head"><h2 id="live-editor-title">New setlist</h2></div>
+      <label class="live-field">Name <input type="text" id="live-setlist-name" maxlength="80" autocomplete="off"></label>
+      <div id="live-editor-body"></div>
+      <div class="live-row">
+        <button class="live-btn live-btn-primary" id="live-setlist-save" type="button">Save setlist</button>
+        <button class="live-btn" id="live-setlist-cancel" type="button">Cancel</button>
+      </div>
+    </div>
+
+    <div class="live-card live-card-recent" id="live-recent" hidden>
+      <div class="live-card-head"><h2>Recent rooms</h2></div>
+      <ul id="live-recent-list" class="live-recent-list"></ul>
+      <button class="live-btn" id="live-recent-more" type="button" hidden>Show more</button>
+    </div>
+
+    <div class="live-card live-card-you">
+      <h2>You</h2>
+      <label class="live-field">Your name <input type="text" id="live-name" maxlength="64" placeholder="Listener" autocomplete="nickname"></label>
+      <details class="live-details">
+        <summary><svg class="live-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"><use href="#li-smartphone"></use></svg>Use this account on another device</summary>
+        <p>This ID <em>is</em> your account. Anyone who has it can act as you. Share it only with your own devices.</p>
+        <div class="live-row">
+          <code id="live-full-id"></code>
+          <button class="live-btn live-btn-icon" id="live-copy-id" type="button" aria-label="Copy ID">
+            <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-copy"></use></svg>
+          </button>
+        </div>
+        <label class="live-field">Paste an ID from another device
+          <input type="text" id="live-paste-id" autocomplete="off">
+        </label>
+        <button class="live-btn" id="live-adopt-id" type="button">Log in with pasted ID</button>
+      </details>
+    </div>
+  </section>
+
+  <section id="live-event" hidden>
+    <div class="live-topbar">
+      <span id="live-status" class="live-status" role="status"><span class="live-dot" aria-hidden="true"></span><span id="live-status-text">connecting</span></span>
+      <span id="live-role" class="live-pill" hidden></span>
+      <button class="live-btn live-btn-code" id="live-share-room" type="button" title="Copy invite link">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-link"></use></svg>
+        <span id="live-room-code"></span>
+        <span class="live-sr-only">Copy invite link</span>
+      </button>
+      <button class="live-btn live-topbar-action" id="live-people-open" type="button" title="People">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-users"></use></svg>
+        <span class="live-sr-only">People</span>
+        <span id="live-roster-count">0</span>
+        <span class="live-btn-label" aria-hidden="true">People</span>
+      </button>
+      <button class="live-btn live-btn-icon live-topbar-action" id="live-setlist-open" type="button" aria-label="Setlist" title="Setlist">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-list-music"></use></svg>
+        <span class="live-btn-label">Setlist</span>
+      </button>
+      <button class="live-btn live-btn-icon live-topbar-action" id="live-leave" type="button" aria-label="Leave live" title="Leave live">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-log-out"></use></svg>
+        <span class="live-btn-label">Leave</span>
+      </button>
+    </div>
+
+    <div class="live-now" id="live-now">
+      <div class="live-now-main">
+        <span class="live-now-badge" id="live-now-badge" role="img" aria-label="Live">
+          {{- partial "ornament/morph.html" (dict "page" . "class" "live-indicator" "role" "presentation" "script" false) -}}
+          <svg class="live-icon live-pause" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24"><use href="#li-pause"></use></svg>
+        </span>
+        <button type="button" class="live-now-text" id="live-now-main" aria-label="Room controls" aria-describedby="live-now-index live-now-title">
+          <span class="live-now-index" id="live-now-index"></span>
+          <span id="live-join-flash" class="live-join-flash" aria-hidden="true" hidden><svg class="live-icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24"><use href="#li-user-plus"></use></svg><span id="live-join-count">+1</span></span>
+          <span class="live-now-title"><span class="live-marquee" id="live-now-title">Waiting for the host</span></span>
+        </button>
+      </div>
+      <span id="live-join-live" class="live-sr-only" aria-live="polite"></span>
+    </div>
+
+    <div class="live-hostbar live-host-only" id="live-hostbar" hidden>
+      <button class="live-btn live-btn-icon live-host-only" id="live-prev" type="button" aria-label="Previous qasida" hidden>
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-skip-back"></use></svg>
+      </button>
+      <button class="live-btn" id="live-chorus" type="button" aria-pressed="false" aria-label="Chorus, hidden from followers" title="Chorus, hidden from followers">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-eye-off"></use></svg><span id="live-chorus-text">Chorus</span>
+      </button>
+      <button class="live-btn" id="live-people-bar" type="button" title="People">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-users"></use></svg>
+        <span class="live-sr-only">People</span>
+        <span id="live-roster-count-bar">0</span>
+      </button>
+      <button class="live-btn live-btn-icon" id="live-setlist-bar" type="button" aria-label="Setlist" title="Setlist">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-list-music"></use></svg>
+      </button>
+      <button class="live-btn live-btn-primary" id="live-follow-me" type="button">
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-mic"></use></svg>Lead from here
+      </button>
+      <button class="live-btn live-btn-icon live-host-only" id="live-next" type="button" aria-label="Next qasida" hidden>
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-skip-forward"></use></svg>
+      </button>
+    </div>
+
+    <div class="live-sub">
+      <a id="live-share-qasida" class="live-link" hidden>
+        <svg class="live-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24"><use href="#li-external-link"></use></svg>Open the qasida page
+      </a>
+    </div>
+
+    <div id="live-verses"></div>
+    <div id="live-morph-holder" hidden>{{ partial "ornament/morph.html" . }}</div>
+
+    <button id="live-jump" class="live-backtolive" type="button" hidden>
+      <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-arrow-down-to-line"></use></svg>
+      <span id="live-banner-text">Back to live</span>
+    </button>
+
+    <dialog id="live-menu-dialog" class="live-dialog live-sheet" aria-labelledby="live-menu-title">
+      <div class="live-dialog-head">
+        <h2 id="live-menu-title">Room</h2>
+        <button class="live-btn live-btn-icon" id="live-menu-close" type="button" aria-label="Minimise" title="Minimise">
+          <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-chevron-down"></use></svg>
+        </button>
+      </div>
+      <div class="live-dialog-body" id="live-menu-body">
+        <button class="live-btn live-btn-primary" id="live-menu-setlist" type="button" hidden>
+          <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-list-music"></use></svg>Open setlist
+        </button>
+      </div>
+    </dialog>
+
+    <dialog id="live-setlist-dialog" class="live-dialog" aria-labelledby="live-setlist-dialog-title">
+      <div class="live-dialog-head">
+        <h2 id="live-setlist-dialog-title">Setlist</h2>
+        <button class="live-btn live-btn-icon" id="live-setlist-close" type="button" aria-label="Minimise" title="Minimise">
+          <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-chevron-down"></use></svg>
+        </button>
+      </div>
+      <div class="live-dialog-body">
+        <div id="live-setlist-body"></div>
+        <div class="live-row">
+          <button class="live-btn" id="live-download-setlist" type="button" hidden>
+            <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-download"></use></svg>Save to my setlists
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="live-people-dialog" class="live-dialog" aria-labelledby="live-people-dialog-title">
+      <div class="live-dialog-head">
+        <h2 id="live-people-dialog-title">People</h2>
+        <button class="live-btn live-btn-icon" id="live-people-close" type="button" aria-label="Minimise" title="Minimise">
+          <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-chevron-down"></use></svg>
+        </button>
+      </div>
+      <div class="live-dialog-body">
+        <table class="live-table">
+          <thead><tr><th scope="col">Name</th><th scope="col">Role</th></tr></thead>
+          <tbody id="live-roster"></tbody>
+        </table>
+        <div class="live-row live-host-only" hidden>
+          <button class="live-btn live-btn-danger" id="live-end-event" type="button">
+            <svg class="live-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><use href="#li-power"></use></svg>End event for everyone
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </section>
+
+  <div id="live-toasts" class="live-toasts" role="status" aria-live="polite"></div>
+</div>
+
+{{ $live := resources.Get "live/main.ts" | js.Build (dict "minify" true "target" "es2022") | fingerprint }}
+<script type="module" src="{{ $live.RelPermalink }}"></script>

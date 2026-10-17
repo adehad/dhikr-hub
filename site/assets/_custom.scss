@@ -54,12 +54,17 @@
     --transliteration-font-perc: 80%;
 
     --repeat-mark-color: #aa622b;
+
+    // Open chorus tab text on the black tab
+    --chorus-open-color: #adb5bd;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         // Lighter copper keeps at least 3:1 on the dark theme's #343a40
         --repeat-mark-color: #e0a172;
+        // Open chorus tab text on the light tab
+        --chorus-open-color: #5c636a;
     }
 }
 
@@ -88,7 +93,7 @@ body {
     display: inline-block;
     flex-direction: column;
     flex-grow: 1;
-    flex: 0 0 100%; // full width = one column
+    flex: 0 0 calc(100% - 1rem); // full width = one column
     box-sizing: border-box; // ensures padding/border don’t overflow
     margin-left: 1rem; // make sure never too close together
 
@@ -127,7 +132,15 @@ body {
 
     &:checked {
         &~label[for="chorus-toggle"] {
-            color: #b27d54;
+            color: var(--chorus-open-color);
+
+            .chorus-tab-show {
+                display: none;
+            }
+
+            .chorus-tab-hide {
+                display: inline;
+            }
         }
     }
 
@@ -136,7 +149,7 @@ body {
         // position: fixed->sticky is not a transition, this animation helps make less jarring
         animation: slideIn 0.4s ease-out forwards;
         max-height: 70vh;
-        overflow-y: scroll;
+        overflow-y: auto;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
     }
 }
@@ -169,6 +182,9 @@ label[for="chorus-toggle"] {
     color: var(--body-background);
     writing-mode: sideways-rl;
 
+    .chorus-tab-hide {
+        display: none;
+    }
 }
 
 .transliteration {
@@ -701,4 +717,1282 @@ body.show-repeat-marks {
 
 .ornament-morph+h2 {
     margin-top: 1rem;
+}
+
+// ============================================
+// Live follow-along
+// ============================================
+
+#live-app {
+    // Role colours reuse the ornament palette, which already clears 5:1 on both themes.
+    --live-host: var(--ornament-1);
+    --live-follow: var(--ornament-2);
+    --live-ok: var(--ornament-5);
+    // White text on it clears 5:1; it stays the same in both themes.
+    --live-gold: #8a6a12;
+    --live-live: #c8102e;
+    --live-surface: var(--gray-100);
+    --live-border: var(--gray-200);
+    --live-muted: var(--gray-500);
+    // Set from main.ts to the site header's height while the event view shows.
+    --live-header-h: 0px;
+    --live-sticky-top: var(--live-header-h);
+    // Top of the bands that stick below the now strip.
+    --live-bar-top: var(--live-sticky-top);
+
+    --live-dot: var(--live-live);
+
+    @media (prefers-color-scheme: dark) {
+        --live-live: #ff7b7b;
+        // #ff7b7b reads as pink at dot size on the card grey.
+        --live-dot: #ff6b6b;
+    }
+
+    @media screen and (min-width: $mobile-breakpoint) {
+        --live-sticky-top: 0px;
+        --live-bar-top: calc(var(--live-sticky-top) + 64px);
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+
+    .live-sr-only,
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .live-icon {
+        flex: none;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .live-hint {
+        font-size: 0.9rem;
+        opacity: 0.75;
+        margin: 0.25rem 0 0.75rem;
+    }
+
+    .live-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+
+    // ----- buttons -----
+
+    .live-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0 0.9rem;
+        border: 1px solid var(--live-border);
+        border-radius: 10px;
+        background: var(--live-surface);
+        color: var(--body-font-color);
+        font: inherit;
+        font-size: 0.95rem;
+        line-height: 1.2;
+        white-space: nowrap;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+
+        &:hover {
+            border-color: var(--live-muted);
+        }
+
+        &[disabled] {
+            opacity: 0.4;
+            cursor: default;
+        }
+
+        &.is-confirmed {
+            color: var(--live-ok);
+            border-color: var(--live-ok);
+        }
+    }
+
+    .live-btn-icon {
+        padding: 0;
+        width: 44px;
+    }
+
+    .live-btn-primary {
+        background: var(--color-link);
+        border-color: var(--color-link);
+        color: #fff;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .live-btn-danger {
+        color: var(--live-live);
+        border-color: var(--live-live);
+        background: transparent;
+    }
+
+    .live-btn-host {
+        color: var(--live-host);
+        border-color: var(--live-host);
+        background: transparent;
+    }
+
+    .live-btn-quiet {
+        border-color: transparent;
+        background: transparent;
+
+        &:hover {
+            background: var(--live-surface);
+        }
+    }
+
+    .live-btn-star[aria-pressed="true"] {
+        color: var(--live-host);
+
+        .live-icon {
+            fill: currentColor;
+        }
+    }
+
+    .live-btn-remove {
+        color: var(--live-live);
+    }
+
+    .live-btn-add {
+        color: var(--color-link);
+        border-color: var(--color-link);
+        background: transparent;
+    }
+
+    .live-btn-code {
+        font-family: ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+        letter-spacing: 0.12em;
+        font-size: 1.05rem;
+    }
+
+    // Matches the chorus pin tab on the qasida pages, copper when on
+    #live-chorus {
+        border: 0;
+        border-radius: 5px 15px 15px 5px;
+        background: var(--body-font-color);
+        color: var(--body-background);
+
+        &[aria-pressed="true"] {
+            background: var(--live-gold);
+            color: #fff;
+            border-color: var(--live-gold);
+        }
+    }
+
+    // ----- pills -----
+
+    .live-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        border: 1.5px solid currentColor;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        line-height: 1.3;
+        white-space: nowrap;
+        color: var(--live-muted);
+    }
+
+    .live-pill-host {
+        color: var(--live-host);
+    }
+
+    .live-pill-lead {
+        color: var(--live-live);
+    }
+
+    .live-pill-follow {
+        color: var(--live-follow);
+    }
+
+    .live-pill-you {
+        text-transform: none;
+        letter-spacing: 0;
+        margin-inline-start: 0.4rem;
+    }
+
+    // ----- forms -----
+
+    .live-field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    input[type="text"],
+    input[type="search"] {
+        min-height: 44px;
+        padding: 0 0.75rem;
+        border: 1px solid var(--live-border);
+        border-radius: 10px;
+        background: var(--body-background);
+        color: var(--body-font-color);
+        font: inherit;
+        font-size: 1rem;
+    }
+
+    .live-code-input {
+        flex: 1;
+        min-width: 0;
+        min-height: 48px;
+        font-family: ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+        font-size: 1.4rem;
+        letter-spacing: 0.18em;
+        text-transform: lowercase;
+    }
+
+    .live-search {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0.75rem 0 0.25rem;
+
+        input {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+
+    // ----- lobby cards -----
+
+    .live-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid var(--live-border);
+        border-top-width: 5px;
+        border-radius: 14px;
+        background: var(--live-surface);
+
+        h2 {
+            margin: 0 0 0.25rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    .live-card-join {
+        border-top-color: var(--live-follow);
+    }
+
+    .live-card-host {
+        border-top-color: var(--live-host);
+    }
+
+    .live-card-editor {
+        border-top-color: var(--color-link);
+    }
+
+    .live-card-you,
+    .live-card-recent {
+        border-top-color: var(--live-muted);
+    }
+
+    .live-recent-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .live-recent-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.25rem;
+        margin: 0;
+        border-top: 1px solid var(--live-border);
+        border-radius: 8px;
+
+        &:hover,
+        &:focus-within {
+            background: var(--body-background);
+        }
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
+    .live-recent-open {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex: 1;
+        min-width: 0;
+        min-height: 44px;
+        padding: 0.25rem 0.5rem;
+        border: 0;
+        border-radius: 8px;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        text-align: start;
+        cursor: pointer;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    .live-recent-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .live-recent-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        flex: none;
+        font-size: 0.85rem;
+        opacity: 0.85;
+    }
+
+    .live-recent-count {
+        font-variant-numeric: tabular-nums;
+    }
+
+    .live-recent-live {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--live-dot);
+        animation: live-recent-pulse 1s ease-out infinite;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+            box-shadow: none;
+        }
+    }
+
+    // --live-muted falls below 4.5:1 on the row backgrounds, so the name keeps the text colour.
+    .live-recent-dead .live-recent-name {
+        color: inherit;
+        text-decoration: line-through;
+    }
+
+    .live-recent-remove {
+        &:hover,
+        &:focus-visible {
+            color: var(--live-live);
+        }
+    }
+
+    .live-recent-confirm {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.25rem 0.5rem 0.5rem;
+        font-size: 0.9rem;
+
+        .live-recent-confirm-text {
+            flex: 1 1 100%;
+        }
+    }
+
+    #live-recent-more {
+        margin-top: 0.25rem;
+    }
+
+    .live-card-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .live-details {
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+
+        summary {
+            cursor: pointer;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--color-link);
+        }
+    }
+
+    #live-full-id {
+        flex: 1;
+        min-width: 0;
+        word-break: break-all;
+        user-select: all;
+    }
+
+    // ----- tables -----
+
+    .live-table {
+        display: table;
+        width: 100%;
+        margin: 0.25rem 0 0.5rem;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+
+        th,
+        td {
+            padding: 0.3rem 0.5rem;
+            border: 0;
+            border-top: 1px solid var(--live-border);
+            text-align: start;
+            vertical-align: middle;
+        }
+
+        thead th {
+            border-top: 0;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        .live-td-num {
+            width: 2.5rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+            opacity: 0.7;
+        }
+
+        .live-td-title {
+            width: 100%;
+            padding-inline: 0.25rem;
+            overflow-wrap: anywhere;
+        }
+
+        .live-track-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            width: 100%;
+            min-height: 44px;
+            padding: 0.2rem 0.4rem;
+            border: 0;
+            border-radius: 8px;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            text-align: start;
+            cursor: pointer;
+
+            .live-icon {
+                opacity: 0.55;
+            }
+
+            &:hover {
+                background: var(--live-surface);
+
+                .live-icon {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .live-track-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .live-td-actions {
+            width: 1%;
+            white-space: nowrap;
+            text-align: end;
+            padding-inline-end: 0;
+        }
+
+        .live-actions {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.15rem;
+        }
+
+        .live-role-cell {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.25rem;
+            flex-wrap: wrap;
+            // Wide enough for a leading host's chips and star button on one
+            // row; the name column, which wraps anywhere, gives up the space.
+            min-width: 13rem;
+
+            .live-actions {
+                margin-inline-start: auto;
+            }
+        }
+
+        .live-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+
+            .live-pill {
+                font-size: 0.66rem;
+                padding: 0.15rem 0.45rem;
+            }
+        }
+
+        tr.live-row-current td {
+            background: color-mix(in srgb, var(--live-live) 9%, transparent);
+        }
+
+        tr.live-row-current td:first-child {
+            box-shadow: inset 4px 0 0 var(--live-live);
+            padding-inline-start: 0.9rem;
+            opacity: 1;
+        }
+
+        tr.live-row-lead td:first-child {
+            box-shadow: inset 4px 0 0 var(--live-live);
+            padding-inline-start: 0.9rem;
+        }
+    }
+
+    .live-setlist {
+        .live-td-num {
+            width: 2ch;
+            padding-inline: 0.15rem;
+            font-size: 0.8rem;
+        }
+
+        tr.live-row-current td.live-td-num {
+            width: auto;
+            padding-inline-start: 0.9rem;
+            padding-inline-end: 0.35rem;
+        }
+
+        .live-td-title {
+            text-align: center;
+        }
+
+        .live-track-btn {
+            justify-content: center;
+            text-align: center;
+        }
+
+        thead .live-th-title {
+            text-align: center;
+            padding-block: 0;
+        }
+
+        .live-th-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+    }
+
+    .live-btn-ara {
+        width: 44px;
+        padding: 0;
+        font-size: 1rem;
+        letter-spacing: 0;
+        text-transform: none;
+        line-height: 1;
+
+        &[aria-pressed="true"] {
+            color: var(--color-link);
+            border-color: var(--color-link);
+        }
+    }
+
+    .live-rec {
+        display: inline-flex;
+        color: var(--live-live);
+        animation: live-rec 1s ease-in-out infinite;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+
+    .live-rec-star {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
+
+    .live-updown {
+        display: inline-flex;
+
+        .live-btn {
+            width: 44px;
+            padding: 0;
+        }
+
+        .live-btn:first-child {
+            border-start-end-radius: 0;
+            border-end-end-radius: 0;
+            border-inline-end: 0;
+        }
+
+        .live-btn:last-child {
+            border-start-start-radius: 0;
+            border-end-start-radius: 0;
+        }
+    }
+
+    .live-setlist-title {
+        display: block;
+    }
+
+    .live-td-peer .live-pill-you {
+        vertical-align: middle;
+    }
+
+    .live-setlist-ara {
+        display: block;
+        font-size: 1.05rem;
+        line-height: 1.4;
+        opacity: 0.8;
+    }
+
+    .live-peer-id {
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.6;
+        font-family: ui-monospace, monospace;
+    }
+
+    .live-picker-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 40vh;
+        overflow-y: auto;
+        border: 1px solid var(--live-border);
+        border-radius: 10px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+            border-top: 1px solid var(--live-border);
+
+            &:first-child {
+                border-top: 0;
+            }
+        }
+
+        .live-picker-title {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .live-setlist-ara {
+            display: inline;
+            flex: none;
+            max-width: 40%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    // ----- event: top bar -----
+
+    .live-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        align-items: center;
+        margin-bottom: 0.6rem;
+
+        .live-btn-label {
+            display: none;
+        }
+    }
+
+    // The host bar already carries People and Setlist; the sheet keeps its own.
+    &.is-host #live-event > .live-topbar {
+        #live-people-open,
+        #live-setlist-open {
+            display: none;
+        }
+    }
+
+    .live-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.8rem;
+        opacity: 0.85;
+
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--live-muted);
+        }
+
+        &[data-state="open"] .live-dot {
+            background: var(--live-ok);
+        }
+
+        &[data-state="connecting"] .live-dot,
+        &[data-state="closed"] .live-dot {
+            background: #e0a800;
+            animation: live-pulse 1.2s ease-in-out infinite;
+        }
+    }
+
+    // ----- event: now strip -----
+
+    .live-now {
+        position: sticky;
+        top: 0;
+        z-index: 92;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.4rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid var(--live-border);
+        border-inline-start: 6px solid var(--live-live);
+        border-radius: 10px;
+        background: var(--body-background);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+        &.is-detached {
+            border-inline-start-color: var(--live-muted);
+
+            .live-now-badge {
+                color: var(--live-muted);
+            }
+
+            .live-indicator.ornament-morph {
+                display: none;
+            }
+
+            .live-pause {
+                display: inline;
+                color: var(--live-muted);
+                animation: live-pause-pulse 2s ease-in-out infinite;
+
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: $mobile-breakpoint) {
+            position: fixed;
+            top: 0;
+            left: 3.25rem;
+            right: 3.25rem;
+            height: var(--live-header-h);
+            margin: 0;
+            z-index: 101;
+            box-sizing: border-box;
+            padding-block: 0;
+            border-top: 0;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+    .live-now-main {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-inline: 0.5rem 0.4rem;
+    }
+
+    .live-now-text {
+        flex: 1;
+        min-width: 0;
+        display: grid;
+        // The index and the join flash share the first row; the title spans it.
+        grid-template-columns: minmax(0, max-content) 1fr;
+        align-items: center;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        text-align: start;
+        cursor: pointer;
+    }
+
+    .live-now-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--live-live);
+    }
+
+    .live-pause {
+        display: none;
+    }
+
+    .live-now .live-indicator.ornament-morph {
+        display: inline-flex;
+        width: 22px;
+        height: 22px;
+        max-width: none;
+        margin: 0;
+        color: var(--live-live);
+        animation: live-rec 1s ease-in-out infinite;
+        transition: none;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+
+    .live-now-index {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .live-join-flash {
+        display: inline-flex;
+        align-items: center;
+        justify-self: start;
+        gap: 0.2rem;
+        margin-inline-start: 0.4rem;
+        color: var(--live-ok);
+        font-size: 0.8rem;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        animation: live-join-fade 1.2s ease-out forwards;
+
+        .live-icon {
+            width: 14px;
+            height: 14px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+
+    .live-now-title {
+        grid-column: 1 / -1;
+        display: block;
+        min-width: 0;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .live-now-title.is-overflowing {
+        text-overflow: clip;
+
+        .live-marquee {
+            display: inline-block;
+            animation: live-marquee 12s linear infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            text-overflow: ellipsis;
+
+            .live-marquee {
+                display: inline;
+                animation: none;
+            }
+        }
+    }
+
+    .live-hostbar {
+        position: sticky;
+        top: var(--live-bar-top);
+        z-index: 92;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.4rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.25rem 0;
+        margin-bottom: 0.25rem;
+        background: var(--body-background);
+
+        // Prev and next sit at the screen edges on phones, with the other
+        // controls between them.
+        @media screen and (max-width: $mobile-breakpoint) {
+            margin-inline: -1rem;
+            padding-inline: 0.25rem;
+        }
+    }
+
+    // The main site's chorus tab and panel, moved below the now strip and,
+    // for hosts, the host bar.
+    #live-verses label[for="chorus-toggle"] {
+        top: calc(var(--live-bar-top) + 8px);
+    }
+
+    #live-verses #chorus-toggle:checked ~ .sticky-chorus {
+        top: calc(var(--live-bar-top) + 8px);
+    }
+
+    &.is-host #live-verses {
+        label[for="chorus-toggle"] {
+            top: calc(var(--live-bar-top) + 62px);
+        }
+
+        #chorus-toggle:checked ~ .sticky-chorus {
+            top: calc(var(--live-bar-top) + 62px);
+        }
+    }
+
+    #live-verses .live-chorus-live {
+        display: none;
+    }
+
+    // The host's chorus outranks both the closed tab and the open grey.
+    #live-verses.live-host-chorus-on label[for="chorus-toggle"] {
+        background-color: var(--live-gold);
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3em;
+
+        .live-chorus-live {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            flex: none;
+            stroke: currentColor;
+            fill: none;
+            // The sideways writing mode turns the glyph with the text; turn it back upright
+            transform: rotate(90deg);
+        }
+    }
+
+    .live-sub {
+        min-height: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .live-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        min-height: 44px;
+        font-size: 0.9rem;
+        color: var(--color-link);
+    }
+
+    // ----- event: back to live -----
+
+    .live-backtolive {
+        position: fixed;
+        left: 50%;
+        bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+        transform: translateX(-50%);
+        z-index: 150;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 48px;
+        max-width: calc(100vw - 2rem);
+        padding: 0 1.2rem;
+        border: 0;
+        border-radius: 999px;
+        // White text on --live-live's dark-theme pink is 2.5:1; this red clears 5:1 in both themes.
+        background: #c8102e;
+        color: #fff;
+        font: inherit;
+        font-weight: 500;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+
+        span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    // ----- dialogs -----
+
+    .live-dialog[open] {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .live-dialog {
+        width: #{"min(100vw - 1.5rem, 40rem)"};
+        max-height: 85vh;
+        padding: 0;
+        border: 0;
+        border-radius: 14px;
+        background: var(--body-background);
+        color: var(--body-font-color);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+        &::backdrop {
+            background: rgba(0, 0, 0, 0.45);
+        }
+    }
+
+    .live-dialog-head {
+        flex: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        border-bottom: 1px solid var(--live-border);
+        background: var(--body-background);
+
+        h2 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+    }
+
+    .live-dialog-body {
+        flex: 1;
+        min-height: 0;
+        padding: 0.5rem 0.5rem 0.75rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .live-sheet {
+        @media screen and (max-width: $mobile-breakpoint) {
+            margin-top: calc(var(--live-header-h) + 0.5rem);
+            max-height: calc(100vh - var(--live-header-h) - 1rem);
+        }
+
+        .live-dialog-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .live-topbar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
+            align-items: center;
+            margin: 0;
+
+            > * {
+                min-width: 0;
+            }
+
+            .live-btn-label {
+                display: inline;
+            }
+        }
+
+        .live-status {
+            grid-column: 1;
+            min-height: 44px;
+            padding-inline: 0.25rem;
+        }
+
+        #live-role {
+            grid-column: 2 / -1;
+            justify-self: start;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        #live-share-room {
+            grid-column: 1 / -1;
+        }
+
+        .live-topbar-action {
+            width: auto;
+            padding: 0 0.4rem;
+            gap: 0.3rem;
+            overflow: hidden;
+        }
+    }
+}
+
+// The now strip moves into the site header on phones: the header grows to fit
+// its 44px buttons and starts flush with the top so the two line up.
+@media screen and (max-width: $mobile-breakpoint) {
+    body.live-event-active {
+        .book-page {
+            padding-top: 0;
+        }
+
+        .book-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 3.5rem;
+
+            h3 {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+@keyframes live-recent-pulse {
+    0% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--live-dot) 55%, transparent);
+        opacity: 1;
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px transparent;
+        opacity: 0.8;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+        opacity: 1;
+    }
+}
+
+@keyframes live-rec {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes live-marquee {
+    0%,
+    12% {
+        transform: translateX(0);
+    }
+
+    88%,
+    100% {
+        transform: translateX(calc(-1 * var(--live-overflow)));
+    }
+}
+
+@keyframes live-join-fade {
+    0%,
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes live-pause-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+@keyframes live-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+.live-toasts {
+    position: fixed;
+    bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: calc(100vw - 2rem);
+
+    .live-toast {
+        padding: 0.7rem 1rem;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--body-font-color);
+        color: var(--body-background);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        font: inherit;
+        text-align: center;
+    }
+
+    button.live-toast {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.verse-container.live-broadcast {
+    outline: 2px dashed var(--live-live);
+    outline-offset: 10px;
+    border-radius: 12px;
+}
+
+.live-render-error {
+    text-align: center;
+    opacity: 0.8;
 }
