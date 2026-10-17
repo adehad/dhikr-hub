@@ -98,6 +98,7 @@ describe("LiveStore", () => {
     expect(typeof identity.id).toBe("string");
     expect(identity.name).toBe("Listener");
   });
+
   it("keeps one identity for the page's life when localStorage refuses writes", () => {
     const ls = fakeLocalStorage();
     ls.setItem = () => {
@@ -109,5 +110,20 @@ describe("LiveStore", () => {
     const renamed = store.updateIdentity({ name: "Ahmad" });
     expect(renamed.id).toBe(first.id);
     expect(store.ensureIdentity()).toMatchObject({ id: first.id, name: "Ahmad" });
+  });
+
+  it("remembers and forgets recent rooms across reloads, dropping bad entries", () => {
+    const ls = fakeLocalStorage();
+    const store = new LiveStore(ls);
+    store.rememberRoom({ code: "abcdefgh", name: "Majlis", lastSeen: "2026-01-01T00:00:00Z" });
+    store.rememberRoom({ code: "hgfedcba", name: "", lastSeen: "2026-01-02T00:00:00Z" });
+    expect(new LiveStore(ls).recentRooms().map((r) => r.code)).toEqual(["hgfedcba", "abcdefgh"]);
+    store.forgetRoom("hgfedcba");
+    expect(store.recentRooms().map((r) => r.code)).toEqual(["abcdefgh"]);
+
+    const blob = JSON.parse(ls.getItem("dhikr-hub-live")!) as { recentRooms: unknown[] };
+    blob.recentRooms.push({ code: 5 }, "junk");
+    ls.setItem("dhikr-hub-live", JSON.stringify(blob));
+    expect(new LiveStore(ls).recentRooms()).toHaveLength(1);
   });
 });
