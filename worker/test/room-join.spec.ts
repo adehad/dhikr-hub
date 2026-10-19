@@ -144,3 +144,89 @@ describe("room join", () => {
     expect(await reply).toMatchObject({ type: "hosts" });
   });
 });
+
+describe("room name and metadata", () => {
+  it("a room created with a name carries it in the snapshot", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad", "Thursday mawlid");
+    const { snapshot } = await join(room, PEER_ID, "Listener");
+    expect(snapshot.roomName).toBe("Thursday mawlid");
+  });
+
+  it("a room created without a name defaults to the host's room", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad");
+    const { snapshot } = await join(room, PEER_ID, "Listener");
+    expect(snapshot.roomName).toBe("Ahmad's room");
+  });
+
+  it("an oversized room name is clamped to 64 code points", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad", "\u{1F319}".repeat(100));
+    const { snapshot } = await join(room, PEER_ID, "Listener");
+    expect(snapshot.roomName).toBe("\u{1F319}".repeat(64));
+  });
+
+  it("a non-string room name falls back to the default", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad", 42);
+    const { snapshot } = await join(room, PEER_ID, "Listener");
+    expect(snapshot.roomName).toBe("Ahmad's room");
+  });
+
+  it("a stored room without a name snapshots an empty name", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad");
+    await runInDurableObject(roomStub(room), async (_instance, state) => {
+      const s = await state.storage.get<Record<string, unknown>>("room");
+      delete s!.roomName;
+      delete s!.hostName;
+      await state.storage.put("room", s);
+    });
+    const { snapshot } = await join(room, PEER_ID, "Listener");
+    expect(snapshot.roomName).toBe("");
+  });
+
+  it("the host's display name is stored with the room", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad", "Thursday mawlid");
+    const stored = await runInDurableObject(roomStub(room), (_instance, state) =>
+      state.storage.get<{ hostName: string }>("room"),
+    );
+    expect(stored!.hostName).toBe("Ahmad");
+  });
+
+  it("/meta returns the name and setlist summary and no identity data", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad", "Thursday mawlid");
+    const host = await join(room, HOST_ID, "Ahmad");
+    await join(room, PEER_ID, "Listener");
+    host.ws.send(
+      JSON.stringify({
+        type: "setlist",
+        setlist: { id: "s1", name: "Mawlid set", items: ["a", "b"], updatedAt: "2026-10-16T00:00:00Z" },
+      }),
+    );
+    host.ws.send(JSON.stringify({ type: "follow-me" }));
+    while ((await nextMessage(host.ws)).type !== "hosts");
+
+    const res = await roomStub(room).fetch("https://do/meta");
+    expect(res.status).toBe(200);
+    const raw = await res.text();
+    expect(JSON.parse(raw)).toStrictEqual({ name: "Thursday mawlid", setlistName: "Mawlid set", trackCount: 2 });
+    expect(raw).not.toContain(host.snapshot.you);
+    expect(raw).not.toContain("Ahmad");
+    expect(raw).not.toContain("Listener");
+  });
+
+  it("/meta without a setlist reports none", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad");
+    const res = await roomStub(room).fetch("https://do/meta");
+    expect(await res.json()).toStrictEqual({ name: "Ahmad's room", setlistName: null, trackCount: 0 });
+  });
+
+  it("/meta on an unknown room is 404", async () => {
+    const res = await roomStub("zzzzzzzz").fetch("https://do/meta");
+    expect(res.status).toBe(404);
+    expect(await res.json()).toStrictEqual({ error: "not found" });
+  });
+
+  it("/meta is not exposed on the public API", async () => {
+    const room = await createRoom(HOST_ID, "Ahmad");
+    const res = await SELF.fetch(`https://example.com/api/live/room/${room}/meta`);
+    expect(res.status).toBe(404);
+  });
+});
