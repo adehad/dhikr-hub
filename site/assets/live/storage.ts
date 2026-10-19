@@ -1,5 +1,7 @@
 import { isNonEmptyString, isSetlist } from "./messages";
 import type { Setlist } from "./messages";
+import * as recent from "./recent-rooms";
+import type { RecentRoom } from "./recent-rooms";
 
 export interface Identity {
   id: string; // full secret, never rendered except the transfer screen
@@ -11,6 +13,7 @@ interface Blob {
   identity: Identity | null;
   trusted: string[];
   setlists: Setlist[];
+  recentRooms: RecentRoom[];
 }
 
 // Whole-blob last-write-wins: a second tab writing this key clobbers
@@ -28,7 +31,7 @@ function isIdentity(v: unknown): v is Identity {
 }
 
 function emptyBlob(): Blob {
-  return { identity: null, trusted: [], setlists: [] };
+  return { identity: null, trusted: [], setlists: [], recentRooms: [] };
 }
 
 export class LiveStore {
@@ -53,6 +56,9 @@ export class LiveStore {
         identity: isIdentity(parsed.identity) ? parsed.identity : null,
         trusted: Array.isArray(parsed.trusted) ? parsed.trusted.filter(isNonEmptyString) : [],
         setlists: Array.isArray(parsed.setlists) ? parsed.setlists.filter(isSetlist) : [],
+        recentRooms: Array.isArray(parsed.recentRooms)
+          ? parsed.recentRooms.filter(recent.isRecentRoom).slice(0, recent.RECENT_LIMIT)
+          : [],
       };
     } catch {
       return emptyBlob();
@@ -124,6 +130,22 @@ export class LiveStore {
   deleteSetlist(id: string): void {
     const blob = this.read();
     blob.setlists = blob.setlists.filter((s) => s.id !== id);
+    this.write(blob);
+  }
+
+  recentRooms(): RecentRoom[] {
+    return this.read().recentRooms;
+  }
+
+  rememberRoom(room: RecentRoom): void {
+    const blob = this.read();
+    blob.recentRooms = recent.rememberRoom(blob.recentRooms, room);
+    this.write(blob);
+  }
+
+  forgetRoom(code: string): void {
+    const blob = this.read();
+    blob.recentRooms = recent.forgetRoom(blob.recentRooms, code);
     this.write(blob);
   }
 }

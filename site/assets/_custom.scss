@@ -740,8 +740,12 @@ body.show-repeat-marks {
     // Top of the bands that stick below the now strip.
     --live-bar-top: var(--live-sticky-top);
 
+    --live-dot: var(--live-live);
+
     @media (prefers-color-scheme: dark) {
         --live-live: #ff7b7b;
+        // #ff7b7b reads as pink at dot size on the card grey.
+        --live-dot: #ff6b6b;
     }
 
     @media screen and (min-width: $mobile-breakpoint) {
@@ -1008,8 +1012,119 @@ body.show-repeat-marks {
         border-top-color: var(--color-link);
     }
 
-    .live-card-you {
+    .live-card-you,
+    .live-card-recent {
         border-top-color: var(--live-muted);
+    }
+
+    .live-recent-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .live-recent-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.25rem;
+        margin: 0;
+        border-top: 1px solid var(--live-border);
+        border-radius: 8px;
+
+        &:hover,
+        &:focus-within {
+            background: var(--body-background);
+        }
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
+    .live-recent-open {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex: 1;
+        min-width: 0;
+        min-height: 44px;
+        padding: 0.25rem 0.5rem;
+        border: 0;
+        border-radius: 8px;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        text-align: start;
+        cursor: pointer;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    .live-recent-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .live-recent-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        flex: none;
+        font-size: 0.85rem;
+        opacity: 0.85;
+    }
+
+    .live-recent-count {
+        font-variant-numeric: tabular-nums;
+    }
+
+    .live-recent-live {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--live-dot);
+        animation: live-recent-pulse 1s ease-out infinite;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+            box-shadow: none;
+        }
+    }
+
+    // --live-muted falls below 4.5:1 on the row backgrounds, so the name keeps the text colour.
+    .live-recent-dead .live-recent-name {
+        color: inherit;
+        text-decoration: line-through;
+    }
+
+    .live-recent-remove {
+        &:hover,
+        &:focus-visible {
+            color: var(--live-live);
+        }
+    }
+
+    .live-recent-confirm {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.25rem 0.5rem 0.5rem;
+        font-size: 0.9rem;
+
+        .live-recent-confirm-text {
+            flex: 1 1 100%;
+        }
+    }
+
+    #live-recent-more {
+        margin-top: 0.25rem;
     }
 
     .live-card-head {
@@ -1767,6 +1882,23 @@ body.show-repeat-marks {
                 visibility: hidden;
             }
         }
+    }
+}
+
+@keyframes live-recent-pulse {
+    0% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--live-dot) 55%, transparent);
+        opacity: 1;
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px transparent;
+        opacity: 0.8;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+        opacity: 1;
     }
 }
 

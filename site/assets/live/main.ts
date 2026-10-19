@@ -7,6 +7,15 @@ import { coalesceJoin, joinMessage, type JoinFlash } from "./join-flash";
 import { debounce, FollowerScroller, groupElements, HostTracker, jumpDirection, pickCurrentGroup } from "./sync";
 import { SetlistEditor, shortTitle, type QasidaIndexEntry } from "./setlist-editor";
 import {
+  parseRoomStatus,
+  roomsToFetch,
+  timeAgo,
+  visibleRooms,
+  RECENT_VISIBLE,
+  type RecentRoom,
+  type RoomStatus,
+} from "./recent-rooms";
+import {
   button,
   closeDialog,
   closeOnBackdrop,
@@ -132,7 +141,7 @@ async function boot(root: HTMLElement): Promise<void> {
       ornaments: readOrnaments(root),
     });
   } else {
-    await lobbyView(store, { api, indexUrl, registerIdentity });
+    await lobbyView(store, { api, httpBase, indexUrl, registerIdentity });
   }
 }
 
@@ -142,11 +151,13 @@ async function lobbyView(
   store: LiveStore,
   ctx: {
     api: (p: string, i?: RequestInit) => Promise<Response>;
+    httpBase: string;
     indexUrl: string;
     registerIdentity: () => Promise<void>;
   },
 ): Promise<void> {
   el<HTMLElement>("live-lobby").hidden = false;
+  recentRoomsView(store, ctx.httpBase);
 
   const identity = store.ensureIdentity();
   const nameInput = el<HTMLInputElement>("live-name");
@@ -321,6 +332,170 @@ async function lobbyView(
   });
 }
 
+function recentRoomsView(store: LiveStore, httpBase: string): void {
+  const card = el<HTMLElement>("live-recent");
+  const list = el<HTMLUListElement>("live-recent-list");
+  const more = el<HTMLButtonElement>("live-recent-more");
+  let expanded = false;
+  // null means unknown: unreachable, or a worker without the status endpoint.
+  const statuses = new Map<string, RoomStatus | null>();
+  const requested = new Set<string>();
+  const rows = new Map<string, HTMLLIElement>();
+  let openConfirm: HTMLElement | null = null;
+
+  more.addEventListener("click", () => {
+    expanded = true;
+    render();
+  });
+
+  function forget(code: string): void {
+    store.forgetRoom(code);
+    rows.delete(code);
+    statuses.delete(code);
+    openConfirm = null;
+    render();
+    list.querySelector<HTMLButtonElement>(".live-recent-open")?.focus();
+  }
+
+  function closeConfirm(): void {
+    openConfirm?.remove();
+    openConfirm = null;
+  }
+
+  function showConfirm(row: HTMLLIElement, room: RecentRoom, displayName: string, opener: HTMLButtonElement): void {
+    if (openConfirm?.parentElement === row) {
+      openConfirm.querySelector("button")?.focus();
+      return;
+    }
+    closeConfirm();
+    const box = document.createElement("div");
+    box.className = "live-recent-confirm";
+    box.setAttribute("role", "group");
+    box.setAttribute("aria-label", `Remove ${displayName} from recent?`);
+    const remove = button(document, {
+      text: "Remove",
+      className: "live-btn-danger",
+      onClick: () => forget(room.code),
+    });
+    const keep = button(document, {
+      text: "Keep",
+      onClick: () => {
+        closeConfirm();
+        opener.focus();
+      },
+    });
+    const text = document.createElement("span");
+    text.className = "live-recent-confirm-text";
+    text.textContent = "Remove from recent?";
+    box.append(text, remove, keep);
+    row.appendChild(box);
+    openConfirm = box;
+    remove.focus();
+  }
+
+  function paintStatus(row: HTMLLIElement, room: RecentRoom): void {
+    const status = statuses.get(room.code);
+    row.classList.toggle("live-recent-dead", status?.exists === false);
+    const group = row.querySelector<HTMLElement>(".live-recent-status");
+    if (!group) return;
+    group.replaceChildren();
+    if (status === undefined) return;
+    if (status === null) {
+      group.textContent = "Status unavailable";
+      return;
+    }
+    if (!status.exists) {
+      group.textContent = "Ended";
+      return;
+    }
+    if (status.live) {
+      const dot = document.createElement("span");
+      dot.className = "live-recent-live";
+      dot.setAttribute("role", "img");
+      dot.setAttribute("aria-label", "Live now");
+      group.appendChild(dot);
+    }
+    if (status.people > 0) {
+      const count = document.createElement("span");
+      count.className = "live-recent-count";
+      count.textContent = String(status.people);
+      const label = document.createElement("span");
+      label.className = "live-sr-only";
+      label.textContent = status.people === 1 ? " person here" : " people here";
+      group.append(icon(document, "users", 16), count, label);
+    } else {
+      const ago = document.createElement("span");
+      ago.className = "live-recent-ago";
+      ago.textContent = timeAgo(status.lastActive, Date.now());
+      group.appendChild(ago);
+    }
+  }
+
+  function buildRow(room: RecentRoom): HTMLLIElement {
+    const row = document.createElement("li");
+    row.className = "live-recent-row";
+    row.dataset.room = room.code;
+    const open = document.createElement("button");
+    open.type = "button";
+    open.className = "live-recent-open";
+    const displayName = room.name.trim() || room.code;
+    const name = document.createElement("span");
+    name.className = "live-recent-name";
+    name.textContent = displayName;
+    const group = document.createElement("span");
+    group.className = "live-recent-status";
+    open.append(name, group);
+    open.addEventListener("click", () => {
+      if (statuses.get(room.code)?.exists === false) showConfirm(row, room, displayName, open);
+      else location.search = `?room=${room.code}`;
+    });
+    row.append(
+      open,
+      button(document, {
+        icon: "x",
+        label: `Remove ${displayName} from recent`,
+        className: "live-btn-quiet live-recent-remove",
+        onClick: () => forget(room.code),
+      }),
+    );
+    paintStatus(row, room);
+    return row;
+  }
+
+  async function fetchStatus(code: string): Promise<RoomStatus | null> {
+    try {
+      const res = await fetch(`${httpBase}/api/live/room/${code}/status`);
+      if (!res.ok) return null;
+      return parseRoomStatus(await res.json());
+    } catch {
+      return null;
+    }
+  }
+
+  function render(): void {
+    const all = store.recentRooms();
+    card.hidden = all.length === 0;
+    const shown = visibleRooms(all, expanded);
+    list.replaceChildren(...shown.map((room) => rows.get(room.code) ?? buildRow(room)));
+    for (const row of list.children) rows.set((row as HTMLLIElement).dataset.room!, row as HTMLLIElement);
+    const hiddenCount = all.length - shown.length;
+    more.hidden = expanded || all.length <= RECENT_VISIBLE;
+    more.textContent = `Show more (${hiddenCount} more)`;
+
+    for (const code of roomsToFetch(all, expanded, requested)) {
+      requested.add(code);
+      void fetchStatus(code).then((status) => {
+        statuses.set(code, status);
+        const row = rows.get(code);
+        const room = store.recentRooms().find((r) => r.code === code);
+        if (row && room) paintStatus(row, room);
+      });
+    }
+  }
+
+  render();
+}
+
 // ---------- event ----------
 
 async function eventView(
@@ -341,8 +516,10 @@ async function eventView(
     return;
   }
 
-  const probe = await fetch(`${ctx.httpBase}/api/live/room/${room}/ws`).catch(() => null);
-  if (probe?.status === 404) {
+  const probe = await fetch(`${ctx.httpBase}/api/live/room/${room}/status`)
+    .then(async (res) => (res.ok ? parseRoomStatus(await res.json()) : null))
+    .catch(() => null);
+  if (probe?.exists === false) {
     toast("Room not found. Check the code with the host.");
     setTimeout(() => {
       location.search = "";
@@ -436,6 +613,12 @@ async function eventView(
     (node) => node.nodeType === Node.TEXT_NODE,
   );
   const pageTitle = document.title;
+  let recentName: string | null = null;
+  function rememberRoom(): void {
+    if (recentName === null) return;
+    store.rememberRoom({ code: room, name: recentName, lastSeen: new Date().toISOString() });
+  }
+
   function showRoomName(name: string | undefined): void {
     const trimmed = name?.trim();
     if (!trimmed) return;
@@ -830,6 +1013,10 @@ async function eventView(
         roster = msg.roster;
         setlist = msg.setlist;
         showRoomName(msg.roomName);
+        if (recentName === null) {
+          recentName = msg.roomName?.trim() ?? "";
+          rememberRoom();
+        }
         lastHostPosition = msg.position;
         chorusOn = msg.chorus === true;
         currentIndex = msg.currentIndex ?? (msg.currentSlug && setlist ? indexFallback(msg.currentSlug) : null);
@@ -1108,6 +1295,7 @@ async function eventView(
     restoreRoomName();
     document.body.classList.remove("live-event-active");
     socket.stop();
+    rememberRoom();
     void wakeLock?.release().catch(() => {});
     location.search = "";
   });
