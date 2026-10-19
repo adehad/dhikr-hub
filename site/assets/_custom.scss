@@ -54,12 +54,17 @@
     --transliteration-font-perc: 80%;
 
     --repeat-mark-color: #aa622b;
+
+    // Open chorus tab text on the black tab
+    --chorus-open-color: #adb5bd;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         // Lighter copper keeps at least 3:1 on the dark theme's #343a40
         --repeat-mark-color: #e0a172;
+        // Open chorus tab text on the light tab
+        --chorus-open-color: #5c636a;
     }
 }
 
@@ -127,7 +132,15 @@ body {
 
     &:checked {
         &~label[for="chorus-toggle"] {
-            color: #b27d54;
+            color: var(--chorus-open-color);
+
+            .chorus-tab-show {
+                display: none;
+            }
+
+            .chorus-tab-hide {
+                display: inline;
+            }
         }
     }
 
@@ -169,6 +182,9 @@ label[for="chorus-toggle"] {
     color: var(--body-background);
     writing-mode: sideways-rl;
 
+    .chorus-tab-hide {
+        display: none;
+    }
 }
 
 .transliteration {

@@ -44,7 +44,9 @@ e.g. {{< verse file="qasida/thalama" lang="en" >}}
 
 {{ if (gt (len $verses_json.order.chorus) 0) }}
 <input type="checkbox" id="chorus-toggle">
-<label for="chorus-toggle">Chorus</label>
+<label for="chorus-toggle">
+  <span class="sr-only chorus-tab-show">Show </span><span class="sr-only chorus-tab-hide">Hide </span>Chorus
+</label>
 
 <div class="sticky-chorus">
     {{ range $v_config_idx, $v_config := $verses_json.order.chorus }}
