@@ -97,6 +97,21 @@ async function invitePage(request: Request, env: Env, ctx: ExecutionContext, roo
   }
 }
 
+async function roomStatus(env: Env, room: string): Promise<Response> {
+  let body: unknown = { exists: false };
+  if (/^[a-z2-9]{8}$/.test(room)) {
+    try {
+      const res = await roomStub(env, room).fetch("https://do/status");
+      if (res.ok) body = await res.json();
+    } catch {
+      // A failed lookup reads as an absent room rather than a 500.
+    }
+  }
+  const res = json(body);
+  res.headers.set("Cache-Control", "no-store");
+  return res;
+}
+
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
@@ -189,6 +204,11 @@ export default {
         return json({ room });
       }
       return json({ error: "room init failed" }, 500);
+    }
+
+    const statusMatch = /^\/api\/live\/room\/([^/]+)\/status$/.exec(path);
+    if (statusMatch && request.method === "GET") {
+      return roomStatus(env, statusMatch[1]!);
     }
 
     const wsMatch = /^\/api\/live\/room\/([a-z2-9]{8})\/ws$/.exec(path);

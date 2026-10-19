@@ -102,6 +102,20 @@ export class LiveRoom extends DurableObject {
       });
     }
 
+    if (url.pathname === "/status" && request.method === "GET") {
+      const s = await this.state();
+      if (!s) return Response.json({ exists: false });
+      // Public and unauthenticated: counts only, never names or publicIds.
+      const roster = this.roster(s.hosts);
+      return Response.json({
+        exists: true,
+        name: s.roomName ?? "",
+        people: roster.length,
+        live: roster.some((p) => p.publicId === s.leader),
+        lastActive: new Date(s.lastActivity).toISOString(),
+      });
+    }
+
     if (url.pathname === "/ws") {
       if (request.headers.get("Upgrade") !== "websocket") {
         return Response.json({ error: "expected websocket" }, { status: 426 });
