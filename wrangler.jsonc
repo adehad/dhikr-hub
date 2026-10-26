@@ -21,5 +21,15 @@
   // Append-only: deployed tags must never be edited or removed.
   "migrations": [
     { "tag": "v1", "new_sqlite_classes": ["LiveRoom", "IdentityRegistry"] }
-  ]
+  ],
+  // Previews do not inherit bindings. Each Preview gets its own empty Durable Object
+  // namespaces, so rooms and identities never touch production.
+  "previews": {
+    "durable_objects": {
+      "bindings": [
+        { "name": "LIVE_ROOM", "class_name": "LiveRoom" },
+        { "name": "IDENTITY", "class_name": "IdentityRegistry" }
+      ]
+    }
+  }
 }
