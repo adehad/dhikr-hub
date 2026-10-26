@@ -33,8 +33,9 @@ BookEditPath = 'blob/HEAD/site'
 BookServiceWorker = "precache" # precache caches all webpages
 
 # Origin of the live worker (wss/https host). Empty = same origin as the page.
-# GitHub Pages needs this set to the production Workers URL once known.
-LiveEndpoint = ''
+# GitHub Pages has no worker, so its /live/ page talks to production here.
+# workers.dev hosts and localhost ignore it and stay same-origin.
+LiveEndpoint = 'wss://dhikr-hub.adehad.workers.dev'
 
 [markup.tableOfContents]
 startLevel = 1
