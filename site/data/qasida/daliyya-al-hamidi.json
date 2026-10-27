@@ -5,6 +5,11 @@
     },
     "verses": {
         "ara": [
+            "لَا إِلٰهَ إِلَّا اللهُ",
+            "لَا إِلٰهَ إِلَّا اللهُ",
+            "مُحَمَّدٌ رَسُوْلُ اللهِ",
+            "عَلَيْهِ صَلَاةُ اللهِ",
+
             "يَا سَيِّدِي، يَا رَسُولَ اللهِ، يَا سَنَدِي",
             "يَا وَاسِعَ الْفَضْلِ، وَالْإِحْسَانِ، وَالْمَدَدِ",
 
@@ -78,6 +83,11 @@
             "وَدَامَ ذِكْرُكَ مَرْفُوعًا إِلَى الْأَبَدِ"
         ],
         "en": [
+            "lā ilāha illā Llāhu",
+            "lā ilāha illā Llāhu",
+            "Muḥammadun rasūlu Llāhi",
+            "ʿalayhi ṣalātu Llāhi",
+
             "Yā sayyidī, yā Rasūla-llāhi, yā sanadī",
             "yā wāsiʿa l-faḍli wa-l-iḥsāni wa-l-madadi",
 
@@ -153,6 +163,11 @@
     },
     "translation": {
         "en": [
+            "There is no god but Allah",
+            "There is no god but Allah",
+            "Muhammad is the Messenger of Allah,",
+            "upon him be the blessings of Allah.",
+
             "O my master, O Messenger of God, O my support,",
             "O you whose bounty, beneficence and succour are vast.",
 
@@ -227,16 +242,15 @@
         ]
     },
     "order": {
-        "chorus": [],
-        "verses": [
+        "chorus": [
             [
                 { "repeat": 1, "index": 0 },
-                { "repeat": 1, "index": 1 }
-            ],
-            [
+                { "repeat": 1, "index": 1 },
                 { "repeat": 1, "index": 2 },
                 { "repeat": 1, "index": 3 }
-            ],
+            ]
+        ],
+        "verses": [
             [
                 { "repeat": 1, "index": 4 },
                 { "repeat": 1, "index": 5 }
@@ -324,6 +338,14 @@
             [
                 { "repeat": 1, "index": 46 },
                 { "repeat": 1, "index": 47 }
+            ],
+            [
+                { "repeat": 1, "index": 48 },
+                { "repeat": 1, "index": 49 }
+            ],
+            [
+                { "repeat": 1, "index": 50 },
+                { "repeat": 1, "index": 51 }
             ]
         ]
     }

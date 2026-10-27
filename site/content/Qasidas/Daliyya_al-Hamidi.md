@@ -30,3 +30,4 @@ Shaykh al-Islām Muḥammad ibn Aḥmad al-Ṭāhir al-Ḥāmidī al-Armantī al
 ### Sources
 
 - Arabic, transliteration, translation: shared PDF ("A Dāliyya in Praise of the Prophet ﷺ")
+- Refrain: the lāzima from Antum Furūḍī (Nasāʾim al-Ḥaḍra); transliteration and translation auto-generated
