@@ -31,5 +31,20 @@
         { "name": "IDENTITY", "class_name": "IdentityRegistry" }
       ]
     }
+  },
+  // A deploy applies this block over the dashboard's Observability settings, so
+  // change them here. issue_detection is left out: Wrangler 4.152 rejects the field.
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": false,
+      "head_sampling_rate": 1,
+      "persist": true
+    }
   }
 }
