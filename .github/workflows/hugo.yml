@@ -41,7 +41,7 @@ jobs:
           fetch-depth: 0
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Copy README
         run: cp -a README.md site/content/About.md
       - name: Build with Hugo
